@@ -4,14 +4,11 @@ public class Tv3 {
 
     // Change channel
     public void channelDown() {
-        // channel = 35;
-        channel = channel - 5;
+        channel = 35;
     }
-
     // Change volume
     public void volumeUp() {
-        // volume = 6;
-        volume = volume + 2;
+        volume = 6;
     }
     public static void main (String[] args) {
         Tv3 myTv3 = new Tv3();
@@ -20,9 +17,9 @@ public class Tv3 {
         System.out.println("Current TV volume : " + myTv3.volume);
 
         myTv3.channelDown();
+        System.out.println("TV channel has been changed to : " + myTv3.channel);
+        
         myTv3.volumeUp();
-
-        System.out.println("Last TV channel : " + myTv3.channel);
-        System.out.println("Last TV volume : " + myTv3.volume);
+        System.out.println("TV volume has been increased to : " + myTv3.volume);
     }
 }
