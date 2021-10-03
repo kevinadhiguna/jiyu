@@ -1,3 +1,9 @@
+/**
+ * YOU CAN USE ANY CODE FROM THIS REPOSITORY BUT PLEASE DO NOT REMOVE CREDIT TO THE AUTHOR. 
+ * GitHub : kevinadhiguna (https://github.com/kevinadhiguna)
+ * GitHub Repo : https://github.com/kevinadhiguna/jiyu
+ */
+
 public class Tv3 {
     int channel = 40;
     int volume = 4;
