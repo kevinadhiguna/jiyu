@@ -24,5 +24,8 @@ public class Point2dTest {
         System.out.println("The second coordinate is : " + p2.toString());
 
         System.out.println("\nThe distance between two coordinates is : " + p1.distance(p2));
+
+        // Avoid resource leak
+        input.close();
     }
 }
