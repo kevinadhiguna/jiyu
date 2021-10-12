@@ -107,6 +107,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### Himitsu ###
+syusoku
+
 ### Node ###
 # Logs
 logs
