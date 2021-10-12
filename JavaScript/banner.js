@@ -17,4 +17,15 @@ const banner = figlet.text(text, {
     console.log(data);
 });
 
+// == Import and Export syntaxes (details : https://stackoverflow.com/a/60331886) ==
+// (1) CommonJS syntax
+// Export the banner
 module.exports = banner;
+// How to import the banner in another file (Example)
+// const banner = require("./banner"); 
+
+// (2) ES6 syntax
+// Export the banner
+// export default banner;
+// How to import the banner in another file (Example)
+// import { banner } from "banner";
