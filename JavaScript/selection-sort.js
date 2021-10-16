@@ -9,6 +9,7 @@ function selectionSort(array) {
                 minIndex = j;
             }
         }
+        // Swap
         [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
     }
     return arr;
