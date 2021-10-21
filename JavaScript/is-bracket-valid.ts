@@ -10,7 +10,7 @@ function isBracketValid(s: string) {
 }
 
 console.log("\n=== Are these brackets valid ? ===\n");
-console.log("GitHub repository : https://github.com/kevinadhiguna/jiyu/JavaScript/is-bracket-valid.ts\n");
+console.log("GitHub repository : https://github.com/kevinadhiguna/jiyu/blob/master/JavaScript/is-bracket-valid.ts\n");
 
 console.log("Case '()' :", isBracketValid("()"));
 console.log("Case '()()' :", isBracketValid("()()"));
