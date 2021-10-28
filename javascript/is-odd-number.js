@@ -11,4 +11,4 @@ function isOddNumber(array) {
 }
 
 const result = isOddNumber(numbers);
-console.log("Among these numbers :", numbers,"odd numbers are :\n", result);
+console.log("Among these numbers :", numbers, "odd numbers are :\n", result);
