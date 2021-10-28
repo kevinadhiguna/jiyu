@@ -11,7 +11,7 @@ function isBracketValid(s: string) {
 
 console.log("\n=== Are these brackets valid ? ===\n");
 console.log(
-    "GitHub repository : https://github.com/kevinadhiguna/jiyu/blob/master/JavaScript/is-bracket-valid.ts\n"
+    "GitHub repository : https://github.com/kevinadhiguna/jiyu/blob/master/typescript/is-bracket-valid.ts\n"
 );
 
 console.log("Case '()' :", isBracketValid("()"));
