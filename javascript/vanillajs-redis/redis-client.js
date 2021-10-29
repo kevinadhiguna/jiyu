@@ -3,11 +3,16 @@ const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 
 // Initialize Redis client
-const jsRedisClient = createHandyClient({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
-    password: process.env.REDIS_PORT,
-});
+let jsRedisClient;
+try {
+    jsRedisClient = createHandyClient({
+        host: process.env.REDIS_HOST,
+        port: process.env.REDIS_PORT,
+        password: process.env.REDIS_PORT,
+    });
+} catch (error) {
+    console.error(`Error connecting to Redis : ${error}`);
+}
 
 async function redisSetMerchant(merchantId, merchantBrand, merchantName) {
     // Set key-value
