@@ -8,7 +8,7 @@ try {
     jsRedisClient = createHandyClient({
         host: process.env.REDIS_HOST,
         port: process.env.REDIS_PORT,
-        password: process.env.REDIS_PORT,
+        password: process.env.REDIS_PW,
     });
 } catch (error) {
     console.error(`Error connecting to Redis : ${error}`);
