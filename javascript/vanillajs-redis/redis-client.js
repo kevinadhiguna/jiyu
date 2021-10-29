@@ -6,6 +6,7 @@ require("dotenv").config();
 const jsRedisClient = createHandyClient({
     host: process.env.REDIS_HOST,
     port: process.env.REDIS_PORT,
+    password: process.env.REDIS_PORT,
 });
 
 async function redisSetMerchant(merchantId, merchantBrand, merchantName) {
