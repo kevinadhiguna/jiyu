@@ -12,4 +12,9 @@ function isEvenNumber(array) {
 const result = isEvenNumber(numbers);
 
 // Show results
-console.log("Among these numbers :\n", numbers, "\nEven Numbers are :\n", result);
+console.log(
+    "Among these numbers :\n",
+    numbers,
+    "\nEven Numbers are :\n",
+    result
+);

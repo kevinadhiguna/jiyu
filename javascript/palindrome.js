@@ -15,8 +15,10 @@ for (let i = 0; i < word.length; i++) {
 
 console.log("Array of the reversed word :", reversed_word_arr);
 
-let reversed_word = reversed_word_arr.join('');
+let reversed_word = reversed_word_arr.join("");
 console.log("Reversed Word :", reversed_word);
 
 console.log("\n[ RESULT ]");
-word === reversed_word ? console.log("The word is palindrome !") : console.log("The word is NOT palindrome...");
+word === reversed_word
+    ? console.log("The word is palindrome !")
+    : console.log("The word is NOT palindrome...");

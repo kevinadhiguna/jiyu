@@ -9,12 +9,10 @@ function largestNumber(arr) {
     //         ? (largestNumber = arrayNumber[i])
     //         : null;
     // }
-    
+
     // (2) For-each
-    arrayNumber.forEach(e => {
-        largestNumber < e
-            ? (largestNumber = e)
-            : null;
+    arrayNumber.forEach((e) => {
+        largestNumber < e ? (largestNumber = e) : null;
     });
     return largestNumber;
 }
