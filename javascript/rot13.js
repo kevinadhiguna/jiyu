@@ -18,7 +18,7 @@ function rot13(s) {
 }
 
 // Take one of the most common password from https://nordpass.com/most-common-passwords-list/.
-const password = "GhdeJKAncdjvnd"; // <- Known issue : currently password can only contain alphabet, not numbers...
+const password = "qwerty"; // <- Known issue : currently password can only contain alphabet, not numbers...
 console.log("Let's apply ROT13 to this password :", password, "\n");
 
 const encryptedPassword = rot13(password);
