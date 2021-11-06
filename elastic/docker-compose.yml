@@ -1,4 +1,7 @@
-# Reference : https://levelup.gitconnected.com/docker-compose-made-easy-with-elasticsearch-and-kibana-4cb4110a80dd
+# Reference : 
+# [1] https://levelup.gitconnected.com/docker-compose-made-easy-with-elasticsearch-and-kibana-4cb4110a80dd
+# [2] https://quoeamaster.medium.com/deploying-elasticsearch-and-kibana-with-docker-86a4ac78d851
+
 # Official docs : https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html
 
 version: "3.8"
