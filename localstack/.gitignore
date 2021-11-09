@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/localstack
+# Edit at https://www.toptal.com/developers/gitignore?templates=localstack
+
+### LocalStack ###
+# https://github.com/localstack/localstack
+**/.localstack
+
+# End of https://www.toptal.com/developers/gitignore/api/localstack
+
+### AWS CLI ###
+aws
+awscliv2.zip
