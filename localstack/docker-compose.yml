@@ -2,7 +2,10 @@ version: "3.8"
 
 services:
   localstack:
+    # "${LOCALSTACK_DOCKER_NAME-localstack_main}" means docker-compose.yml will refer to the value of variable called LOCALSTACK_DOCKER_NAME in a .env file. Otherwise the docker container is named "localstack_main".
     container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
+    # From 2020-07-11 onwards, the default image "localstack/localstack" in Docker Hub refers to the “light version”, which has some large dependency files like Elasticsearch removed
+    # In case you need the full set of dependencies, the "localstack/localstack-full" image can be used instead
     image: localstack/localstack
     network_mode: bridge
     ports:
@@ -13,6 +16,7 @@ services:
       - "127.0.0.1:4566:4566"
       - "127.0.0.1:4571:4571"
     environment:
+      # Specify the services in a variable named SERVICES, otherwise localstack does not work...
       - SERVICES=${SERVICES- }
       - DEBUG=${DEBUG- }
       - DATA_DIR=${DATA_DIR- }
