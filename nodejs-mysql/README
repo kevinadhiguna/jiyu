@@ -1,0 +1,5 @@
+NodeJS - MySQL tutorial
+
+Spin up MySQL with the help of Docker and execute SQL queries to MySQL from a NodeJS client.
+
+Reference : https://www.w3schools.com/nodejs/nodejs_mysql.asp
