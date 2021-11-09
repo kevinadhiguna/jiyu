@@ -10,3 +10,6 @@
 ### AWS CLI ###
 aws
 awscliv2.zip
+
+### Environment Variables ###
+.env
