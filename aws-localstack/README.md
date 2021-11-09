@@ -31,6 +31,8 @@
 </p>
 -->
 
+<br />
+
 # Overview
 
 [LocalStack 💻](https://localstack.cloud) is a cloud service emulator that runs in a single container on your laptop or in your CI environment.
@@ -46,6 +48,8 @@ You can find a comprehensive list of supported APIs on our [☑️ Feature Cover
 LocalStack also provides additional features to make your life as a cloud developer easier!
 Check out LocalStack's [Cloud Developer Tools](#localstack-cloud-developer-tools).
 -->
+
+<br />
 
 # How to Run using docker-compose :
 
