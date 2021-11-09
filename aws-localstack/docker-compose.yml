@@ -12,12 +12,16 @@ services:
     image: localstack/localstack
     network_mode: bridge
     ports:
+      ### Default config ###
       #- "127.0.0.1:53:53"                # only required for Pro
       #- "127.0.0.1:53:53/udp"            # only required for Pro
       #- "127.0.0.1:443:443"              # only required for Pro
       #- "127.0.0.1:4510-4530:4510-4530"  # only required for Pro
-      - "127.0.0.1:4566:4566"
-      - "127.0.0.1:4571:4571"
+      #- "127.0.0.1:4566:4566"
+      #- "127.0.0.1:4571:4571"
+      ### Modified config ###
+      - "4566:4566"
+      - "4571:4571"
     environment:
       # Specify the services in a variable named SERVICES, otherwise localstack does not work...
       - SERVICES=${SERVICES- }
