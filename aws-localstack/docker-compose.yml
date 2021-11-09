@@ -1,3 +1,6 @@
+# docker-compose reference : https://github.com/localstack/localstack/blob/master/docker-compose.yml
+# configuration reference : https://docs.localstack.cloud/localstack/configuration/#core
+
 version: "3.8"
 
 services:
