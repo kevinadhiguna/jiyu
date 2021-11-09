@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-mysql",
+  "version": "1.0.0",
+  "description": "nodejs-mysql",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mysql": "^2.18.1"
+  }
+}
