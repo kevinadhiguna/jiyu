@@ -68,11 +68,32 @@ console.log("Concat strings :", firstname.concat(" ", lastname), "\n");
 // This also works but not concat method : console.log("Concat strings :", firstname, lastname);
 
 // ### trim ###
-let rookies = " Marsh, Adel, Detmers   ";
+let rookies = " Marsh, Adell, Detmers   ";
 // Warning : trim only removes whitespaces before the first char and after the last char in a string. With that being said, whitespaces between chars will not be removed.
-console.log("Trim to remove whitespaces :", rookies.trim(), "\n"); // Marsh, Adel, Detmers
+console.log("Trim to remove whitespaces :", rookies.trim(), "\n"); // Marsh, Adell, Detmers
 
 // ### padStart & padEnd ###
 let number_of_starting_pitchers = "5";
 console.log("padStart method :", number_of_starting_pitchers.padStart(4, 0)); // 0005
-console.log("padEnd method :", number_of_starting_pitchers.padEnd(4, 0)); // 5000
+console.log("padEnd method :", number_of_starting_pitchers.padEnd(4, 0), "\n"); // 5000
+
+/**
+ * There are 3 methods to extract a string's character :
+ * 
+ * 1. charAt(position)
+ * 2. charCodeAt(position)
+ * 3. Property access [] (This is not really a built-in method like others, but it just works)
+ * 
+ */
+
+// ### charAt ###
+let catcher = "Stassi";
+console.log("charAt the first index char :", catcher.charAt(0), "\n"); // S
+
+// ### charCodeAt ###
+// returns UTF-16 of 'S'
+console.log("charCodeAt the first index char :", catcher.charCodeAt(0), "\n"); // 83
+
+// ### Property access ###
+console.log("Property Access :", catcher[0]); // S
+// Please keep in mind that : let catcher[0] = "A" does not work but gives no error..  
