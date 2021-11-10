@@ -1,3 +1,5 @@
+// Source : https://www.w3schools.com/js/js_string_methods.asp
+
 /**
  * There are 3 methods for extracting a part of a string in JavaScript:
  * 
@@ -5,7 +7,6 @@
  * 2. substring(start, end)
  * 3. substr(start, length)
  * 
- * Source : https://www.w3schools.com/js/js_string_methods.asp
  */
 
 let the_angels = "Ohtani, Trout, Rendon";
@@ -95,5 +96,21 @@ console.log("charAt the first index char :", catcher.charAt(0), "\n"); // S
 console.log("charCodeAt the first index char :", catcher.charCodeAt(0), "\n"); // 83
 
 // ### Property access ###
-console.log("Property Access :", catcher[0]); // S
+console.log("Property Access :", catcher[0], "\n"); // S
 // Please keep in mind that : let catcher[0] = "A" does not work but gives no error..  
+
+/**
+ * Convert a string into an array : split()
+ * 
+ * 1. split(",") <- split on commas
+ * 2. split(" ") <- split on spaces
+ * 3. split("\") <- split on pipe
+ * 
+ */
+
+let most_outstanding_player = "Shohei Ohtani";
+
+console.log("Split to an array of single characters :", most_outstanding_player.split(""));
+console.log("Split on commas :", most_outstanding_player.split(","));
+console.log("Split on spaces :", most_outstanding_player.split(" "));
+console.log("Split on pipe :", most_outstanding_player.split("|"));
