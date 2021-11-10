@@ -70,4 +70,9 @@ console.log("Concat strings :", firstname.concat(" ", lastname), "\n");
 // ### trim ###
 let rookies = " Marsh, Adel, Detmers   ";
 // Warning : trim only removes whitespaces before the first char and after the last char in a string. With that being said, whitespaces between chars will not be removed.
-console.log("Trim to remove whitespaces :", rookies.trim()); // Marsh, Adel, Detmers
+console.log("Trim to remove whitespaces :", rookies.trim(), "\n"); // Marsh, Adel, Detmers
+
+// ### padStart & padEnd ###
+let number_of_starting_pitchers = "5";
+console.log("padStart method :", number_of_starting_pitchers.padStart(4, 0)); // 0005
+console.log("padEnd method :", number_of_starting_pitchers.padEnd(4, 0)); // 5000
