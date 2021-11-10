@@ -22,3 +22,12 @@ console.log("Slice 8-13 :", the_angels_2.slice(8, 13)); // Trout
 console.log("Slice from 8 :", the_angels_2.slice(8)); // Trout, Rendon
 // A negative index means it is counted from behind
 console.log("Slice from behind :", the_angels_2.slice(-6), "\n"); // Rendon
+
+
+// ### substring ###
+// Substring is similar to Slice but can not accept negative indexes
+console.log("Substring 0-6 :", the_angels_2.substring(0, 6)); // Ohtani
+console.log("Substring 8-13 :", the_angels_2.substring(8, 13)); // Trout
+console.log("Substring from 8 :", the_angels_2.substring(8)); // Trout, Rendon
+// Substring does not accept a negative index. Thus, if one does so, it returns a whole string without modifying it.
+console.log("Substring from behind :", the_angels_2.substring(-6), "\n"); // Ohtani, Trout, Rendon
