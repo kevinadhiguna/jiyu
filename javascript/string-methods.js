@@ -49,3 +49,8 @@ console.log("Replace :", the_angels_2.replace("Rendon", "Walsh")); // Ohtani, Tr
 console.log("Replace case-sensitive :", the_angels_2.replace(/TROUT/i, "Upton")); // Ohtani, Upton, Rendon
 // To replace all matches, use /g (global) flag as by default, replace method only replaces the first match.
 console.log("Replace all matches :", the_angels_2.replace(/Ohtani/g, "Fletcher"), "\n"); // Fletcher, Trout, Rendon
+
+
+// ### toUpperCase ###
+let manager = "Joe Maddon";
+console.log("toUpperCase :", manager.toUpperCase(), "\n");
