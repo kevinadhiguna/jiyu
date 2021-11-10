@@ -54,3 +54,8 @@ console.log("Replace all matches :", the_angels_2.replace(/Ohtani/g, "Fletcher")
 // ### toUpperCase ###
 let manager = "Joe Maddon";
 console.log("toUpperCase :", manager.toUpperCase(), "\n");
+
+
+// ### toLowerCase ###
+let hitting_coach = "Bruce Hines";
+console.log("toLowerCase :", hitting_coach.toLowerCase(), "\n");
