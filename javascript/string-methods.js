@@ -59,3 +59,10 @@ console.log("toUpperCase :", manager.toUpperCase(), "\n");
 // ### toLowerCase ###
 let hitting_coach = "Bruce Hines";
 console.log("toLowerCase :", hitting_coach.toLowerCase(), "\n");
+
+
+// ### concat ###
+let firstname = "Raisel";
+let lastname = "Iglesias"
+console.log("Concat strings :", firstname.concat(" ", lastname), "\n");
+// This also works but not concat method : console.log("Concat strings :", firstname, lastname);
