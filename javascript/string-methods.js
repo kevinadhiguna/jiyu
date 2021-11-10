@@ -31,3 +31,13 @@ console.log("Substring 8-13 :", the_angels_2.substring(8, 13)); // Trout
 console.log("Substring from 8 :", the_angels_2.substring(8)); // Trout, Rendon
 // Substring does not accept a negative index. Thus, if one does so, it returns a whole string without modifying it.
 console.log("Substring from behind :", the_angels_2.substring(-6), "\n"); // Ohtani, Trout, Rendon
+
+
+// ### substr ###
+// Substr is similar to Slice but the second parameter indicates the length of the extracted part
+console.log("Substr 0-6 :", the_angels_2.substr(0, 6)); // Ohtani
+console.log("Substr 8-13 :", the_angels_2.substr(8, 13)); // Trout, Rendon
+// If the second param is unavailable, it will return an extracted string from the first index to the rest of string.
+console.log("Substr from 8 :", the_angels_2.substr(8)); // Trout, Rendon
+// If the first param is ngeative, it counts from the end of the string
+console.log("Substr from behind :", the_angels_2.substr(-6), "\n"); // Rendon
