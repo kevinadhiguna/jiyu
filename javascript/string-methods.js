@@ -41,3 +41,11 @@ console.log("Substr 8-13 :", the_angels_2.substr(8, 13)); // Trout, Rendon
 console.log("Substr from 8 :", the_angels_2.substr(8)); // Trout, Rendon
 // If the first param is ngeative, it counts from the end of the string
 console.log("Substr from behind :", the_angels_2.substr(-6), "\n"); // Rendon
+
+
+// ### replace ###
+console.log("Replace :", the_angels_2.replace("Rendon", "Walsh")); // Ohtani, Trout, Walsh
+// Replace method is case-sensitive. To prevent it, use an /i flag.
+console.log("Replace case-sensitive :", the_angels_2.replace(/TROUT/i, "Upton")); // Ohtani, Upton, Rendon
+// To replace all matches, use /g (global) flag as by default, replace method only replaces the first match.
+console.log("Replace all matches :", the_angels_2.replace(/Ohtani/g, "Fletcher"), "\n"); // Fletcher, Trout, Rendon
