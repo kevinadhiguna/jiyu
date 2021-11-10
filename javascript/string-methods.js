@@ -92,7 +92,7 @@ let catcher = "Stassi";
 console.log("charAt the first index char :", catcher.charAt(0), "\n"); // S
 
 // ### charCodeAt ###
-// returns UTF-16 of 'S'
+// returns UTF-16 of 'S' (for more: https://asecuritysite.com/coding/asc2)
 console.log("charCodeAt the first index char :", catcher.charCodeAt(0), "\n"); // 83
 
 // ### Property access ###
