@@ -72,4 +72,12 @@ console.log("Search 'Judge' in includes method from index 5 :", the_yankees.incl
 console.log("startsWith method (Stanton) :", the_yankees.startsWith("Stanton")); // false
 console.log("Is LeMahieu still a top-batter in the Yankees ?", the_yankees.startsWith("LeMahieu") ? "Sure" : "Nah.."); // Sure
 // able to receive a starting point for search by adding a second param
-console.log("Is Judge a top-batter ?", the_yankees.startsWith("Judge", 10) ? "Yeah" : "Noo"); // Yeah (Although Judge is not at the beginning, the searching starts from the 10th index. So, it returns true that results in "Yeah")
+console.log("Is Judge a top-batter ?", the_yankees.startsWith("Judge", 10) ? "Yeah" : "Noo", "\n"); // Yeah (Although Judge is not at the beginning, the searching starts from the 10th index. So, it returns true that results in "Yeah")
+
+// ### endsWith() ###
+// Warning (Browser Support) : endsWith() method is not supported in the Internet Explorer and is case-sensitive...
+// returns true if a string ends with a specified value
+console.log("endsWith method (LeMahieu) :", the_yankees.endsWith("LeMahieu")); // false
+console.log("Is Stanton the last hitter in the Yankees ?", the_yankees.endsWith("Stanton") ? "Yup !" : "Big no !"); // Yup !
+// Able to check only a certain length of a string by passing a second param
+console.log("Is Judge among the first 12 characters ?", the_yankees.endsWith("Judge", 12) ? "Yes" : "No"); // No (Even though "Judge" starts from the 10th index, it ends at the 14th index. Thus, only 15 or more value in the second param will return true for this case)
