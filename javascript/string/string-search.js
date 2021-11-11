@@ -45,7 +45,7 @@ console.log("Search LeMahieu in the Yankees :", the_yankees.search("LeMahieu"), 
  */
 
 // ### match() ###
-// returns an array
+// searches a string that matches a RegEx and then returns an array
 console.log("Match method in the Yankees :", the_yankees.match("LeMahieu"));
 // [
 //   'LeMahieu',
