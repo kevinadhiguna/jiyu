@@ -62,5 +62,7 @@ console.log("Does LeMahieu still play for the Yankees ?", the_yankees.match(/lem
 // ### includes() ###
 // Warning (Browser Support) : the includes method is not supported in the Internet Explorer...
 // returns true if a string contains a specific value
-console.log("Includes method (LeMahieu in the Yankees) :", the_yankees.includes("LeMahieu"));
-console.log("Is Stanton still at the bronx ?", the_yankees.includes("Stanton") ? "Absolutely" : "Not anymore..");
+console.log("Includes method (LeMahieu in the Yankees) :", the_yankees.includes("LeMahieu")); // true
+console.log("Is Stanton still at the bronx ?", the_yankees.includes("Stanton") ? "Absolutely" : "Not anymore.."); // Absolutely
+// able to determine a starting search position with the help of a second parameter
+console.log("Search 'Judge' in includes method from index 5 :", the_yankees.includes("Judge", 5), "\n"); // true (Judge is at 10)
