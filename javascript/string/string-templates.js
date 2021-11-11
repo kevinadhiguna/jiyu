@@ -12,3 +12,8 @@ Lindor,
 Bayez,
 DeGrom
 `; 
+
+// ### Template literals & Variable subtitution ###
+let manager_firstname = "Gabe";
+let manager_lastname = "Kepler";
+let manager_fullname = `SF Giants' manager is ${manager_firstname} ${manager_lastname}`;
