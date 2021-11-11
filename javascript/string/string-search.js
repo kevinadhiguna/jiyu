@@ -53,4 +53,6 @@ console.log("Match method in the Yankees :", the_yankees.match("LeMahieu"));
 //   input: 'LeMahieu, Judge, Stanton',
 //   groups: undefined
 // ]
-console.log("Does Stanton still play for the Yankees ?", the_yankees.match(/stanton/i)[0] ? "Yep" : "No..", "\n"); // Yep
+console.log("Does Stanton still play for the Yankees ?", the_yankees.match(/stanton/i)[0] ? "Yep" : "No.."); // Yep
+console.log("Does Judge still play for the Yankees ?", the_yankees.match(/Judge/g)[0] ? "Indeed" : "Nope"); // Indeed
+console.log("Does LeMahieu still play for the Yankees ?", the_yankees.match(/lemahieu/gi)[0] ? "Definitely" : "Nah", "\n"); // Definitely
