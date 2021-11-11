@@ -34,4 +34,12 @@ console.log("Index of (Carlos) Correa in the Yankees :", the_yankees.lastIndexOf
 
 // ### search() ###
 // search a value within a string and returns its index
-console.log("Search LeMahieu in the Yankees :", the_yankees.search("LeMahieu")); // 0
+console.log("Search LeMahieu in the Yankees :", the_yankees.search("LeMahieu"), "\n"); // 0
+
+/**
+ * Difference between search() and indexOf() :
+ * 
+ * - search() can not take a second parameter
+ * - indexOf() is not able to search specific value (can not involve Regular Expression)
+ * 
+ */
