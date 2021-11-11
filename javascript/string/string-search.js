@@ -53,6 +53,14 @@ console.log("Match method in the Yankees :", the_yankees.match("LeMahieu"));
 //   input: 'LeMahieu, Judge, Stanton',
 //   groups: undefined
 // ]
+
+// Actually for the cases below, the includes method is more suited...
 console.log("Does Stanton still play for the Yankees ?", the_yankees.match(/stanton/i)[0] ? "Yep" : "No.."); // Yep
 console.log("Does Judge still play for the Yankees ?", the_yankees.match(/Judge/g)[0] ? "Indeed" : "Nope"); // Indeed
 console.log("Does LeMahieu still play for the Yankees ?", the_yankees.match(/lemahieu/gi)[0] ? "Definitely" : "Nah", "\n"); // Definitely
+
+// ### includes() ###
+// Warning (Browser Support) : the includes method is not supported in the Internet Explorer...
+// returns true if a string contains a specific value
+console.log("Includes method (LeMahieu in the Yankees) :", the_yankees.includes("LeMahieu"));
+console.log("Is Stanton still at the bronx ?", the_yankees.includes("Stanton") ? "Absolutely" : "Not anymore..");
