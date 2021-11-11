@@ -43,3 +43,14 @@ console.log("Search LeMahieu in the Yankees :", the_yankees.search("LeMahieu"), 
  * - indexOf() is not able to search specific value (can not involve Regular Expression)
  * 
  */
+
+// ### match() ###
+// returns an array
+console.log("Match method in the Yankees :", the_yankees.match("LeMahieu"));
+// [
+//   'LeMahieu',
+//   index: 0,
+//   input: 'LeMahieu, Judge, Stanton',
+//   groups: undefined
+// ]
+console.log("Does Stanton still play for the Yankees ?", the_yankees.match(/stanton/i)[0] ? "Yep" : "No..", "\n"); // Yep
