@@ -25,5 +25,8 @@ console.log(manager_fullname, "\n");
 // ### Expression Subtitution ###
 let total_team_wage = 200000000;
 let luxury_tax = 0.35;
-let payroll = `Team Payroll : ${total_team_wage} + (${total_team_wage} * ${luxury_tax}) :`+ "$" +(total_team_wage + (total_team_wage * luxury_tax));
+let payroll =
+    `Team Payroll : ${total_team_wage} + (${total_team_wage} * ${luxury_tax}) :` +
+    "$" +
+    (total_team_wage + total_team_wage * luxury_tax);
 console.log(payroll);
