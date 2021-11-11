@@ -31,3 +31,7 @@ console.log("Last index of (Aaron) Judge with a second parameter :", the_yankees
 // NOTE : Both indexOf() and lastIndexOf() return -1 if the text is not found.
 console.log("Index of (Shohei) Ohtani in the Yankees :", the_yankees.indexOf("Ohtani")); // -1
 console.log("Index of (Carlos) Correa in the Yankees :", the_yankees.lastIndexOf("Correa"), "\n"); // -1
+
+// ### search() ###
+// search a value within a string and returns its index
+console.log("Search LeMahieu in the Yankees :", the_yankees.search("LeMahieu")); // 0
