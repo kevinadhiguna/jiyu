@@ -37,8 +37,9 @@ let tags = ["mlb", "baseball", "sports"];
 
 let html = `<h2>${header}</h2><ul>`;
 
-for (x in tags) {
+for (const x of tags) {
     html += `<li>${x}</li>`;
 }
 
 html += `</ul>`;
+console.log(html);
