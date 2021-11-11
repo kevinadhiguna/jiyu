@@ -29,7 +29,7 @@ let payroll =
     `Team Payroll : ${total_team_wage} + (${total_team_wage} * ${luxury_tax}) :` +
     "$" +
     (total_team_wage + total_team_wage * luxury_tax);
-console.log(payroll);
+console.log(payroll, "\n");
 
 // ### HTML templates ###
 let header = "Template Literals";
@@ -42,4 +42,4 @@ for (const x of tags) {
 }
 
 html += `</ul>`;
-console.log(html);
+console.log("HTML templates :", html);
