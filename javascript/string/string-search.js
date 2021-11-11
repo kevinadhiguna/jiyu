@@ -16,14 +16,17 @@ let the_yankees = yankees.slice();
 // returns the index of the first occurence of a specified text in a string
 let indexOfJudge = the_yankees.indexOf("Judge");
 console.log("Index of (Aaron) Judge :", indexOfJudge); // 10
+console.log("Is Stanton hitting after Judge ?", the_yankees.indexOf("Stanton") > indexOfJudge ? "Yeah !" : "Nope.."); // Yeah
 // receives a second parameter as the starting index of searching
-console.log("Is Stanton hitting after Judge ?", the_yankees.indexOf("Stanton") > indexOfJudge ? "Yeah !" : "Nope..", "\n"); // Yeah
+console.log("Index of (Aaron) Judge with a second parameter :", the_yankees.indexOf("Judge", 7), "\n"); // 10
 
 // ### lastIndexOf() ###
 let the_yankees_2 = yankees.slice().concat(", Judge");
 console.log("The yankees 2 :", the_yankees_2); // LeMahieu, Judge, Stanton, Judge
 // returns the index of the last occurence of a specified text
-console.log("Last index of (Aaron) Judge :", the_yankees_2.lastIndexOf("Judge"), "\n"); // 26
+console.log("Last index of (Aaron) Judge :", the_yankees_2.lastIndexOf("Judge")); // 26
+// Searches backward
+console.log("Last index of (Aaron) Judge with a second parameter :", the_yankees.lastIndexOf("Judge", 7), "\n"); // -1 (Not found because it searches from index 7 to 0 while "Judge" is at 10)
 
 // NOTE : Both indexOf() and lastIndexOf() return -1 if the text is not found.
 console.log("Index of (Shohei) Ohtani in the Yankees :", the_yankees.indexOf("Ohtani")); // -1
