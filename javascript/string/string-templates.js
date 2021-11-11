@@ -30,3 +30,15 @@ let payroll =
     "$" +
     (total_team_wage + total_team_wage * luxury_tax);
 console.log(payroll);
+
+// ### HTML templates ###
+let header = "Template Literals";
+let tags = ["mlb", "baseball", "sports"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (x in tags) {
+    html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
