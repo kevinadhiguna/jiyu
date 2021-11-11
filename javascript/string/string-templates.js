@@ -17,3 +17,8 @@ DeGrom
 let manager_firstname = "Gabe";
 let manager_lastname = "Kepler";
 let manager_fullname = `SF Giants' manager is ${manager_firstname} ${manager_lastname}`;
+
+// ### Expression Subtitution ###
+let total_team_wage = 200000000;
+let luxury_tax = 0.35;
+let payroll = `Team Payroll : ${price} + (${price} * ${luxury_tax})`;
