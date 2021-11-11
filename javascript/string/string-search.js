@@ -66,3 +66,10 @@ console.log("Includes method (LeMahieu in the Yankees) :", the_yankees.includes(
 console.log("Is Stanton still at the bronx ?", the_yankees.includes("Stanton") ? "Absolutely" : "Not anymore.."); // Absolutely
 // able to determine a starting search position with the help of a second parameter
 console.log("Search 'Judge' in includes method from index 5 :", the_yankees.includes("Judge", 5), "\n"); // true (Judge is at 10)
+
+// ### startsWith() ###
+// returns true if a string starts with a specified value
+console.log("startsWith method (Stanton) :", the_yankees.startsWith("Stanton")); // false
+console.log("Is LeMahieu still a top-batter in the Yankees ?", the_yankees.startsWith("LeMahieu") ? "Sure" : "Nah.."); // Sure
+// able to receive a starting point for search by adding a second param
+console.log("Is Judge a top-batter ?", the_yankees.startsWith("Judge", 10) ? "Yeah" : "Noo"); // Yeah (Although Judge is not at the beginning, the searching starts from the 10th index. So, it returns true that results in "Yeah")
