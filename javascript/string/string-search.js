@@ -12,6 +12,6 @@
 let yankees = "LeMahieu, Judge, Stanton";
 let the_yankees = yankees.slice();
 
-// ### indexOf ###
+// ### indexOf() ###
 // returns the index of the first occurence of a specified text in a string
 console.log("Index of (Aaron) Judge :", the_yankees.indexOf("Judge")); // 10
