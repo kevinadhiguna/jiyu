@@ -15,3 +15,9 @@ let the_yankees = yankees.slice();
 // ### indexOf() ###
 // returns the index of the first occurence of a specified text in a string
 console.log("Index of (Aaron) Judge :", the_yankees.indexOf("Judge")); // 10
+
+// ### lastIndexOf() ###
+let the_yankees_2 = yankees.slice().concat(", Judge");
+console.log("The yankees 2 :", the_yankees_2);
+// returns the index of the last occurence of a specified text
+console.log("Last index of (Aaron) Judge :", the_yankees_2.lastIndexOf("Judge")); // 26
