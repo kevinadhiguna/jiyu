@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "fastify": "^3.23.1",
-    "fastify-swagger": "^4.12.6"
+    "fastify-swagger": "^4.12.6",
+    "uuid": "^8.3.2"
   }
 }
