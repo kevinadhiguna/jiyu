@@ -1,7 +1,7 @@
 {
   "name": "fastify-crud-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "license": "MIT",
   "dependencies": {
     "fastify": "^3.23.1",
