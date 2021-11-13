@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^3.23.1"
+    "fastify": "^3.23.1",
+    "fastify-swagger": "^4.12.6"
   }
 }
