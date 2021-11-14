@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  image: gitpod/workspace-full:latest
+  container_name: gitpod_workspace_full
