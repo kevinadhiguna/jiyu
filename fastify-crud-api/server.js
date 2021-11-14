@@ -1,6 +1,9 @@
 const fastify = require("fastify")({ logger: true });
 require("dotenv").config();
 
+// Register a route
+fastify.register(require('./routes/items'));
+
 const port = process.env.PORT;
 
 // Start server
