@@ -10,6 +10,10 @@ fastify.register(require("fastify-swagger"), {
             title: "fastify crud api",
         },
     },
+    // == To avoid an error such as "Can't read from file https://mywebsite.com/docs/json" (for more: https://github.com/fastify/fastify-swagger/issues/191#issuecomment-802457146) ==
+    // uiConfig: {
+    //     validatorUrl: null,
+    // },
 });
 
 // Register a route
