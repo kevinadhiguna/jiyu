@@ -1,15 +1,15 @@
 let items = [
     {
         id: "1",
-        name: "Cricket",
+        name: "Nike Air Jordan 1s",
     },
     {
         id: "2",
-        name: "Football",
+        name: "Futurecraft 4D",
     },
     {
         id: "3",
-        name: "Baseball",
+        name: "Thunder Spectra",
     },
 ];
 
