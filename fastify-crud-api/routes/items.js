@@ -3,6 +3,7 @@ const {
     getItem,
     addItem,
     deleteItem,
+    updateItem,
 } = require("../controllers/items");
 
 // Item schema
@@ -37,22 +38,6 @@ const getItemOpts = {
     handler: getItem,
 };
 
-const deleteItemOpts = {
-    schema: {
-        response: {
-            200: {
-                type: "object",
-                properties: {
-                    message: {
-                        type: "string",
-                    },
-                },
-            },
-        },
-    },
-    handler: deleteItem,
-};
-
 const postItemOpts = {
     schema: {
         // Adding an item without a name would be invalid
@@ -70,6 +55,32 @@ const postItemOpts = {
     handler: addItem,
 };
 
+const deleteItemOpts = {
+    schema: {
+        response: {
+            200: {
+                type: "object",
+                properties: {
+                    message: {
+                        type: "string",
+                    },
+                },
+            },
+        },
+    },
+    handler: deleteItem,
+};
+
+
+const updateItemOpts = {
+    schema: {
+        response: {
+            200: Item,
+        },
+    },
+    handler: updateItem,
+};
+
 function itemRoutes(fastify, options, done) {
     // Get all items
     fastify.get("/items", getItemsOpts);
@@ -82,6 +93,9 @@ function itemRoutes(fastify, options, done) {
 
     // Delete an item
     fastify.delete("/items/:id", deleteItemOpts);
+
+    // Update an item
+    fastify.put("/items/:id", updateItemOpts);
 
     done();
 }
