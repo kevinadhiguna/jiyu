@@ -1,4 +1,4 @@
-const items = require("../items");
+const { getItems, getItem } = require("../controllers/items");
 
 // Item schema
 const Item = {
@@ -19,10 +19,7 @@ const getItemsOpts = {
             },
         },
     },
-    handler: function (req, reply) {
-        // Send a reply (response) if one hits '/items' (http://localhost:5000/items) route.
-        reply.send(items);
-    },
+    handler: getItems,
 };
 
 // Options for get a single item (more like a response format)
@@ -32,13 +29,7 @@ const getItemOpts = {
             200: Item,
         },
     },
-    handler: function (req, reply) {
-        const { id } = req.params;
-        const item = items.find((item) => {
-            item.id === id;
-        });
-        reply.send(item);
-    },
+    handler: getItem,
 };
 
 function itemRoutes(fastify, options, done) {
