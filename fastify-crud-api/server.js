@@ -5,10 +5,19 @@ const port = process.env.PORT;
 
 const items = require('./items');
 
-// Send a reply (response) if one hits '/items' (http://localhost:5000/items) route. 
+// Get all items
 fastify.get('/items', (req, reply) => {
-    // reply.send({ test: 'hello' });
+    // Send a reply (response) if one hits '/items' (http://localhost:5000/items) route. 
     reply.send(items);
+});
+
+// Get a specific item
+fastify.get("/item/:id", (req, reply) => {
+    const { id } = req.params;
+    const item = items.find(item => {
+        item.id === id;
+    });
+    reply.send(item);
 });
 
 // Start server
