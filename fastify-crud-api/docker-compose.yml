@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  fastify-crud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastify_crud_api_ctr
+    environments:
+    - PORT: ${PORT}
+    ports:
+    - 5000:5000
