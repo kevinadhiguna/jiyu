@@ -1,10 +1,10 @@
 {
-  "type": "module",
   "dependencies": {
     "dotenv": "^10.0.0",
     "figlet": "^1.5.2",
     "handy-redis": "^2.3.1",
     "node-fetch": "^3.0.0",
+    "node-fetch-commonjs": "^3.0.3",
     "redis": "^3.1.2",
     "uuid": "^8.3.2"
   }
