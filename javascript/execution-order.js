@@ -3,7 +3,9 @@
  */
 
 // Note : Make sure your package.json includes a line for “type”: “module”, Without this line node assumes you want to use Common JS modules rather than ESM.
-import fetch from "node-fetch"; // <- The fetch API is not implemented in NodeJS. Thus, one is required to use an external module called 'node-fetch' (Source: https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined).
+// import fetch from "node-fetch-commonjs"; // <- The fetch API is not implemented in NodeJS. Thus, one is required to use an external module called 'node-fetch' (Source: https://stackoverflow.com/questions/48433783/referenceerror-fetch-is-not-defined).
+
+const fetch = require("node-fetch-commonjs");
 
 console.log("aaa");
 

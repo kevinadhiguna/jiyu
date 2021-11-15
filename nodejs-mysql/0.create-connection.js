@@ -1,8 +1,12 @@
-import mysql from "mysql";
+// import mysql from "mysql";
+const mysql = require("mysql");
 
 // Import 'dotenv' in ES6 (reference: https://github.com/motdotla/dotenv/issues/89#issuecomment-139372079)
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
+
+// Import 'dotenv' in commonJS
+require("dotenv").config();
 
 // MySQL connection config
 const mysqlConnection = mysql.createConnection({
