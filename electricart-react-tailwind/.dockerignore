@@ -1,0 +1,16 @@
+node_modules
+
+.gitignore
+
+CHANGELOG.md
+README.md
+*.md
+
+docker-compose.yml
+docker-compose.yaml
+*.yml
+*.yaml
+
+.cache
+
+.git
