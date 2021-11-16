@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  electricart-react-tailwind:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: electricart-react-tailwind_ctr
+    ports:
+      - 3000:3000
