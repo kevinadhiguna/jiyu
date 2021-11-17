@@ -1,0 +1,50 @@
+# This is a basic workflow to help you get started with Actions
+
+name: rsync-ssh deployment
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Rsync Deployments Action
+      # You may pin to the exact commit or the version.
+      # uses: Burnett01/rsync-deployments@b943ffe476f772c90f0199d1a180f068f0206e87
+      - uses: Burnett01/rsync-deployments@5.1
+        with:
+          # The switches
+          switches: -avzh --exclude=".git" --exclude=".github"
+          # The remote shell argument
+          #rsh: # optional, default is 
+          # The local path
+          path: /
+          # The remote path
+          remote_path: ${{ secret.REMOTE_PATH }}
+          # The remote host
+          remote_host: ${{ secret.REMOTE_HOST }}
+          # The remote port
+          remote_port: ${{ secret.REMOTE_PORT }}
+          # The remote user
+          remote_user: ${{ secret.REMOTE_USER }}
+          # The remote key
+          remote_key: ${{ secret.REMOTE_KEY }}
+          # The remote key passphrase
+          remote_key_pass: ${{ secret.REMOTE_KEY_PASS }}
