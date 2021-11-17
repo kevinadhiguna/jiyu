@@ -105,7 +105,7 @@ YjdjNTllYTY5GQID
 
 Please do not share your private key so that the server won't be compromised easily.
 <br />
-Converting to `.ppk` format is not mandatory :
+Converting to `.ppk` format is **NOT mandatory** :
 
 <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-convert-to-ppk.png" />
 
@@ -202,4 +202,229 @@ jobs:
 
 You might see wavy red lines that say `This value cannot be null` but it's ok. We will fix them later.
 
+<br />
+
+13. It's time to edit the `main.yml` file. Let's edit the name first. Editing name is optional. It will the one that is red-lined in the image below.
+
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-6.png" />
+
+<br />
+
+Let's change it to `rsync-ssh deployment` (feel free to name it whatever you want) :
+```diff
+- name: CI
++ name: rsync-ssh deployment
+```
+
+<br />
+
+Assuming your current branch is `dev`, actually there's nothing much to be changed here :
+```yml
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+```
+
+However, if your current/target branch is `master`, you need to change `dev` to `master` like this :
+```yml
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+```
+
+<br />
+
+Next, we will edit what we copied from the template :
+```yml
+- name: Rsync Deployments Action
+      # You may pin to the exact commit or the version.
+      # uses: Burnett01/rsync-deployments@b943ffe476f772c90f0199d1a180f068f0206e87
+      - uses: Burnett01/rsync-deployments@5.1
+        with:
+          # The switches
+          switches: 
+          # The remote shell argument
+          rsh: # optional, default is 
+          # The local path
+          path: # optional, default is 
+          # The remote path
+          remote_path: 
+          # The remote host
+          remote_host: 
+          # The remote port
+          remote_port: # optional, default is 22
+          # The remote user
+          remote_user: 
+          # The remote key
+          remote_key: 
+          # The remote key passphrase
+          remote_key_pass: # optional, default is 
+```
+
+<br />
+<br />
+
+Let's start from `switches`. As [the documentation](https://github.com/Burnett01/rsync-deployments#inputs) says, `switches` indicates any initial/required rsync flags. I would pass some flags decribed below and exclude a couple of directories that are not required by my application to run. Feel free to change it. 
+```diff
+- switches:
++ switches: -avzh --exclude=".git" --exclude=".github"
+```
+
+Some rsync flags (source: [Linuxize](https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/)) :
+`-a` : This option tells rsync to syncs directories recursively. <br />
+`-z` : This option forces rsync to compresses the data as it is sent to the destination machine. Use this option only if the connection to the remote machine is slow.
+`-v` : Verbose output (logs).
+`-h` : Make the output/logs into human-readable format.
+`--exclude`: Exclude a file. For instance: `--exclude="README.md"` will exclude README.md from being synced.
+
+<br />
+<br />
+
+I do not want to execute any other commands, so I will comment out the `rsh` part as it is optional as well.
+```diff
+- rsh: # optional, default is 
++ #rsh:
+```
+
+<br />
+<br />
+
+Set up the local path. `/` indicates your branch's root directory. 
+```diff
+- path: # optional, default is
++ path: / 
+```
+
+<br />
+<br />
+
+Next thing is to set the remote path. Let's say your Cpanel username is `johndoe` and you want to sync into `public_html` directory. Then you are able to modify it like this :
+```diff
+- remote_path:
++ remote_path: /home/johndoe/public_html 
+```
+
+<br />
+<br />
+
+Remote host is either the IP address of your web server or hostname (e.g. : mywebsite.com). I have not tested using hostname so I 'll just drop an IP address of a  web server (162.134.12.14).
+```diff
+- remote_host:
++ remote_host: 162.134.12.14
+```
+
+<br />
+<br />
+
+Setting up `remote_port` can be quite tricky. You should get info whether your hosting provider runs SSH on port 22 (default port) or not. In this scenario, let's assume SSH is served on port 31678. Then change it like below :
+```diff
+- remote_port: # optional, default is 22
++ remote_port: 31678
+```
+
+<br />
+<br />
+
+`remote_user` is your username in Cpanel. Previously, we set `remote_path` to `home/johndoe/public_html`. So, `johndoe` is the username and `remote_user` as well.
+```diff
+- remote_user:
++ remote_user: johndoe
+```
+
+<br />
+<br />
+
+`remote_key` is filled by the private key generated in Cpanel. At this point, let's just fill it `${{ secret.REMOTE_KEY }}` as it is not secure to put it directly. Basically what we are doing is that we ask GitHub to fetch a repository secret named `REMOTE_KEY`. This will be explained later.
+```diff
+- remote_key:
++ remote_key: ${{ secret.REMOTE_KEY }}
+```
+
+<br />
+<br />
+
+`remote_key_pass` is the passphrase we created when generating the public key in Cpanel. This is **noncompulsory**. Again, let's put `${{ secret.REMOTE_KEY_PASS }}` for now as it is not secure to put it directly. GitHub will fetch a repository secret named `REMOTE_KEY_PASS` when GitHub workflows run.
+```diff
+- remote_key_pass: # optional, default is
++ remote_key_pass: ${{ secret.REMOTE_KEY_PASS }}
+```
+
+<br />
+<br />
+
+Eventually, the `main.yml` looks like this :
+
+```yml
+# This is a basic workflow to help you get started with Actions
+
+name: rsync-ssh deployment
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Rsync Deployments Action
+      # You may pin to the exact commit or the version.
+      # uses: Burnett01/rsync-deployments@b943ffe476f772c90f0199d1a180f068f0206e87
+      - uses: Burnett01/rsync-deployments@5.1
+        with:
+          # The switches
+          switches: -avzh --exclude=".git" --exclude=".github"
+          # The remote shell argument
+          #rsh: # optional, default is 
+          # The local path
+          path: /
+          # The remote path
+          remote_path: /home/johndoe/public_html
+          # The remote host
+          remote_host: 162.134.12.14
+          # The remote port
+          remote_port: 31678
+          # The remote user
+          remote_user: johndoe
+          # The remote key
+          remote_key: ${{ secret.REMOTE_KEY }}
+          # The remote key passphrase
+          remote_key_pass: ${{ secret.REMOTE_KEY_PASS }}
+```
+
+<br />
+
+<!--
+In the image above, I propose a new branch named **dev-workflows-patch** but it is not a must. You can directly push to your current branch as well although I would suggest to push into a new branch to test GitHub workflows.
+
 To be able to access webserver, one needs Secure Shell which is well-known as SSH (More: [What is SSH ? - by Search Target](https://searchsecurity.techtarget.com/definition/Secure-Shell)).
+-->
