@@ -1,3 +1,9 @@
+# SSH Rsync from GitHub to Cpanel
+
+Do you put app files in Cpanel? If so, how do you track changes ? If you use GitHub, then this writing might be right for you...
+
+<br />
+
 ## 🤔 Problems..
 
 Sometimes, **Cpanel ignores GitHub integration** if a directory such as `public_html` is already occupied. 
