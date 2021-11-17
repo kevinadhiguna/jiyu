@@ -10,7 +10,13 @@ Sometimes, **Cpanel ignores GitHub integration** if a directory such as `public_
 
 ## 💡 Proposed solution
 
-I believe one of the quickest and safest solution to this is **to utilize SSH and Rsync through a workflow** such as GitHub workflows in GitHub and GitLab CI in GitLab.
+I believe one of the quickest and safest solution to this is **to utilize SSH and Rsync through a workflow** such as GitHub workflows in GitHub and GitLab CI in GitLab. 
+
+<br />
+
+To be able to access webserver, one needs Secure Shell which is well-known as SSH (More: [What is SSH ? - by Search Target](https://searchsecurity.techtarget.com/definition/Secure-Shell)).
+<br />
+In addition, Rsync is a tool that synchronizes a remote and local file, according to [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories).
 
 <br />
 
@@ -423,8 +429,89 @@ jobs:
 
 <br />
 
+14. Before committing the file, open **Settings** in a new tab to configure repository secret. Click **Secret** in the left menu and click the **New repository secret** button.
+
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-8.png" />
+
+<br />
+
+15. Let's add `REMOTE_KEY` as an example.
+
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-9.png" />
+
+<br />
+
+If you did so, let's put other variables' values into repository secret as well. At the end, you would have secrets like this :
+
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-10.png" />
+
+<br />
+
+15. Back to the previous tab where you edit `main.yml` to edit it again like this (just to fetch some variables' values from repository secret) :
+
+```yml
+# This is a basic workflow to help you get started with Actions
+
+name: rsync-ssh deployment
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Rsync Deployments Action
+      # You may pin to the exact commit or the version.
+      # uses: Burnett01/rsync-deployments@b943ffe476f772c90f0199d1a180f068f0206e87
+      - uses: Burnett01/rsync-deployments@5.1
+        with:
+          # The switches
+          switches: -avzh --exclude=".git" --exclude=".github"
+          # The remote shell argument
+          #rsh: # optional, default is 
+          # The local path
+          path: /
+          # The remote path
+          remote_path: ${{ secret.REMOTE_PATH }}
+          # The remote host
+          remote_host: ${{ secret.REMOTE_HOST }}
+          # The remote port
+          remote_port: ${{ secret.REMOTE_PORT }}
+          # The remote user
+          remote_user: ${{ secret.REMOTE_USER }}
+          # The remote key
+          remote_key: ${{ secret.REMOTE_KEY }}
+          # The remote key passphrase
+          remote_key_pass: ${{ secret.REMOTE_KEY_PASS }}
+```
+
+<br />
+
+16. Click the **Start commit** button so it will be pushed to your branch and automatically run GitHub workflows.
+
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-7.png" />
+
+<br />
+
+Thank you for reading, have a nice day !
+
 <!--
 In the image above, I propose a new branch named **dev-workflows-patch** but it is not a must. You can directly push to your current branch as well although I would suggest to push into a new branch to test GitHub workflows.
-
-To be able to access webserver, one needs Secure Shell which is well-known as SSH (More: [What is SSH ? - by Search Target](https://searchsecurity.techtarget.com/definition/Secure-Shell)).
 -->
