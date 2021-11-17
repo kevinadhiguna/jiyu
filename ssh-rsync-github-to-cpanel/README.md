@@ -5,3 +5,7 @@ Sometimes, Cpanel ignores GitHub integration if a directory such as `public_html
 ## Proposed solution
 
 I believe one of the quickest and safest solution to this is to utilize SSH and Rsync through a workflow such as GitHub workflows in GitHub and GitLab CI in GitLab.
+
+## Steps :
+
+To be able to access webserver, one needs Secure Shell which is well-known as SSH (More: [What is SSH ? - by Search Target](https://searchsecurity.techtarget.com/definition/Secure-Shell)).
