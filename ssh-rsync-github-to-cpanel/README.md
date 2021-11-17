@@ -447,7 +447,7 @@ If you did so, let's put other variables' values into repository secret as well.
 
 <br />
 
-15. Back to the previous tab where you edit `main.yml` to edit it again like this (just to fetch some variables' values from repository secret) :
+16. Back to the previous tab where you edit `main.yml` to edit it again like this (just to fetch some variables' values from repository secret) :
 
 ```yml
 # This is a basic workflow to help you get started with Actions
@@ -504,7 +504,7 @@ jobs:
 
 <br />
 
-16. Click the **Start commit** button so it will be pushed to your branch and automatically run GitHub workflows.
+17. Click the **Start commit** button so it will be pushed to your branch and automatically run GitHub workflows.
 
 <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-7.png" />
 
