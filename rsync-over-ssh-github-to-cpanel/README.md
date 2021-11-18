@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-  <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/rsync-over-ssh-logo.png" />
+  <img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/rsync-over-ssh-logo.png" />
   <h3 align="center">Rsync over SSH from GitHub to Cpanel</h3>
 
   <p align="center">
@@ -35,41 +35,41 @@ In addition, Rsync is a tool that synchronizes a remote and local file, accordin
 
 1. Log in to access Cpanel :
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel.png" />
 
 <br />
 
 2. Search for SSH :
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh.png" />
 
 <br />
 
 3. If you don't have a key, you can generate it by clicking the "Generate Key" button. Otherwise you are allowed to import your keys.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-generate-key-button.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh-generate-key-button.png" />
 
 <br />
 
 4. Fill in the columns and generate your public key. Also, ensure that you have secured your SSH key passphrase.
 
-<img src ="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-generate-key-page.png" />
+<img src ="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-generate-key-page.png" />
 
 <br />
 
 5. To be able to use it, change the authorization status from **unauthorized** to **authorized**. You can do so by clicking the **manage** button in the public key row.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-authorize-key-1.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh-authorize-key-1.png" />
 
 6. Make sure you have authorized it.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-authorize-key-2.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh-authorize-key-2.png" />
 
 <br />
 
 7. Go back and check the authorization status. Make sure it is **authorized**.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-authorize-key-3.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh-authorize-key-3.png" />
 
 <br />
 
@@ -124,7 +124,7 @@ Please do not share your private key so that the server won't be compromised eas
 <br />
 Converting to `.ppk` format is **NOT mandatory** :
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/cpanel-ssh-convert-to-ppk.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/cpanel-ssh-convert-to-ppk.png" />
 
 <br />
 
@@ -134,31 +134,31 @@ Converting to `.ppk` format is **NOT mandatory** :
 
 10. Go to your repository and click the **Action** tab. This time, we will set up our own workflow so just click the text like in the image below.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions.png" />
 
 <br />
 
 After clicked, you will see something like this. GitHub workflow is powered by `.yml` file.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-1.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-1.png" />
 
 <br />
 
 11. On the right side of your screen, you see a marketplace. Some people provide templates for workflows. Search **rsync** as our GitHub workflows is powered by Rsync and SSH.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-2.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-2.png" />
 
 <br />
 
 Let's shoose [Rsync Deployments Action](https://github.com/Burnett01/rsync-deployments) by [Burnett01](https://github.com/Burnett01).
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-3.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-3.png" />
 
 <br />
 
 12. Copy the template by clicking the copy icon.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-4.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-4.png" />
 
 <br />
 
@@ -223,7 +223,7 @@ You might see wavy red lines that say `This value cannot be null` but it's ok. W
 
 13. It's time to edit the `main.yml` file. Let's edit the name first. Editing name is optional. It will the one that is red-lined in the image below.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-6.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-6.png" />
 
 <br />
 
@@ -442,19 +442,19 @@ jobs:
 
 14. Before committing the file, open **Settings** in a new tab to configure repository secret. Click **Secret** in the left menu and click the **New repository secret** button.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-8.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-8.png" />
 
 <br />
 
 15. Let's add `REMOTE_KEY` as an example.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-9.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-9.png" />
 
 <br />
 
 If you did so, let's put other variables' values into repository secret as well. At the end, you would have secrets like this :
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-10.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-10.png" />
 
 <br />
 
@@ -517,11 +517,11 @@ jobs:
 
 17. Click the **Start commit** button so it will be pushed to your branch and automatically run GitHub workflows.
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-7.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-7.png" />
 
 <br />
 
-<img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/github-set-github-actions-11.png" />
+<img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-11.png" />
 
 <br />
 
