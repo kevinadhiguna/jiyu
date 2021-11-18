@@ -1,6 +1,6 @@
 <br />
 <div align="center">
-  <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/ssh-over-rsync.png" />
+  <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/rsync-over-ssh-logo.png" />
   <h3 align="center">Rsync over SSH from GitHub to Cpanel</h3>
 
   <p align="center">
