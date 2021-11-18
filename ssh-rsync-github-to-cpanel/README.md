@@ -1,7 +1,12 @@
-# SSH Rsync from GitHub to Cpanel
+<br />
+<div align="center">
+  <img src="https://github.com/kevinadhiguna/jiyu/blob/master/ssh-rsync-github-to-cpanel/assets/ssh-over-rsync.png" />
+  <h3 align="center">Rsync over SSH from GitHub to Cpanel</h3>
 
-Do you put app files in Cpanel? If so, how do you track changes ? If you use GitHub, then this writing might be right for you...
-
+  <p align="center">
+    Do you put app files in Cpanel? If so, how do you track changes ? If you use GitHub, then this writing might be right for you... 🚀 
+  </p>
+</div>
 <br />
 
 ## 🤔 Problems..
