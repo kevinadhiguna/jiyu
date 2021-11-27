@@ -1,0 +1,26 @@
+name: github-workflow-slack-notification
+
+on:
+  push:
+    branches: [ slack-notify ]
+
+
+jobs: 
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+  # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      - name: Notify to Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://github.com/rtCamp.png?size=48 # Replace with your logo
+          # SLACK_MESSAGE: 'Post Content :rocket:'
+          SLACK_TITLE: Deployment Message
+          SLACK_USERNAME: DevOps Team
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
