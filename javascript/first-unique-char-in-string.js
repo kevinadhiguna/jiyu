@@ -1,4 +1,5 @@
-// THIS PROGRAM IS NOT COMPLETED YET !
+// Answer of this question is in : first-non-repeating-char.js
+
 /*
 First Unique Character in a String
 
