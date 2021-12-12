@@ -1,5 +1,9 @@
 # funworks
 
+powered by VueJS version 3 and TypeScript.
+
+<br />
+
 ## Project setup
 ```
 yarn install
