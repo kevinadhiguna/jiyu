@@ -4,6 +4,7 @@ services:
   php-web-apache:
     build: php-web
     container_name: php-web-apache_ctr
+    # Put 'php-web' directory to apache2's root directory which is '/var/www/html' and mount it
     volumes:
       - ./php-web:/var/www/html
     ports:
