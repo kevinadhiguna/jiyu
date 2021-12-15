@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  php-web-apache:
+    build: php-web
+    container_name: php-web-apache_ctr
+    volumes:
+      - ./php-web:/var/www/html
+    ports:
+      - 8007:80
