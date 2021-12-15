@@ -1,0 +1,39 @@
+# ------------------------------------------------
+# Remove exact version of docker-compose
+# ------------------------------------------------
+#
+# A Compose implementation SHOULD NOT use this version to select an exact schema to validate the Compose file, but prefer 
+#  the most recent schema at the time it has been designed.
+# (for more: https://github.com/compose-spec/compose-spec/blob/master/spec.md#version-top-level-element)
+# 
+
+# Uncomment the line below to execute docker-compose
+# version: "3.8"
+
+services:
+  # Database
+  mysql-db:
+    image: mysql:5.6.43
+    container_name: mysql_ctr
+    restart: always
+    ports:
+      - 6603:3306
+    # volumes:
+    #   # Initialize database ('mydb.sql' in this case) on container start
+    #   - ./mydb.sql:/docker-entrypoint-initdb.d/mydb.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
+
+  # PHPmyAdmin
+  phpmyadmin:
+    depends_on:
+      - mysql-db
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_ctr
+    restart: always
+    # The port configuration below allows one to access PHPmyAdmin on port 8003, like http://localhost:8003
+    ports:
+      - 8003:80
+    environment:
+      # Assign the database service name ('mysql-db' in this case)
+      PMA_HOST: mysql-db
