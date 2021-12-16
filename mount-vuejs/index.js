@@ -8,8 +8,8 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        changePlayer() {
-            this.playerName = "Mike Trout";
+        changePlayer(playerName) {
+            this.playerName = playerName;
         }
     }
 });
