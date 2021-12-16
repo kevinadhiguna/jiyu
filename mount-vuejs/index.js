@@ -13,6 +13,9 @@ const app = Vue.createApp({
         changePlayer(playerName) {
             this.playerName = playerName;
         },
+        toggleShowManager() {
+            this.hasManager = !this.hasManager;
+        }
     },
 });
 
