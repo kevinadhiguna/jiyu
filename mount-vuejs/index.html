@@ -28,8 +28,8 @@
         <!-- Conditional Rendering -->
 
         <!-- Shown if 'true', otherwise, not shown -->
-        <div v-if="true">
-            <p>Hello from conditional rendering :)</p>
+        <div v-if="hasManager">
+            <p>The Angels manager : {{ managerName }}</p>
         </div>
     </div>
 </body>
