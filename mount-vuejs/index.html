@@ -39,6 +39,14 @@
 
         <!-- Similar to 'v-if', 'v-show' only displays its content when the condition meets -->
         <div v-show="hasManager">Currently a manager is in charge of the team.</div>
+
+        <!--
+            [ Valuable notes on 'v-if' and 'v-show' ]
+            
+            Assuming the condition does not meet :
+            - 'v-if' removes itself from DOM to hide its content (expensive on performance) -> Therefore, 'v-if' is used on something that does not change often.
+            - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
+        -->
     </div>
 </body>
 
