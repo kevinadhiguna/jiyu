@@ -33,7 +33,8 @@
         </div>
 
         <button @click="toggleShowManager">
-            <span>Hide manager</span>
+            <span v-if="hasManager">Hide manager</span>
+            <span v-if="!hasManager">Show manager</span>
         </button>
     </div>
 </body>
