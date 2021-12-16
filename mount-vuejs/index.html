@@ -36,6 +36,9 @@
             <span v-if="hasManager">Hide manager</span>
             <span v-else>Show manager</span>
         </button>
+
+        <!-- Similar to 'v-if', 'v-show' only displays its content when the condition meets -->
+        <div v-show="hasManager">Currently a manager is in charge of the team.</div>
     </div>
 </body>
 
