@@ -13,13 +13,12 @@
     
     <div id="mount-vuejs">
         <p>{{ teamName }} - {{ playerName }} - {{ playerPosition }} - {{ homeruns }}</p>
+        <button v-on:click="homeruns++">Hit a dinger</button>
+        <br />
+        <button v-on:click="homeruns--">Disallow a homerun...</button>
+        <br />
+        <div @click="changePlayer("Mike Trout")">Change player</div>
     </div>
-
-    <button v-on:click="homeruns++">Hit a dinger</button>
-    <br />
-    <button v-on:click="homeruns--">Disallow a homerun...</button>
-    <br />
-    <div @click="changePlayer("Mike Trout")">Change player</div>
 </body>
 
 <script src="index.js"></script>
