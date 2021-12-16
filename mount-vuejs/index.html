@@ -13,11 +13,24 @@
     
     <div id="mount-vuejs">
         <p>{{ teamName }} - {{ playerName }} - {{ playerPosition }} - {{ homeruns }}</p>
+        
         <button v-on:click="homeruns++">Hit a dinger</button>
         <br />
         <button v-on:click="homeruns--">Disallow a homerun...</button>
+        
         <br />
+        
+        <!-- OnClick event -->
         <div @click="changePlayer("Mike Trout")">Change player</div>
+        
+        <br />
+        
+        <!-- Conditional Rendering -->
+
+        <!-- Shown if 'true', otherwise, not shown -->
+        <div v-if="true">
+            <p>Hello from conditional rendering :)</p>
+        </div>
     </div>
 </body>
 
