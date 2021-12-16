@@ -6,13 +6,14 @@ const app = Vue.createApp({
             playerPosition: "DH",
             homeruns: 46,
             hasManager: true,
-        }
+            managerName: "Joe Maddon",
+        };
     },
     methods: {
         changePlayer(playerName) {
             this.playerName = playerName;
-        }
-    }
+        },
+    },
 });
 
 app.mount("#mount-vuejs");
