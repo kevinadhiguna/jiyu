@@ -5,6 +5,7 @@ const app = Vue.createApp({
             playerName: "Shohei Ohtani",
             playerPosition: "DH",
             homeruns: 46,
+            hasManager: true,
         }
     },
     methods: {
