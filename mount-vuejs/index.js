@@ -6,6 +6,11 @@ const app = Vue.createApp({
             playerPosition: "DH",
             homeruns: 46,
         }
+    },
+    methods: {
+        changePlayer() {
+            this.playerName = "Mike Trout";
+        }
     }
 });
 
