@@ -31,6 +31,10 @@
         <div v-if="hasManager">
             <p>The Angels manager : {{ managerName }}</p>
         </div>
+
+        <button @click="toggleShowManager">
+            <span>Hide manager</span>
+        </button>
     </div>
 </body>
 
