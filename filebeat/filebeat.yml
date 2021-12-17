@@ -1,0 +1,36 @@
+filebeat.inputs:
+- type: log
+  paths:
+    # Access access log in apache2
+    "/var/log/apache2/access.log"
+  fields:
+          app_id: access-log
+
+- type: log
+  paths:
+    # Access error log in apache2
+    "/var/log/apache2/error.log"
+  fields:
+          app_id: error-log
+
+- type: log
+  paths:
+    # Access other_vhosts_access log in apache2
+    "/var/log/apache2/other_vhosts_access.log"
+  fields:
+          app_id: other_vhosts_access-log
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+multiline.pattern: '^\['
+multiline.negate: true
+multiline.match: after
+
+output.elasticsearch:
+  hosts: ["localhost:9200"]
+  username: "elastic"
+  password: "12345678"
+setup.kibana:
+  host: "localhost:5601"
