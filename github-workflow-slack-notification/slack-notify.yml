@@ -17,10 +17,14 @@ jobs:
       - name: Notify to Slack
         uses: rtCamp/action-slack-notify@v2
         env:
+          # Slack channel which your bot will send deployment result message.
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          # SLACK_ICON is a profile picture of your Slack deployment bot.
           SLACK_ICON: https://github.com/rtCamp.png?size=48 # Replace with your logo
           # SLACK_MESSAGE: 'Post Content :rocket:'
           SLACK_TITLE: Deployment Message
+          # Feel free to fill the 'SLACK_USERNAME'. It can be your team name, or anything. This will be reflected as bot's name.
           SLACK_USERNAME: DevOps Team
+          # Obtain 'SLACK_WEBHOOK' from your Slack account. Copy it, then store to GitHub repository secret so that GitHub Action can access it.
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
