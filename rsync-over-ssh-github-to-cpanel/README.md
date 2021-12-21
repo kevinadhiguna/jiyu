@@ -302,10 +302,15 @@ Let's start from `switches`. As [the documentation](https://github.com/Burnett01
 ```
 
 Some rsync flags (source: [Linuxize](https://linuxize.com/post/how-to-use-rsync-for-local-and-remote-data-transfer-and-synchronization/)) :
-`-a` : This option tells rsync to syncs directories recursively. <br />
+<br />
+`-a` : This option tells rsync to syncs directories recursively.
+<br />
 `-z` : This option forces rsync to compresses the data as it is sent to the destination machine. Use this option only if the connection to the remote machine is slow.
+<br />
 `-v` : Verbose output (logs).
+<br />
 `-h` : Make the output/logs into human-readable format.
+<br />
 `--exclude`: Exclude a file. For instance: `--exclude="README.md"` will exclude README.md from being synced.
 
 <br />
