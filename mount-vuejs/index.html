@@ -73,6 +73,20 @@
         
         <br />
         
+        <!-- data/ttribute binding -->
+        <a :href="url">Los Angeles Angels</a>
+        
+        <!--
+            Notes regarding data/attribute binding :
+           
+            - "v-bind" is used for data or attribute binding.
+            - Neither of "<a href="url">Los Angeles Angels</a>" AND "<a href="{{ url }}">Los Angeles Angels</a>" work.
+            - "<a :href="url">Los Angeles Angels</a>" works just like "<a v-bind:href="url">Los Angeles Angels</a>".
+            - ":" (colon) stands for "v-bind:" as "v-bind" is frequently used. Just like "@click" for "v-on:click" in event handler.
+        -->
+        
+        <br />
+        
         <!-- mouse events -->
         <div class="box" @mouseover="handleEvent($event, 5)">mousover (enter)</div>
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
