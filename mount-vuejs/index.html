@@ -65,6 +65,8 @@
         <div>
             <ul>
                 <li v-for="player in rosters">
+                    <!-- utilizing data/attribute binding to display image -->
+                    <img :src="player.img" :alt="player.position" />
                     <h3>{{ player.name }}</h3>
                     <p>{{ player.position }}</p>
                 </li>
