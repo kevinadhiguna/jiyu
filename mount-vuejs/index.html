@@ -62,9 +62,9 @@
         <br />
         
         <!-- mouse events -->
-        <div class="box">mousover (enter)</div>
-        <div class="box">mouseleave</div>
-        <div class="box">double click</div>
+        <div class="box" @mouseover="handleEvent">mousover (enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dbclick="handleEvent">double click</div>
         <div class="box"></div>
     </div>
 </body>
