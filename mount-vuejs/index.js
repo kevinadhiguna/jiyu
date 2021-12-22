@@ -25,6 +25,10 @@ const app = Vue.createApp({
             if (data) {
                 console.log("Data :", data);
             }
+        },
+        handleMouseMove (e) {
+            this.x = e.offsetX;
+            this.y = e.offsetY;
         }
     },
 });
