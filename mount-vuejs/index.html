@@ -92,6 +92,12 @@
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dbclick="handleEvent">double click</div>
         <div class="box" @mouseposition="handleMouseMove">mouse position in box : {{ x }} - {{ y }}</div>
+        
+        <!--
+            Notes regarding event handler :
+            - "@click" is shorthand for "v-on:click". This goes same for "@dbclick" to "v-on:dbclick", and others.
+        -->
+        
     </div>
 </body>
 
