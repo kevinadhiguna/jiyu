@@ -61,6 +61,18 @@
         
         <br />
         
+        <!-- For loop (using 'v-for') -->
+        <div>
+            <ul>
+                <li v-for="player in rosters">
+                    <h3>{{ player.name }}</h3>
+                    <p>{{ player.position }}</p>
+                </li>
+            </ul>
+        </div>
+        
+        <br />
+        
         <!-- mouse events -->
         <div class="box" @mouseover="handleEvent($event, 5)">mousover (enter)</div>
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
