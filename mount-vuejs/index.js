@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             teamName: "Los Angeles Angels",
+            websiteUrl: "https://www.angels.com",
             playerName: "Shohei Ohtani",
             playerPosition: "DH",
             homeruns: 46,
