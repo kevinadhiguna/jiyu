@@ -7,6 +7,17 @@
     <!-- Load VueJS from unpkg -->
     <script src="https://unpkg.com/vue@3.2.26" />
     <title>VueJS - mock</title>
+    
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to VueJS !</h1>
@@ -47,6 +58,14 @@
             - 'v-if' removes itself from DOM to hide its content (expensive on performance) -> Therefore, 'v-if' is used on something that does not change often.
             - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
         -->
+        
+        <br />
+        
+        <!-- mouse events -->
+        <div class="box">mousover (enter)</div>
+        <div class="box">mouseleave</div>
+        <div class="box">double click</div>
+        <div class="box"></div>
     </div>
 </body>
 
