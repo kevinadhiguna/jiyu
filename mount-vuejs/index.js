@@ -7,6 +7,11 @@ const app = Vue.createApp({
             homeruns: 46,
             hasManager: true,
             managerName: "Joe Maddon",
+            rosters: [
+                { name: 'Mike Trout', position: 'CF' },
+                { name: 'Anthony Rendon', position: '3B' },
+                { name: 'Noah Syndergaard', position: 'SP' },
+            ]
             x: 0,
             y: 0
         };
