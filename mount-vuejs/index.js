@@ -7,6 +7,8 @@ const app = Vue.createApp({
             homeruns: 46,
             hasManager: true,
             managerName: "Joe Maddon",
+            x: 0,
+            y: 0
         };
     },
     methods: {
