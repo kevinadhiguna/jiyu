@@ -16,9 +16,13 @@ const app = Vue.createApp({
         toggleShowManager() {
             this.hasManager = !this.hasManager;
         },
-        handleEvent(e) {
+        handleEvent(e, data) {
             console.log("Event :", e);
             console.log("Event Type :", e.type);
+            
+            if (data) {
+                console.log("Data :", data);
+            }
         }
     },
 });
