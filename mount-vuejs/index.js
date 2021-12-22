@@ -18,6 +18,7 @@ const app = Vue.createApp({
         },
         handleEvent(e) {
             console.log("Event :", e);
+            console.log("Event Type :", e.type);
         }
     },
 });
