@@ -24,7 +24,7 @@ aws_rds_connection = pymysql.connect(
 def awsLambdaHandler(event, context):
     cursor = aws_rds_connection.cursor()
     
-    # Fetch all wilayah 
+    # Fetch area
     print("Total Area :", cursor.execute('SELECT * FROM t_area'))
 
     # This returns arrays
