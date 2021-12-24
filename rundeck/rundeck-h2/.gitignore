@@ -1,0 +1,6 @@
+### Database ###
+dbdata
+*.sql
+
+### Environment Variables ###
+.env
