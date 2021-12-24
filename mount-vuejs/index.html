@@ -7,6 +7,17 @@
     <!-- Load VueJS from unpkg -->
     <script src="https://unpkg.com/vue@3.2.26" />
     <title>VueJS - mock</title>
+    
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to VueJS !</h1>
@@ -47,6 +58,48 @@
             - 'v-if' removes itself from DOM to hide its content (expensive on performance) -> Therefore, 'v-if' is used on something that does not change often.
             - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
         -->
+        
+        <br />
+        
+        <!-- For loop (using 'v-for') -->
+        <div>
+            <ul>
+                <li v-for="player in rosters" :class="{ fav: hasBeenMVP  }">
+                    <!-- utilizing data/attribute binding to display image -->
+                    <img :src="player.img" :alt="player.position" />
+                    <h3>{{ player.name }}</h3>
+                    <p>{{ player.position }}</p>
+                </li>
+            </ul>
+        </div>
+        
+        <br />
+        
+        <!-- data/ttribute binding -->
+        <a :href="url">Los Angeles Angels</a>
+        
+        <!--
+            Notes regarding data/attribute binding :
+           
+            - "v-bind" is used for data or attribute binding.
+            - Neither of "<a href="url">Los Angeles Angels</a>" AND "<a href="{{ url }}">Los Angeles Angels</a>" work.
+            - "<a :href="url">Los Angeles Angels</a>" works just like "<a v-bind:href="url">Los Angeles Angels</a>".
+            - ":" (colon) stands for "v-bind:" as "v-bind" is frequently used. Just like "@click" for "v-on:click" in event handler.
+        -->
+        
+        <br />
+        
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleEvent($event, 5)">mousover (enter)</div>
+        <div class="box" @mouseleave="handleEvent">mouseleave</div>
+        <div class="box" @dbclick="handleEvent">double click</div>
+        <div class="box" @mouseposition="handleMouseMove">mouse position in box : {{ x }} - {{ y }}</div>
+        
+        <!--
+            Notes regarding event handler :
+            - "@click" is shorthand for "v-on:click". This goes same for "@dbclick" to "v-on:dbclick", and others.
+        -->
+        
     </div>
 </body>
 
