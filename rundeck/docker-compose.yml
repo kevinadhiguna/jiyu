@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+    rundeck:
+        image: rundeck/rundeck:SNAPSHOT
+        # links:
+        #   - mysql
+        depends_on:
+          - mysql
+        environment:
+            RUNDECK_DATABASE_DRIVER: org.mariadb.jdbc.Driver
+            RUNDECK_DATABASE_USERNAME: rundeck
+            RUNDECK_DATABASE_PASSWORD: rundeck
+            RUNDECK_DATABASE_URL: jdbc:mysql://mysql/rundeck?autoReconnect=true&useSSL=false
+        # volumes:
+        #   - ${RUNDECK_LICENSE_FILE:-/dev/null}:/home/rundeck/etc/rundeckpro-license.key
+        ports:
+          - 4440:4440
+    mysql:
+        image: mysql:5.7
+        # expose:
+        #   - 3306
+        ports:
+          - 3306:3306
+        environment:
+          - MYSQL_ROOT_PASSWORD=root
+          - MYSQL_DATABASE=rundeck
+          - MYSQL_USER=rundeck
+          - MYSQL_PASSWORD=rundeck
+        volumes:
+          - dbdata:/var/lib/mysql
+
+volumes:
+    dbdata:
