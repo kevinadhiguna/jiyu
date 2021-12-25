@@ -7,8 +7,8 @@ services:
         # - Not using 'RUNDECK_DATABASE_DRIVER' & 'RUNDECK_DATABASE_URL' (for more : https://docs.rundeck.com/docs/administration/configuration/docker.html#database)
         environment:
             # RUNDECK_DATABASE_DRIVER: org.mariadb.jdbc.Driver
-            RUNDECK_DATABASE_USERNAME: ${RUNDECK_DATABASE_USERNAME}
-            RUNDECK_DATABASE_PASSWORD: ${RUNDECK_DATABASE_PASSWORD}
+            RUNDECK_DATABASE_USERNAME: ${RUNDECK_DATABASE_USERNAME:-rundeck}
+            RUNDECK_DATABASE_PASSWORD: ${RUNDECK_DATABASE_PASSWORD:-rundeck}
             # Add 'RUNDECK_GRAILS_URL' to avoid host changing to localhost (see more : https://github.com/rundeck/rundeck/issues/671)
             # 'RUNDECK_GRAILS_URL' can be remote IP address, such as 43.133.23.165 or hostname, like https://mywebsite.com
             RUNDECK_GRAILS_URL: ${RUNDECK_GRAILS_URL}
