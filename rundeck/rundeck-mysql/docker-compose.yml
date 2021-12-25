@@ -9,12 +9,12 @@ services:
           - mysql
         environment:
             RUNDECK_DATABASE_DRIVER: org.mariadb.jdbc.Driver
-            RUNDECK_DATABASE_USERNAME: ${RUNDECK_DATABASE_USERNAME}
-            RUNDECK_DATABASE_PASSWORD: ${RUNDECK_DATABASE_PASSWORD}
+            RUNDECK_DATABASE_USERNAME: ${RUNDECK_DATABASE_USERNAME:-rundeck}
+            RUNDECK_DATABASE_PASSWORD: ${RUNDECK_DATABASE_PASSWORD:-rundeck}
             RUNDECK_DATABASE_URL: jdbc:mysql://mysql/rundeck?autoReconnect=true&useSSL=false
             # Add 'RUNDECK_GRAILS_URL' to avoid host changing to localhost (see more : https://github.com/rundeck/rundeck/issues/671)
             # 'RUNDECK_GRAILS_URL' can be remote IP address, such as 43.133.23.165 or hostname, like https://mywebsite.com
-            RUNDECK_GRAILS_URL: ${RUNDECK_GRAILS_URL}
+            RUNDECK_GRAILS_URL: ${RUNDECK_GRAILS_URL:-localhost:4440}
         # volumes:
         #   - ${RUNDECK_LICENSE_FILE:-/dev/null}:/home/rundeck/etc/rundeckpro-license.key
         ports:
@@ -26,10 +26,10 @@ services:
         ports:
           - 3306:3306
         environment:
-          MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-          MYSQL_DATABASE: ${MYSQL_DATABASE}
-          MYSQL_USER: ${MYSQL_USER}
-          MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+          MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+          MYSQL_DATABASE: ${MYSQL_DATABASE:-rundeck}
+          MYSQL_USER: ${MYSQL_USER:-rundeck}
+          MYSQL_PASSWORD: ${MYSQL_PASSWORD:-rundeck}
         volumes:
           - dbdata:/var/lib/mysql
 
