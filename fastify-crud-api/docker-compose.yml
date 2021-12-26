@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: fastify_crud_api_ctr
     environment:
-      PORT: ${PORT}
+      PORT: ${PORT:-5000}
     ports:
       - 5000:5000
