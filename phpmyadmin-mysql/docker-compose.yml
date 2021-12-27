@@ -40,3 +40,4 @@ services:
     environment:
       # Assign the database service name ('mysql-db' in this case)
       PMA_HOST: mysql-db
+      PMA_PORTS: 3306
