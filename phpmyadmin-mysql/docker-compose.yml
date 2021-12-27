@@ -22,10 +22,10 @@ services:
     #   # Initialize database ('mydb.sql' in this case) on container start
     #   - ./mydb.sql:/docker-entrypoint-initdb.d/mydb.sql
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-P@ssw0rd}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-pma_mysql_db}
+      MYSQL_USER: ${MYSQL_USER:-pma_mysql_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-admin12345}
 
   # PHPmyAdmin
   phpmyadmin:
@@ -40,4 +40,4 @@ services:
     environment:
       # Assign the database service name ('mysql-db' in this case)
       PMA_HOST: mysql-db
-      PMA_PORTS: ${PMA_PORTS}
+      PMA_PORTS: ${PMA_PORTS:-3306}
