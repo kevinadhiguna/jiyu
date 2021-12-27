@@ -23,6 +23,9 @@ services:
     #   - ./mydb.sql:/docker-entrypoint-initdb.d/mydb.sql
     environment:
       MYSQL_ROOT_PASSWORD: helloworld
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
 
   # PHPmyAdmin
   phpmyadmin:
