@@ -10,7 +10,7 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | Ant Design Pro v5 | A ReactJS framework created by Ant Group. |  |
+| 1 | Ant Design Pro v5 | A ReactJS framework created by Ant Group. | [Ant Design - website](https://ant.design/) |
 | 2 | AWS Lambda - Python | Execute an SQL query to AWS RDS (MySQL), powered by Python. |  |
 | 3 | AWS - LocalStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
 | 4 | Bash scripts | A collection of bash scripts. |  |
@@ -33,7 +33,7 @@ This is a repo for... whatever 🤷
 | 21 | PHPMyAdmin - MySQL | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
 | 22 | Python | Meant to be filled with fun Python scripts, but... |  |
 | 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
-| 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] |  |
+| 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
 | 25 | TypeScript | TypeScript program. Running on `ts-node`. |  |
 
 <br />
