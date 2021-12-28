@@ -15,7 +15,7 @@ This is a repo for... whatever 🤷
 | 3 | AWS - LocalStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
 | 4 | Bash scripts | A collection of bash scripts. |  |
 | 5 | C++ | Some C++ program. |  |
-| 6 | Elastic Search - Kibana | A logging utility. [Using Docker] |  |
+| 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
 | 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
 | 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. |  |
 | 9 | Filebeat | A logging utility. [Using Docker] |  |
