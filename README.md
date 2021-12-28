@@ -17,7 +17,7 @@ This is a repo for... whatever 🤷
 | 5 | C++ | Some C++ program. |  |
 | 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
 | 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
-| 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. |  |
+| 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
 | 9 | Filebeat | A logging utility. [Using Docker] |  |
 | 10 | Funworks | A NuxtJS page. | 🚧 Under development... |
 | 11 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
