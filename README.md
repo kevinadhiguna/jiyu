@@ -18,16 +18,16 @@ This is a repo for... whatever 🤷
 | 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
 | 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
 | 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
-| 9 | Filebeat | A logging utility. [Using Docker] |  |
+| 9 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
 | 10 | Funworks | A NuxtJS page. | 🚧 Under development... |
 | 11 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
 | 12 | GitPod Workspace full | (To be added...) |  |
 | 13 | Golang | A directory that contains Golang program. |  |
 | 14 | Java | A number of program to practice OOP. |  |
 | 15 | JavaScript | JavaScript collection that might be useful (read: cheatsheet). |  |
-| 16 | Mount - VueJS | An HTML/CSS page, but mounting VueJS with the help of unpkg. |  |
+| 16 | Mount - VueJS | An HTML/CSS page, but mounting VueJS with the help of unpkg. | [VueJS 3 - Unpkg](https://unpkg.com/browse/vue@3.2.26/) |
 | 17 | NodeJS - MySQL | A workspace to connect NodeJS to MySQL. |  |
-| 18 | Odoo | An ERP solution (it is said so). [Using Docker] |  |
+| 18 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
 | 19 | PHP - Apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
 | 20 | PHP | An attempt to run PHP CodeIgniter with dockerized-environment. |  |
 | 21 | PHPMyAdmin - MySQL | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
