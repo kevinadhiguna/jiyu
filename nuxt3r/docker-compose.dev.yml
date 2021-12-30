@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nuxtjs-v3:
+    container_name: nuxtjs-v3-ctr
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    environment:
+      HOST: ${HOST:-localhost}
+      PORT: ${PORT:-3000}
+    tty: true
+    stdin_open: true
+    # volumes:
+    #   - ./:/app
+    ports:
+      - 4000:3000
+    networks:
+      - nuxtjs-v3-net
+
+networks:
+  nuxtjs-v3-net:
