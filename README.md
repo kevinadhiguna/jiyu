@@ -35,6 +35,7 @@ This is a repo for... whatever 🤷
 | 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
 | 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
 | 25 | TypeScript | TypeScript program. Running on `ts-node`. |  |
+| 26 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. |  |
 
 <br />
 
