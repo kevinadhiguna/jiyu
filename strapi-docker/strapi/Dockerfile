@@ -3,7 +3,6 @@
 # FROM strapi/base:${BASE_VERSION}
 
 # ARG STRAPI_VERSION
-# RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
 ### ---------------- ###
 
 ### --- MODIFIED --- ###
