@@ -6,6 +6,7 @@
 ### ---------------- ###
 
 ### --- MODIFIED (determining base image) --- ###
+# Having built Strapi base image, replace "kaidoe" with your DockerHub username.
 ARG ACCOUNT="kaidoe"
 ARG BASE_VERSION="16"
 ARG STRAPI_VERSION="4.0.2"
