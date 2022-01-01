@@ -4,7 +4,6 @@
 
 # ARG STRAPI_VERSION
 # RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
-
 ### ---------------- ###
 
 ### --- MODIFIED --- ###
@@ -23,11 +22,13 @@ WORKDIR /srv/app
 
 VOLUME /srv/app
 
-### ORIGINAL ###
+### --- ORIGINAL --- ###
 # COPY strapi/docker-entrypoint.sh /usr/local/bin/
+### ---------------- ###
 
-### MODIFIED ###
+### --- MODIFIED --- ###
 COPY docker-entrypoint.sh /usr/local/bin/
+### ---------------- ###
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
