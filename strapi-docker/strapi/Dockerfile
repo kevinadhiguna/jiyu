@@ -1,11 +1,11 @@
-### --- ORIGINAL --- ###
+### --- ORIGINAL (determining base image) --- ###
 # ARG BASE_VERSION
 # FROM strapi/base:${BASE_VERSION}
 
 # ARG STRAPI_VERSION
 ### ---------------- ###
 
-### --- MODIFIED --- ###
+### --- MODIFIED (determining base image) --- ###
 ARG ACCOUNT="kaidoe"
 ARG BASE_VERSION="16"
 ARG STRAPI_VERSION="4.0.2"
@@ -21,11 +21,11 @@ WORKDIR /srv/app
 
 VOLUME /srv/app
 
-### --- ORIGINAL --- ###
+### --- ORIGINAL (docker-entrypoint.sh placement) --- ###
 # COPY strapi/docker-entrypoint.sh /usr/local/bin/
 ### ---------------- ###
 
-### --- MODIFIED --- ###
+### --- MODIFIED (docker-entrypoint.sh placement) --- ###
 COPY docker-entrypoint.sh /usr/local/bin/
 ### ---------------- ###
 
