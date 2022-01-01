@@ -1,3 +1,9 @@
+### Notes ###
+# 
+# VALID     : ARG NODE_VERSION="16-alpine"
+# INVALID   : ARG NODE_VERSION=16-alpine (Will give an error saying "invalid reference format")
+#
+
 ARG NODE_VERSION="16-alpine"
 FROM node:${NODE_VERSION}
 
