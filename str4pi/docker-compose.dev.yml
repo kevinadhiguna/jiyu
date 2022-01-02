@@ -28,6 +28,21 @@ services:
     ports:
       - '3306:3306'
 
+  str4pi:
+    depends_on:
+      - mysql
+    build: .
+    container_name: str4pi-app-ctr
+    env_file:
+      - .env
+    ports:
+      - 1337:1337
+    networks:
+      -  str4pi-db-net
+
+networks:
+  str4pi-db-net:
+
 volumes:
   # pgdata:
   mysqldata:
