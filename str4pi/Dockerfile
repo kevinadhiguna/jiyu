@@ -1,7 +1,7 @@
 # A dockerfile must always start by importing the base image.
 # One can use the keyword 'FROM' to do that.
-# Having built Strapi base image, replace "kaidoe" with your DockerHub username.
-ARG ACCOUNT="kaidoe"
+# Having built Strapi base image, replace "kevinadhiguna" with your DockerHub username.
+ARG ACCOUNT="kevinadhiguna"
 ARG BASE_VERSION="16"
 ARG STRAPI_VERSION="4.0.2"
 
