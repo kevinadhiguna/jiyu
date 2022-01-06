@@ -18,6 +18,8 @@ COPY yarn.lock .
 
 # Install dependencies, but not generate a yarn.lock file and fail if an update is needed (for more : https://classic.yarnpkg.com/en/docs/cli/install/#toc-yarn-install-frozen-lockfile).
 RUN yarn install --frozen-lockfile
+# If the above command prompts an error, try running this instead :
+#RUN yarn
 
 # == Copy required files ==
 # In order to launch our Strapi app, we must import it into our image.
