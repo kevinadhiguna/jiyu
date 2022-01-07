@@ -1,9 +1,9 @@
 # A dockerfile must always start by importing the base image.
 # One can use the keyword 'FROM' to do that.
-# Having built Strapi base image, replace "kaidoe" with your DockerHub username.
-ARG ACCOUNT="kaidoe"
+# Having built Strapi base image, replace "kevinadhiguna" with your DockerHub username.
+ARG ACCOUNT="kevinadhiguna"
 ARG BASE_VERSION="16"
-ARG STRAPI_VERSION="4.0.2"
+ARG STRAPI_VERSION="4.0.3"
 
 FROM ${ACCOUNT}/base:${BASE_VERSION}
 
@@ -18,6 +18,8 @@ COPY yarn.lock .
 
 # Install dependencies, but not generate a yarn.lock file and fail if an update is needed (for more : https://classic.yarnpkg.com/en/docs/cli/install/#toc-yarn-install-frozen-lockfile).
 RUN yarn install --frozen-lockfile
+# If the above command prompts an error, try running this instead :
+#RUN yarn
 
 # == Copy required files ==
 # In order to launch our Strapi app, we must import it into our image.
