@@ -1,0 +1,17 @@
+### Dependency ###
+node_modules
+
+### Git ###
+.github
+.git
+.gitignore
+
+### Docker ###
+docker-compose.yml
+docker-compose.yaml
+
+### Environment Variables ###
+.env.example
+
+### Project ###
+README.md
