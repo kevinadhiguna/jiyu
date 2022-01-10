@@ -10,3 +10,6 @@ RUN apt-get install -y openjdk-11-jre-headless \
 
 # Quick install with apt
 RUN curl https://raw.githubusercontent.com/rundeck/packaging/main/scripts/deb-setup.sh 2> /dev/null | bash -s rundeck
+
+# Start Rundeck
+RUN sudo service rundeckd start
