@@ -13,3 +13,6 @@ RUN curl https://raw.githubusercontent.com/rundeck/packaging/main/scripts/deb-se
 
 # Start Rundeck
 RUN sudo service rundeckd start
+
+# Verify if Rundeck started corrently
+RUN tail -f /var/log/rundeck/service.log
