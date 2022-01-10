@@ -16,3 +16,6 @@ RUN service rundeckd start
 
 # Verify if Rundeck started corrently
 RUN tail -f /var/log/rundeck/service.log
+
+# Having started the service, you should see something similar to:
+# "Grails application running at http://localhost:4440 in environment: production"
