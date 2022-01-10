@@ -12,7 +12,7 @@ RUN apt-get install -y openjdk-11-jre-headless \
 RUN curl https://raw.githubusercontent.com/rundeck/packaging/main/scripts/deb-setup.sh 2> /dev/null | bash -s rundeck
 
 # Start Rundeck
-RUN sudo service rundeckd start
+RUN service rundeckd start
 
 # Verify if Rundeck started corrently
 RUN tail -f /var/log/rundeck/service.log
