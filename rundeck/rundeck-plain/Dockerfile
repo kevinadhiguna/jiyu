@@ -19,3 +19,8 @@ RUN tail -f /var/log/rundeck/service.log
 
 # Having started the service, you should see something similar to:
 # "Grails application running at http://localhost:4440 in environment: production"
+
+# If so, navigate to http://localhost:4440/ (opens new window) in a browser.
+# Log in with the 
+#   username : admin
+#   password : admin
