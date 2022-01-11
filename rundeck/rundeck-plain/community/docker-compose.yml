@@ -13,3 +13,8 @@ services:
     image: mysql:5.7
     container_name: mysql_ctr
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_USERNAME: admin
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: rundeck
