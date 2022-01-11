@@ -10,5 +10,5 @@ services:
       - rundeck-mysql-net
 
   mysql:
-    image: mysql:8
-    container_name: mysql-8_ctr
+    image: mysql:5.7
+    container_name: mysql_ctr
