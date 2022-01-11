@@ -18,3 +18,5 @@ services:
       MYSQL_USERNAME: admin
       MYSQL_PASSWORD: 12345
       MYSQL_DATABASE: rundeck
+    ports:
+      - "127.0.0.1:3306:3306"
