@@ -12,3 +12,4 @@ services:
   mysql:
     image: mysql:5.7
     container_name: mysql_ctr
+    restart: always
