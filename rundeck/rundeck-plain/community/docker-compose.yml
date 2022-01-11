@@ -8,3 +8,6 @@ services:
       - 4440:4440
     networks:
       - rundeck-mysql-net
+
+  mysql:
+    image: mysql:8
