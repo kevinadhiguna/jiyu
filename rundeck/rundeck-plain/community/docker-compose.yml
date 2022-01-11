@@ -6,3 +6,5 @@ services:
     container_name: rundeck-community_ctr
     ports:
       - 4440:4440
+    networks:
+      - rundeck-mysql-net
