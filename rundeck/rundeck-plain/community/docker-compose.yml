@@ -25,6 +25,9 @@ services:
     networks:
       - rundeck-mysql-net
 
+networks:
+  rundeck-mysql-net:
+
 volumes:
   data_mysql:
     driver: local
