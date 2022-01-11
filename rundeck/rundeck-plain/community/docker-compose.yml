@@ -2,3 +2,4 @@ version: '3.8'
 
 services:
   build: .
+  container_name: rundeck-community_ctr
