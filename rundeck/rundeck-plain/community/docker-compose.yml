@@ -22,6 +22,8 @@ services:
       MYSQL_DATABASE: rundeck
     ports:
       - "127.0.0.1:3306:3306"
+    networks:
+      - rundeck-mysql-net
 
 volumes:
   data_mysql:
