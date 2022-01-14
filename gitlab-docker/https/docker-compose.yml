@@ -5,3 +5,6 @@ services:
     image: "gitlab/gitlab-ee:latest"
     restart: always
     hostname: "gitlab.example.com"
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url "https://gitlab.example.com"
