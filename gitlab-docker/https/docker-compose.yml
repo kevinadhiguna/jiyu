@@ -1,3 +1,5 @@
+# Reference : https://docs.gitlab.com/ee/install/docker.html
+
 version: '3.8'
 
 services:
@@ -12,7 +14,7 @@ services:
       - "80:80"
       - "443:443"
       - "22:22"
-    # The GitLab container uses host mounted volumes to store persistent data
+    # The GitLab container uses host mounted volumes to store persistent data (https://docs.gitlab.com/ee/install/docker.html#set-up-the-volumes-location)
     volumes:
       # For storing application data
       - "$GITLAB_HOME/config:/var/opt/gitlab"
