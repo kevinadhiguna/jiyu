@@ -3,7 +3,7 @@
 version: '3.8'
 
 services:
-  gitlab-web:
+  gitlab-web-https:
     image: "gitlab/gitlab-ee:latest"
     restart: always
     hostname: "gitlab.example.com"
