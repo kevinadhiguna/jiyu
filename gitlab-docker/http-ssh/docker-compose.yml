@@ -12,3 +12,15 @@ services:
     ports:
       - "8929:8929"
       - "2224:22"
+    # The GitLab container uses host mounted volumes to store persistent data (https://docs.gitlab.com/ee/install/docker.html#set-up-the-volumes-location)
+    #
+    # Linux : GITLAB_HOME=/srv/gitlab
+    # MacOS : GITLAB_HOME=$HOME/gitlab
+    #
+    volumes:
+      # For storing the gitlab configuration file
+      - "$GITLAB_HOME/config:/etc/gitlab"
+      # For storing logs
+      - "$GITLAB_HOME/logs:/var/log/gitlab"
+      # For storing application data
+      - "$GITLAB_HOME/data/var/opt/gitlab"
