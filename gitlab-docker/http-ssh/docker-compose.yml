@@ -4,3 +4,4 @@ services:
   gitlab-web-http-ssh:
     image: "gitlab/gitlab-ee:latest"
     restart: always
+    hostname: "gitlab.example.com"
