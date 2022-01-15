@@ -4,7 +4,10 @@ version: '3.8'
 
 services:
   gitlab-web-http-ssh:
-    image: "gitlab/gitlab-ee:latest"
+    # GitLab docker image (select either) :
+    # - Community edition   : "gitlab/gitlab-ce:latest"
+    # - Enterprise edition  : "gitlab/gitlab-ee:latest"
+    image: "gitlab/gitlab-ce:latest"
     restart: always
     hostname: "gitlab.example.com"
     environment:
