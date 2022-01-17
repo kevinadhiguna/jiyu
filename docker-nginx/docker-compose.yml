@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  nginx-serve-static-file:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nginx-serve-static
+    container_name: nginx-serve-static_ctr
+    
