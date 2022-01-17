@@ -7,4 +7,5 @@ services:
       dockerfile: Dockerfile
     image: nginx-serve-static
     container_name: nginx-serve-static_ctr
+    restart: always
     
