@@ -8,4 +8,5 @@ services:
     image: nginx-serve-static
     container_name: nginx-serve-static_ctr
     restart: always
-    
+    ports:
+     - "8087:8087"
