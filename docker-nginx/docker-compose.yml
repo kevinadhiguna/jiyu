@@ -1,12 +1,17 @@
 version: '3.8'
 
 services:
+  # Define a service named 'nginx-serve-static-file'
   nginx-serve-static-file:
+    # Build docker image from 'Dockerfile' in this root directory
     build:
       context: .
       dockerfile: Dockerfile
+    # Assign docker image name
     image: nginx-serve-static
+    # Give docker container name
     container_name: nginx-serve-static_ctr
     restart: always
+    # App will be served on port 8087 inside anb outside of the docker container
     ports:
      - "8087:8087"
