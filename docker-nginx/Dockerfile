@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . .
 
-COPY nginx/static-file.conf /etc/nginx/conf.d
+COPY nginx/static-file.conf /etc/nginx/conf.d/
