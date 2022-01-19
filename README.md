@@ -38,6 +38,7 @@ This is a repo for... whatever 🤷
 | 26 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. |  |
 | 27 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
 | 28 | str4pi | Strapi version 4 project.  |  |
+| 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
 
 <br />
 
