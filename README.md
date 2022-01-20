@@ -39,6 +39,7 @@ This is a repo for... whatever 🤷
 | 27 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
 | 28 | str4pi | Strapi version 4 project.  |  |
 | 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
+| 30 | gitlab-docker | GitLab in a docker container.  |  |
 
 <br />
 
