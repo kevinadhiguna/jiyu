@@ -40,6 +40,7 @@ This is a repo for... whatever 🤷
 | 28 | str4pi | Strapi version 4 project.  |  |
 | 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
 | 30 | gitlab-docker | GitLab in a docker container.  |  |
+| 31 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
 
 <br />
 
