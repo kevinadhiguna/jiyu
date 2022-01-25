@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  krakend:
+    image: devopsfaith/krakend:latest
+    container_name: krakend_ctr
+    volumes:
+      - "$PWD:/etc/krakend"
+    ports:
+      - 8080:8080
