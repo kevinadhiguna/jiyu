@@ -16,3 +16,4 @@ services:
   mysql-db:
     image: mysql:8.0.28
     container_name: mysql-ctr
+    restart: unless-stopped
