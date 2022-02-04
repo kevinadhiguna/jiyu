@@ -1,6 +1,7 @@
 version: "3.8"
 
 services:
+  # Based on : https://cloudbeaver.io/docs/Run-Docker-Container/
   cloudbeaver-web:
     image: dbeaver/cloudbeaver:21.2.4
     container_name: cloudbeaver-ctr
