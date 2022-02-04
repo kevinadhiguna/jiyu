@@ -35,6 +35,7 @@ services:
   postgresql-db:
     image: postgres:14.1
     container_name: postgres-ctr
+    restart: unless-stopped
 
 volumes:
   cloudbeaver_mysqldata:
