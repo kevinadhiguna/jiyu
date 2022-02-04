@@ -12,6 +12,7 @@ services:
       - 8080:8978
     networks:
       - cloudbeaver-mysql-net
+      - cloudbeaver-postgresql-net
 
   # == Run some DBMS to test CloudBeaver ==
 
@@ -42,6 +43,8 @@ services:
       POSTGRES_DB: cloudbeaver
     ports:
       - 5432:5432
+    networks:
+      - cloudbeaver-postgresql-net
 
 volumes:
   cloudbeaver_mysqldata:
