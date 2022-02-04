@@ -10,6 +10,8 @@ services:
       - /var/cloudbeaver/workspace:/opt/cloudbeaver/workspace
     ports:
       - 8080:8978
+    networks:
+      - cloudbeaver-mysql-net
 
   # == Run some DBMS to test CloudBeaver ==
 
@@ -27,3 +29,5 @@ services:
       - cloudbeaver_mysqldata:/var/lib/mysql
     ports:
       - 3306:3306
+    networks:
+      - cloudbeaver-mysql-net
