@@ -23,3 +23,5 @@ services:
       MYSQL_PASSWORD: cloudbeaver
       MYSQL_ROOT_HOST: '%'
       MYSQL_ROOT_PASSWORD: cloudbeaver
+    volumes:
+      - cloudbeaver_mysqldata:/var/lib/mysql
