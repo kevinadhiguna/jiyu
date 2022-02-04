@@ -4,6 +4,7 @@ services:
   cloudbeaver-web:
     image: dbeaver/cloudbeaver:21.2.4
     container_name: cloudbeaver-ctr
+    restart: unless-stopped
     volumes:
       - /var/cloudbeaver/workspace:/opt/cloudbeaver/workspace
     ports:
