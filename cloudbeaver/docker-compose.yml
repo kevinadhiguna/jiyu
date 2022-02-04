@@ -40,6 +40,8 @@ services:
       POSTGRES_USER: cloudbeaver
       POSTGRES_PASSWORD: cloudbeaver
       POSTGRES_DB: cloudbeaver
+    ports:
+      - 5432:5432
 
 volumes:
   cloudbeaver_mysqldata:
