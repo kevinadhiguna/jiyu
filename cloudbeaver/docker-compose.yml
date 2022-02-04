@@ -32,6 +32,9 @@ services:
     networks:
       - cloudbeaver-mysql-net
 
+  postgresql-db:
+    image: postgres:14.1
+
 volumes:
   cloudbeaver_mysqldata:
 
