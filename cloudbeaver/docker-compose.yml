@@ -51,3 +51,4 @@ volumes:
 
 networks:
   cloudbeaver-mysql-net:
+  cloudbeaver-postgresql-net:
