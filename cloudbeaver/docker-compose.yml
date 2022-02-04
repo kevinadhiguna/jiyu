@@ -10,3 +10,8 @@ services:
       - /var/cloudbeaver/workspace:/opt/cloudbeaver/workspace
     ports:
       - 8080:8978
+
+  # == Run some DBMS to test CloudBeaver ==
+  
+  mysql-db:
+    image: mysql:8.0.28
