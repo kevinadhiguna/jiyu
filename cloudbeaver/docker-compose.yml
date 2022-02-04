@@ -34,6 +34,7 @@ services:
 
   postgresql-db:
     image: postgres:14.1
+    container_name: postgres-ctr
 
 volumes:
   cloudbeaver_mysqldata:
