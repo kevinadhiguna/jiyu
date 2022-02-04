@@ -32,5 +32,8 @@ services:
     networks:
       - cloudbeaver-mysql-net
 
+volumes:
+  cloudbeaver_mysqldata:
+
 networks:
   cloudbeaver-mysql-net:
