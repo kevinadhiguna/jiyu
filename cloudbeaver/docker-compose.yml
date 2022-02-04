@@ -17,3 +17,9 @@ services:
     image: mysql:8.0.28
     container_name: mysql-ctr
     restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: cloudbeaver
+      MYSQL_USER: cloudbeaver
+      MYSQL_PASSWORD: cloudbeaver
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: cloudbeaver
