@@ -12,6 +12,7 @@ services:
       - 8080:8978
 
   # == Run some DBMS to test CloudBeaver ==
-  
+
   mysql-db:
     image: mysql:8.0.28
+    container_name: mysql-ctr
