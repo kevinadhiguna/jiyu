@@ -31,7 +31,9 @@ services:
   str4pi:
     depends_on:
       - mysql
-    build: .
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     container_name: str4pi-app-ctr
     env_file:
       - .env
