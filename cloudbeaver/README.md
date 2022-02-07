@@ -9,3 +9,5 @@ Yup, Cloudbeaver is also a database management tool. Unlike the software mention
 <br />
 
 <img src="https://github.com/dbeaver/cloudbeaver/wiki/images/demo_screenshot_1.png" />
+
+Try demo server here : https://demo.cloudbeaver.io
