@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "mern's server-side",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.0.0",
