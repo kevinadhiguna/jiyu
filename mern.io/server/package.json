@@ -1,0 +1,7 @@
+{
+  "name": "mern.io",
+  "version": "1.0.0",
+  "description": "mern's server-side",
+  "main": "server.js",
+  "license": "MIT"
+}
