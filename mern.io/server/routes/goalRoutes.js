@@ -8,3 +8,5 @@ router.get("/", (req, res) => {
         "message": "Get initial routes"
       });
 });
+
+module.exports = { router };
