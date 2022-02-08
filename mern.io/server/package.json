@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "mern's server-side",
   "main": "server.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
