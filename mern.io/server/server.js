@@ -11,4 +11,4 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`The app has been launched on port ${port}.`);
-})
+});
