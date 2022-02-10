@@ -21,6 +21,13 @@ const updateGoal = (req, res) => {
   res.status(200).json({ message: `Update a goal ${req.params.id}` });
 };
 
+// @desc    Delete a Goal
+// @route   DELETE /api/goals/:id
+// @access  Private
+const deleteGoal = (req, res) => {
+  res.status(200).json({ message: `Delete a goal ${req.params.id}` });
+};
+
 module.exports = {
   getGoals,
   setGoal,
