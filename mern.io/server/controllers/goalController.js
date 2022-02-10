@@ -6,3 +6,7 @@ const getGoals = (req, res) => {
     message: "Get goals",
   });
 };
+
+module.exports = {
+  getGoals,
+};
