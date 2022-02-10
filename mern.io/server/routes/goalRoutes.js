@@ -1,14 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
+const { getGoals } = require("../controllers/goalController");
+
 // GET
-router.get("/", (req, res) => {
-  res
-    .status(200)
-    .json({
-      "message": "Get initial routes"
-    });
-});
+router.get("/", getGoals);
 
 // POST
 router.post("/", (req, res) => {
