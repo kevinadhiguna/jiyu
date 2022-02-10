@@ -3,6 +3,8 @@ const app = express();
 
 // Parse raw JSON
 app.use(express.json());
+// The extended option allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true)
+app.use(express.urlencoded({ extended: false }));
 
 require("dotenv").config();
 
