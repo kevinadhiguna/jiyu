@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 
+// Parse raw JSON
+app.use(express.json());
+
 require("dotenv").config();
 
 const port = process.env.PORT || 5000;
