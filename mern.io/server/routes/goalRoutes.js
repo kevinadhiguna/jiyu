@@ -19,4 +19,13 @@ router.post("/", (req, res) => {
     });
 });
 
+// PUT
+router.put("/:id", (req, res) => {
+  res
+    .status(200)
+    .json({
+      "message": `Change goal ${req.params.id}`
+    });
+});
+
 module.exports = router;
