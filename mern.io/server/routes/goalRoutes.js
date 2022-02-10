@@ -28,4 +28,13 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// DELETE
+router.delete("/:id", (req, res) => {
+  res
+    .status(200)
+    .json({
+      "message": `Delete goal ${req.params.id}`
+    });
+});
+
 module.exports = router;
