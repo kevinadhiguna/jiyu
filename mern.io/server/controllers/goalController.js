@@ -7,6 +7,13 @@ const getGoals = (req, res) => {
   });
 };
 
+// @desc    Set a Goal
+// @route   POST /api/goals
+// @access  Private
+const setGoal = (req, res) => {
+  res.status(200).json({ message: "Set a goal" });
+};
+
 module.exports = {
   getGoals,
 };
