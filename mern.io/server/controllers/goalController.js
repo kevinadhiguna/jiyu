@@ -19,9 +19,10 @@ const setGoal = (req, res) => {
 // @access   Private
 const updateGoal = (req, res) => {
   res.status(200).json({ message: `Update a goal ${req.params.id}` });
-}
+};
 
 module.exports = {
   getGoals,
   setGoal,
+  updateGoal,
 };
