@@ -16,4 +16,5 @@ const setGoal = (req, res) => {
 
 module.exports = {
   getGoals,
+  setGoal,
 };
