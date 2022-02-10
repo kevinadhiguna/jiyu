@@ -11,10 +11,12 @@ const getGoals = (req, res) => {
 // @route   POST /api/goals
 // @access  Private
 const setGoal = (req, res) => {
-  // Add a manual error handler if a field named text does not exist in request body.
+  // Add an error handler created by ExpressJS, if a field named text does not exist in request body.
   if (!req.body.text) {
-    res.status(400).json({ message: "Please send a text !" });
+    res.status(400);
+    throw new Error("Please add a text field !");
   }
+
   res.status(200).json({ message: "Set a goal" });
 };
 
