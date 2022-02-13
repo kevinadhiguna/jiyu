@@ -31,7 +31,6 @@ const port = process.env.PORT || 5000;
 
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
-const { connect } = require("mongoose");
 app.use("/api/goals", goalRoutes);
 
 // Overwrite ExpressJS default error handler
