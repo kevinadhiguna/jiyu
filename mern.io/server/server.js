@@ -4,6 +4,9 @@ const app = express();
 // Import a customized error handler
 const { errorHandler } = require("./middleware/errorHandler");
 
+// Add colors to terminal output
+const colors = require("colors");
+
 /**
  * Notes regarding "express.json()" and "express.urlencoded()" from StackOverflow (https://stackoverflow.com/a/51844327) :
  *
