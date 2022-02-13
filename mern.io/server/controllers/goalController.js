@@ -37,6 +37,12 @@ const updateGoal = asyncHandler(async (req, res) => {
   // Find a record that will be updated
   const goal = await Goal.findById(req.params.id);
 
+  // If the record does not exist, send back status 400
+  if (!goal) {
+    res.status(400);
+    throw new Error("Goal not found");
+  }
+
   res.status(200).json({ message: `Update a goal ${req.params.id}` });
 });
 
