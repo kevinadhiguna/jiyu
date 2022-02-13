@@ -8,7 +8,7 @@ const Goal = require("../models/goalModel");
 // @access  Private
 const getGoals = asyncHandler(async (req, res) => {
   // Find all goals
-  const goals = Goal.find();
+  const goals = await Goal.find();
 
   res.status(200).json(goals);
 });
