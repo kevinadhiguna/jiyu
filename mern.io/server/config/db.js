@@ -5,5 +5,8 @@ const connection = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URI);
 
     console.log(`MongoDB connected : ${conn.connection.host}`.cyan.underline);
-  } catch (error) {}
+  } catch (errorDBconnection) {
+    console.error(errorDBconnection);
+    process.exit(1);
+  }
 };
