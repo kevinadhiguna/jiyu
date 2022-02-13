@@ -7,6 +7,10 @@ const { errorHandler } = require("./middleware/errorHandler");
 // Add colors to terminal output
 const colors = require("colors");
 
+// Connect to MongoDB
+const connectDB = require("./config/db");
+connectDB();
+
 /**
  * Notes regarding "express.json()" and "express.urlencoded()" from StackOverflow (https://stackoverflow.com/a/51844327) :
  *
@@ -27,6 +31,7 @@ const port = process.env.PORT || 5000;
 
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
+const { connect } = require("mongoose");
 app.use("/api/goals", goalRoutes);
 
 // Overwrite ExpressJS default error handler
