@@ -3,9 +3,14 @@
 const mongoose = require("mongoose");
 
 // Define schema
-const goalSchema = mongoose.Schema({
-  text: {
-    type: String,
-    required: [true, "Please add a text value"],
+const goalSchema = mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: [true, "Please add a text value"],
+    },
   },
-});
+  {
+    timestamps: true,
+  }
+);
