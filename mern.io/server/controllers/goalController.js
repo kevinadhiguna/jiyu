@@ -34,6 +34,9 @@ const setGoal = asyncHandler(async (req, res) => {
 // @route   PUT /api/goals/:id
 // @access   Private
 const updateGoal = asyncHandler(async (req, res) => {
+  // Find a record that will be updated
+  const goal = await Goal.findById(req.params.id);
+
   res.status(200).json({ message: `Update a goal ${req.params.id}` });
 });
 
