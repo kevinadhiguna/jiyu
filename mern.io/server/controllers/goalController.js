@@ -48,7 +48,7 @@ const updateGoal = asyncHandler(async (req, res) => {
     new: true,
   });
 
-  res.status(200).json({ message: `Update a goal ${req.params.id}` });
+  res.status(200).json(updatedGoal);
 });
 
 // @desc    Delete a Goal
