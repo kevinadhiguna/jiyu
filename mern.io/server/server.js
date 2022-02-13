@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 
+// Import a customized error handler
+const { errorHandler } = require("./middleware/errorHandler");
+
 /**
  * Notes regarding "express.json()" and "express.urlencoded()" from StackOverflow (https://stackoverflow.com/a/51844327) :
- * 
+ *
  * - You DO NOT NEED express.json() and express.urlencoded() for GET Requests or DELETE Requests.
  * - You NEED express.json() and express.urlencoded() for POST and PUT requests, because in both these requests you are sending data (in the form of some data object) to the server.
  * - express.json() is a method inbuilt in express to recognize the incoming Request Object as a JSON Object.
@@ -22,6 +25,9 @@ const port = process.env.PORT || 5000;
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
 app.use("/api/goals", goalRoutes);
+
+// Overwrite ExpressJS default error handler
+app.use(errorHandler);
 
 // Start the app (back-end server)
 app.listen(port, () => {
