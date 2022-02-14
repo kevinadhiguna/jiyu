@@ -16,4 +16,13 @@ const loginUser = (req, res) => {
   });
 };
 
+// @desc    Get user data
+// @route   GET /api/users
+// @access  Public
+const getMe = (req, res) => {
+  res.json({
+    message: "My Data display",
+  });
+};
+
 module.exports = { registerUser, loginUser };
