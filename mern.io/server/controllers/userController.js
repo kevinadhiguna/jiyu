@@ -38,6 +38,21 @@ const registerUser = asyncHandler(async (req, res) => {
     password: hashedPassword,
   });
 
+  // If successfully created a user
+  if (user) {
+    res.status(201).json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+    });
+  } else {
+    // If a new user was not added
+    res.status(400);
+    throw new Error(
+      "Invalid user data, unable to create user. Please try again later..."
+    );
+  }
+
   res.json({
     message: "Register a user",
   });
