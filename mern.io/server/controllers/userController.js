@@ -57,11 +57,29 @@ const registerUser = asyncHandler(async (req, res) => {
 // @desc    Authenticate a user
 // @route   POST /api/users/login
 // @access Public
-const loginUser = (req, res) => {
+const loginUser = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  // Check user's email
+  const user = User.findOne({ email });
+
+  // Check if hashed result of password from user input is same as hashed password in database
+  if (user && (await bcrypt.compare(password, user.password))) {
+    res.status(200).json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+    });
+  } else {
+    // Not let user log in
+    res.status(400);
+    throw new Error("The email and password do not match. Please try again..");
+  }
+
   res.json({
     message: "Login user",
   });
-};
+});
 
 // @desc    Get user data
 // @route   GET /api/users/me
