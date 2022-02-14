@@ -23,7 +23,9 @@ const protect = asyncHandler(async (req, res, next) => {
       const decoded = jwt.sign(token, process.env.JWT_SECRET);
 
       // Get user data
-      req.user = await User.findById(decoded.id);
+      req.user = await User.findById(decoded.id).select("-password");
+
+      next();
     } catch (error) {}
   }
 });
