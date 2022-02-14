@@ -31,7 +31,9 @@ const port = process.env.PORT || 5000;
 
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
+const userRoutes = require("./routes/userRoutes");
 app.use("/api/goals", goalRoutes);
+app.use("/api/users", userRoutes);
 
 // Overwrite ExpressJS default error handler
 app.use(errorHandler);
