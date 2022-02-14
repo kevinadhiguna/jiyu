@@ -52,10 +52,6 @@ const registerUser = asyncHandler(async (req, res) => {
       "Invalid user data, unable to create user. Please try again later..."
     );
   }
-
-  res.json({
-    message: "Register a user",
-  });
 });
 
 // @desc    Authenticate a user
