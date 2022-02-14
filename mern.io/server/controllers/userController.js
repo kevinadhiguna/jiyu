@@ -65,10 +65,12 @@ const loginUser = asyncHandler(async (req, res) => {
 
   // Check if hashed result of password from user input is same as hashed password in database
   if (user && (await bcrypt.compare(password, user.password))) {
+    // Return user data and jwt if login is successful
     res.status(200).json({
       _id: user.id,
       name: user.name,
       email: user.email,
+      token: generateJWT(user._id),
     });
   } else {
     // Not let user log in
