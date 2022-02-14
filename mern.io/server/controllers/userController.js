@@ -17,7 +17,7 @@ const loginUser = (req, res) => {
 };
 
 // @desc    Get user data
-// @route   GET /api/users
+// @route   GET /api/users/me
 // @access  Public
 const getMe = (req, res) => {
   res.json({
