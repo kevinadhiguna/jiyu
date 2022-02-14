@@ -15,3 +15,5 @@ router.post("/login", loginUser);
 
 // Get user data
 router.get("/me", getMe);
+
+module.exports = router;
