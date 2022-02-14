@@ -75,10 +75,6 @@ const loginUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("The email and password do not match. Please try again..");
   }
-
-  res.json({
-    message: "Login user",
-  });
 });
 
 // @desc    Get user data
