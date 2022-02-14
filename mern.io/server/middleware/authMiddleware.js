@@ -38,3 +38,5 @@ const protect = asyncHandler(async (req, res, next) => {
     throw new Error("Not authorized, please login first..");
   }
 });
+
+module.exports = { protect };
