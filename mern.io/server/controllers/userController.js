@@ -86,4 +86,11 @@ const getMe = (req, res) => {
   });
 };
 
+// Generate JSON Web Token (JWT)
+const generateJWT = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_EXPIRY,
+  });
+};
+
 module.exports = { registerUser, loginUser, getMe };
