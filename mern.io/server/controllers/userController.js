@@ -7,4 +7,13 @@ const registerUser = (req, res) => {
   });
 };
 
+// @desc    Authenticate a user
+// @route   POST /api/users/login
+// @access Public
+const loginUser = (req, res) => {
+  res.json({
+    message: "Login user",
+  });
+};
+
 module.exports = { registerUser };
