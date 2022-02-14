@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const asyncHandler = require("express-async-handler");
+const User = require("../controllers/userController");
 
 const protect = asyncHandler(async (req, res, next) => {
   let token;
@@ -20,6 +21,9 @@ const protect = asyncHandler(async (req, res, next) => {
 
       // Verify token
       const decoded = jwt.sign(token, process.env.JWT_SECRET);
+
+      // Get user data
+      req.user = await User.findById(decoded.id);
     } catch (error) {}
   }
 });
