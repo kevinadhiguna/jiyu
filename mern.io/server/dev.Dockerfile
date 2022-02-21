@@ -8,11 +8,11 @@ COPY package.json .
 RUN yarn install --frozen-lockfile
 
 COPY config/ config/
-COPY controllers/ controllers/
-COPY middleware/ middleware/
 COPY models/ models/
-COPY routes/ routes/
 COPY server.js server.js
+COPY middleware/ middleware/
+COPY routes/ routes/
+COPY controllers/ controllers/
 
 EXPOSE 5000
 
