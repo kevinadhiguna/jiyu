@@ -86,6 +86,12 @@ const deleteGoal = asyncHandler(async (req, res) => {
     throw new Error("User not found");
   }
 
+  // Check if logged in user matches the goal user
+  if (goal.user.toString() !== user.id) {
+    res.status(401);
+    throw new Error("User not authorized !");
+  }
+
   // Remove the goal if exists
   await goal.remove();
 
