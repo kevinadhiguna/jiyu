@@ -8,6 +8,9 @@ const {
   deleteGoal,
 } = require("../controllers/goalController");
 
+// Import auth middleware
+const { protect } = require("../middleware/authMiddleware");
+
 /**
  * Option 1 (Easier and more understandable for some people)
  */
