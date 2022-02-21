@@ -1,7 +1,8 @@
 const asyncHandler = require("express-async-handler");
 
-// Import model in which goal schema exists
+// Import models in which goal and user schema exists
 const Goal = require("../models/goalModel");
+const User = require("../models/userModel");
 
 // @desc    Get Goals
 // @route   GET /api/goals
