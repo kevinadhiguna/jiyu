@@ -83,11 +83,17 @@ const loginUser = asyncHandler(async (req, res) => {
 // @desc    Get user data
 // @route   GET /api/users/me
 // @access  Private
-const getMe = (req, res) => {
-  res.json({
-    message: "My Data display",
+const getMe = asyncHandler(async (req, res) => {
+  // We have access to "req.user" since we set that in middleware
+  const { _id, name, email } = await User.findById(req.user.id);
+
+  // Send status code and data
+  res.status(200).json({
+    id: _id,
+    name,
+    email,
   });
-};
+});
 
 // Generate JSON Web Token (JWT)
 const generateJWT = (id) => {
