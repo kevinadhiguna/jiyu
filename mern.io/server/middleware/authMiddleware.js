@@ -5,7 +5,9 @@ const User = require("../models/userModel");
 const protect = asyncHandler(async (req, res, next) => {
   let token;
 
-  // Check if a JWT exists in request header and starts with : "Bearer"
+  // Check :
+  // - if authorization header in request exists
+  // - if a JWT exists in authorization header and starts with : "Bearer"
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith("Bearer")
@@ -22,9 +24,10 @@ const protect = asyncHandler(async (req, res, next) => {
       // Verify token
       const decoded = jwt.sign(token, process.env.JWT_SECRET);
 
-      // Get user data
+      // Get user data without including password
       req.user = await User.findById(decoded.id).select("-password");
 
+      // next() allows one to call another middleware function
       next();
     } catch (errorProtect) {
       console.error(errorProtect);
