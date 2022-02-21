@@ -45,6 +45,13 @@ const updateGoal = asyncHandler(async (req, res) => {
     throw new Error("Goal not found");
   }
 
+  // Check for a user
+  const user = await User.findById(req.user.id);
+  if (!user) {
+    res.status(401)
+    throw new Error("User not found !")
+  }
+
   // If found, then update it
   const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
