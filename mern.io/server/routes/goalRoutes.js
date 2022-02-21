@@ -30,6 +30,6 @@ const { protect } = require("../middleware/authMiddleware");
  * Option 2 (more concise and clean for some people)
  */
 router.route("/").get(protect, getGoals).post(protect, setGoal);
-router.route("/:id").put(protect, updateGoal).delete(deleteGoal);
+router.route("/:id").put(protect, updateGoal).delete(protect, deleteGoal);
 
 module.exports = router;
