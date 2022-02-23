@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:5.0.6
+    container_name: mongodb-v5_ctr
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      # Docker timezone lists : https://github.com/kevinadhiguna/jiyu/tree/master/docker-timezone-lists
+      TZ: "Europe/London"
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+    volumes:
+      - mongo-volume:/data/db
+    ports:
+      - 27018:27017
+
+volumes:
+  mongo-volume:
