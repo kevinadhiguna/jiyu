@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:5.0.6
+    container_name: mongodb-v5_ctr
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: johndoe
+      MONGO_INITDB_ROOT_PASSWORD: S3cRe7
+      # Docker timezone lists : https://github.com/kevinadhiguna/jiyu/tree/master/docker-timezone-lists
+      TZ: "Europe/London"
+    ports:
+      - 27017:27017
