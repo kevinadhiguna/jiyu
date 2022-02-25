@@ -3,4 +3,5 @@ const User = require("./model/userModel");
 require("dotenv").config();
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI);
+const connectDB = require("./config/db");
+connectDB();
