@@ -24,7 +24,6 @@ app.use(express.json());
 // The extended option allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true)
 app.use(express.urlencoded({ extended: false }));
 
-
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -41,6 +40,13 @@ const port = process.env.PORT || 5000;
 const hostname = process.env.HOSTNAME || 5000;
 
 // Start the app (back-end server)
-app.listen(port, hostname, () => {
+const server = app.listen(port, hostname, () => {
   console.log(`The app has been launched on port ${port}.`);
+});
+
+// Gracceful shutdown
+process.on("SIGTERM", () => {
+  server.close(() => {
+    console.log("Process terminated");
+  });
 });
