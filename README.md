@@ -42,7 +42,8 @@ This is a repo for... whatever 🤷
 | 30 | gitlab-docker | GitLab in a docker container.  |  |
 | 31 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
 | 32 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
-| 33 | mern.io | An application powered by MERN stack.  | 🚧 Under development... |
+| 33 | mern.io | An application powered by MERN stack.  | 🚧 Front-End is on the way.. |
+| 34 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
 
 <br />
 
