@@ -5,6 +5,7 @@ require("dotenv").config();
 
 // Add colors to terminal output
 const colors = require("colors");
+app.use(colors);
 
 // Connect to MongoDB
 const connectDB = require("./config/db");
