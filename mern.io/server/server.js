@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
-
-// Import a customized error handler
-const { errorHandler } = require("./middleware/errorHandler");
+// Load environment variables
+require("dotenv").config();
 
 // Add colors to terminal output
 const colors = require("colors");
@@ -25,10 +24,6 @@ app.use(express.json());
 // The extended option allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true)
 app.use(express.urlencoded({ extended: false }));
 
-// Load environment variables
-require("dotenv").config();
-const port = process.env.PORT || 5000;
-const hostname = process.env.HOSTNAME || 5000
 
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
@@ -36,8 +31,14 @@ const userRoutes = require("./routes/userRoutes");
 app.use("/api/goals", goalRoutes);
 app.use("/api/users", userRoutes);
 
+// Import a customized error handler
+const { errorHandler } = require("./middleware/errorHandler");
 // Overwrite ExpressJS default error handler
 app.use(errorHandler);
+
+// Determine port and host/hostname
+const port = process.env.PORT || 5000;
+const hostname = process.env.HOSTNAME || 5000;
 
 // Start the app (back-end server)
 app.listen(port, hostname, () => {
