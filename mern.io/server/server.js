@@ -38,7 +38,7 @@ app.use(errorHandler);
 
 // Determine port and host/hostname
 const port = process.env.PORT || 5000;
-const hostname = process.env.HOSTNAME || 5000;
+const hostname = process.env.HOSTNAME || "localhost";
 
 // Start the app (back-end server)
 const server = app.listen(port, hostname, () => {
