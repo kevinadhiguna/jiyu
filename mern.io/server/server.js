@@ -28,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 // Load environment variables
 require("dotenv").config();
 const port = process.env.PORT || 5000;
+const hostname = process.env.HOSTNAME || 5000
 
 // Register routes
 const goalRoutes = require("./routes/goalRoutes");
@@ -39,6 +40,6 @@ app.use("/api/users", userRoutes);
 app.use(errorHandler);
 
 // Start the app (back-end server)
-app.listen(port, () => {
+app.listen(port, hostname, () => {
   console.log(`The app has been launched on port ${port}.`);
 });
