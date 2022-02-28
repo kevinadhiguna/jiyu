@@ -32,7 +32,7 @@ const registerUser = asyncHandler(async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, salt);
 
   // Create a user
-  const user = User.create({
+  const user = await User.create({
     name,
     email,
     password: hashedPassword,
@@ -62,7 +62,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
   // Check user's email
-  const user = User.findOne({ email });
+  const user = await User.findOne({ email });
 
   // Check if hashed result of password from user input is same as hashed password in database
   if (user && (await bcrypt.compare(password, user.password))) {
