@@ -11,7 +11,7 @@ services:
       PORT: ${PORT:-5000}
       HOSTNAME: ${HOSTNAME:-localhost}
       MONGO_URI: ${MONGO_URI}
-      JWT_SECRET: ${JWT_SECRET}
+      JWT_SECRET: ${JWT_SECRET:-Te8Eq9Fr7Tr0Ax6Pf6Md}
       JWT_EXPIRY: ${JWT_EXPIRY}
     ports:
       - 5000:5000
