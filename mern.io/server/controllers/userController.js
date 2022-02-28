@@ -18,7 +18,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // Check if a user already exists by looking at email
-  const userExists = User.findOne({ email });
+  const userExists = await User.findOne({ email });
 
   // Throw an error if a user already exists
   if (userExists) {
