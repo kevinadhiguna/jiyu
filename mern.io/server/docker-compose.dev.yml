@@ -12,6 +12,6 @@ services:
       HOSTNAME: ${HOSTNAME:-localhost}
       MONGO_URI: ${MONGO_URI}
       JWT_SECRET: ${JWT_SECRET:-Te8Eq9Fr7Tr0Ax6Pf6Md}
-      JWT_EXPIRY: ${JWT_EXPIRY}
+      JWT_EXPIRY: "${JWT_EXPIRY:-1d}"
     ports:
       - 5000:5000
