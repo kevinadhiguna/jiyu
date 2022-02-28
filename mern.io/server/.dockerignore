@@ -1,0 +1,13 @@
+# Dependency
+node_modules
+
+# Environment variables
+.env
+.env.example
+
+# Git
+.github
+.gitignore
+
+# Documentation
+README.md
