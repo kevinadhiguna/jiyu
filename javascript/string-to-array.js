@@ -9,4 +9,4 @@ const stringToArray = (string) => {
 };
 
 const result = stringToArray(string);
-console.log(`Convert a string '${string}' to an asrray : ${result}`);
+console.log(`Convert a string '${string}' to an array : ${result}`);
