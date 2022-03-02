@@ -6,7 +6,7 @@ require("dotenv").config();
 let jsRedisClient;
 try {
     jsRedisClient = createHandyClient({
-        host: process.env.REDIS_HOST,
+        host: process.env.REDIS_HOST || "localhost",
         port: process.env.REDIS_PORT,
         password: process.env.REDIS_PW,
     });
