@@ -10,6 +10,7 @@ const app = http.createServer((req, res) => {
 
 // Determine hostname/host and port
 const PORT = process.env.PORT || 8050;
+// process.argv[2] means one should add an argument when running this program. For exammple : "node networking.js 0.0.0.0" will start the app on 0.0.0.0
 const HOSTNAME = process.argv[2] || "localhost"; // Hostname/host is localhost by default
 
 // Start the app
