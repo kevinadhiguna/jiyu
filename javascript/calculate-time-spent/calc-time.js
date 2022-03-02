@@ -13,3 +13,19 @@ const measureTimeSpent = () => {
 };
 
 measureTimeSpent();
+// OUTPUT :
+// == Start ==
+// 
+// i : 1
+// i : 2
+// i : 3
+// i : 4
+// i : 5
+// i : 6
+// i : 7
+// i : 8
+// i : 9
+// i : 10
+// displayNumbers(): 0.423ms
+//
+// == End ==
