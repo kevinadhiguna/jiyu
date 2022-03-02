@@ -6,4 +6,7 @@ const uid = () => {
 };
 
 const id = uid();
+
 console.log("Unique ID : ", id);
+// OUTPUT :
+// Unique ID :  l08ydntpahdekd4xbe6
