@@ -8,11 +8,11 @@ const server = http.createServer((req, res) => {
   res.end(`Hi, you came from ${ip}\n`);
 });
 
-const hostname = process.argv[2] || null;
+// Determine hostname/host and port 
+const PORT = process.env.PORT || 8050;
+const HOSTNAME = process.argv[2] || null;
 
-const port = process.env.PORT || 8050;
-
-server.listen(port, hostname, (err) => {
+server.listen(PORT, HOSTNAME, (err) => {
   if (err) {
     return console.log("Error occured :", err);
   }
