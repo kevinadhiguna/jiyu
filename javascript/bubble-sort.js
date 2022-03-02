@@ -18,3 +18,8 @@ const sorted_result = bubbleSort(numbers);
 console.log("=== Bubble Sort ===\n");
 console.log("Before sorted : ", numbers);
 console.log("After sorted : ", sorted_result);
+// OUTPUT :
+// === Bubble Sort ===
+//
+// Before sorted :  [ 5, 66, 3, 2, 456, 123 ]
+// After sorted :  [ 2, 3, 5, 66, 123, 456 ]
