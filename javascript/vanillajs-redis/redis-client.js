@@ -34,5 +34,8 @@ async function redisSetMerchant(merchantId, merchantBrand, merchantName) {
   await jsRedisClient.quit();
 }
 
+// Generate an ID
 const id = uuidv4();
+
+// Execute redisSetMerchant function above
 redisSetMerchant(id, "Nike", "Air Jordan");
