@@ -10,18 +10,17 @@ const fetch = require("node-fetch-commonjs");
 console.log("aaa");
 
 fetch("https://catfact.ninja/fact")
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-        console.log("bbb");
-    });
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    console.log("bbb");
+  });
 
 console.log("ccc");
 
-
 /**
  * [Answer]
- * 
+ *
  * aaa
  * ccc
  * {
@@ -29,7 +28,7 @@ console.log("ccc");
  *   length: 78
  * }
  * bbb
- * 
+ *
  * JavaScript runs asynchronously. That means while fetching the data from API, it runs the latest line of console.log then executes the lines inside the fetch block.
- * 
+ *
  */
