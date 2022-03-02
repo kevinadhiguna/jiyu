@@ -26,10 +26,10 @@ async function redisSetMerchant(merchantId, merchantBrand, merchantName) {
   const redisMerchantName = await jsRedisClient.get("merchantName");
 
   // Show values
-  console.log("Merchant ID is :", redisMerchantId);
-  console.log("Merchant Brand is :", redisMerchantBrand);
-  console.log("Merchant Name is :", redisMerchantName);
-  
+  console.log("Merchant ID is :", redisMerchantId); // Merchant ID is : 72b8e296-fdf5-48ab-a087-785f7883547a
+  console.log("Merchant Brand is :", redisMerchantBrand); // Merchant Brand is : Nike
+  console.log("Merchant Name is :", redisMerchantName); // Merchant Name is : Air Jordan
+
   // Close Redis connection
   await jsRedisClient.quit();
 }
