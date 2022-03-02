@@ -1,4 +1,6 @@
 const http = require("http");
+// Load environment variables
+require("dotenv").config();
 
 const server = http.createServer((req, res) => {
   const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
