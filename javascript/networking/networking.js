@@ -10,7 +10,7 @@ const app = http.createServer((req, res) => {
 
 // Determine hostname/host and port
 const PORT = process.env.PORT || 8050;
-const HOSTNAME = process.argv[2] || null;
+const HOSTNAME = process.argv[2] || "localhost"; // Hostname/host is localhost by default
 
 // Start the app
 const server = app.listen(PORT, HOSTNAME, (err) => {
