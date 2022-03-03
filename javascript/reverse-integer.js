@@ -22,8 +22,8 @@ function reverseInteger(n) {
     .split("") // ["x", "y", "z"]
     .reverse() // ["z", "y", "x"]
     .join(""); // "zyx"
-  let parsedInt = parseInt(reversedNumber); // zyx
-  return tempCopiedNumber < 0 ? parsedInt * -1 : parsedInt; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
+  let parsedReverseNumber = parseInt(reversedNumber); // zyx
+  return tempCopiedNumber < 0 ? parsedReverseNumber * -1 : parsedReverseNumber; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
 }
 
 const integer = 9762938;
