@@ -26,5 +26,7 @@ function reverseInteger(n) {
   return tempCopiedNumber < 0 ? parsedReverseNumber * -1 : parsedReverseNumber; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
 }
 
-const integer = 9762938;
-console.log("Reversed", integer, "to", reverseInteger(integer)); // Reversed 9762938 to 8392679
+const number1 = 9762938;
+const number2 = -1837065;
+console.log("Reversed", number1, "to", reverseInteger(number1)); // Reversed 9762938 to 8392679
+console.log("Reversed", number2, "to", reverseInteger(number2)); // Reversed -1837065 to -5607381
