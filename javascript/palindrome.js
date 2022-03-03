@@ -18,6 +18,6 @@ console.log("Reversed Word :", reversed_word); // Reversed Word : otamot
 
 console.log("\n[ RESULT ]");
 word === reversed_word
-  ? console.log("The word is palindrome !")
-  : console.log("The word is NOT palindrome...");
-// The word is NOT palindrome...
+  ? console.log(`${word} is palindrome !`)
+  : console.log(`${word} is NOT palindrome...`);
+// tomato is NOT palindrome...
