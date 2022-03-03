@@ -14,13 +14,14 @@ console.log(
   "GitHub repository : https://github.com/kevinadhiguna/jiyu/blob/master/javascript/is-bracket-valid.js\n"
 );
 
-console.log("Case '()' :", isBracketValid("()") ? "valid" : "invalid");
-console.log("Case '()()' :", isBracketValid("()()") ? "valid" : "invalid");
-console.log("Case ')(' :", isBracketValid(")(") ? "valid" : "invalid");
-console.log("Case '' :", isBracketValid("") ? "valid" : "invalid");
-console.log("Case '((()))' :", isBracketValid("((()))") ? "valid" : "invalid");
+console.log("Case '()' :", isBracketValid("()") ? "valid" : "invalid"); // Case '()' : valid
+console.log("Case '()()' :", isBracketValid("()()") ? "valid" : "invalid"); // Case '()()' : valid
+console.log("Case ')(' :", isBracketValid(")(") ? "valid" : "invalid"); // Case ')(' : invalid
+console.log("Case '' :", isBracketValid("") ? "valid" : "invalid"); // Case '' : valid
+console.log("Case '((()))' :", isBracketValid("((()))") ? "valid" : "invalid"); // Case '((()))' : valid
 console.log(
   "Case '((()' :",
   isBracketValid("((()") ? "valid" : "invalid",
   "\n"
 );
+// Case '((()' : invalid
