@@ -6,23 +6,23 @@
  */
 
 function rot13(s) {
-    return s
-        .split("")
-        .map((char) =>
-            // console.log("char :", char);
-            String.fromCharCode(
-                char.charCodeAt(0) + (char.toLowerCase() < "n" ? 13 : -13)
-            )
-        )
-        .join("");
+  return s
+    .split("")
+    .map((char) =>
+      // console.log("char :", char);
+      String.fromCharCode(
+        char.charCodeAt(0) + (char.toLowerCase() < "n" ? 13 : -13)
+      )
+    )
+    .join("");
 }
 
 // Take one of the most common password from https://nordpass.com/most-common-passwords-list/.
 const password = "qwerty"; // <- Known issue : currently password can only contain alphabet, not numbers...
-console.log("Let's apply ROT13 to this password :", password, "\n");
+console.log("Let's apply ROT13 to this password :", password, "\n"); // Let's apply ROT13 to this password : qwerty
 
 const encryptedPassword = rot13(password);
-console.log("Apply ROT13 to the password :", encryptedPassword);
+console.log("Apply ROT13 to the password :", encryptedPassword); // Apply ROT13 to the password : djregl
 
 const decryptedPassword = rot13(encryptedPassword);
-console.log("Decrypt from ROT13 :", decryptedPassword);
+console.log("Decrypt from ROT13 :", decryptedPassword); // Decrypt from ROT13 : qwerty
