@@ -9,4 +9,7 @@ const stringToArray = (string) => {
 };
 
 const result = stringToArray(string);
-console.log(`Convert a string '${string}' to an array : ${result}`);
+console.log(`[1] Convert '${string}' to an array : ${result}`);
+// [1] Convert 'Hello' to an array : H,e,l,l,o
+console.log(`[2] Convert '${string}' to an array :`, string.split(""));
+// [2] Convert 'Hello' to an array : [ 'H', 'e', 'l', 'l', 'o' ]
