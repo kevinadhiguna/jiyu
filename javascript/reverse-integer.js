@@ -19,9 +19,9 @@ function reverseInteger(n) {
   const tempCopiedNumber = n;
   let reversedNumber = n
     .toString() // "xyz"
-    .split("") // ["x", "y", "z"]
-    .reverse() // ["z", "y", "x"]
-    .join(""); // "zyx"
+    .split("") // ["x", "y", "z"] (String method)
+    .reverse() // ["z", "y", "x"] (Array method)
+    .join(""); // "zyx" (Array method)
   let parsedReverseNumber = parseInt(reversedNumber); // zyx
   return tempCopiedNumber < 0 ? parsedReverseNumber * -1 : parsedReverseNumber; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
 }
