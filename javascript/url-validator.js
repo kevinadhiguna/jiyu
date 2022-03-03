@@ -15,5 +15,18 @@ const links = [
 ];
 
 for (let i = 0; i < links.length; i++) {
-  console.log(`[case ${i+1}]`, links[i], "is a", isUrlValid(links[i]), "URL..");
+  console.log(
+    `[case ${i + 1}]`,
+    links[i],
+    "is a",
+    isUrlValid(links[i]),
+    "URL.."
+  );
 }
+// OUTPUT
+// [case 1] https://mywebsite.com is a valid URL..
+// [case 2] https://mywebsite.com/login is a valid URL..
+// [case 3] https://mywebsite.com/login#privacy is a valid URL..
+// [case 4] https://admin.mywebsite.com is a valid URL..
+// [case 5] https://admin.mywebsite.com/dashboard is a valid URL..
+// [case 6] https://admin.mywebsite.com/dashboard#terms is a valid URL..
