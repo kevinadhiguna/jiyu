@@ -11,3 +11,10 @@ console.log(`
     The competition is separated to ${baseball.league[0]} and ${baseball.league[1]}.
     The total teams in ${baseball.leagueName} is ${baseball.teamNumbers}.
 `);
+// OUTPUT
+//
+// Baseball is one of the most popular sports in United States of America.
+// It has a professional league called MLB.
+// The competition is separated to AL and NL.
+// The total teams in MLB is 30.
+//
