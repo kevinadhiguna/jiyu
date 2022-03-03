@@ -5,6 +5,7 @@ function isUrlValid(url) {
   return urlRegex.test(url) ? "valid" : "invalid";
 }
 
+// Known issue : "https://Mywebsite.com" is considered a valid URL (should be invalid since it has an uppercase letter)
 const links = [
   "https://mywebsite.com",
   "https://mywebsite.com/login",
