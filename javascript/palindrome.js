@@ -1,24 +1,23 @@
 let word = "tomato";
 
 // Original word
-console.log("Original word :", word);
+console.log("Original word :", word); // Original word : tomato
 
 // Convert the word into an array consisting of each character
 word_arr = word.split("");
-console.log("Now, let's convert the word into an array :", word_arr);
+console.log("Now, let's convert the word into an array :", word_arr); // Now, let's convert the word into an array : [ 't', 'o', 'm', 'a', 't', 'o' ]
 
 let reversed_word_arr = [];
-
 for (let i = 0; i < word.length; i++) {
-    reversed_word_arr.push(word_arr.pop([i]));
+  reversed_word_arr.push(word_arr.pop([i]));
 }
-
-console.log("Array of the reversed word :", reversed_word_arr);
+console.log("Array of the reversed word :", reversed_word_arr); // Array of the reversed word : [ 'o', 't', 'a', 'm', 'o', 't' ]
 
 let reversed_word = reversed_word_arr.join("");
-console.log("Reversed Word :", reversed_word);
+console.log("Reversed Word :", reversed_word); // Reversed Word : otamot
 
 console.log("\n[ RESULT ]");
 word === reversed_word
-    ? console.log("The word is palindrome !")
-    : console.log("The word is NOT palindrome...");
+  ? console.log("The word is palindrome !")
+  : console.log("The word is NOT palindrome...");
+// The word is NOT palindrome...
