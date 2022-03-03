@@ -19,3 +19,6 @@ console.log("Getting an object’s entries :", Object.entries(obj));
 
 // Stringify an object
 console.log("Stringify an object :", JSON.stringify(obj));
+
+// Copying an object
+console.log("Copying an object :", { ...obj });
