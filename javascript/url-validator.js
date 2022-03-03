@@ -15,5 +15,5 @@ const links = [
 ];
 
 for (let i = 0; i < links.length; i++) {
-  console.log(`[case ${i}]`, links[i], "is a", isUrlValid(links[i]), "URL..");
+  console.log(`[case ${i+1}]`, links[i], "is a", isUrlValid(links[i]), "URL..");
 }
