@@ -16,15 +16,15 @@
  */
 
 function reverseInteger(n) {
-    const tempCopiedNumber = n;
-    let reversedNumber = n
-        .toString() // "xyz"
-        .split("") // ["x", "y", "z"]
-        .reverse() // ["z", "y", "x"]
-        .join(""); // "zyx"
-    let parsedInt = parseInt(reversedNumber); // zyx
-    return tempCopiedNumber < 0 ? parsedInt * -1 : parsedInt; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
+  const tempCopiedNumber = n;
+  let reversedNumber = n
+    .toString() // "xyz"
+    .split("") // ["x", "y", "z"]
+    .reverse() // ["z", "y", "x"]
+    .join(""); // "zyx"
+  let parsedInt = parseInt(reversedNumber); // zyx
+  return tempCopiedNumber < 0 ? parsedInt * -1 : parsedInt; // Add minus, if the original number is negative. Otherwise, just return the reversed number..
 }
 
 const integer = 9762938;
-console.log("Reversed", integer, "to", reverseInteger(integer));
+console.log("Reversed", integer, "to", reverseInteger(integer)); // Reversed 9762938 to 8392679
