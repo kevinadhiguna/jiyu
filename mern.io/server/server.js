@@ -47,7 +47,8 @@ const server = app.listen(port, hostname, () => {
 
 // Gracceful shutdown
 process.on("SIGTERM", () => {
-  server.close(() => {
+  server.close((err) => {
     console.log("Process terminated");
+    process.exit(err ? 1 : 0);
   });
 });
