@@ -44,6 +44,7 @@ This is a repo for... whatever 🤷
 | 32 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
 | 33 | mern.io | An application powered by MERN stack.  | 🚧 Front-End is on the way.. |
 | 34 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
+| 35 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
 
 <br />
 
