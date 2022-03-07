@@ -29,3 +29,21 @@ const hello = (): void => {
   console.log("Hello World !");
 };
 hello();
+
+// === Interface ===
+console.info("\n=== Interface ===");
+interface Player {
+  name: string;
+  club: string;
+  age?: string; // optional
+  jerseyNumber: number;
+  move?: () => void; // optional
+}
+
+let academyPlayer: Player = {
+  name: "Steven Josh",
+  club: "Real Madrid",
+  jerseyNumber: 17,
+  move: () => {},
+};
+console.log("academyPlayer :", academyPlayer);
