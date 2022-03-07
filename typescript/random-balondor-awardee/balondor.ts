@@ -57,3 +57,6 @@ console.log(`With Duplicates : ${balondorPlayers.random(10, true)}`);
 // If 'allowDups' parameter is not present, by default it equals to false.
 console.log(`Without Duplicates : ${balondorPlayers.random(5)}`);
 
+// SAMPLE OUTPUT
+// With Duplicates : Cristiano Ronaldo,Alfredo Di Stefano,Robert Lewandowski,Lev Yashin,Johan Cruyff,Cristiano Ronaldo,Alfredo Di Stefano,Johan Cruyff,Michel Platini,Alfredo Di Stefano
+// Without Duplicates : Johan Cruyff,Robert Lewandowski,Lionel Messi,Lev Yashin,Michel Platini
