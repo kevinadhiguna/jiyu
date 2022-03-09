@@ -8,5 +8,8 @@
     "node-fetch-commonjs": "^3.0.3",
     "redis": "^3.1.2",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
