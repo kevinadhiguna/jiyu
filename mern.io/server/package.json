@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "format:check": "prettier --check server.js 'config/*.js' 'controllers/*.js' 'middleware/*.js' 'models/*.js' 'routes/*.js'"
   },
   "license": "MIT",
   "dependencies": {
