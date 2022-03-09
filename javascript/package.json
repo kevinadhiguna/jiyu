@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "check": "prettier --check *.js '**/*js'"
+    "check": "prettier --check *.js '**/*js'",
+    "format": "prettier --write *.js '**/*.js'"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
