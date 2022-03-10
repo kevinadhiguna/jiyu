@@ -9,13 +9,13 @@ const measureTimeSpent = () => {
   console.time("displayNumbers()");
   displayNumbers();
   console.timeEnd("displayNumbers()");
-  console.info("\n== End ==")
+  console.info("\n== End ==");
 };
 
 measureTimeSpent();
 // OUTPUT :
 // == Start ==
-// 
+//
 // i : 1
 // i : 2
 // i : 3

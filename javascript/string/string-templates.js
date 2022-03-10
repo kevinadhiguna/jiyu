@@ -26,9 +26,9 @@ console.log(manager_fullname, "\n");
 let total_team_wage = 200000000;
 let luxury_tax = 0.35;
 let payroll =
-    `Team Payroll : ${total_team_wage} + (${total_team_wage} * ${luxury_tax}) :` +
-    "$" +
-    (total_team_wage + total_team_wage * luxury_tax);
+  `Team Payroll : ${total_team_wage} + (${total_team_wage} * ${luxury_tax}) :` +
+  "$" +
+  (total_team_wage + total_team_wage * luxury_tax);
 console.log(payroll, "\n");
 
 // ### HTML templates ###
@@ -38,7 +38,7 @@ let tags = ["mlb", "baseball", "sports"];
 let html = `<h2>${header}</h2><ul>`;
 
 for (const x of tags) {
-    html += `<li>${x}</li>`;
+  html += `<li>${x}</li>`;
 }
 
 html += `</ul>`;

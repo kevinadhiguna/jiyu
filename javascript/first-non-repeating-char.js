@@ -18,33 +18,33 @@ test case:
 */
 
 function firstUniqueChar(s) {
-    for (let i = 0; i < s.length; i++) {
-        // If the first index of a character/letter is the same as its last index, then it is unique and a non-repeating chaarcter/letter.
-        if (s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))) {
-            return s.charAt(i);
-        }        
+  for (let i = 0; i < s.length; i++) {
+    // If the first index of a character/letter is the same as its last index, then it is unique and a non-repeating chaarcter/letter.
+    if (s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))) {
+      return s.charAt(i);
     }
+  }
 
-    // If no letter is unique in a string
-    return "-";
+  // If no letter is unique in a string
+  return "-";
 }
 
 console.log(
-    "The first unique letter in 'faiztheprodigy' :",
-    firstUniqueChar("faiztheprodigy"),
-    "\n"
+  "The first unique letter in 'faiztheprodigy' :",
+  firstUniqueChar("faiztheprodigy"),
+  "\n"
 );
 console.log(
-    "The first unique letter in 'aabb' :",
-    firstUniqueChar("aabb"),
-    "\n"
+  "The first unique letter in 'aabb' :",
+  firstUniqueChar("aabb"),
+  "\n"
 );
 console.log(
-    "The first unique letter in 'zzzassdzqppqra' :",
-    firstUniqueChar("zzzassdzqppqra"),
-    "\n"
+  "The first unique letter in 'zzzassdzqppqra' :",
+  firstUniqueChar("zzzassdzqppqra"),
+  "\n"
 );
 console.log(
-    "The first unique letter in 'xcelrtxcelrtxcelrtxcelrtxcelrtyay' :",
-    firstUniqueChar("xcelrtxcelrtxcelrtxcelrtxcelrtyay")
+  "The first unique letter in 'xcelrtxcelrtxcelrtxcelrtxcelrtyay' :",
+  firstUniqueChar("xcelrtxcelrtxcelrtxcelrtxcelrtyay")
 );

@@ -6,23 +6,25 @@
  */
 
 // To read text from clipboard
-navigator.clipboard.readText()
-    .then(text => {
-        // Use a text
-        console.log("Text :", text);
-    })
-    .catch(readTextErr => {
-        // Handle an error reading text
-        console.log("Error happened :", readTextErr);
-    });
+navigator.clipboard
+  .readText()
+  .then((text) => {
+    // Use a text
+    console.log("Text :", text);
+  })
+  .catch((readTextErr) => {
+    // Handle an error reading text
+    console.log("Error happened :", readTextErr);
+  });
 
 // To write text to clipboard
-navigator.clipboard.writeText()
-    .then(() => {
-        // Success
-        console.info("Successfully write the text !");
-    })
-    .catch(writeTextErr => {
-        // Handle an error writing text
-        console.error("Failed writing text :", writeTextErr);
-    });
+navigator.clipboard
+  .writeText()
+  .then(() => {
+    // Success
+    console.info("Successfully write the text !");
+  })
+  .catch((writeTextErr) => {
+    // Handle an error writing text
+    console.error("Failed writing text :", writeTextErr);
+  });

@@ -1,8 +1,8 @@
 const obj = {
-    name: "Harper",
-    age: 25,
-    occupation: "Athlete",
-    club: "Los Angeles Angels",
+  name: "Harper",
+  age: 25,
+  occupation: "Athlete",
+  club: "Los Angeles Angels",
 };
 
 // Getting an entire object

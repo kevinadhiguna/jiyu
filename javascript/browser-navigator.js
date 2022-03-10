@@ -1,6 +1,6 @@
 /**
  * The window.navigator object contains information about the visitor's browser (source: https://www.w3schools.com/js/js_window_navigator.asp).
- * 
+ *
  * These code are meant to be executed in a browser.
  */
 

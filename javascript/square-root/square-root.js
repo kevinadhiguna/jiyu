@@ -6,4 +6,3 @@ console.log(`\nThe square root of ${number} is ${result}\n`);
 //
 // The square root of 324 is 18
 //
-

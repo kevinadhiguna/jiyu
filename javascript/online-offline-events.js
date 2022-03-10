@@ -9,9 +9,9 @@ console.log("Currently the user is", userStatus);
 // == JavaScript Event listener ==
 // If a user is online :
 window.addEventListener("online", () => {
-    console.log("User is online !");
+  console.log("User is online !");
 });
 // If a user is offline :
 window.addEventListener("offline", () => {
-    console.log("User is offline...");
+  console.log("User is offline...");
 });

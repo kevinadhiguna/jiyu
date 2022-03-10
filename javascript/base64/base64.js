@@ -1,5 +1,5 @@
 const originalString = "I live in Los Angeles";
-console.log("Original String :", originalString, "\n"); // Original String : I live in Los Angeles 
+console.log("Original String :", originalString, "\n"); // Original String : I live in Los Angeles
 
 // Encode using base64
 const encodedString = Buffer.from(originalString, "binary").toString("base64");

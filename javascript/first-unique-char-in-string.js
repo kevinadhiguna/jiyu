@@ -20,42 +20,42 @@ test case:
 */
 
 function firstUniqueChar(s) {
-    // An object to save letters and their appearences.
-    let uniqueChar = {};
+  // An object to save letters and their appearences.
+  let uniqueChar = {};
 
-    for (let i = 0; i < s.length; i++) {
-        !uniqueChar[s[i]] ? (uniqueChar[s[i]] = 1) : uniqueChar[s[i]]++;
+  for (let i = 0; i < s.length; i++) {
+    !uniqueChar[s[i]] ? (uniqueChar[s[i]] = 1) : uniqueChar[s[i]]++;
+  }
+
+  console.log("Count of each letter :", uniqueChar);
+
+  for (let key of Object.keys(uniqueChar)) {
+    // Get the first key whose value is 1 (Value = 1 means the letter is unique)
+    if (uniqueChar[key] === 1) {
+      return s.indexOf(key);
     }
+  }
 
-    console.log("Count of each letter :", uniqueChar);
-
-    for (let key of Object.keys(uniqueChar)) {
-        // Get the first key whose value is 1 (Value = 1 means the letter is unique)
-        if (uniqueChar[key] === 1) {
-            return s.indexOf(key);
-        }
-    }
-
-    // If no letter is unique in a string
-    return "-";
+  // If no letter is unique in a string
+  return "-";
 }
 
 console.log(
-    "Index of the first unique letter in this string :",
-    firstUniqueChar("faiztheprodigy"),
-    "\n"
+  "Index of the first unique letter in this string :",
+  firstUniqueChar("faiztheprodigy"),
+  "\n"
 );
 console.log(
-    "Index of the first unique letter in this string :",
-    firstUniqueChar("aabb"),
-    "\n"
+  "Index of the first unique letter in this string :",
+  firstUniqueChar("aabb"),
+  "\n"
 );
 console.log(
-    "Index of the first unique letter in this string :",
-    firstUniqueChar("zzzassdzqppqra"),
-    "\n"
+  "Index of the first unique letter in this string :",
+  firstUniqueChar("zzzassdzqppqra"),
+  "\n"
 );
 console.log(
-    "Index of the first unique letter in this string :",
-    firstUniqueChar("xcelrtxcelrtxcelrtxcelrtxcelrtyay")
+  "Index of the first unique letter in this string :",
+  firstUniqueChar("xcelrtxcelrtxcelrtxcelrtxcelrtyay")
 );

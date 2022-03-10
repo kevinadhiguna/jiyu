@@ -23,6 +23,6 @@ console.log(
     ${person.friends[1].name} is also a friend of mine. He plays for ${person.friends[1].team}.`
 );
 // OUTPUT
-// Hi, I am Austin Harper and am 24 yo. My hobby is playing baseball so I play for Braves. 
+// Hi, I am Austin Harper and am 24 yo. My hobby is playing baseball so I play for Braves.
 //  Actually I have a friend named Jack Seager who plays for Mariners.
 //  Corey Buehler is also a friend of mine. He plays for Dodgers.
