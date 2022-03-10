@@ -3,9 +3,12 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "nuxt3": "latest"
+    "nuxt3": "latest",
+    "prettier": "^2.5.1",
+    "husky": "^7.0.0"
   }
 }
