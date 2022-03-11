@@ -21,7 +21,7 @@ fastify.register(require("./routes/items"));
 
 // Determine port and host/hostname
 const PORT = process.env.PORT || 5000;
-const HOSTNAME = process.env.HOSTNAME;
+const HOSTNAME = process.env.HOSTNAME || "localhost";
 
 // Start server
 const start = async () => {
