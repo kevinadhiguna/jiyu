@@ -20,8 +20,8 @@ fastify.register(require("fastify-swagger"), {
 fastify.register(require("./routes/items"));
 
 // Determine port and host/hostname
-const port = process.env.PORT;
-const hostname = process.env.HOSTNAME;
+const PORT = process.env.PORT;
+const HOSTNAME = process.env.HOSTNAME;
 
 // Start server
 const start = async () => {
