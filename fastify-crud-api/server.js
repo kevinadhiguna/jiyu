@@ -26,7 +26,7 @@ const HOSTNAME = process.env.HOSTNAME;
 // Start server
 const start = async () => {
   try {
-    await fastify.listen(port);
+    await fastify.listen(PORT, HOSTNAME);
   } catch (error) {
     fastify.log.error(error);
     console.error("Error occured.. exiting..");
