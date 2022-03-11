@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "check": "prettier --check \"./**/*.{js,.json}\""
   },
   "license": "MIT",
   "dependencies": {
