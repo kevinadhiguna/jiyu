@@ -12,6 +12,6 @@ services:
     # Give docker container name
     container_name: nginx-serve-static_ctr
     restart: always
-    # App will be served on port 8087 inside anb outside of the docker container
+    # App will be served on port 8087 inside and outside of the docker container
     ports:
      - "8087:8087"
