@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -7,7 +7,10 @@ COPY package.json .
 
 RUN yarn --frozen-lockfile
 
-COPY . .
+COPY items.js items.js
+COPY server.js server.js
+COPY routes/ routes/
+COPY controllers/ controllers/
 
 EXPOSE 5000
 
