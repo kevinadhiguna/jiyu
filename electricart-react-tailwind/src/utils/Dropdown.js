@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import Transition from '../utils/Transition.js';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Transition from "../utils/Transition.js";
 
-function Dropdown({
-  children,
-  title
-}) {
-
+function Dropdown({ children, title }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -24,7 +20,11 @@ function Dropdown({
         onClick={(e) => e.preventDefault()}
       >
         {title}
-        <svg className="w-3 h-3 fill-current text-gray-500 cursor-pointer ml-1 flex-shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="w-3 h-3 fill-current text-gray-500 cursor-pointer ml-1 flex-shrink-0"
+          viewBox="0 0 12 12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z" />
         </svg>
       </a>
@@ -50,7 +50,7 @@ export default Dropdown;
 Dropdown.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element.isRequired
+    PropTypes.element.isRequired,
   ]),
   title: PropTypes.string.isRequired,
 };
