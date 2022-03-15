@@ -581,3 +581,8 @@ Zulu
 ```
 
 Source : [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html)
+
+## Example of setting timezone in MongoDB docker container
+
+- [MongoDB v4 docker container](https://github.com/kevinadhiguna/jiyu/blob/master/mongodb-docker/v4/docker-compose.yml)
+- [MongoDB v5 docker container](https://github.com/kevinadhiguna/jiyu/blob/master/mongodb-docker/v5/docker-compose.yml)
