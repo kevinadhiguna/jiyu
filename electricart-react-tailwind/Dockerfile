@@ -7,7 +7,10 @@ COPY package.json .
 
 RUN yarn --frozen-lockfile
 
-COPY . .
+COPY public/ public/
+COPY .dockerignore .dockerignore
+COPY craco.config.js craco.config.js
+COPY src/ src/
 
 EXPOSE 3000
 
