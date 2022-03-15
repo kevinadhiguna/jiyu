@@ -26,7 +26,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "check": "prettier --check \"./**/*.{js,json}\""
+    "check": "prettier --check \"./**/*.{js,json}\"",
+    "format": "prettier --write \"./**/*.{js,json}\""
   },
   "eslintConfig": {
     "extends": "react-app"
