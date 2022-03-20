@@ -1,0 +1,15 @@
+const express = require("express");
+const app = express();
+require("dotenv").config();
+
+app.use(express.json());
+
+const getuseripRoute = require("./route/getuseripRoute");
+app.use("/", getuseripRoute);
+
+const PORT = process.env.PORT || 5000;
+const HOSTNAME = process.env.HOSTNAME || "localhost";
+
+const server = app.listen(PORT, HOSTNAME, () => {
+  console.log(`App is running on ${HOSTNAME}:${PORT}`);
+});
