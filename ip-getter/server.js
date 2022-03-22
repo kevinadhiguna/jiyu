@@ -4,6 +4,9 @@ require("dotenv").config();
 
 app.use(express.json());
 
+const helmet = require("helmet");
+app.use(helmet());
+
 const getuseripRoute = require("./route/getuseripRoute");
 app.use("/", getuseripRoute);
 
