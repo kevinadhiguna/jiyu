@@ -273,6 +273,11 @@ json-schema-traverse@^0.4.1:
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz#69f6a87d9513ab8bb8fe63bdb0979c448e684660"
   integrity sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==
 
+lil-http-terminator@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/lil-http-terminator/-/lil-http-terminator-1.2.2.tgz#f78944a3977eff5083ac29764940fb7d3806a6ff"
+  integrity sha512-2n6gKJIKgPjy4JfSlwsQnAA7wK4SEA1cegqdsYwr7qObVfIHdELjDGjEcYWJanfF/u/mRzIT2WPqhpzC6R9pZw==
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
