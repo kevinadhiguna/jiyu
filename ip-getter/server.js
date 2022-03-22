@@ -29,3 +29,5 @@ async function shutdown(signalORevent) {
   `);
   process.exit(error ? 1 : 0);
 }
+
+process.on("SIGINT", shutdown);
