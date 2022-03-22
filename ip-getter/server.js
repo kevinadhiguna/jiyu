@@ -25,7 +25,7 @@ async function shutdown(signalORevent) {
       Success: ${success}
       Message: ${message}
       Code: ${code}
-      Error (if exists): ${error || ''}
+      Error (if exists): ${error || ""}
   `);
-  process.exit(error ? 1 : 0)
+  process.exit(error ? 1 : 0);
 }
