@@ -13,3 +13,19 @@ const HOSTNAME = process.env.HOSTNAME || "localhost";
 const server = app.listen(PORT, HOSTNAME, () => {
   console.log(`App is running on ${HOSTNAME}:${PORT}`);
 });
+
+const createHttpterminator = require("lil-http-terminator");
+const httpTerminator = createHttpterminator({ server });
+
+async function shutdown(signalORevent) {
+  const { code, message, success, error } = await httpTerminator.terminate();
+  console.log(`${signalORevent} occurred, shutting down...`);
+  console.log(`
+    HTTP server closure result:
+      Success: ${success}
+      Message: ${message}
+      Code: ${code}
+      Error (if exists): ${error || ''}
+  `);
+  process.exit(error ? 1 : 0)
+}
