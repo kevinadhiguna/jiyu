@@ -33,3 +33,4 @@ async function shutdown(signalORevent) {
 process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 process.on("uncaughtException", shutdown);
+process.on("unhandledRejection", shutdown);
