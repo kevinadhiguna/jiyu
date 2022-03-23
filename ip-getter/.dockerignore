@@ -1,0 +1,16 @@
+# Dependency
+node_modules
+
+# Environment Variables
+.env
+.env.example
+
+# Git
+.gitignore
+
+# Prettier
+.prettierrc
+.prettierignore
+
+# Docs
+README.md
