@@ -1,0 +1,17 @@
+# Reference: https://docs.appsmith.com/setup/docker
+version: "3.8"
+
+services:
+  # Appsmith service
+  appsmith:
+    image: index.docker.io/appsmith/appsmith-ce
+    container_name: appsmith-ce_ctr
+    ports:
+      - 80:80
+      - 443:443
+      - 9001:9001
+    volumes:
+      - ./stacks:/appsmith-stacks
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+    restart: unless-stopped
