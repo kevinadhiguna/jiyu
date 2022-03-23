@@ -15,3 +15,12 @@ services:
     labels:
       com.centurylinklabs.watchtower.enable: "true"
     restart: unless-stopped
+
+  # Auto update service
+  auto-update:
+    image: containrrr/watchtower:latest-dev
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    # Update check interval in seconds.
+    command: --schedule "0 0 * ? * *" --label-enable --cleanup
+    restart: unless-stopped
