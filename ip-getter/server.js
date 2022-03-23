@@ -22,7 +22,7 @@ const httpTerminator = createHttpterminator({ server });
 
 async function shutdown(signalORevent) {
   const { code, message, success, error } = await httpTerminator.terminate();
-  console.log(`${signalORevent} occurred, shutting down...`);
+  console.log(`\n${signalORevent} occurred, shutting down...`);
   console.log(`
     HTTP server closure result:
       Success: ${success}
