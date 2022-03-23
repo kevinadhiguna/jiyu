@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  ip-getter:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    image: ip-getter_img
+    container_name: ip-getter_ctr
+    environment:
+      HOSTNAME: "localhost"
+      PORT: 5000
+    ports:
+      - 5000:5000
