@@ -8,7 +8,7 @@ services:
     image: ip-getter_img
     container_name: ip-getter_ctr
     environment:
-      HOSTNAME: "localhost"
-      PORT: 5000
+      HOSTNAME: ${HOSTNAME}
+      PORT: ${PORT}
     ports:
      - 5000:5000
