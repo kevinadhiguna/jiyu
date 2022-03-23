@@ -37,3 +37,12 @@ process.on("SIGINT", shutdown);
 process.on("SIGTERM", shutdown);
 process.on("uncaughtException", shutdown);
 process.on("unhandledRejection", shutdown);
+
+// Example of log when receiving SIGINT and graceful shutdown is successful :
+// SIGINT occurred, shutting down...
+//
+//     HTTP server closure result:
+//       Success: true
+//       Message: Server successfully closed
+//       Code: TERMINATED
+//       Error (if exists):
