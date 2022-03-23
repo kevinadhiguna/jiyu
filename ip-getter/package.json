@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "check:format": "prettier --check \"./**/*.{js,json}\""
   },
   "dependencies": {
     "dotenv": "^16.0.0",
