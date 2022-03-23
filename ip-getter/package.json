@@ -9,5 +9,8 @@
     "helmet": "^5.0.2",
     "http-terminator": "^3.2.0",
     "lil-http-terminator": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
