@@ -11,7 +11,9 @@ const getuseripRoute = require("./route/getuseripRoute");
 app.use("/", getuseripRoute);
 
 const PORT = process.env.PORT || 5000;
+console.log(`PORT : ${PORT}`);
 const HOSTNAME = process.env.HOSTNAME || "localhost";
+console.log(`HOSTNAME : ${HOSTNAME}`);
 
 const server = app.listen(PORT, HOSTNAME, () => {
   console.log(`App is running on ${HOSTNAME}:${PORT}`);
@@ -21,6 +23,7 @@ const createHttpterminator = require("lil-http-terminator");
 const httpTerminator = createHttpterminator({ server });
 
 async function shutdown(signalORevent) {
+  console.log(`Signal or Event : ${signalORevent}`);
   const { code, message, success, error } = await httpTerminator.terminate();
   console.log(`\n${signalORevent} occurred, shutting down...`);
   console.log(`
