@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: dev.Dockerfile
     image: ip-getter_dev_img
-    container_name: ip-getter__dev_ctr
+    container_name: ip-getter_dev_ctr
     environment:
-      HOSTNAME: ${HOSTNAME:-localhost}
-      PORT: ${PORT:-5000}
+      HOSTNAME: localhost
+      PORT: 5000
     ports:
       - 5000:5000
