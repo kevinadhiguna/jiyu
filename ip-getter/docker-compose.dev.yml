@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: dev.Dockerfile
-    image: ip-getter_img
-    container_name: ip-getter_ctr
+    image: ip-getter_dev_img
+    container_name: ip-getter__dev_ctr
     environment:
       HOSTNAME: ${HOSTNAME:-localhost}
       PORT: ${PORT:-5000}
