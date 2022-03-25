@@ -46,6 +46,7 @@ This is a repo for... whatever 🤷
 | 34 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
 | 35 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
 | 36 | ip-getter | Get user IP address.  |  |
+| 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 
 <br />
 
