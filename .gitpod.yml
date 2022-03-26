@@ -2,12 +2,12 @@ image:
   file: .gitpod.Dockerfile
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: "Run ip-getter"
-    command: |
+  - name: "Setup IP-GETTER"
+    init: |
       dir=ip-getter
       direnv allow $dir
       cd $dir
-      yarn && yarn start
+      yarn
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
