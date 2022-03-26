@@ -8,6 +8,7 @@ tasks:
       direnv allow $dir
       cd $dir
       yarn
+      exit
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
