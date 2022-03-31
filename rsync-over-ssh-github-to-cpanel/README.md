@@ -541,6 +541,9 @@ $ cd .ssh
 $ cat my-ssh-key.pub >> authorized_keys
 ```
 
+Reference :
+- [Deploying to a server via SSH and Rsync in a Github Action](https://zellwk.com/blog/github-actions-deploy/)
+
 <br />
 
 Thank you for reading, have a nice day !
