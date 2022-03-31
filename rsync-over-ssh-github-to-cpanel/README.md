@@ -529,6 +529,19 @@ jobs:
 <img src="https://github.com/kevinadhiguna/jiyu/blob/master/rsync-over-ssh-github-to-cpanel/assets/github-set-github-actions-11.png" />
 
 <br />
+<br />
+
+## ⚠️ Fix permission denied error when running GitHub Actions
+
+Add the generated public key (e.g.: id_rsa.pub, my-ssh-key.pub, etc.) to `.ssh/authorized_keys`.
+
+If the generated public key name is `my-ssh-key.pub`, run :
+```bash
+$ cd .ssh
+$ cat my-ssh-key.pub >> authorized_keys
+```
+
+<br />
 
 Thank you for reading, have a nice day !
 
