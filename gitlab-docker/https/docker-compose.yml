@@ -30,4 +30,8 @@ services:
       - "$GITLAB_HOME/logs:/var/log/gitlab"
       # For storing the GitLab configuration files
       - "$GITLAB_HOME/config:/etc/gitlab"
+    ### 'shm_size' sets the size of the /dev/shm partition for this build’s containers. ###
+    # 256 MB
     shm_size: "256m"
+    # 2 GB
+    #shm_size: "2gb"
