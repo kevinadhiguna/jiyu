@@ -8,6 +8,7 @@ services:
     # - Community edition   : "gitlab/gitlab-ce:latest"
     # - Enterprise edition  : "gitlab/gitlab-ee:latest"
     image: "gitlab/gitlab-ce:latest"
+    container_name: gitlab-ce_ctr
     restart: always
     hostname: "gitlab.example.com"
     environment:
