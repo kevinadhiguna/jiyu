@@ -8,9 +8,9 @@ services:
       context: .
       dockerfile: Dockerfile
     # Assign docker image name
-    image: nginx-serve-static
+    image: nginx-serve-static-file_img
     # Give docker container name
-    container_name: nginx-serve-static_ctr
+    container_name: nginx-serve-static-file_ctr
     restart: always
     # App will be served on port 8087 inside and outside of the docker container
     ports:
