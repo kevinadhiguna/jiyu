@@ -10,7 +10,7 @@ require("dotenv").config();
 
 // MySQL connection config
 const mysqlConnection = mysql.createConnection({
-    host: process.env.MYSQL_HOST,
+    host: process.env.MYSQL_HOST || "localhost",
     user: process.env.MYSQL_USER || "root",
     password: process.env.MYSQL_PASSWORD,
 });
