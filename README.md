@@ -47,6 +47,7 @@ This is a repo for... whatever 🤷
 | 35 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
 | 36 | ip-getter | Get user IP address.  |  |
 | 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
+| 38 | date-fns | Play with date in JavaScript.  |  |
 
 <br />
 
