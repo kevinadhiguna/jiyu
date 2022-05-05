@@ -5,3 +5,6 @@ os.arch();
 
 // Return information on the CPUs available on your system.
 os.cpus();
+
+// Return the number of bytes that represent the free memory in the system.
+os.freemem();
