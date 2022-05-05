@@ -2,3 +2,6 @@
 
 // OS architecture
 os.arch();
+
+// Return information on the CPUs available on your system.
+os.cpus();
