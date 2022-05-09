@@ -1,4 +1,4 @@
-// Source : https://medium.com/sfl-newsroom/nodejs-health-checks-and-overload-protection-368a132a725e
+// Reference : https://medium.com/sfl-newsroom/nodejs-health-checks-and-overload-protection-368a132a725e
 
 const express = require('express');
 const app = express();
