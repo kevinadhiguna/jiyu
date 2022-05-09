@@ -19,5 +19,7 @@ app.get('/check', (req, res) => {
     res.status(status).end();
 });
 
-app.listen(process.env.PORT);
+const PORT = process.env.PORT;
+
+app.listen(PORT);
 console.log(`Api Server running on ${process.env.PORT} port, PID: ${process.pid}`);
