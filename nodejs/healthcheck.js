@@ -20,6 +20,7 @@ app.get('/check', (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST;
 
-app.listen(PORT);
+app.listen(PORT, HOST);
 console.log(`Api Server running on ${process.env.PORT} port, PID: ${process.pid}`);
