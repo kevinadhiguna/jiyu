@@ -1,0 +1,7 @@
+{
+  "name": "mailgun-nodemailer",
+  "version": "1.0.0",
+  "description": "Send email using nodemailer and mailgun service",
+  "main": "sendmail.js",
+  "license": "MIT"
+}
