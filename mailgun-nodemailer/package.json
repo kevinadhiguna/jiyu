@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "Send email using nodemailer and mailgun service",
   "main": "sendmail.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.7.5"
+  }
 }
