@@ -1,12 +1,98 @@
+<!-- Reference: https://medium.com/myedusolve/how-to-code-your-own-linktree-with-html-css-3189c354e1a3 -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nginx serve static file</title>
-</head>
-<body>
-    <h1>This is a static file served by Nginx !</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Linktree clone served by Nginx</title>
+  </head>
+  <style>
+    .logo {
+      width: 300px;
+    }
+
+    h2 {
+      color: #024873;
+    }
+
+    .links__item {
+      display: block;
+      max-width: 550px;
+      margin: 0 auto 15px;
+      margin-bottom: 5px;
+      padding: 15px 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      color: #000;
+      font-family: Futura sans-serif;
+    }
+
+    .links__item .links__item--event {
+      border-bottom: 3px solid #ffa093;
+      box-shadow: inset 0 -4px 0 #ffa093;
+      border-radius: 25px;
+      border: 2px solid #ffa093;
+      background-color: #ffa093;
+    }
+  </style>
+  <body>
+    <img
+      class="logo"
+      src="https://links.myedusolve.com/assets/images/imagelink2-min.png"
+      alt="logo"
+    />
+    <div class="links">
+      <div class="links__item">
+        <a
+          href="https://www.youtube.com"
+          class="links__item links__item--video"
+          target="_blank"
+        >
+          YouTube
+        </a>
+      </div>
+      <div class="links__item">
+        <a
+          href="https://instagram.com"
+          class="links__item links__item--event"
+          target="_blank"
+        >
+          Instagram
+        </a>
+      </div>
+      <div class="links__item">
+        <a
+          href="https://medium.com"
+          class="links__item links__item--event"
+          target="_blank"
+        >
+          Medium
+        </a>
+      </div>
+      <div class="links__item">
+        <a
+          href="https://twitter.com"
+          class="links__item links__item--event"
+          target="_blank"
+          >Twitter</a
+        >
+      </div>
+      <div class="links__item">
+        <a
+          href="https://facebook.com"
+          class="links__item links__item--event"
+          target="_blank"
+          >Facebook</a
+        >
+      </div>
+    </div>
+  </body>
 </html>
