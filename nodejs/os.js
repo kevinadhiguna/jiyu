@@ -21,3 +21,6 @@ console.log("OS home directory : ", os.homedir());
 
 // Return the calculation made by the operating system on the load average.
 console.log("Load average : ", os.loadavg());
+
+// Return the platform that Node.js was compiled for:
+console.log("Platform : ", os.platform());
