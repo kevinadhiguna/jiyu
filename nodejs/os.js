@@ -15,3 +15,6 @@ console.log("Free memory in the system : ", os.freemem());
 
 // Return available network interfaces in the system
 console.log("Available network interfaces : ", os.networkInterfaces());
+
+// Return the path to the home directory of the current user.
+console.log("OS home directory : ", os.homedir());
