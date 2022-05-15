@@ -18,3 +18,6 @@ console.log("Available network interfaces : ", os.networkInterfaces());
 
 // Return the path to the home directory of the current user.
 console.log("OS home directory : ", os.homedir());
+
+// Return the calculation made by the operating system on the load average.
+console.log("Load average : ", os.loadavg());
