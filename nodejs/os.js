@@ -24,3 +24,6 @@ console.log("Load average : ", os.loadavg());
 
 // Return the platform that Node.js was compiled for:
 console.log("Platform : ", os.platform());
+
+// Returns a string that identifies the operating system release number
+console.log("Release : ", os.release());
