@@ -30,3 +30,6 @@ console.log("Release : ", os.release());
 
 // Returns the path to the assigned temp folder.
 console.log("OS temp directory : ", os.tmpdir());
+
+// Returns the number of bytes that represent the total memory available in the system.
+console.log("OS total memory : ", os.totalmem());
