@@ -32,4 +32,4 @@ console.log("Release : ", os.release());
 console.log("OS temp directory : ", os.tmpdir());
 
 // Returns the number of bytes that represent the total memory available in the system.
-console.log("OS total memory : ", os.totalmem());
+console.log("OS total memory : ", os.totalmem() / 1000000000, "GB");
