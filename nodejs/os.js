@@ -31,6 +31,9 @@ console.log("OS temp directory : ", os.tmpdir());
 // Returns the number of bytes that represent the total memory available in the system.
 console.log("OS total memory : ", os.totalmem() / 1000000000, "GB");
 
+// Returns the number of seconds the computer has been running since it was last rebooted.
+console.log("OS uptime : ", os.uptime() * 0.0166667, "minute(s)");
+
 // Return information on the CPUs available on your system.
 console.log("Available CPUs on system : ", os.cpus());
 
