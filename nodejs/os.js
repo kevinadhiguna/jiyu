@@ -13,6 +13,9 @@ console.log("Free memory in the system : ", os.freemem() / 1000000000, "GB");
 // Return the path to the home directory of the current user.
 console.log("OS home directory : ", os.homedir());
 
+// Returns an object that contains the current username, uid, gid, shell, and homedir
+console.log("OS user info : ", os.userInfo());
+
 // Return the calculation made by the operating system on the load average.
 console.log("Load average : ", os.loadavg());
 
