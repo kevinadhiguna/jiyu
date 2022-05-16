@@ -11,7 +11,7 @@ console.log("OS architecture : ", os.arch());
 console.log("Available CPUs on system : ", os.cpus());
 
 // Return the number of bytes that represent the free memory in the system.
-console.log("Free memory in the system : ", os.freemem());
+console.log("Free memory in the system : ", os.freemem() / 1000000000, "GB");
 
 // Return available network interfaces in the system
 console.log("Available network interfaces : ", os.networkInterfaces());
