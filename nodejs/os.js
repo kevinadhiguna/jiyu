@@ -27,3 +27,6 @@ console.log("Platform : ", os.platform());
 
 // Returns a string that identifies the operating system release number
 console.log("Release : ", os.release());
+
+// Returns the path to the assigned temp folder.
+console.log("OS temp directory : ", os.tmpdir());
