@@ -16,8 +16,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// One should use a formatted name to avoid landing email to spam. More about formatted name : https://nodemailer.com/message/addresses/.
+const MAIL_FROM = "YOURCOMPANY <hello@yourdomain.com>";
+
 const mailOpts = {
-  from: "hello@yourdomain.com",
+  from: MAIL_FROM,
   to: "customer@gmail.com",
   subject: "Hello from mailgun - nodemailer",
   text: "How are you doing ?",
