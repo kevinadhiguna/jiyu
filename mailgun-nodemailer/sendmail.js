@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // One should use a formatted name to avoid landing email to spam. More about formatted name : https://nodemailer.com/message/addresses/.
-const MAIL_FROM = "YOURCOMPANY <hello@yourdomain.com>";
+const MAIL_FROM = precess.env.MAIL_FROM || "YOURCOMPANY <hello@yourdomain.com>";
 
 const mailOpts = {
   from: MAIL_FROM,
