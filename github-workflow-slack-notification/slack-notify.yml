@@ -1,9 +1,10 @@
+# Reference: https://github.com/rtCamp/action-slack-notify
+
 name: github-workflow-slack-notification
 
 on:
   push:
     branches: [ slack-notify ]
-
 
 jobs: 
   slackNotification:
