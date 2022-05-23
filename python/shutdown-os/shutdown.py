@@ -2,3 +2,6 @@
 import subprocess
 
 subprocess.run(["shutdown", "-s"])
+
+# For Linux
+#subprocess.run(["shutdown"])
