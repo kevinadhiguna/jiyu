@@ -10,3 +10,5 @@ services:
       MYSQL_PASSWORD: secretpassword
       MYSQL_ROOT_PASSWORD: example
       MySQL_DATABASE: product
+    ports:
+     - 3306:3306
