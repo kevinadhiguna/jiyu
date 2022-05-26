@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   db:
-    image: mysql
+    image: mysql:8.0.29
     container_name: mysql_ctr
     command: --default-authentication-plugin=mysql_native_password
     restart: always
