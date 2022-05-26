@@ -30,5 +30,10 @@ mysql2Connection.query(
   function (error, results, fields) {
     console.log("Results : ", results); // results contains rows returned by server
     console.log("Fields : ", fields); // fields contains extra meta data about results, if available
+    
+    // Display errors if something went wrong
+    if (error) {
+      console.error("Something went wrong : ", error);
+    }
   }
 )
