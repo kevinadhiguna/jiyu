@@ -1,5 +1,5 @@
 // import mysql from "mysql";
-const mysql = require("mysql");
+const mysql2 = require("mysql2");
 
 // Import 'dotenv' in ES6 (reference: https://github.com/motdotla/dotenv/issues/89#issuecomment-139372079)
 // import dotenv from "dotenv";
@@ -9,7 +9,7 @@ const mysql = require("mysql");
 require("dotenv").config();
 
 // MySQL connection config
-const mysqlConnection = mysql.createConnection({
+const mysqlConnection = mysql2.createConnection({
     host: process.env.MYSQL_HOST || "localhost",
     user: process.env.MYSQL_USER || "root",
     password: process.env.MYSQL_PASSWORD || "",
