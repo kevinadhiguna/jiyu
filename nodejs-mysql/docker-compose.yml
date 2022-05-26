@@ -12,3 +12,6 @@ services:
       MySQL_DATABASE: product
     ports:
      - 3306:3306
+    # Initialize a database when container is spun up
+    # volumes:
+    #  - /product.sql:/docker-entrypoint-initdb.d/product.sql
