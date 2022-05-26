@@ -9,7 +9,7 @@ const mysql2 = require("mysql2");
 require("dotenv").config();
 
 // MySQL connection config
-const mysqlConnection = mysql2.createConnection({
+const mysql2Connection = mysql2.createConnection({
   host: process.env.MYSQL_HOST || "localhost",
   user: process.env.MYSQL_USER || "root",
   password: process.env.MYSQL_PASSWORD || "",
@@ -18,15 +18,17 @@ const mysqlConnection = mysql2.createConnection({
 });
 
 // Connect to MySQL
-mysqlConnection.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to MySQL !");
-});
+mysql2Connection.connect(err => {
+  if (err) {
+    throw err;
+  }
+  console.log("Connected to MySQL !")
+})
 
-mysqlConnection.query(
+mysql2Connection.query(
   "SELECT * FROM mysql.user",
   function (error, results, fields) {
-    console.log(results); // results contains rows returned by server
-    console.log(fields); // fields contains extra meta data about results, if available
+    console.log("Results : ", results); // results contains rows returned by server
+    console.log("Fields : ", fields); // fields contains extra meta data about results, if available
   }
-);
+)
