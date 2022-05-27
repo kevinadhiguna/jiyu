@@ -14,4 +14,8 @@ services:
      - 3306:3306
     # Initialize a database when container is spun up
     volumes:
+     - product-data:/var/lib/mysql
      - ./product.sql:/docker-entrypoint-initdb.d/product.sql
+
+volumes:
+  product-data:
