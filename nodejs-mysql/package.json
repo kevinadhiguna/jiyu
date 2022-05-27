@@ -2,7 +2,7 @@
   "name": "nodejs-mysql",
   "version": "1.0.0",
   "description": "nodejs-mysql",
-  "type": "module",
+  "type": "commonjs",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
