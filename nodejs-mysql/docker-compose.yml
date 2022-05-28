@@ -4,7 +4,7 @@ services:
   db:
     image: mysql:8.0.29
     container_name: mysql_ctr
-    restart: always
+    # restart: always
     environment:
       MYSQL_USER: user
       MYSQL_PASSWORD: secretpassword
