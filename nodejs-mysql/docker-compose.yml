@@ -9,7 +9,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: secretpassword
       MYSQL_ROOT_PASSWORD: example
-      MySQL_DATABASE: product
+      MYSQL_DATABASE: product
     ports:
      - 3306:3306
     # Initialize a database when container is spun up
