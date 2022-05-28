@@ -26,7 +26,7 @@ mysql2Connection.connect(err => {
 })
 
 mysql2Connection.query(
-  "SELECT * FROM mysql.user",
+  "SELECT * FROM stationary",
   function (error, results, fields) {
     console.log("Results : ", results); // results contains rows returned by server
     console.log("Fields : ", fields); // fields contains extra meta data about results, if available
