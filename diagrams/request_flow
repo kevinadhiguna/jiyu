@@ -1,0 +1,10 @@
+digraph "Request Flow" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Request Flow" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	a99f14e16be542748fe8f45617f70d02 [label="Nginx Load Balancer" height=1.9 image="/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/resources/aws/compute/ec2.png" shape=none]
+	"9b0a957481a648ecbb8fe8bca412a01f" [label="Web Server" height=1.9 image="/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/resources/aws/compute/elastic-container-service.png" shape=none]
+	a99f14e16be542748fe8f45617f70d02 -> "9b0a957481a648ecbb8fe8bca412a01f" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"385d970b24b04309899e423ec6d1843e" [label=Database height=1.9 image="/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/resources/aws/database/rds.png" shape=none]
+	"9b0a957481a648ecbb8fe8bca412a01f" -> "385d970b24b04309899e423ec6d1843e" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
