@@ -40,7 +40,23 @@ const al_cyyoung_2021 = [
 const App = () => {
   return (
     <>
-      <h3>Hello World !</h3>
+      <h3>MLB - AL MVP 2021</h3>
+      <table>
+        <tr>
+          <th>Player ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Club</th>
+        </tr>
+        {al_mvp_2021.map((data) => (
+          <tr>
+            <td>{data.id}</td>
+            <td>{data.name}</td>
+            <td>{data.age}</td>
+            <td>{data.club}</td>
+          </tr>
+        ))}
+      </table>
     </>
   );
 };
