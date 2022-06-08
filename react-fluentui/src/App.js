@@ -18,7 +18,14 @@ function App() {
         >
           Learn React
         </a>
-        <PrimaryButton text="Learn FluentUI" style={{ marginTop: "10px" }} />
+        <PrimaryButton
+          text="Learn FluentUI"
+          style={{ marginTop: "10px" }}
+          onClick={() => {
+            window.location.href =
+              "https://developer.microsoft.com/en-us/fluentui#/controls/";
+          }}
+        />
       </header>
     </div>
   );
