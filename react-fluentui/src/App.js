@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { PrimaryButton } from "@fluentui/react/lib/Button";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <PrimaryButton text="Learn FluentUI" style={{ marginTop: "10px" }} />
       </header>
     </div>
   );
