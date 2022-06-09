@@ -1,4 +1,4 @@
-import { Table } from "antd";
+import { Space, Table } from "antd";
 import { al_mvp_2021 } from "../mock-data/mvp-data";
 import { al_cyyoung_2021 } from "../mock-data/cyyoung-data";
 
@@ -26,7 +26,7 @@ const columns = [
 ];
 
 const AntdTable = () => {
-  <>
+  <Space direction="vertical" size={"middle"} align="center">
     <Table
       title={"MLB AL MVP 2021"}
       columns={columns}
@@ -37,7 +37,7 @@ const AntdTable = () => {
       columns={columns}
       dataSource={al_cyyoung_2021}
     />
-  </>;
+  </Space>;
 };
 
 export default AntdTable;
