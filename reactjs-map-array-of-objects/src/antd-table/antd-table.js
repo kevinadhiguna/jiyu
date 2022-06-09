@@ -36,7 +36,7 @@ const getCyYoungTableTitle = () => {
 
 const AntdTable = () => {
   return (
-    <Space direction="vertical" size={"middle"} align="center">
+    <Space direction="vertical" size={"middle"}>
       <Table
         // title={"MLB AL MVP 2021"} // <- Don't
         title={getMVPtableTitle} // <- Do ('title' must be a function)
