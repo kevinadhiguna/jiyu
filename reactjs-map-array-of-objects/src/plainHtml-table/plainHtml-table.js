@@ -1,5 +1,5 @@
-import { al_mvp_2021 } from "./mock-data/mvp-data";
-import { al_cyyoung_2021 } from "./mock-data/cyyoung-data";
+import { al_mvp_2021 } from "../mock-data/mvp-data";
+import { al_cyyoung_2021 } from "../mock-data/cyyoung-data";
 
 const PlainHtmlTable = () => {
   return (
