@@ -5,7 +5,7 @@ const PlainHtmlTable = () => {
   return (
     <>
       <h3>MLB - AL MVP 2021</h3>
-      <table>
+      <table border="1">
         <tr>
           <th>Player ID</th>
           <th>Name</th>
@@ -23,7 +23,7 @@ const PlainHtmlTable = () => {
       </table>
       <br />
       <h3>MLB - AL Cy Young 2021</h3>
-      <table>
+      <table border="1">
         <tr>
           <th>Player ID</th>
           <th>Name</th>
