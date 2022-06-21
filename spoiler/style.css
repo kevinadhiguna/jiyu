@@ -1,0 +1,16 @@
+.spoiler-text {
+  display: inline;
+  color: #ccc;
+
+  background-image: linear-gradient(#ccc, #ccc);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100% 100%;
+
+  transition: baxkground-size 1000ms, color 700ms;
+}
+
+.spoiler-text:hover {
+  background-size: 0% 100%;
+  color: #121212;
+}
