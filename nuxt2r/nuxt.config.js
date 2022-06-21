@@ -33,8 +33,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    // https://go.nuxtjs.dev/buefy
+    'nuxt-buefy',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
