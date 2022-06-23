@@ -1,0 +1,45 @@
+.app {
+  padding: 2rem 1rem;
+  /* padding: 2rem; */
+}
+
+.title {
+  font-size: 2.5rem;
+  /* font-size: 2rem; */
+  margin-bottom: 1rem;
+}
+
+.url-input {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: #fff;
+  /* background: #EEE; */
+  width: 100%;
+  max-width: 300px;
+  /* max-width: 320px; */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.generate-button, .download-text {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  color: #2bcb4b;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.qrcode-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  /* height: 480px; */
+  margin: 2rem auto;
+}
