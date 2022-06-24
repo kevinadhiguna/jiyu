@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Stack } from "@fluentui/react";
 import "./App.css";
+import list from "./mock-data/data";
 
 export const App: React.FunctionComponent = () => {
+  const [todo, setTodo] = useState(list);
+  
   return (
     <>
       <div className="wrapper">
