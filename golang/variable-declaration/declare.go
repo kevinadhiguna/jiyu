@@ -17,6 +17,8 @@ func main() {
 	fmt.Println("Last  name :", lastname)  // Last name : doe
 	fmt.Println("Full  name :", fullname)  // Full name : john doe
 
+	assignmentAfterDeclaration()
+
 	varsWithoutValues();
 }
 
@@ -28,4 +30,11 @@ func varsWithoutValues() {
 	fmt.Println("integer variable without value :", integerVar) // integer variable without value : 0
 	fmt.Println("string  variable without value :", stringVar)  // string variable without value : ""
 	fmt.Println("boolean variable without value :", boolVar)    // boolean variable without value : false
+}
+
+func assignmentAfterDeclaration() {
+	var familyname string
+	familyname = "smith"
+
+	fmt.Println("Family name :", familyname) // Family name : smith
 }
