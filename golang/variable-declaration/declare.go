@@ -16,4 +16,16 @@ func main() {
 	fmt.Println("First name :", firstname) // First name : john
 	fmt.Println("Last  name :", lastname)  // Last name : doe
 	fmt.Println("Full  name :", fullname)  // Full name : john doe
+
+	varsWithoutValues();
+}
+
+func varsWithoutValues() {
+	var integerVar int
+	var stringVar string
+	var boolVar bool
+
+	fmt.Println("integer variable without value :", integerVar) // integer variable without value : 0
+	fmt.Println("string  variable without value :", stringVar)  // string variable without value : ""
+	fmt.Println("boolean variable without value :", boolVar)    // boolean variable without value : false
 }
