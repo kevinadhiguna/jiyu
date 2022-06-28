@@ -1,0 +1,19 @@
+package main
+
+import ("fmt")
+
+func main() {
+	// (1) -> var <variable_name> <type> = <value>
+	var firstname string = "john"
+
+	// (2) -> <variable_name> := <value>
+	// In this case, the type of variable is inferred from the value
+	lastname := "doe"
+
+	// The (1) way without declaring the type of variable
+	var fullname = firstname + " " + lastname
+
+	fmt.Println("First name :", firstname) // First name : john
+	fmt.Println("Last  name :", lastname)  // Last name : doe
+	fmt.Println("Full  name :", fullname)  // Full name : john doe
+}
