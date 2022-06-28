@@ -41,3 +41,5 @@ func assignmentAfterDeclaration() {
 }
 
 // varOutsideFunc := 100 // <- ERROR since ':=' is used outside of a function
+var varOutsideFunc = 101
+var varOutsideFunc2 int = 102
