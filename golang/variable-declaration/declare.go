@@ -1,3 +1,4 @@
+// Reference : https://www.w3schools.com/go/go_variables.php
 package main
 
 import ("fmt")
@@ -38,3 +39,5 @@ func assignmentAfterDeclaration() {
 
 	fmt.Println("Family name :", familyname) // Family name : smith
 }
+
+// varOutsideFunc := 100 // <- ERROR since ':=' is used outside of a function
