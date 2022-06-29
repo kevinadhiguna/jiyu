@@ -21,6 +21,8 @@ func main() {
 	assignmentAfterDeclaration()
 
 	varsWithoutValues();
+
+	multipleVarsDeclartion()
 }
 
 func varsWithoutValues() {
@@ -43,3 +45,12 @@ func assignmentAfterDeclaration() {
 // varOutsideFunc := 100 // <- ERROR since ':=' is used outside of a function
 var varOutsideFunc = 101
 var varOutsideFunc2 int = 102
+
+func multipleVarsDeclartion() {
+	var (
+		player string = "Shohei Ohtani"
+		club string = "Los Angeles Dodgers"
+	)
+
+	fmt.Println(player + " of " + club + " is the 2024 MLB National League MVP")
+}
