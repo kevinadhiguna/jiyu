@@ -20,7 +20,7 @@ func main() {
 
 	assignmentAfterDeclaration()
 
-	varsWithoutValues();
+	varsWithoutValues()
 
 	multipleVarsDeclartion()
 }
