@@ -10,6 +10,6 @@ func main() {
 	fmt.Println("Marks : ", marks)
 	fmt.Println("Another Marks : ", anotherMarks)
 
-        # Access an element of array
+        // Access an element of array
         fmt.Println("The first student : ", students[0])
 }
