@@ -12,4 +12,15 @@ func main() {
 
   // Access an element of array
   fmt.Println("The first student : ", students[0])
+
+	inferredArrays()
+}
+
+func inferredArrays() {
+	// Arrays with inferred lengths
+	var teachers = [...]string{"nolan", "erica", "mike", "jessica"}
+	assistantTeachers := [...]string{"machado", "rebecca", "jared", "May"}
+
+	fmt.Println("Teachers : ", teachers)
+	fmt.Println("Assistant Teachers : ", assistantTeachers)
 }
