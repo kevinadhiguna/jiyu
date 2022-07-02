@@ -8,7 +8,7 @@ func main() {
         var students = [7]string{"john", "doe", "kai", "smith", "patrick", "michael", "noah"}
 
 	fmt.Println("Marks : ", marks)
-	fmt.Println("Another Marks : ", anotherMarks)
+	fmt.Println("Other Marks : ", otherMarks)
 
         // Access an element of array
         fmt.Println("The first student : ", students[0])
