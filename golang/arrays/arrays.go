@@ -1,4 +1,4 @@
-// Refer
+// Reference : https://www.w3schools.com/go/go_arrays.php
 package main
 import ("fmt")
 
