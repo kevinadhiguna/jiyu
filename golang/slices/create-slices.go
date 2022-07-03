@@ -17,8 +17,8 @@ func main()  {
 
 func createSliceWithMakeFunc()  {
 	// If the capacity parameter is not defined, it will be equal to length.
-	top2mvps := make([]string, 2)
-	fmt.Println("Top 2 MVP (created with make function) : ", top2mvps)
-	fmt.Println("Top 2 MVP Length   : ", len(top2mvps))
-	fmt.Println("Top 2 MVP Capacity : ", cap(top2mvps))
+	top2mvp := make([]string, 2)
+	fmt.Println("Top 2 MVP (created with make function) : ", top2mvp)
+	fmt.Println("Top 2 MVP Length   : ", len(top2mvp))
+	fmt.Println("Top 2 MVP Capacity : ", cap(top2mvp))
 }
