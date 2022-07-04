@@ -4,7 +4,7 @@ import ("fmt")
 
 func main()  {
 	// A normal Array
-	var top5mvp = [5]string{"shohei", "judge", "ramirez", "alvarez", "trout"}
+	var top5mvp = [5]string{"Shohei Ohtani", "Aaron Judge", "Jose Ramirez", "Yordan Alvarez", "Mike Trout"}
 	fmt.Println("Top 5 MVP (a normal array) : ", top5mvp)
 
 	// A slice
