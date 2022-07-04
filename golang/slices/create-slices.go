@@ -1,3 +1,4 @@
+// Reference : https://www.w3schools.com/go/go_slices.php
 package main
 import ("fmt")
 
