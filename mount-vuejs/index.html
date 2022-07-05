@@ -28,7 +28,7 @@
 
       <div v-if="showPlayers">
         <ul>
-          <li v-for="player in rosters" :class="{ fav: player.hasBeenMVP  }">
+          <li v-for="player in rosters" :class="{ fav: player.hasBeenMVP }">
             <!-- utilizing data/attribute binding to display image -->
             <img
               :src="player.img"
