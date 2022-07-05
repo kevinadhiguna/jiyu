@@ -4,6 +4,7 @@ const app = Vue.createApp({
       teamName: "Los Angeles Angels",
       websiteUrl: "https://www.angels.com",
       showPlayers: true,
+      showPitchers: true,
       rosters: [
         {
           name: "Mike Trout",
