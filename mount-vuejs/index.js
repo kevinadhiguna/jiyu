@@ -3,12 +3,7 @@ const app = Vue.createApp({
     return {
       teamName: "Los Angeles Angels",
       websiteUrl: "https://www.angels.com",
-      // playerName: "Shohei Ohtani",
-      // playerPosition: "DH",
-      // homeruns: 46,
-      // hasManager: true,
       showPlayers: true,
-      // managerName: "Joe Maddon",
       rosters: [
         {
           name: "Mike Trout",
@@ -41,32 +36,12 @@ const app = Vue.createApp({
           img: "https://www.presstelegram.com/wp-content/uploads/2019/09/GettyImages-1172368294-1.jpg?w=1860",
         },
       ],
-      // x: 0,
-      // y: 0,
     };
   },
   methods: {
-    // changePlayer(playerName) {
-    //   this.playerName = playerName;
-    // },
     toggleShowPlayers() {
       this.showPlayers = !this.showPlayers;
     },
-    // toggleShowManager() {
-    //   this.hasManager = !this.hasManager;
-    // },
-    // handleEvent(e, data) {
-    //   console.log("Event :", e);
-    //   console.log("Event Type :", e.type);
-
-    //   if (data) {
-    //     console.log("Data :", data);
-    //   }
-    // },
-    // handleMouseMove(e) {
-    //   this.x = e.offsetX;
-    //   this.y = e.offsetY;
-    // },
   },
 });
 
