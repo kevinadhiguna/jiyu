@@ -46,6 +46,9 @@ const app = Vue.createApp({
     changeColor(player) {
       player.hasBeenMVP = !player.hasBeenMVP;
     },
+    toggleShowPitchers() {
+      this.showPitchers = !this.showPitchers;
+    },
   },
   computed: {
     showOnlyStartingPitchers() {
