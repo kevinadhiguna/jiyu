@@ -46,6 +46,11 @@ const app = Vue.createApp({
       player.hasBeenMVP = !player.hasBeenMVP;
     },
   },
+  computed: {
+    showOnlyStartingPitchers() {
+      return this.rosters.filter((roster) => roster.position == "SP");
+    },
+  },
 });
 
 app.mount("#mount-vuejs");

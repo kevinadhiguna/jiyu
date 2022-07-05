@@ -57,6 +57,40 @@
           </li>
         </ul>
       </div>
+
+      <br />
+
+      <button @click="toggleShowPitchers">
+        <span v-if="showPitchers">Hide pitchers</span>
+        <span v-else>Show pitchers</span>
+      </button>
+
+      <div v-if="showPitchers">
+        <ul>
+          <li v-for="pitcher in showOnlyStartingPitchers">
+            <img
+              :src="pitcher.img"
+              :alt="pitcher.position"
+              class="player-images"
+            />
+            <h3>{{ pitcher.name }}</h3>
+            <p>{{ pitcher.position }}</p>
+          </li>
+        </ul>
+      </div>
+      <div v-else>
+        <ul>
+          <li>
+            <img
+              src="https://sportslogosvg.com/wp-content/uploads/2020/09/mlb.png"
+              alt="MLB"
+              class="player-images"
+            />
+            <h3>No players available</h3>
+            <p>N/A</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 
