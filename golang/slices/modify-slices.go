@@ -11,6 +11,7 @@ func main()  {
 	fmt.Println("Cy Young 2022 (after modification) : ", cyyoung)
 
 	appendToSlice()
+	appendOneSliceToAnotherSlice()
 }
 
 func appendToSlice()  {
@@ -23,4 +24,17 @@ func appendToSlice()  {
 	fmt.Println("Most RBI (after being appended) : ", mostRBI)
 	fmt.Println("Most RBI (length, after being appended) : ", len(mostRBI))
 	fmt.Println("Most RBI (capacity, after being appended) : ", cap(mostRBI))	
+}
+
+func appendOneSliceToAnotherSlice() {
+	highestOPS := []string{"Shohei Ohtani", "Aaron Judge", "Mike Trout"}
+	highestWAR := []string{"Shohei Ohtani", "Mike Trout", "Rafael Devers"}
+
+	bestOffense := append(highestOPS, highestWAR...)
+	fmt.Println("Best Offense : ", bestOffense)
+	fmt.Println("Best Offense (Length) : ", len(bestOffense))
+	fmt.Println("Best Offense (Capacity) : ", cap(bestOffense))
+
+	// lowestERA := []float32{2.32, 2.34, 2.78}
+	// bestPlayers := append(highestWAR, lowestERA) // <- ERROR : cannot use lowestERA (variable of type []float32) as string value in argument to append
 }
