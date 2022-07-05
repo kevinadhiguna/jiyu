@@ -42,6 +42,9 @@ const app = Vue.createApp({
     toggleShowPlayers() {
       this.showPlayers = !this.showPlayers;
     },
+    changeColor(player) {
+      player.hasBeenMVP = !player.hasBeenMVP;
+    },
   },
 });
 
