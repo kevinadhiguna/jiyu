@@ -13,7 +13,7 @@
     <h1>Welcome to VueJS !</h1>
 
     <div id="mount-vuejs">
-      <div>
+      <!-- <div>
         <p>{{ teamName }} - {{ playerName }}</p>
         <p>{{ playerPosition }} - {{ homeruns }}</p>
       </div>
@@ -22,29 +22,29 @@
       <br />
       <button v-on:click="homeruns--">Disallow a homerun...</button>
 
-      <br />
+      <br /> -->
 
       <!-- OnClick event -->
-      <div @click="changePlayer('Mike Trout')">Change player</div>
+      <!-- <div @click="changePlayer('Mike Trout')">Change player</div> -->
 
-      <br />
+      <!-- <br /> -->
 
       <!-- Conditional Rendering -->
 
       <!-- Shown if 'true', otherwise, not shown -->
-      <div v-if="hasManager">
+      <!-- <div v-if="hasManager">
         <p>The Angels manager : {{ managerName }}</p>
-      </div>
+      </div> -->
 
-      <button @click="toggleShowManager">
+      <!-- <button @click="toggleShowManager">
         <span v-if="hasManager">Hide manager</span>
         <span v-else>Show manager</span>
-      </button>
+      </button> -->
 
       <!-- Similar to 'v-if', 'v-show' only displays its content when the condition meets -->
-      <div v-show="hasManager">
+      <!-- <div v-show="hasManager">
         Currently a manager is in charge of the team.
-      </div>
+      </div> -->
 
       <!--
         [ Valuable notes on 'v-if' and 'v-show' ]
@@ -54,10 +54,22 @@
         - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
       -->
 
-      <br />
+      <!-- <br /> -->
+
+      <!-- data/attribute binding -->
+      <div>
+        <h1>
+          <a :href="websiteUrl" target="_blank">Los Angeles Angels</a>
+        </h1>
+      </div>
 
       <!-- For loop (using 'v-for') -->
-      <div>
+      <button @click="toggleShowPlayers">
+        <span v-if="showPlayers">Hide Players</span>
+        <span v-else>Show Players</span>
+      </button>
+
+      <div v-if="showPlayers">
         <ul>
           <li v-for="player in rosters" :class="{ fav: player.hasBeenMVP  }">
             <!-- utilizing data/attribute binding to display image -->
@@ -71,11 +83,10 @@
           </li>
         </ul>
       </div>
-
-      <br />
-
-      <!-- data/ttribute binding -->
-      <a :href="websiteUrl" target="_blank">Los Angeles Angels</a>
+      <div v-else>
+        <br />
+        No Players available
+      </div>
 
       <!--
         Notes regarding data/attribute binding :
@@ -86,17 +97,17 @@
         - ":" (colon) stands for "v-bind:" as "v-bind" is frequently used. Just like "@click" for "v-on:click" in event handler.
       -->
 
-      <br />
+      <!-- <br /> -->
 
       <!-- mouse events -->
-      <div class="box" @mouseover="handleEvent($event, 5)">
+      <!-- <div class="box" @mouseover="handleEvent($event, 5)">
         mousover (enter)
       </div>
       <div class="box" @mouseleave="handleEvent">mouseleave</div>
       <div class="box" @dbclick="handleEvent">double click</div>
       <div class="box" @mouseposition="handleMouseMove">
         mouse position in box : {{ x }} - {{ y }}
-      </div>
+      </div> -->
 
       <!--
         Notes regarding event handler :
