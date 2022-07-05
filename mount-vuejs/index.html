@@ -1,107 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Load VueJS from unpkg -->
     <script src="https://unpkg.com/vue@3.2.26"></script>
     <title>VueJS - mock</title>
-    
+
     <style>
-        .box {
-            padding: 100px 0;
-            width: 400px;
-            text-align: center;
-            background: #ddd;
-            margin: 20px;
-            display: inline-block;
-        }
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to VueJS !</h1>
-    
+
     <div id="mount-vuejs">
-        <p>{{ teamName }} - {{ playerName }} - {{ playerPosition }} - {{ homeruns }}</p>
-        
-        <button v-on:click="homeruns++">Hit a dinger</button>
-        <br />
-        <button v-on:click="homeruns--">Disallow a homerun...</button>
-        
-        <br />
-        
-        <!-- OnClick event -->
-        <div @click="changePlayer("Mike Trout")">Change player</div>
-        
-        <br />
-        
-        <!-- Conditional Rendering -->
+      <div>
+        <p>{{ teamName }} - {{ playerName }}</p>
+        <p>{{ playerPosition }} - {{ homeruns }}</p>
+      </div>
 
-        <!-- Shown if 'true', otherwise, not shown -->
-        <div v-if="hasManager">
-            <p>The Angels manager : {{ managerName }}</p>
-        </div>
+      <button v-on:click="homeruns++">Hit a dinger</button>
+      <br />
+      <button v-on:click="homeruns--">Disallow a homerun...</button>
 
-        <button @click="toggleShowManager">
-            <span v-if="hasManager">Hide manager</span>
-            <span v-else>Show manager</span>
-        </button>
+      <br />
 
-        <!-- Similar to 'v-if', 'v-show' only displays its content when the condition meets -->
-        <div v-show="hasManager">Currently a manager is in charge of the team.</div>
+      <!-- OnClick event -->
+      <div @click="changePlayer('Mike Trout')">Change player</div>
 
-        <!--
-            [ Valuable notes on 'v-if' and 'v-show' ]
-            
-            Assuming the condition does not meet :
-            - 'v-if' removes itself from DOM to hide its content (expensive on performance) -> Therefore, 'v-if' is used on something that does not change often.
-            - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
-        -->
+      <br />
+
+      <!-- Conditional Rendering -->
+
+      <!-- Shown if 'true', otherwise, not shown -->
+      <div v-if="hasManager">
+        <p>The Angels manager : {{ managerName }}</p>
+      </div>
+
+      <button @click="toggleShowManager">
+        <span v-if="hasManager">Hide manager</span>
+        <span v-else>Show manager</span>
+      </button>
+
+      <!-- Similar to 'v-if', 'v-show' only displays its content when the condition meets -->
+      <div v-show="hasManager">
+        Currently a manager is in charge of the team.
+      </div>
+
+      <!--
+        [ Valuable notes on 'v-if' and 'v-show' ]
         
-        <br />
+        Assuming the condition does not meet :
+        - 'v-if' removes itself from DOM to hide its content (expensive on performance) -> Therefore, 'v-if' is used on something that does not change often.
+        - 'v-show' only set CSS (display: 'none') to not display its content -> Hence, generally 'v-show' is frequently used.
+      -->
+
+      <br />
+
+      <!-- For loop (using 'v-for') -->
+      <div>
+        <ul>
+          <li v-for="player in rosters" :class="{ fav: hasBeenMVP  }">
+            <!-- utilizing data/attribute binding to display image -->
+            <img :src="player.img" :alt="player.position" />
+            <h3>{{ player.name }}</h3>
+            <p>{{ player.position }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <br />
+
+      <!-- data/ttribute binding -->
+      <a :href="url">Los Angeles Angels</a>
+
+      <!--
+        Notes regarding data/attribute binding :
         
-        <!-- For loop (using 'v-for') -->
-        <div>
-            <ul>
-                <li v-for="player in rosters" :class="{ fav: hasBeenMVP  }">
-                    <!-- utilizing data/attribute binding to display image -->
-                    <img :src="player.img" :alt="player.position" />
-                    <h3>{{ player.name }}</h3>
-                    <p>{{ player.position }}</p>
-                </li>
-            </ul>
-        </div>
-        
-        <br />
-        
-        <!-- data/ttribute binding -->
-        <a :href="url">Los Angeles Angels</a>
-        
-        <!--
-            Notes regarding data/attribute binding :
-           
-            - "v-bind" is used for data or attribute binding.
-            - Neither of "<a href="url">Los Angeles Angels</a>" AND "<a href="{{ url }}">Los Angeles Angels</a>" work.
-            - "<a :href="url">Los Angeles Angels</a>" works just like "<a v-bind:href="url">Los Angeles Angels</a>".
-            - ":" (colon) stands for "v-bind:" as "v-bind" is frequently used. Just like "@click" for "v-on:click" in event handler.
-        -->
-        
-        <br />
-        
-        <!-- mouse events -->
-        <div class="box" @mouseover="handleEvent($event, 5)">mousover (enter)</div>
-        <div class="box" @mouseleave="handleEvent">mouseleave</div>
-        <div class="box" @dbclick="handleEvent">double click</div>
-        <div class="box" @mouseposition="handleMouseMove">mouse position in box : {{ x }} - {{ y }}</div>
-        
-        <!--
-            Notes regarding event handler :
-            - "@click" is shorthand for "v-on:click". This goes same for "@dbclick" to "v-on:dbclick", and others.
-        -->
-        
+        - "v-bind" is used for data or attribute binding.
+        - Neither of "<a href="url">Los Angeles Angels</a>" AND "<a href="{{ url }}">Los Angeles Angels</a>" work.
+        - "<a :href="url">Los Angeles Angels</a>" works just like "<a v-bind:href="url">Los Angeles Angels</a>".
+        - ":" (colon) stands for "v-bind:" as "v-bind" is frequently used. Just like "@click" for "v-on:click" in event handler.
+      -->
+
+      <br />
+
+      <!-- mouse events -->
+      <div class="box" @mouseover="handleEvent($event, 5)">
+        mousover (enter)
+      </div>
+      <div class="box" @mouseleave="handleEvent">mouseleave</div>
+      <div class="box" @dbclick="handleEvent">double click</div>
+      <div class="box" @mouseposition="handleMouseMove">
+        mouse position in box : {{ x }} - {{ y }}
+      </div>
+
+      <!--
+        Notes regarding event handler :
+        - "@click" is shorthand for "v-on:click". This goes same for "@dbclick" to "v-on:dbclick", and others.
+      -->
     </div>
-</body>
+  </body>
 
-<script src="index.js"></script>
+  <script src="index.js"></script>
 </html>
