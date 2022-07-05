@@ -1,0 +1,42 @@
+body {
+  background: #eee;
+  max-width: 960px;
+  margin: 20px auto;
+}
+
+p, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  background: #fff;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  /* Set all items in the middle */
+  align-items: center;
+  /* Provide equal space in horizontal direction */
+  justify-content: space-between;
+}
+
+li.fav {
+  background-color: #ff9ed2;
+  color: #fff;
+}
+
+.player-images {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.box {
+  padding: 100px 0;
+  width: 400px;
+  text-align: center;
+  background: #ddd;
+  margin: 20px;
+  display: inline-block;
+}
