@@ -49,6 +49,7 @@ This is a repo for... whatever 🤷
 | 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 | 38 | date-fns | Play with date in JavaScript.  |  |
 | 39 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
+| 40 | react-fluentui-ts | ReactJS to-do list app, powered by Fluent UI. |  |
 
 <br />
 
