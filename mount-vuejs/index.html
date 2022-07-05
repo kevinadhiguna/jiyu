@@ -9,6 +9,9 @@
     <title>VueJS - mock</title>
 
     <style>
+      .player-images {
+        max-width: 500px;
+      }
       .box {
         padding: 100px 0;
         width: 400px;
@@ -71,7 +74,11 @@
         <ul>
           <li v-for="player in rosters" :class="{ fav: player.hasBeenMVP  }">
             <!-- utilizing data/attribute binding to display image -->
-            <img :src="player.img" :alt="player.position" />
+            <img
+              :src="player.img"
+              :alt="player.position"
+              class="player-images"
+            />
             <h3>{{ player.name }}</h3>
             <p>{{ player.position }}</p>
           </li>
