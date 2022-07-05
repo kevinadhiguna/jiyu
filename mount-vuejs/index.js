@@ -27,7 +27,7 @@ const app = Vue.createApp({
           name: "Noah Syndergaard",
           position: "SP",
           hasBeenMVP: false,
-          img: "https://images.daznservices.com/di/library/sporting_news/5e/f6/noah-syndergaard-41619-ftr_1xae9ljnym1vd1usagyhhdj7of.png?t=711309146&quality=100&w=1280&h=720",
+          img: "https://images.ctfassets.net/pnq4hpds29uh/2M0kpIaRjVmgGZzUCdUhkm/f6f0bd4b0d21c22c6934f9555a33a48c/Noah_Syndergaard_Angels.jpg",
         },
         {
           name: "Patrick Sandoval",
