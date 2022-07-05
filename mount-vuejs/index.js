@@ -9,7 +9,7 @@ const app = Vue.createApp({
           name: "Mike Trout",
           position: "CF",
           hasBeenMVP: true,
-          img: "https://www.pngarts.com/files/5/Mike-Trout-PNG-Free-Download.png",
+          img: "https://s.yimg.com/uu/api/res/1.2/TXgljaUjOCosGEFQIKZ6fg--~B/aD0yMDQxO3c9MzA2MDtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2020-01/e5e786c0-3989-11ea-a7ee-fcba7d6fe84d",
         },
         {
           name: "Anthony Rendon",
