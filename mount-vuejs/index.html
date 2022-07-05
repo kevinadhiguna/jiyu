@@ -69,7 +69,7 @@
       <!-- For loop (using 'v-for') -->
       <div>
         <ul>
-          <li v-for="player in rosters" :class="{ fav: hasBeenMVP  }">
+          <li v-for="player in rosters" :class="{ fav: player.hasBeenMVP  }">
             <!-- utilizing data/attribute binding to display image -->
             <img :src="player.img" :alt="player.position" />
             <h3>{{ player.name }}</h3>
