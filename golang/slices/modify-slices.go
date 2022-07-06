@@ -12,6 +12,7 @@ func main()  {
 
 	appendToSlice()
 	appendOneSliceToAnotherSlice()
+	changeLengthOfSlice()
 }
 
 func appendToSlice()  {
@@ -37,4 +38,17 @@ func appendOneSliceToAnotherSlice() {
 
 	// lowestERA := []float32{2.32, 2.34, 2.78}
 	// bestPlayers := append(highestWAR, lowestERA) // <- ERROR : cannot use lowestERA (variable of type []float32) as string value in argument to append
+}
+
+func changeLengthOfSlice()  {
+	data := [6]float32{13.78, 13.44, 11.23, 11.08, 10.99, 10.50}
+	kPer9 := data[1:4]
+	fmt.Println("K/9 : ", kPer9)
+	fmt.Println("K/9 (length) : ", len(kPer9))
+	fmt.Println("K/9 (capacity) : ", cap(kPer9))
+
+	kPer9 = data[2:5]
+	fmt.Println("K/9 (modified) : ", kPer9)
+	fmt.Println("K/9 (modified - length) : ", len(kPer9))
+	fmt.Println("K/9 (modified - capacity) : ", cap(kPer9))
 }
