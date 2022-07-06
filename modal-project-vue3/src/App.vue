@@ -3,16 +3,22 @@
     <h1>{{ framework }} App</h1>
     <input type="text" ref="inputfield" />
     <button @click="handleClick">Click</button>
+    <Modal />
   </div>
 </template>
 
 <script>
+import Modal from "./components/Modal.vue";
+
 export default {
   name: "App",
   data() {
     return {
       framework: "Vue.js v3",
     };
+  },
+  components: {
+    Modal,
   },
   methods: {
     handleClick() {
