@@ -15,6 +15,9 @@ func main() {
 	fmt.Println("I * J : ", multiplication(i, j))
 	fmt.Println("X / Y : ", division(x, y))
 	fmt.Println("X % Y : ", modulus(x, y))
+	// Increment
+	i++
+	fmt.Println("I++   : ", i)
 }
 
 func addition(number1 int, number2 int) int {
