@@ -18,6 +18,9 @@ func main() {
 	// Increment
 	i++
 	fmt.Println("I++   : ", i)
+	// Decrement
+	j--
+	fmt.Println("J--   : ", j)
 }
 
 func addition(number1 int, number2 int) int {
