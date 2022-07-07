@@ -14,6 +14,7 @@ func main() {
 	fmt.Println("I - J : ", subtraction(i, j))
 	fmt.Println("I * J : ", multiplication(i, j))
 	fmt.Println("X / Y : ", division(x, y))
+	fmt.Println("X % Y : ", modulus(x, y))
 }
 
 func addition(number1 int, number2 int) int {
@@ -30,4 +31,8 @@ func multiplication(number1 float32, number2 float32) float32 {
 
 func division(number1 int, number2 int) int {
 	return number1 / number2
+}
+
+func modulus(number1 int, number2 int) int {
+	return number1 % number2
 }
