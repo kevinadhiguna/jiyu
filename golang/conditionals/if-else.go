@@ -1,3 +1,4 @@
+// Reference: https://www.w3schools.com/go/go_elseif_statement.php
 package main
 import ("fmt")
 
