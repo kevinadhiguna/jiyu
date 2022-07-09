@@ -14,5 +14,7 @@ func main()  {
 			fmt.Println("An operating system in Macbook")
 		case "windows":
 			fmt.Println("The operating system created by Microsoft !")
+		default:
+			fmt.Println("Oops, the OS was not available in list. Please check ")
 	}
 }
