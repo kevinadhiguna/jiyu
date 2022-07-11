@@ -7,6 +7,7 @@ func main()  {
 	}
 
 	continueStatement()
+	breakStatement()
 }
 
 func continueStatement()  {
@@ -15,5 +16,14 @@ func continueStatement()  {
 			continue
 		}
 		fmt.Println("j = ", j)
+	}
+}
+
+func breakStatement()  {
+	for k := 1; k < 500; k++ {
+		if k == 6 {
+			break
+		}
+		fmt.Println("k = ", k)
 	}
 }
