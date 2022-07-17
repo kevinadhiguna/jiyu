@@ -9,7 +9,7 @@
 # Having built Strapi base image, replace "kevinadhiguna" with your DockerHub username.
 ARG ACCOUNT="kevinadhiguna"
 ARG BASE_VERSION="16"
-ARG STRAPI_VERSION="4.2.1"
+ARG STRAPI_VERSION="4.2.2"
 
 FROM ${ACCOUNT}/base:${BASE_VERSION}
 ### ---------------- ###
