@@ -4,6 +4,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"log"
+	"net/http"
 )
 
 type Page struct {
@@ -18,6 +20,10 @@ func main()  {
 	p2, _ := loadPage("MLB All Stars 2022")
 	// fmt.Println(p2.Body) 			// Output : [67 111 109 101 32 97 110 100 32 119 97 116 99 104 32 77 76 66 32 65 108 108 32 83 116 97 114 115 32 50 48 50 50 32 105 110 32 116 104 101 32 68 111 100 103 101 114 115 32 83 116 97 100 105 117 109 44 32 76 111 115 32 65 110 103 101 108 101 115 32 33]
 	fmt.Println(string(p2.Body))  // Output : Come and watch MLB All Stars 2022 in the Dodgers Stadium, Los Angeles !
+
+	// Serve wiki pages
+	http.HandleFunc("/view", viewHandler)
+	log.Fatal(http.ListenAndServe(":8083", nil))
 }
 
 func (p *Page) save() error  {
@@ -39,4 +45,10 @@ func loadPage(title string) (*Page, error) {
 	// (1) '&Page{Title: title, Body: body}' as '*Page'
 	// (2) 'nil' as 'error' (since this line is executed when no error occurrs)
 	return &Page{Title: title, Body: body}, nil
+}
+
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+	title := r.URL.Path[len("/view/"):]
+	p, _ := loadPage(title)
+	fmt.Fprintf(w, "<h1>%s</h1><div>%s</div>", p.Title, p.Body)
 }
