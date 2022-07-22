@@ -23,6 +23,8 @@ func main()  {
 
 	// Serve wiki pages
 	http.HandleFunc("/view", viewHandler)
+	// Edit content
+	http.HandleFunc("/edit", editHandler)
 	log.Fatal(http.ListenAndServe(":8083", nil))
 }
 
