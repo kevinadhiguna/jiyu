@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if a directory exists
-if [ -d /home/marcasell/bashscript ];
+if [ -d /home/user/bashscript ];
 then
 	echo "Yes the directory exists!"
 else
@@ -9,7 +9,7 @@ else
 fi
 
 # Check if a file exists in a directory
-if [ -e /home/marcasell/bashscript/helloworld.sh ];
+if [ -e /home/user/bashscript/helloworld.sh ];
 then
 	echo "Yes the file exists!"
 else
@@ -17,7 +17,7 @@ else
 fi
 
 # Check if a file is readable
-if [ -f /home/marcasell/bashscript/helloworld.sh ];
+if [ -f /home/user/bashscript/helloworld.sh ];
 then
 	echo "Yes the file is readable!"
 else
