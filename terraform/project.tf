@@ -14,6 +14,10 @@ variable "prod-vpc-cidr-block" {
   type        = string # <- To avoid input like ["10.0.0.0/16"] instead of 10.0.0.0/16. Useful when working on large codebase.
 }
 
+variable "subnet-values" {
+  description = "Values of subnet properties"
+}
+
 # 1) Create VPC
 
 # 2) Create internet gateway
