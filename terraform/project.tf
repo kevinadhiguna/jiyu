@@ -73,6 +73,17 @@ resource "aws_subnet" "subnet-2" {
   }
 }
 
+# subnet-3 is created only to demonstrate Variable usage
+resource "aws_subnet" "subnet-3" {
+  vpc_id            = aws_vpc.prod-vpc.id
+  cidr_block        = var.subnet-values[1].cidr_block
+  availability_zone = var.subnet-values[1].availability_zone
+
+  tags = {
+    Name = var.subnet-values[1].tags
+  }
+}
+
 # 5) Associate subnet with route table
 
 # 6) Create security group to allow port 22, 80, 443
