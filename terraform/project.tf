@@ -148,3 +148,19 @@ resource "aws_eip" "one" {
 }
 
 # 9) Create Ubuntu server and install/enable Apache2
+resource "aws_instance" "web-server-instance" {
+  ami           = "" # TO-DO : copy AMI from AWS Management Console
+  instance_type = "t2.micro"
+  # Everytime the documentation asks to set availability zone, make sure to set it
+  availability_zone = "us-west-1a" # <- Set to the same availability zone as the subnet (in this case, 'aws_subnet.subnet-2')
+  key_name          = ""           # TO-DO : assign your keypair name generated in AWS when configuring the AWS EC2 instance
+
+  network_interface {
+    device_index         = 0
+    network_interface_id = aws_network_interface.web-server-nic.id
+  }
+
+  tags {
+    Name = "web-server"
+  }
+}
