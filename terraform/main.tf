@@ -44,6 +44,11 @@ resource "aws_instance" "ubuntu-server" {
   }
 }
 
+# -- Note regarding resource declaration --
+# The "aws_subnet.subnet-1" resource uses the ID of "aws_vpc.dev-vpc" resource
+#  However, that does not mean "aws_vpc.dev-vpc" resource must be declared before "aws_subnet.subnet-1" resource
+#   In a nutshell, resource declaration order does not matter and does not have to be in order
+
 resource "aws_vpc" "dev-vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {
