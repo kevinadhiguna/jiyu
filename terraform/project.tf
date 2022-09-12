@@ -53,13 +53,23 @@ resource "aws_route_table" "prod-route-table" {
 }
 
 # 4) Create a subnet
+# resource "aws_subnet" "subnet-2" {
+#   vpc_id            = aws_vpc.prod-vpc.id
+#   cidr_block        = "10.0.1.0/24"
+#   availability_zone = "us-west-1a"
+
+#   tags = {
+#     Name = "prod-subnet"
+#   }
+# }
+
 resource "aws_subnet" "subnet-2" {
   vpc_id            = aws_vpc.prod-vpc.id
-  cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-west-1a"
+  cidr_block        = var.subnet-values[0].cidr_block
+  availability_zone = var.subnet-values[0].availability_zone
 
   tags = {
-    Name = "prod-subnet"
+    Name = var.subnet-values[0].tags
   }
 }
 
