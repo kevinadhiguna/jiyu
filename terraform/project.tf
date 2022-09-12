@@ -19,6 +19,14 @@ variable "subnet-values" {
 }
 
 # 1) Create VPC
+resource "aws_vpc" "prod-vpc" {
+  # cidr_block = "10.0.0.0/16" # <- not using Variable
+  cidr_block = var.prod-vpc-cidr-block # <- using Variable
+
+  tags = {
+    Name = "production"
+  }
+}
 
 # 2) Create internet gateway
 
