@@ -43,3 +43,10 @@ resource "aws_instance" "ubuntu-server" {
     # Version = "22.04.1"
   }
 }
+
+resource "aws_vpc" "dev-vpc" {
+  cidr_block = "10.0.0.0/16"
+  tags = {
+    "Name" = "development"
+  }
+}
