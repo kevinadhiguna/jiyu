@@ -53,6 +53,15 @@ resource "aws_route_table" "prod-route-table" {
 }
 
 # 4) Create a subnet
+resource "aws_subnet" "subnet-2" {
+  vpc_id            = aws_vpc.prod-vpc.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-west-1a"
+
+  tags = {
+    Name = "prod-subnet"
+  }
+}
 
 # 5) Associate subnet with route table
 
