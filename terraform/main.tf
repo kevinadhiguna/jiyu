@@ -34,3 +34,12 @@ provider "aws" {
 #    - "$ terraform destroy -target <PROVIDER_INSTANCE-TYPE>.<NAME>" will only destroy/target the resource mentioned.
 #      Example : "$ terraform destroy -target aws_instance.ubuntu-server"
 # --------------
+
+resource "aws_instance" "ubuntu-server" {
+  ami           = ""
+  instance_type = "t2.micro"
+  tag = {
+    Name = "ubuntu-server-dev"
+    # Version = "22.04.1"
+  }
+}
