@@ -25,3 +25,10 @@ resource "google_compute_subnetwork" "dev_subnet_01" {
 data "google_compute_network" "existing_default_network" {
   name = "default" # The name of default GCP VPC is 'default'
 }
+
+resource "google_compute_subnetwork" "dev_subnet_02" {
+  name          = "dev-subnet-02"
+  ip_cidr_range = "10.110.0.0./16"
+  network       = data.google_compute_network.existing_default_network.id
+  region        = "us-west1"
+}
