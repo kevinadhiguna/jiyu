@@ -8,3 +8,8 @@ provider "google" {
 # (1) Run : '$ gcloud auth application-default login'
 # (2) Login into your Google Account in your browser
 # ----------------------------------------------------------
+
+resource "google_compute_network" "development_network" {
+  name                    = "development-network"
+  auto_create_subnetworks = false
+}
