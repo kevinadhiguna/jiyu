@@ -33,6 +33,7 @@ provider "aws" {
 #    Note :
 #    - "$ terraform destroy -target <PROVIDER_INSTANCE-TYPE>.<NAME>" will only destroy/target the resource mentioned.
 #      Example : "$ terraform destroy -target aws_instance.ubuntu-server"
+#    - IMPORTANT => Deleting resource(s) then '$ terraform apply' is more recommended than '$ terraform destroy -target <PROVIDER_INSTANCE-TYPE>.<NAME>'
 # --------------
 
 resource "aws_instance" "ubuntu-server" {
