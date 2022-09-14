@@ -13,3 +13,10 @@ resource "google_compute_network" "development_network" {
   name                    = "development-network"
   auto_create_subnetworks = false
 }
+
+resource "google_compute_subnetwork" "dev_subnet_01" {
+  name          = "dev-subnet-01"
+  ip_cidr_range = "10.100.0.0/16" # Usable Host IP range : 10.100.0.1 - 10.100.255.254 (more: https://www.calculator.net/ip-subnet-calculator.html)
+  network       = google_compute_network.development_network.id
+  region        = "us-west1"
+}
