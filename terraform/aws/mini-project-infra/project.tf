@@ -16,6 +16,11 @@ variable "prod-vpc-cidr-block" {
 
 variable "subnet-values" {
   description = "Values of subnet properties"
+  type = list(object({
+    cidr_block        = string
+    availability_zone = string
+    tags              = string
+  }))
 }
 
 # 1) Create VPC
