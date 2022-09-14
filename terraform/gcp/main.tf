@@ -19,6 +19,10 @@ resource "google_compute_subnetwork" "dev_subnet_01" {
   ip_cidr_range = "10.100.0.0/16" # Usable Host IP range : 10.100.0.1 - 10.100.255.254 (more: https://www.calculator.net/ip-subnet-calculator.html)
   network       = google_compute_network.development_network.id
   region        = "us-west1"
+  secondary_ip_range = [{
+    ip_cidr_range = "192.168.10.0/24"
+    range_name    = "secondary-range-01"
+  }]
 }
 
 # Get an already existing Google Cloud Platform VPC ID
