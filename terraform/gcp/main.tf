@@ -20,3 +20,8 @@ resource "google_compute_subnetwork" "dev_subnet_01" {
   network       = google_compute_network.development_network.id
   region        = "us-west1"
 }
+
+# Get an already existing Google Cloud Platform VPC ID
+data "google_compute_network" "existing_default_network" {
+  name = "default" # The name of default GCP VPC is 'default'
+}
