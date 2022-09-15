@@ -1,9 +1,3 @@
-provider "aws" {
-  region     = "us-west-1"
-  access_key = ""
-  secret_key = ""
-}
-
 # == Resource declaration format ==
 #resource "<PROVIDER>_<RESOURCE_TYPE>" "<NAME>" {
 #  -- CONFIGURATION_OPTIONS --

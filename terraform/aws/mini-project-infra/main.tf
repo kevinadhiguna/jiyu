@@ -1,9 +1,3 @@
-provider "aws" {
-  region     = ""
-  access_key = ""
-  secret_key = ""
-}
-
 # -- Variable --
 # The actual values can be stored in a separate file named terraform.tfvars.
 #   Otherwise, pass an argument to tell Terraform the env vars filename.
