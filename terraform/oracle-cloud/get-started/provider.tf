@@ -7,7 +7,7 @@ terraform {
 }
 
 provider "oci" {
-  region              = "us-sanjose-1"
+  region              = var.region
   auth                = "SecurityToken"
   config_file_profile = "learn-terraform-oci"
 }
