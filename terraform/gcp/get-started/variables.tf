@@ -1,11 +1,17 @@
-variable "project" {}
+variable "project" {
+  description = "Google Cloud Platform project ID"
+}
 
-variable "credentials_file" {}
+variable "credentials_file" {
+  description = "Credential filename in JSON format"
+}
 
 variable "region" {
-  default = "us-central1"
+  description = "Google Cloud Platform region"
+  default     = "us-central1"
 }
 
 variable "zone" {
-  default = "us-central1-c"
+  description = "Google Cloud Platform availability zone"
+  default     = "us-central1-c"
 }
