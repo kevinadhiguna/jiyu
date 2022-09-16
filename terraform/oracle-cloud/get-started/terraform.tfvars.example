@@ -1,0 +1,5 @@
+# -- DO NOT FILL VALUES HERE -- #
+# Copy this file and create terraform.tfvars file instead
+
+compartment_id = ""
+region         = ""
