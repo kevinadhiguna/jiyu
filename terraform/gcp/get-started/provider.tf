@@ -9,10 +9,12 @@ terraform {
 
 provider "google" {
   # credentials = file(<CREDENTIAL_FILENAME>.json)
-  credentials = file(credentials.json) # <- just an example
+  # credentials = file(credentials.json) # <- just an example
+  credentials = file(var.credentials_file)
 
   # project = "<PROJECT_ID>"
-  project = "Gd62jJSd" # <- just an example
-  region  = "us-central1"
-  zone    = "us-central1-c"
+  # project = "Gd62jJSd" # <- just an example
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
