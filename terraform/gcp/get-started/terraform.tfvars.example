@@ -1,0 +1,7 @@
+# -- DO NOT FILL VALUES HERE -- #
+# Copy this file and create terraform.tfvars file instead
+
+project          = ""
+credentials_file = ""
+region           = ""
+zone             = ""
