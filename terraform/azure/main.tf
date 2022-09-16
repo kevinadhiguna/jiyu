@@ -2,6 +2,11 @@
 resource "azurerm_resource_group" "rg" {
   name     = "my-terraform-resource-group"
   location = "westus2"
+
+  tags = {
+    Environment = "Terraform Azure"
+    Team        = "DevOps"
+  }
 }
 
 # Create a virtual network
