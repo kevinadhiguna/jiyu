@@ -1,9 +1,9 @@
 # Terraform - AWS
 
-Practice some of Terraform usage in AWS
+Implement Terraform to provision an AWS EC2 server
 
 <br />
 
 ## Reference
 
-- [Terraform Course - Automate your AWS cloud infrastructure by FreeCodeCamp](https://youtu.be/SLB_c_ayRMo)
+- [Terraform Get Started - AWS](https://learn.hashicorp.com/collections/terraform/aws-get-started)
