@@ -93,10 +93,20 @@ async function findUser() {
   }
 }
 
+async function nameSearch(name) {
+  try {
+    const user = await User.findByName(name);
+    console.log("user (nameSearch func) : ", user);
+  } catch (error) {
+    console.error("Error finding user name (nameSearch func) : ", error.message);
+  }
+}
+
 async function exec() {
   await run();
   await findUserById("633afc319265f7c614c50214");
   await findUser();
+  await nameSearch("Harper");
 }
 
 exec();
