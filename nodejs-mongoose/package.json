@@ -8,6 +8,7 @@
     "dev-start": "nodemon app.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mongoose": "^6.6.2"
   },
   "devDependencies": {
