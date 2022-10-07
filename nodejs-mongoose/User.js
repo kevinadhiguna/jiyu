@@ -67,4 +67,10 @@ userSchema.pre("save", function(next){
   next();
 });
 
+userSchema.post("save", function(doc, next){
+  console.log("-- Middleware post-save action --");
+  doc.greet();
+  next();
+});
+
 module.exports = mongoose.model("User", userSchema);
