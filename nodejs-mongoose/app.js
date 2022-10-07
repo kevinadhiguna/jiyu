@@ -67,6 +67,7 @@ async function run() {
   }
 }
 
+
 async function findUserById(userId) {
   try {
     const user = await User.findById(userId);
@@ -77,9 +78,25 @@ async function findUserById(userId) {
   }
 }
 
+async function findUser() {
+  try {
+    const user = await User
+      .where("age").gt(15).lt(56)
+      .where("name").equals("zahra")
+      .limit(1)
+      .select("name age")
+      .populate("bestFriend");
+
+    console.log("user (findUser func) : ", user);
+  } catch(error) {
+    console.error("Error finding a user (findUser func) : ", error.message);
+  }
+}
+
 async function exec() {
   await run();
   await findUserById("633afc319265f7c614c50214");
+  await findUser();
 }
 
 exec();
