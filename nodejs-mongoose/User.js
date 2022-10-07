@@ -50,4 +50,9 @@ userSchema.statics.findByName = function(name) {
   return this.find({ name: new RegExp(name, "i") }); // Search using regular expression and make sure it is not case-sensitive
 }
 
+userSchema.query.byName = function(name) {
+  return this.where({ name: new RegExp(name, "i") }); // Chainable
+}
+// Note : '.query' must be chained and is not a "standalone" function like '.methods' and '.statics'
+
 module.exports = mongoose.model("User", userSchema);
