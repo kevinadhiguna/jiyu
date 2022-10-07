@@ -55,4 +55,9 @@ userSchema.query.byName = function(name) {
 }
 // Note : '.query' must be chained and is not a "standalone" function like '.methods' and '.statics'
 
+userSchema.virtual("namedEmail").get(function() {
+  return `${this.name} <${this.email}>`;
+})
+// Note : '.virtual' does not get saved to MongoDB
+
 module.exports = mongoose.model("User", userSchema);
