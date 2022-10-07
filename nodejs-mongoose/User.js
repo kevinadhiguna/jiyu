@@ -60,4 +60,11 @@ userSchema.virtual("namedEmail").get(function() {
 })
 // Note : '.virtual' does not get saved to MongoDB
 
+// -- Schema middleware --
+userSchema.pre("save", function(next){
+  console.log("-- Middleware pre-save action --");
+  this.updatedAt = Date.now();
+  next();
+});
+
 module.exports = mongoose.model("User", userSchema);
