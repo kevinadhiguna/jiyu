@@ -111,12 +111,23 @@ async function chainByName(name) {
   }
 }
 
+async function getNamedEmail(userId) {
+  try {
+    const user = await User.findById(userId);
+    console.log("user (getNamedEmail func) : ", user);
+    console.log("user.namedEmail (getNamedEmail func) : ", user.namedEmail);
+  } catch (error) {
+    console.error("Error getting named email (getNamedEmail func) : ", error.message);
+  }
+}
+
 async function exec() {
   await run();
   await findUserById("633afc319265f7c614c50214");
   await findUser();
   await nameSearch("Harper");
   await chainByName("Harper");
+  await getNamedEmail("633b04652856271bfcf4314f");
 }
 
 exec();
