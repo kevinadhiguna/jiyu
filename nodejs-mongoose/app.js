@@ -102,11 +102,21 @@ async function nameSearch(name) {
   }
 }
 
+async function chainByName(name) {
+  try {
+    const user = await User.find().byName(name);
+    console.log("user (chainByName func) : ", user);
+  } catch (error) {
+    console.error("Error finding a user (chainByName func) : ", error.message);
+  }
+}
+
 async function exec() {
   await run();
   await findUserById("633afc319265f7c614c50214");
   await findUser();
   await nameSearch("Harper");
+  await chainByName("Harper");
 }
 
 exec();
