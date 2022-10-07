@@ -40,4 +40,10 @@ const userSchema = new mongoose.Schema({
   address: addressSchema
 });
 
+
+// -- Schema methods/virtuals --
+userSchema.methods.greet = function() { // <- Only actual function, no arrow function! (Because of 'this' keyword)
+  console.log(`Hi, my name is ${this.name}`);
+}
+
 module.exports = mongoose.model("User", userSchema);
