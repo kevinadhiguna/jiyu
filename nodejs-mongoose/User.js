@@ -46,4 +46,8 @@ userSchema.methods.greet = function() { // <- Only actual function, no arrow fun
   console.log(`Hi, my name is ${this.name}`);
 }
 
+userSchema.statics.findByName = function(name) {
+  return this.find({ name: new RegExp(name, "i") }); // Search using regular expression and make sure it is not case-sensitive
+}
+
 module.exports = mongoose.model("User", userSchema);
