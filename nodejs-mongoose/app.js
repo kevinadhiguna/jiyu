@@ -67,8 +67,19 @@ async function run() {
   }
 }
 
+async function findUserById(userId) {
+  try {
+    const user = await User.findById(userId);
+    console.log("user (findUserById func) : ", user);
+    user.greet();
+  } catch (error) {
+    console.error("Error finding a user by ID (findUserById func) : ", error.message);
+  }
+}
+
 async function exec() {
   await run();
+  await findUserById("633afc319265f7c614c50214");
 }
 
 exec();
