@@ -1,0 +1,8 @@
+# $sortByCount : a shortcut for grouping, counting, and then sorting in descending order
+
+db.universities.aggregate([
+  { $sortByCount: '$city' }
+]).pretty();
+
+# -- Output of the aggregation query above -- #
+{ "_id" : "Salamanca", "count" : 2 }
