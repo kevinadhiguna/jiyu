@@ -1,0 +1,39 @@
+# $lookup : returns documents from a "joined" collection as a sub-array of the original collection
+
+db.universities.aggregate([
+  { $match: { name: 'UPSA' } },
+  { $project: { _id: 0, name: 1 } },
+  { $lookup: {
+      from: 'courses',
+      localField: 'name',
+      foreignField: 'university',
+      as: 'coursesUniv'
+  }}
+]).pretty();
+
+# In the aggregation query above :
+# - There are at least two collections, namely 'universities' and 'courses'.
+# - a user tries to add a new field named 'courses' (contains values in an array) in 'universities' collection.
+# - 'name' in localField indicates there's a field named 'name' in the 'universities' collection.
+# - 'university' in foreignField represents the existance of a field called 'university' in the 'courses' collection.
+# - The aggregation query then will find documents where universities.name = courses.university (IMPORTANT NOTE!)
+# - Afterwards, a new field named 'coursesUniv' is added to 'universities' collection with a corresponding value of 'courses' collection where universities.name = courses.university.
+
+# -- Output of aggregation query above -- #
+{
+	"name" : "UPSA",
+	"coursesUniv" : [
+		{
+			"_id" : ObjectId("632db4ef0abc16097cb685ca"),
+			"university" : "UPSA",
+			"name" : "Electronics",
+			"level" : "Intermediate"
+		},
+		{
+			"_id" : ObjectId("632db4ef0abc16097cb685cc"),
+			"university" : "UPSA",
+			"name" : "Economics",
+			"level" : "Intermediate"
+		}
+	]
+}
