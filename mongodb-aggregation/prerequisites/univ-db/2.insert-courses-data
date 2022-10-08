@@ -1,0 +1,22 @@
+db.courses.insert([
+  {
+    university : 'USAL',
+    name : 'Computer Science',
+    level : 'Excellent'
+  },
+  {
+    university : 'UPSA',
+    name : 'Electronics',
+    level : 'Intermediate'
+  },
+  {
+    university : 'USAL',
+    name : 'Communication',
+    level : 'Excellent'
+  },
+  {
+    university : 'UPSA',
+    name : 'Economics',
+    level : 'Intermediate'
+  },
+]);
