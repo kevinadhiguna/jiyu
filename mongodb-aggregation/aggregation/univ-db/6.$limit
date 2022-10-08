@@ -1,0 +1,13 @@
+# $limit: Limit output to a particular number
+
+db.universities.aggregate([
+  { $match: { name: 'USAL' } },
+  { $unwind: '$students' },
+  { $project: { _id: 0, 'students.year': 1, 'students.number': 1 } },
+  { $sort: { 'students.number': -1 } },
+  { $limit: 2 }
+]).pretty();
+
+# -- Output of aggregation query above (actually more than 2 documents, but limited to first two documents) -- #
+{ "students" : { "year" : 2014, "number" : 24774 } }
+{ "students" : { "year" : 2015, "number" : 23166 } }
