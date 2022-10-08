@@ -1,0 +1,14 @@
+# $out: carry the result of aggregation query (into a new collection / an existing collection / an existing document)
+
+# $out is like a temporary variable to store a value.
+# $out must be the last stage in an aggregation pipeline !
+
+db.universities.aggregate([
+  { $group: { _id: '$name', totaldocs: { $sum: 1 } } },
+  { $out: 'groupAggResult' }                              # <- Produce a new collection named 'groupAggResult'
+]);
+db.groupAggResult.find().pretty();
+
+# -- Output of aggregation query above -- #
+{ "_id" : "UPSA", "totaldocs" : 1 }
+{ "_id" : "USAL", "totaldocs" : 1 }
