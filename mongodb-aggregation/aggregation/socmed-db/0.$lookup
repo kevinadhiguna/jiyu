@@ -1,0 +1,58 @@
+db.post.aggregate([
+  { $lookup: {
+      from: 'like',
+      localField: 'title',
+      foreignField: 'postTitle',
+      as: 'commentContent'
+  } }
+]).pretty();
+
+# -- Output of aggregation query above -- #
+{
+	"_id" : ObjectId("632db2e90abc16097cb685c1"),
+	"title" : "my first post",
+	"author" : "Jim",
+	"likes" : 5,
+	"commentContent" : [
+		{
+			"_id" : ObjectId("632db2f20abc16097cb685c4"),
+			"postTitle" : "my first post",
+			"comment" : "great read",
+			"likes" : 3
+		}
+	]
+}
+{
+	"_id" : ObjectId("632db2e90abc16097cb685c2"),
+	"title" : "my second post",
+	"author" : "Jim",
+	"likes" : 2,
+	"commentContent" : [
+		{
+			"_id" : ObjectId("632db2f20abc16097cb685c5"),
+			"postTitle" : "my second post",
+			"comment" : "good info",
+			"likes" : 0
+		},
+		{
+			"_id" : ObjectId("632db2f20abc16097cb685c6"),
+			"postTitle" : "my second post",
+			"comment" : "i liked this post",
+			"likes" : 12
+		}
+	]
+}
+{
+	"_id" : ObjectId("632db2e90abc16097cb685c3"),
+	"title" : "hello world",
+	"author" : "Joe",
+	"likes" : 3,
+	"commentContent" : [
+		{
+			"_id" : ObjectId("632db2f20abc16097cb685c7"),
+			"postTitle" : "hello world",
+			"comment" : "not my favorite",
+			"likes" : 8
+		}
+	]
+}
