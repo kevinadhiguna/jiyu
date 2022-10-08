@@ -8,8 +8,11 @@
   <title>Intro to AngularJS (IngularJS)</title>
 </head>
 <body>
+  <!-- The ng-app directive defines an AngularJS application. -->
   <div ng-app="">
+    <!-- The ng-model directive binds the value of HTML controls (input, select, textarea) to application data. -->
     <p>Name : <input type="text" ng-model="name"></p>
+    <!-- The ng-bind directive binds application data to the HTML view. -->
     <p ng-bind="name"></p>
   </div>
 </body>
