@@ -1,0 +1,14 @@
+# $sort: Sort a field (values of a field) in ascending/descending order
+
+db.universities.aggregate([
+  { $match: { name: 'USAL' } },                                         # <- (1) Find docuemnt(s) whose name is 'USAL'
+  { $unwind: '$students' },                                             # <- (2) Divide 'students' field value into one document each
+  { $project: { _id: 0, 'students.year': 1, 'students.number': 1 } },   # <- (3) Only display 'students.year' and 'students.number' (hide _id)
+  { $sort: { 'students.number': -1 } }                                  # <- (4) Sort 'students.number' in descending order
+]).pretty();
+
+# -- Output of aggregation query above (in order)-- #
+{ "students" : { "year" : 2014, "number" : 24774 } }
+{ "students" : { "year" : 2015, "number" : 23166 } }
+{ "students" : { "year" : 2016, "number" : 21913 } }
+{ "students" : { "year" : 2017, "number" : 21715 } }
