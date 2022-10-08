@@ -1,0 +1,9 @@
+# $count: Passes a document to the next stage that contains a count of the number of documents input to the stage.
+
+db.universities.aggregate([
+  { $unwind: '$students' },
+  { $count: 'total_documents' }
+]).pretty();
+
+# -- Output of aggregation query above -- #
+{ "total_documents" : 8 }
