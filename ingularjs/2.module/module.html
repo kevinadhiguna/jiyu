@@ -10,15 +10,15 @@
 </head>
 <body>
   <div ng-app="mlbManager" ng-controller="mlbManagerController">
-    <p>My full name is {{ firstName + " " + lastName }}</p>
+    <p>MLB Manager of the year is {{ firstName + " " + lastName }}</p>
   </div>
 </body>
 <script>
   let app = angular
               .module("mlbManager", [])
-              .controller("mlbManagerController", function($scope){
-                $scope.firstName = "Bruce"
-                $scope.lastName = "Williams"
+              .controller("mlbManagerController", function($scope) {
+                $scope.firstName = "Bruce";
+                $scope.lastName = "Williams";
               });
 </script>
 </html>
