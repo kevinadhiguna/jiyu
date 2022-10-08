@@ -13,12 +13,6 @@
     <p>MLB Manager of the year is {{ firstName + " " + lastName }}</p>
   </div>
 </body>
-<script>
-  let app = angular
-              .module("mlbManager", [])
-              .controller("mlbManagerController", function($scope) {
-                $scope.firstName = "Bruce";
-                $scope.lastName = "Williams";
-              });
-</script>
+<script src="module-app.js"></script>
+<script src="module-controller.js"></script>
 </html>
