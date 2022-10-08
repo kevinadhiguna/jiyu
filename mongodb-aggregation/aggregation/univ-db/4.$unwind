@@ -1,0 +1,99 @@
+# $unwind: Breakdown/Divide a field that has array value into a separated document
+
+# $unwind commonly comes at the end of an aggregation query
+
+db.universities.aggregate([
+  { $match: { name: 'USAL' } },
+  { $unwind: '$students' }
+]).pretty();
+
+# -- DATA -- #
+{
+  country : 'Spain',
+  city : 'Salamanca',
+  name : 'USAL',
+  location : {
+    type : 'Point',
+    coordinates : [ -5.6722512,17, 40.9607792 ]
+  },
+  students : [                         # <- 'students' field will be "unwinded" (it has 4 values in the array so it will produce 4 documents)
+    { year : 2014, number : 24774 },
+    { year : 2015, number : 23166 },
+    { year : 2016, number : 21913 },
+    { year : 2017, number : 21715 }
+  ]
+}
+
+# -- Output of aggregation query above -- #
+{   # <- document no.1
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : {
+		"year" : 2014,
+		"number" : 24774
+	}
+}
+{   # <- document no.2
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : {
+		"year" : 2015,
+		"number" : 23166
+	}
+}
+{   # <- document no.3
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : {
+		"year" : 2016,
+		"number" : 21913
+	}
+}
+{   # <- document no.4
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : {
+		"year" : 2017,
+		"number" : 21715
+	}
+}
