@@ -1,0 +1,17 @@
+db.post.insert([
+  {
+    "title" : "my first post",
+    "author" : "Jim",
+    "likes" : 5
+  },
+  {
+    "title" : "my second post",
+    "author" : "Jim",
+    "likes" : 2
+  },
+  {
+    "title" : "hello world",
+    "author" : "Joe",
+    "likes" : 3
+  }
+]);
