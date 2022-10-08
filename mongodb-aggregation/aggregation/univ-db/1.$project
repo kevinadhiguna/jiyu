@@ -1,0 +1,12 @@
+# $project : Ask MongoDB to only display particular fields
+
+# The aggregation query below shows values of country, city, and name fields and does not display value of _id.
+# If one does not want to show _id, it must be specified as follow ( _id: 0 ). Otherwise, it will be displayed ! 
+
+db.universities.aggregate([
+  { $project: { _id: 0, country: 1, city: 1, name: 1 } }
+]).pretty();
+
+# -- Output of aggregation query above -- #
+{ "country" : "Spain", "city" : "Salamanca", "name" : "USAL" }
+{ "country" : "Spain", "city" : "Salamanca", "name" : "UPSA" }
