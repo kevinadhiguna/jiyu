@@ -1,0 +1,75 @@
+# $addFields: Add field(s) to existing document(s)
+
+db.universities.aggregate([
+  { $match: { name: 'USAL' } },
+  { $addFields: { foundedYear: 1941 } }
+]).pretty();
+
+# -- BEFORE -- #
+{
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : [
+		{
+			"year" : 2014,
+			"number" : 24774
+		},
+		{
+			"year" : 2015,
+			"number" : 23166
+		},
+		{
+			"year" : 2016,
+			"number" : 21913
+		},
+		{
+			"year" : 2017,
+			"number" : 21715
+		}
+	]
+}
+
+# -- Output of aggregation query above -- #
+{
+	"_id" : ObjectId("632c722ffc5ae5de575c863a"),
+	"country" : "Spain",
+	"city" : "Salamanca",
+	"name" : "USAL",
+	"location" : {
+		"type" : "Point",
+		"coordinates" : [
+			-5.6722512,
+			17,
+			40.9607792
+		]
+	},
+	"students" : [
+		{
+			"year" : 2014,
+			"number" : 24774
+		},
+		{
+			"year" : 2015,
+			"number" : 23166
+		},
+		{
+			"year" : 2016,
+			"number" : 21913
+		},
+		{
+			"year" : 2017,
+			"number" : 21715
+		}
+	],
+	"foundedYear" : 1941    # <- A new field has been added
+}
