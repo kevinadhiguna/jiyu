@@ -1,0 +1,58 @@
+<!-- Angular.js Expression -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js Expression</title>
+</head>
+<body>
+  <div ng-app="">
+    <h3>Expression</h3>
+    <p>What's your first name ? <input type="text" ng-model="firstName"></p>
+    <p>What's your last name ? <input type="text" ng-model="lastName"></p>
+    <p>What do you do for living ? <input type="text" ng-model="job"></p>
+    <!-- AngularJS expressions are written inside double braces: {{ expression }}. -->
+    <!-- AngularJS expressions binds data to HTML the same way as the ng-bind directive. -->
+    <!-- AngularJS expressions can also be written inside a directive: ng-bind="expression". -->
+    <p>Hi, I am {{ firstName + " " + lastName }}</p>
+    <p>My job is {{ job }}</p>
+    <p>I am {{ 15 + 10 }} years old</p>
+    
+    <br />
+
+    <h3>Change a CSS property</h3>
+    <div ng-init="favColor='lightblue'">
+      <!-- 
+        To skip this error "css error: property value expected", disable html validation in VScode/Codium 
+        or Install Django extension (reference: https://stackoverflow.com/a/57495678) 
+      -->
+      <input style="background-color:{{ favColor }}" />
+    </div>
+
+    <br />
+
+    <h3>Perform calculation</h3>
+    <div ng-init="quantity=3;price=12000">
+      <p>Total price (expression) : {{ quantity * price }}</p>
+      <p>Total price (ng-bind) : <span ng-bind="quantity * price"></span></p>
+    </div>
+
+    <br />
+
+    <h3>AngularJS Object</h3>
+    <div ng-init="player={name: 'Corbin', age: 27, position: 'Right Field'}">
+      <p>My name is {{ player.name }}. I am {{ player.age }} years old who play at {{ player.position }}.</p>
+    </div>
+
+    <br />
+
+    <h3>AngularJS Array</h3>
+    <div ng-init="club=['New York Yankees', 'Atlanta Braves', 'Los Angeles Dodgers', 'Boston RedSox']">
+      <p>{{ club[2] }} recorded 109 wins in 2022 which is one of the most impressive winning record in MLB history.</p>
+    </div>
+  </div>
+</body>
+</html>
