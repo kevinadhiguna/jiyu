@@ -1,0 +1,23 @@
+<!-- Angular.js Module -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js Module</title>
+</head>
+<body>
+  <div ng-app="mlbManager" mlb-manager-directive></div>
+</body>
+<script>
+  let app = angular
+              .module("mlbManager", [])
+              .directive("mlbManagerDirective", function () {
+                return {
+                  template: "MLB Manager of the year is Bruce Williams (this was made in a directive constructor)"
+                }
+              });
+</script>
+</html>
