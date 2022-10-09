@@ -1,0 +1,31 @@
+<!-- Angular.js Directives -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js Directives</title>
+</head>
+<body>
+  <!-- 
+    AngularJS directives are extended HTML attributes with the prefix 'ng-'.
+    The 'ng-app' directive initializes an AngularJS application.
+    The 'ng-init' directive initializes application data.
+    The 'ng-model' directive binds the value of HTML controls (input, select, textarea) to application data.
+  -->
+  <!-- 
+    Once one assigns a value to 'ng-app', angular.module('<ng-app value>') must be declared too. 
+    (TL;DR -> Safer to leave 'ng-app' value empty) 
+  -->
+  <div ng-app="" ng-init="totalPlayers=23;annualSalary=3700000">
+    <p>Total Players = <input type="number" ng-model="totalPlayers"></p>
+    <p>Annual Salary per player = <input type="number" ng-model="annualSalary"></p>
+    
+    <br />
+    
+    <p>Payroll (USD) = ${{ totalPlayers * annualSalary }}</p>
+  </div>
+</body>
+</html>
