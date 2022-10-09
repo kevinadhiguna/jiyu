@@ -1,0 +1,47 @@
+<!-- Angular.js create new directives -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js create new directives</title>
+</head>
+<body>
+  <div ng-app="infielderApp">
+    <!--
+      According to w3school(https://www.w3schools.com/angular/angular_directives.asp),
+      the examples below will all produce the same result (if not restricted).
+    -->
+
+    <!-- Element (E) [works by default] -->
+    <great-infielders></great-infielders>
+
+    <br />
+
+    <!-- Class (C) [only works if not restricted] -->
+    <div class="great-infielders"></div>
+
+    <br />
+
+    <!-- Comment (M) [only works if not restricted, but somehow this did not work (an issue)] -->
+    <!-- directive: great-infielders -->
+
+    <br />
+
+    <!-- Attribute (A) [works by default] -->
+    <div great-infielders></div>
+  </div>
+</body>
+<script>
+  const infielderApp = angular.module("infielderApp", []);
+  infielderApp.directive("greatInfielders", function() {
+    return {
+      restrict: "ECA",  // 'EA' by default (meaning Element names and Attribute names can invoke the directives). Can be assigned multiple vallues.
+      // restrict: "C", // Able to assign just one value as well.
+      template: "<h2>Great Infielders</h2>"
+    }
+  })
+</script>
+</html>
