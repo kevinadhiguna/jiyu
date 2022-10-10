@@ -1,0 +1,24 @@
+<!-- Angular.js onChange event input validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js onChange event input validation</title>
+</head>
+<body>
+  <form ng-app="" name="emailForm" ng-init="myEmail='hello@baseball.com'">
+    Email : <input type="email" name="emailAddressInput" ng-model="myEmail" required>
+    <p>Edit the email address to change the status.</p>
+    
+    <br />
+
+    <h2>Status</h2>
+    <p>Valid : {{ emailForm.emailAddressInput.$valid }} (if true, the value meets all criteria)</p>
+    <p>Dirty : {{ emailForm.emailAddressInput.$dirty }} (if true, the value has been changed)</p>
+    <p>Touched : {{ emailForm.emailAddressInput.$touched }} (if true, the field has been in focus)</p>
+  </form>
+</body>
+</html>
