@@ -1,0 +1,36 @@
+<!-- Angular.js change CSS on validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js change CSS on validation</title>
+</head>
+<style>
+  /* 
+    "Where does '.ng-invalid' come from?" 
+    
+    The ng-model directive adds/removes the following classes, according to the status of the form field:
+      - ng-empty
+      - ng-not-empty
+      - ng-touched
+      - ng-untouched
+      - ng-valid
+      - ng-invalid
+      - ng-dirty
+      - ng-pending
+      - ng-pristine
+      (from w3school)
+  */
+  .emailInputClass.ng-invalid {
+    background-color: #F46D75;
+  }
+</style>
+<body>
+  <form ng-app="" name="emailForm">
+    Email : <input type="email" name="emailInput" ng-model="myEmail" class="emailInputClass" required>
+  </form>
+</body>
+</html>
