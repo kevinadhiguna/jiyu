@@ -1,0 +1,27 @@
+<!-- Angular.js function in $scope -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js function in $scope</title>
+</head>
+<body>
+  <div ng-app="changePitcherApp" ng-controller="changePitcherController">
+    <p>Current {{ team }} pitcher : <h4>{{ pitcher }}</h4></p>
+    <button ng-click="changePitcher()">Change Pitcher</button>
+  </div>
+</body>
+<script>
+  const changePitcherApp = angular.module("changePitcherApp", []);
+  changePitcherApp.controller("changePitcherController", function($scope) {
+    $scope.team = "Houston Astros";
+    $scope.pitcher = "Justin Verlander";
+    $scope.changePitcher = function() {
+      $scope.pitcher = "Rafael Montero";
+    }
+  });
+</script>
+</html>
