@@ -1,0 +1,41 @@
+<!-- Angular.js $rootScope -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js $rootScope</title>
+</head>
+<body ng-app="awardApp">
+  <!-- $rootScope -->
+  <h2>[ Outside ng-controller ($rootScope area) ]</h2>
+  <p>MLB 2022 Regular Season MVP (according to fans) : {{ mvp }}</p>
+
+  <br />
+
+  <!-- $scope -->
+  <div ng-controller="awardAppController">
+    <h2>[ Inside ng-controller ($scope area) ]</h2>
+    <p>MLB 2022 Regular Season MVP (according to New York baseball fans) : {{ mvp }}</p>
+    <!-- Access $rootScope inside ng-controller ($scope area) -->
+    <p>MLB 2022 Regular Season MVP (according to fans) : {{ $root.mvp }}</p>    
+  </div>
+
+  <br />
+
+  <!-- $rootScope -->
+  <h2>[ Outside ng-controller ($rootScope area) ]</h2>
+  <p>MLB 2022 Regular Season MVP (according to fans) is still : {{ mvp }}</p>
+</body>
+<script>
+  const awardApp = angular.module("awardApp", []);
+  awardApp.run(function($rootScope) {
+    $rootScope.mvp = "Shohei Ohtani";
+  })
+  awardApp.controller("awardAppController", function($scope) {
+    $scope.mvp = "Aaron Judge";
+  })
+</script>
+</html>
