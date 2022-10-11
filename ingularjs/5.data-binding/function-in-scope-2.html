@@ -1,0 +1,44 @@
+<!-- Angular.js function in $scope - 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js function in $scope - 2</title>
+</head>
+<body>
+  <div ng-app="bestPitcherApp" ng-controller="bestPitcherController">
+    <!-- 'bestPitchers' is displayed only after the button is clicked -->
+    <p>Best {{ team }} pitchers : {{ bestPitchers }}</p>
+    <button ng-click="getBestPitchers()">Get Best Pitchers</button>
+
+    <br />
+
+    <p>Manager Firstname : <input type="text" ng-model="managerFirstname"></p>
+    <p>Manager Lastname : <input type="text" ng-model="managerLastname"></p>
+    <!-- Manager fullname is shown initially, even though 'getManagerFullname()' is a function -->
+    <p>Manager Fullname : {{ getManagerFullname() }}</p>
+  </div>
+</body>
+<script>
+  const bestPitcherApp = angular.module("bestPitcherApp", []);
+  bestPitcherApp.controller("bestPitcherController", function($scope) {
+    $scope.team = "Los Angeles Angels";
+    
+    $scope.pitcher1 = "Shohei Ohtani";
+    $scope.pitcher2 = "Patrick Sandoval";
+    $scope.bestPitchers = "";
+    $scope.getBestPitchers = function() {
+      $scope.bestPitchers = $scope.pitcher1 + " & " + $scope.pitcher2;
+    }
+
+    $scope.managerFirstname = "Phil";
+    $scope.managerLastname = "Nevin";
+    $scope.getManagerFullname = function () {
+      return $scope.managerFirstname + " " + $scope.managerLastname;
+    }
+  });
+</script>
+</html>
