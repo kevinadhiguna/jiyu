@@ -1,0 +1,90 @@
+<!-- Angular.js add filters to expressions -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js add filters to expressions</title>
+</head>
+<body>
+  <div ng-app="privateInfoApp" ng-controller="privateInfoController">
+    <h3>Privacy Form</h3>
+    <p>May I have your name? <input type="text" ng-model="nameInput"></p>
+    <p>Name (displayed in uppercase) : {{ nameInput | uppercase }}</p>
+    <p>What's your email address? <input type="email" ng-model="emailInput"></p>
+    <p>Email (displayed in lowercase) : {{ emailInput | lowercase }}</p>
+
+    <hr>
+
+    <h3>World Baseball Classic participating players</h3>
+    <ul>
+      <!-- orderBy : 'playerOrigin.country' is wrong! -->
+      <li ng-repeat="player in playerOrigin | orderBy : 'country'">
+        {{ player.name }} ({{ player.country }})
+      </li>
+    </ul>
+
+    <hr>
+
+    <h3>Highest contract in MLB</h3>
+    <p>Mike Trout's contract is estimated around {{ contract | currency }}</p>
+
+    <hr>
+
+    <h3>MLB managers whose name includes a letter of 'e'</h3>
+    <ul>
+      <li ng-repeat="manager in managers | filter : 'e'">
+        {{ manager }}
+      </li>
+    </ul>
+
+    <hr>
+
+    <h3>Teams that has a letter of <input type="text" ng-model="teamLetter"> :</h3>
+    <p>All teams :</p>
+    <ul>
+      <li ng-repeat="team in teams">
+        {{ team }}
+      </li>
+    </ul>
+    <br>
+    <p>Search Result :</p>
+    <ul>
+      <li ng-repeat="searchedTeam in teams | filter : teamLetter">
+        {{ searchedTeam }}
+      </li>
+    </ul>
+  </div>
+</body>
+<script>
+  const privateInfoApp = angular.module("privateInfoApp", []);
+  privateInfoApp.controller("privateInfoController", function($scope) {
+    $scope.nameInput = "Kai Doe";
+    $scope.emailInput = "PRIVaTe@hEllo.App";
+    $scope.playerOrigin = [
+      { name: "Shohei Ohtani", country: "Japan" },
+      { name: "Liam Hendriks", country: "Australia" },
+      { name: "Ji-Man Choi", country: "South Korea" },
+      { name: "Yu Chang", country: "Taiwan" },
+      { name: "Mike Trout", country: "United Stated of America" },
+    ];
+    $scope.managers = [
+      'Dusty Baker', 
+      'Don Mattingly', 
+      'Aaron Boone', 
+      'Gabe Kepler', 
+      'Dave Roberts',
+    ];
+    $scope.teams = [
+      'San Francisco Giants',
+      'Los Angeles Dodgers',
+      'New York Yankees',
+      'Boston RedSox',
+      'Houston Astros'
+    ];
+    $scope.contract = 36000000;
+  })
+</script>
+</html>
