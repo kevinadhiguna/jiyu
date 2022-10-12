@@ -1,0 +1,37 @@
+<!-- Angular.js custom filters -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js custom filters</title>
+</head>
+<body>
+  <ul ng-app="customFiltersApp" ng-controller="customFiltersController">
+    <li ng-repeat="name in names">
+      {{ name | customFormatter }}
+    </li>
+  </ul>
+</body>
+<script>
+  const customFiltersApp = angular.module("customFiltersApp", []);
+  customFiltersApp.filter("customFormatter", function() {
+    return function (name) {
+      let i, c, txt = "";
+      for (let i = 0; i < name.length; i++) {
+        c = name[i];
+        if (i % 2 == 0) {
+          c = c.toUpperCase();
+        }
+        txt += c;
+      }
+      return txt; // ["JaNe", "IoWa", "KaLvIn", "LoWe", "MaRy"]
+    }
+  });
+  customFiltersApp.controller("customFiltersController", function($scope) {
+    $scope.names = ["Jane", "Iowa", "Kalvin", "Lowe", "Mary"];
+  });
+</script>
+</html>
