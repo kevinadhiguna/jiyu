@@ -1,0 +1,40 @@
+<!-- Angular.js table filters -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js table filters</title>
+</head>
+<body>
+  <div ng-app="tableFiltersApp" ng-controller="tableFiltersController">
+    <table border="1" width="100%">
+      <tr>
+        <th ng-click="orderBy('name')">Name</th>
+        <th ng-click="orderBy('country')">Country</th>
+      </tr>
+      <tr ng-repeat="team in footballTeams | orderBy : myFilterValue">
+        <td>{{ team.name }}</td>
+        <td>{{ team.country }}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script>
+  const tableFiltersApp = angular.module("tableFiltersApp", []);
+  tableFiltersApp.controller("tableFiltersController", function($scope) {
+    $scope.footballTeams = [
+      { name: "Manchester United", country: "England" },
+      { name: "Real Madrid", country: "Spain" },
+      { name: "Bayern Munchen", country: "Germany" },
+      { name: "Ajax Amsterdam", country: "Netherlands" },
+      { name: "Olympique Lyon", country: "France" },
+    ];
+    $scope.orderBy = function(filterValue) {
+      $scope.myFilterValue = filterValue;
+    };
+  })
+</script>
+</html>
