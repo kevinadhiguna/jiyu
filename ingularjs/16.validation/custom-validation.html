@@ -1,0 +1,45 @@
+<!-- Angular.js custom validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js custom validation</title>
+</head>
+<body>
+  <div ng-app="customValidationApp">
+    <p>Try writing in the input field:</p>
+
+    <form name="myForm">
+      <input type="text" name="myInput" ng-model="myInput" required my-directive>
+    </form>
+
+    <p>The input's valid state is: {{ myForm.myInput.$valid }}</p>
+
+    <br>
+
+    <p>The input field must contain the character "e" to be consider valid.</p>
+  </div>
+</body>
+<script>
+  const customValidationApp = angular.module("customValidationApp", []);
+  customValidationApp.directive("myDirective", function () {
+    return {
+      require: "ngModel",
+      link: function (scope, element, attr, mCtrl) {
+        function myValidation(value) {
+          if (value.indexOf("e") > -1) {
+            mCtrl.$setValidity('charE', true);
+          } else {
+            mCtrl.$setValidity('charE', false);
+          }
+            return value;
+          }
+        mCtrl.$parsers.push(myValidation);
+      }
+    }
+  });
+</script>
+</html>
