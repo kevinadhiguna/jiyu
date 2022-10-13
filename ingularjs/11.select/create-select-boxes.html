@@ -1,0 +1,25 @@
+<!-- Angular.js create a select box using ng-options -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js create a select box using ng-options</title>
+</head>
+<body>
+  <div ng-app="createSelectBoxApp" ng-controller="createSelectBoxAppController">
+    <p>Choose your favorite infielder</p>
+    <select ng-model="infielder" ng-options="player for player in infielders"></select>
+    <p>You chose {{ infielder }}</p>
+  </div>
+</body>
+<script>
+  const createSelectBoxApp = angular.module("createSelectBoxApp", []);
+  createSelectBoxApp.controller("createSelectBoxAppController", function ($scope) {
+    $scope.infielders = ["Jose Ramirez", "Paul Goldschimdt", "Dansby Swanson"];
+    $scope.infielder = "";
+  });
+</script>
+</html>
