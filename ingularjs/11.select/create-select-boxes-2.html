@@ -1,0 +1,98 @@
+<!-- Angular.js create a select box using ng-options -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js create a select box using ng-options</title>
+</head>
+<body>
+  <div ng-app="createSelectBoxApp" ng-controller="createSelectBoxAppController">
+    <h2>Get your winning team !</h2>
+
+    <p>Choose your catcher (ng-repeat & value)</p>
+    <select ng-model="pickedCatcher">
+      <option value="">catcher</option>
+      <option ng-repeat="catcher in catchers" value="{{ catcher.name }}">{{ catcher.name }} ({{ catcher.club }})</option>
+    </select>
+    <p>{{ pickedCatcher }} is your catcher</p>
+
+    <hr>
+
+    <p>Choose your favorite infielder (ng-value)</p>
+    <select ng-model="pickedInfielder">
+      <option value="">infielder</option>
+      <!-- one can use 'ng-value' instead of 'value'. This will expose one to the selected object.  -->
+      <option ng-repeat="infielder in infielders" ng-value="{{ infielder }}">{{ infielder.name }} ({{ infielder.club }})</option>
+    </select>
+    <!-- Notice that pickedInfielder is an object here -->
+    <p>You chose {{ pickedInfielder.name }}</p>
+
+    <hr>
+
+    <p>Who's your outfielder (ng-options)</p>
+    <select ng-model="pickedOutfielder" ng-options="outfielder.name for outfielder in outfielders" ></select>
+    <p>The outfielder you chose is {{ pickedOutfielder.name }}</p>
+
+    <hr>
+
+    <p>Pick your starting pitcher (ng-repeat & value)</p>
+    <select ng-model="pickedStarter">
+      <option value="">starting pitcher</option>
+      <option ng-repeat="starter in starters" value="{{ starter.name }}">{{ starter.name }} ({{ starter.club }})</option>
+    </select>
+    <p>{{ pickedStarter }} is starting the game</p>
+
+    <hr>
+
+    <p>Who will close the game ? (ng-repeat & value)</p>
+    <select ng-model="pickedCloser">
+      <option value="">closer</option>
+      <option ng-repeat="closer in closers" value="{{ closer.name }}">{{ closer.name }} ({{ closer.club }})</option>
+    </select>
+    <p>{{ pickedCloser }} is closing the game</p>
+
+    <!-- 
+      Note:
+      - 'ng-repeat & value' combo is the best
+      - 'ng-value' is cool, but 'ng-repeat & value' still beats it
+      - ng-options is NOT recommended 
+    -->
+  </div>
+</body>
+<script>
+  const createSelectBoxApp = angular.module("createSelectBoxApp", []);
+  createSelectBoxApp.controller("createSelectBoxAppController", function ($scope) {
+    // Initialize values for two-way binding
+    $scope.pickedCatcher, $scope.pickedInfielder, $scope.pickedOutfielder, $scope.pickedStarter, $scope.pickedCloser = "";
+
+    $scope.catchers = [
+      { name: "Will Smith", club: "Los Angeles Dodgers" },
+      { name: "JT Realmuto", club: "Philadephia Phillies" },
+      { name: "Alejandro Kirk", club: "Toronto Bluejays" },  
+    ];
+    $scope.infielders = [
+      { name: "Jose Ramirez", club: "Cleveland Guardians" },
+      { name: "Paul Goldschimdt", club: "St. Louis Cardinals" },
+      { name: "Dansby Swanson", club: "Atlanta Braves" },
+    ];
+    $scope.outfielders = [
+      { name: "Aaron Judge", club: "New York Yankees" },
+      { name: "Mike Trout", club: "Los Angeles Angels" },
+      { name: "Mookie Betts", club: "Los Angeles Dodgers" },
+    ];
+    $scope.starters = [
+      { name: "Jacob DeGrom", club: "New York Mets" },
+      { name: "Sandy Alcantara", club: "Miami Marlins" },
+      { name: "Justin Verlander", club: "Houston Astros" },
+    ];
+    $scope.closers = [
+      { name: "Edwin Diaz", club: "New York Mets" },
+      { name: "Emmanuel Clase", club: "Cleveland Guardians" },
+      { name: "Josh Hader", club: "Milwaukee Brewers" },
+    ];
+  });
+</script>
+</html>
