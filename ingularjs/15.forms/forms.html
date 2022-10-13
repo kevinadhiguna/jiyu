@@ -1,0 +1,89 @@
+<!-- Angular.js forms -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js forms</title>
+</head>
+<body>
+  <div ng-app="formsApp" ng-controller="formsAppController">
+    <form>
+      <!-- text in forms -->
+      <p>Name : <input type="text" ng-model="name"></p>
+      <div ng-show="name">Hi {{ name }} !</div>
+      
+      <br />
+      
+      <!-- radiobutton in forms -->
+      <p>Pick a position :</p>
+      <input type="radio" ng-model="position" value="pitcher">Pitcher
+      <input type="radio" ng-model="position" value="infielder">Infielder
+      <input type="radio" ng-model="position" value="outfielder">Outfielder
+      
+      <div ng-switch="position">
+        <div ng-switch-when="pitcher">
+          <p>You love to pitch since you are a {{ position }}, aren't you?</p>
+        </div>
+        <div ng-switch-when="infielder">
+          <p>As an {{ position }}, you do some shift in infield..</p>
+        </div>
+        <div ng-switch-when="outfielder">
+          <p>So as an {{ position }}, would you like to play center, right, or left?</p>
+        </div>
+      </div>
+
+      <br /><br />
+      
+      <!-- selectbox in forms -->
+      <p>Pick a team you would like to play for</p>
+      <select ng-model="team">
+        <option value="New York Yankees">New York Yankees</option>
+        <option value="Los Angeles Dodgers">Los Angeles Dodgers</option>
+        <option value="Atlanta Braves">Atlanta Braves</option>
+      </select>
+
+      <div ng-switch="team">
+        <div ng-switch-when="New York Yankees">
+          <h3>You are a {{ team }} fan</h3>
+          <p>
+            The most WS ring in MLB history, <a href="https://yankees.com" target="_blank" rel="noopener noreferrer">the Yankees</a>
+          </p>
+        </div>
+        <div ng-switch-when="Los Angeles Dodgers">
+          <h3>You are a {{ team }} fan</h3>
+          <p>
+            You look good in Dodger blue ! Let's go <a href="https://dodgers.com" target="_blank" rel="noopener noreferrer">Dodgers</a> !
+          </p>
+        </div>
+        <div ng-switch-when="Atlanta Braves">
+          <h3>You are an {{ team }} fan</h3>
+          <p>
+            Last year World Series champion, <a href="https://braves.com" target="_blank" rel="noopener noreferrer">Atlanta Braves</a>
+          </p>
+        </div>
+      </div>
+      
+      <br /><br />
+      
+      <!-- checkbox in forms -->
+      <input type="checkbox" ng-model="agreeToTerms">Hello {{ name }}, by checking this, you have read and agreed to terms
+    </form>
+
+    <br />
+    
+    <button ng-disabled="!agreeToTerms" ng-click="register()">Register</button>
+  </div>
+</body>
+<script>
+  const formsApp = angular.module("formsApp", []);
+  formsApp.controller("formsAppController", function ($scope) {
+    $scope.agreeToTerms = false;
+    $scope.register = function () {
+      alert("You have successfully registered !");
+    }
+  });
+</script>
+</html>
