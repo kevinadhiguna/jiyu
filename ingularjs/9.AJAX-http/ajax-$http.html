@@ -1,0 +1,65 @@
+<!-- Angular.js AJAX $http -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js AJAX $http</title>
+</head>
+<body>
+  <div ng-app="ajaxHttpApp" ng-controller="ajaxHttpAppController">
+    <p ng-show="!isError">name : {{ name }}</p>
+    <p ng-show="isError">Oops, something went wrong...</p>
+  </div>  
+</body>
+<script>
+  const ajaxHttpAppController = angular.module("ajaxHttpApp", []);
+  ajaxHttpAppController.controller("ajaxHttpAppController", function($scope, $http) {
+    const remoteUrl = "https://jsonplaceholder.typicode.com/users";
+    $scope.isError = false;
+
+    $http({
+      method: "GET",
+      url: remoteUrl,
+    }).then(function isSuccessful(res) { // <- First function handles success
+      $scope.name = res.data[1].name;
+      // Output: Ervin Howell
+
+      $scope.config = res.config;
+      // Output: {"method":"GET","transformRequest":[null],"transformResponse":[null],"jsonpCallbackParam":"callback","url":"https://jsonplaceholder.typicode.com/users","headers":{"Accept":"application/json, text/plain, */*"}}
+      
+      $scope.headers = res.headers;
+      // Output: function(d){b||(b=zd(a));return d?(d=b[K(d)],void 0===d&&(d=null),d):b}
+      
+      $scope.status = res.status;
+      // Output: 200
+      
+      $scope.statusText = res.statusText;
+      // Output: OK
+    }, function isError(err) { // <- Second function handles errors
+      $scope.isError = true;
+      console.error("Something went wrong : ", err);
+      // err.statusText = "" when it is error, so not recommended to use that property
+    });
+
+    // -- Notes -- 
+    // The response from the server is an object with these properties:
+    // - .config the object used to generate the request.
+    // - .data a string, or an object, carrying the response from the server.
+    // - .headers a function to use to get header information.
+    // - .status a number defining the HTTP status.
+    // - .statusText a string defining the HTTP status.
+
+    // The .get() method is a shortcut method of the $http service. There are several shortcut methods:
+    // - .delete()
+    // - .get()
+    // - .head()
+    // - .jsonp()
+    // - .patch()
+    // - .post()
+    // - .put()
+  });
+</script>
+</html>
