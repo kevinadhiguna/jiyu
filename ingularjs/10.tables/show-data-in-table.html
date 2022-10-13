@@ -1,0 +1,64 @@
+<!-- Angular.js displaying data in a table -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js displaying data in a table</title>
+</head>
+<style>
+  table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  
+  /* This CSS will style the table instead of using $odd and $even (a traditional way of styling) */
+  /* table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  } */
+</style>
+<body>
+  <div ng-app="displayDataTableApp" ng-controller="displayDataTableAppController">
+    <table ng-show="!isError">
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Website</th>
+      </tr>
+      <tr ng-repeat="user in users | orderBy : 'website'">
+        <td>{{ $index + 1 }}</td>
+        <td ng-if="$odd" style="background-color: #f1f1f1;">{{ user.name | uppercase }}</td>
+        <td ng-if="$even">{{ user.name | uppercase }}</td>
+        <td ng-if="$odd" style="background-color: #f1f1f1;">{{ user.website }}</td>
+        <td ng-if="$even">{{ user.website }}</td>
+      </tr>
+    </table>
+
+    <p ng-show="isError">Oops... something went wrong, try again later</p>
+  </div>
+</body>
+<script>
+  const displayDataTableApp = angular.module("displayDataTableApp", []);
+  displayDataTableApp.controller("displayDataTableAppController", function($scope, $http) {
+    const userUrl = "https://jsonplaceholder.typicode.com/users";
+    $scope.isError = false;
+
+    $http({
+      method: "GET",
+      url: userUrl,
+    }).then(function isSuccessful(res) {
+      $scope.users = res.data;
+    }, function isError(err) {
+      $scope.isError = true;
+      console.error("Something went wrong : ", err);
+    });
+  });
+</script>
+</html>
