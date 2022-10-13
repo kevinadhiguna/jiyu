@@ -1,0 +1,31 @@
+<!-- Angular.js form state & input state -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js form state & input state</title>
+</head>
+<body>
+  <div ng-app="">
+    <p>Try leaving the first input field blank :</p>
+    <form name="myForm">
+      <p>
+        Name: 
+        <!-- ng-model is a must-use directive here, otherwise the validaiton does not work! -->
+        <input type="text" name="myName" ng-model="myName" required>
+        <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+      </p>
+
+      <p>
+        Address :
+        <input type="text" name="myAddress" ng-model="myAddress" required>
+      </p>
+    </form>
+
+    <p>One uses the ng-show directive to only show the error message if the field has been touched AND is empty</p>
+  </div>
+</body>
+</html>
