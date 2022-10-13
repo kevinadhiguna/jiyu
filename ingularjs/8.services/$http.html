@@ -1,0 +1,41 @@
+<!-- Angular.js HTTP service -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js HTTP service</title>
+</head>
+<body>
+  <div ng-app="userApp" ng-controller="userAppController">
+    <!-- This one has failed still... -->
+    <p>Our users are : {{ users }}</p>
+  </div>
+</body>
+<script>
+  const userApp = angular.module("userApp", []);
+  userApp.controller("userAppController", async function ($scope, $http) {
+    const userUrl = "https://jsonplaceholder.typicode.com/users";
+
+    // -- Somehow, async-await did not work but .then() did --
+    // let res = await $http.get(userUrl);
+    // console.log("res.data[0].name : ", res.data[0].name);
+    // $scope.users = await res.data[0].name;
+    // console.log("$scope.users : ", $scope.users);
+    // console.log("typeof($scope.users) : ", typeof($scope.users));
+
+    $http.get(userUrl)
+        .then(function (res) {
+          $scope.users = res.data[0].name;
+          console.log("res.data[0].name : ", res.data[0].name);
+          console.log("$scope.users : ", $scope.users);
+          console.log("typeof($scope.users) : ", typeof($scope.users));
+        })
+        .catch(function (err) {
+          console.error(`Error fetching data from ${userUrl} : `, err);
+        });
+  })
+</script>
+</html>
