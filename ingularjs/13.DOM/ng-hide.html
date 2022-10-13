@@ -1,0 +1,26 @@
+<!-- Angular.js ng-hide directive -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js ng-hide directive</title>
+</head>
+<body>
+  <div ng-app="ngHideApp" ng-controller="ngHideAppController">
+    <h2 ng-hide="year != 2022">MLB 2022 Cy Young award</h2>
+    <p ng-hide="!isSandyCY">Sandy Alcantara is a Cy Young winner</p>
+    <p ng-hide="!isMaxCY">Max Fried is a Cy Young winner</p>
+  </div>
+</body>
+<script>
+  const ngHideApp = angular.module("ngHideApp", []);
+  ngHideApp.controller("ngHideAppController", function ($scope) {
+    $scope.year = 2022;
+    $scope.isSandyCY = true;
+    $scope.isMaxCY = false;
+  })
+</script>
+</html>
