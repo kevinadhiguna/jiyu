@@ -1,0 +1,27 @@
+<!-- Angular.js $interval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js $interval</title>
+</head>
+<body>
+  <div ng-app="intervalApp" ng-controller="intervalAppController">
+    <p>Current time :</p>
+    <h3>{{ time }}</h3>
+    <p>The $interval service runs a function every specified millisecond.</p>
+  </div>
+</body>
+<script>
+  const intervalApp = angular.module("intervalApp", []);
+  intervalApp.controller("intervalAppController", function($scope, $interval) {
+    $scope.time = new Date().toLocaleTimeString();
+    $interval(function () {
+      $scope.time = new Date().toLocaleTimeString();
+    }, 1000);
+  });
+</script>
+</html>
