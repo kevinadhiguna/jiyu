@@ -1,0 +1,35 @@
+<!-- Angular.js toggle true-false -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js toggle true-false</title>
+</head>
+<body>
+  <div ng-app="toggleApp" ng-controller="toggleAppController">
+    <button ng-click="toggleMenu()">
+      <p ng-show="!isMenuVisible">Show menu</p>
+      <p ng-show="isMenuVisible">Hide menu</p>
+    </button>
+
+    <div ng-show="isMenuVisible">
+      <h3>Menu :</h3>
+      <p>Curry Rice</p>
+      <p>Pizza</p>
+      <p>Pasta</p>
+    </div>
+  </div>
+</body>
+<script>
+  const toggleApp = angular.module("toggleApp", []);
+  toggleApp.controller("toggleAppController", function ($scope) {
+    $scope.isMenuVisible = false;
+    $scope.toggleMenu = function () {
+      $scope.isMenuVisible = !$scope.isMenuVisible;
+    }
+  });
+</script>
+</html>
