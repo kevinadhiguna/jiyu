@@ -1,0 +1,26 @@
+<!-- Angular.js $event object -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js $event object</title>
+</head>
+<body>
+  <div ng-app="eventObjectApp" ng-controller="eventObjectAppController">
+    <h3 ng-mousemove="eventFunc($event)">Mouse over me!</h3>
+    <p>Coordinate (x, y): {{ xCoordinate + ', ' + yCoordinate }}</p>
+  </div>
+</body>
+<script>
+  const eventObjectApp = angular.module("eventObjectApp", []);
+  eventObjectApp.controller("eventObjectAppController", function ($scope) {
+    $scope.eventFunc = function (coordinate) {
+      $scope.xCoordinate = coordinate.clientX;
+      $scope.yCoordinate = coordinate.clientY;
+    }
+  });
+</script>
+</html>
