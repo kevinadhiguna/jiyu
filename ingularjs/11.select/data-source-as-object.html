@@ -1,0 +1,40 @@
+<!-- Angular.js data source as an object -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js data source as an object</title>
+</head>
+<body>
+  <div ng-app="objectDataSourceApp" ng-controller="objectDataSourceAppController">
+    <p>Select a team</p>
+    <select ng-model="selectedTeam" ng-options="key for (key, value) in teams"></select>
+    <p>You selected {{ selectedTeam }}</p>
+
+    <hr>
+
+    <p>Select a manager</p>
+    <select ng-model="selectedManager" ng-options="value.name for (key , value) in managers"></select>
+    <p>Your manager is {{ selectedManager.name }} ({{ selectedManager.club }} - {{ selectedManager.servedYears }} year(s))</p>
+  </div>
+</body>
+<script>
+  const objectDataSourceApp = angular.module("objectDataSourceApp", []);
+  objectDataSourceApp.controller("objectDataSourceAppController", function ($scope) {
+    $scope.teams = {
+      newyork: "New York Yankees",
+      losangeles: "Los Angeles Angels",
+      atlanta: "Atlanta Braves",
+    };
+
+    $scope.managers = {
+      manager01: { name: "Dusty Baker", club: "Houston Astros", servedYears: 10 },
+      manager02: { name: "Phil Nevin", club: "Los Angeles Angels", servedYears: 1 },
+      manager03: { name: "Don Mattingly", club: "Miami Marlins", servedYears: 2 },
+    };
+  });
+</script>
+</html>
