@@ -1,0 +1,58 @@
+<!-- Angular.js form example -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js form example</title>
+</head>
+<body>
+  <div ng-app="formExampleApp" ng-controller="formExampleAppController">
+    <!-- 
+      Notes :
+      - The novalidate attribute is new in HTML5. It disables any default browser validation.
+      - The novalidate attribute is not needed for this application, but normally you will use it in AngularJS forms, to override standard HTML5 validation. 
+    -->
+    <form novalidate>
+      First Name: <br />
+      <input type="text" ng-model="user.firstName"><br />
+      Last Name: <br />
+      <input type="text" ng-model="user.lastName"><br />
+      
+      <br /><br />
+      
+      <button ng-click="reset()">Reset</button>
+      <button ng-click="submit()">Submit</button>
+    </form>
+
+    <hr>
+
+    <div>
+      <h3>State :</h3>
+      <p>Form result : {{ user }}</p>
+      <p>Master : {{ master }}</p>
+    </div>
+  </div>
+</body>
+<script>
+  const formExampleApp = angular.module("formExampleApp", []);
+  formExampleApp.controller("formExampleAppController", function ($scope) {
+    $scope.master = {
+      firstName: "Edwin",
+      lastName: "Harper",
+    }
+
+    $scope.reset = function () {
+      $scope.user = angular.copy($scope.master);
+    }
+
+    $scope.submit = function () {
+      alert(`Hi ${$scope.user.firstName} ${$scope.user.lastName}, your form is submitted !`);
+    }
+
+    // $scope.reset();
+  });
+</script>
+</html>
