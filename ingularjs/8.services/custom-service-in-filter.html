@@ -1,0 +1,40 @@
+<!-- Angular.js custom service -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js custom service</title>
+</head>
+<body>
+  <div ng-app="customServiceApp" ng-controller="customServiceAppController">
+    <p>Use a filter when displaying the array [255, 251, 200]:</p>
+
+    <ul>
+      <li ng-repeat="x in counts">
+        {{ x | formatter }}
+      </li>
+    </ul>
+
+    <p>This filter uses a service that converts numbers into hexadecimal values.</p>
+  </div>
+</body>
+<script>
+  const customServiceApp = angular.module("customServiceApp", []);
+  customServiceApp.service("hexafy", function () {
+    this.hexaFunc = function(x) {
+      return x.toString(16);
+    }
+  })
+  customServiceApp.filter("formatter", ["hexafy", function(hexafy) {
+    return function (x) {
+      return hexafy.hexaFunc(x);
+    }
+  }])
+  customServiceApp.controller("customServiceAppController", function ($scope, hexafy) {
+    $scope.counts = [255,251, 200];
+  })
+</script>
+</html>
