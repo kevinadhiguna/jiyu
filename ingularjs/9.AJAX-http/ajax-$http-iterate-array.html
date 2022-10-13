@@ -1,0 +1,42 @@
+<!-- Angular.js AJAX $http - iterate an array -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js AJAX $http - iterate an array</title>
+</head>
+<body>
+  <div ng-app="ajaxHttpApp" ng-controller="ajaxHttpAppController">
+    <p>Users from a mock API</p>
+    <ul>
+      <li ng-repeat="data in responseData">
+        {{ data.name }} ({{ data.id }})
+      </li>
+    </ul>
+    
+    <p ng-show="isError">Oops, something went wrong...</p>
+  </div>  
+</body>
+<script>
+  const ajaxHttpAppController = angular.module("ajaxHttpApp", []);
+  ajaxHttpAppController.controller("ajaxHttpAppController", function($scope, $http) {
+    const remoteUrl = "https://jsonplaceholder.typicode.com/users";
+    // const remoteUrl2 = "https://www.w3schools.com/angular/customers.php";
+    $scope.isError = false;
+
+    $http({
+      method: "GET",
+      url: remoteUrl,
+    }).then(function isSuccessful(res) { // <- First function handles success
+      $scope.responseData = res.data;
+    }, function isError(err) { // <- Second function handles errors
+      $scope.isError = true;
+      console.error("Something went wrong : ", err);
+      // err.statusText = "" when it is error, so not recommended to use that property
+    });
+  });
+</script>
+</html>
