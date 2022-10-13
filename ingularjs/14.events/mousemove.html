@@ -1,0 +1,24 @@
+<!-- Angular.js mouse events - mousemove -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js mouse events - mousemove</title>
+</head>
+<body>
+  <!-- Checkout more Angular.js events here : https://www.w3schools.com/angular/angular_events.asp -->
+  <div ng-app="mousemoveApp" ng-controller="mousemoveAppController">
+    <h3 ng-mousemove="count = count + 1">Mouse over me!</h3>
+    <h4>count : {{ count }}</h4>
+  </div>
+</body>
+<script>
+  const mousemoveApp = angular.module("mousemoveApp", []);
+  mousemoveApp.controller("mousemoveAppController", function ($scope) {
+    $scope.count = 0;
+  });
+</script>
+</html>
