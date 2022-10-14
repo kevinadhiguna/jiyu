@@ -1,0 +1,45 @@
+<!-- Angular.js global API -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>Angular.js global API</title>
+</head>
+<body>
+  <div ng-app="globalApiApp" ng-controller="globalApiAppController">
+    <h3>Person</h3>
+    <p>Name : {{ person1.name }}</p>
+    <!-- <p>Lowercase name : {{ person1.lowercaseName }}</p> -->
+    <!-- <p>Uppercase name : {{ person1.uppercaseName }}</p> -->
+    <p>Is {{ person1.name }}'s name a valid string ? : {{ isNameValidString }}</p>
+    <br />
+    <p>{{ person1.name }}'s mark : {{ person1.mark }}</p>
+    <p>Is {{person1.name }}'s mark a valid number ? : {{ isMarkValidNumber }}</p>
+  </div>
+</body>
+<script>
+  const globalApiApp = angular.module("globalApiApp", []);
+  globalApiApp.controller("globalApiAppController", function ($scope) {
+    $scope.person1 = {
+      name: "Jacob",
+      mark: 97
+    };
+
+    // Note: angular.lowercase() & angular.uppercase() have been removed and therefore are deprecated! (https://github.com/angular/angular.js/commit/1daa4f2231a89ee88345689f001805ffffa9e7de#diff-1d54c5f722aebc473dbe96f836ddf974)
+    // angular.lowercase()
+    // $scope.person1.lowercaseName = angular.lowercase($scope.person1.name);
+    
+    // angular.uppercase()
+    // $scope.person1.uppercaseName = angular.uppercase($scope.person1.name);
+    
+    // angular.isString()
+    $scope.isNameValidString = angular.isString($scope.person1.name);
+    
+    // angular.isNumber()
+    $scope.isMarkValidNumber = angular.isNumber($scope.person1.mark);
+  });
+</script>
+</html>
