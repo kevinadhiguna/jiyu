@@ -1,0 +1,81 @@
+<!-- Angular.js x W3.CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- Load W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Angular.js x W3.CSS</title>
+</head>
+<body>
+  <div ng-app="w3CssApp" ng-controller="w3CssAppController" class="w3-container">
+    <h3>Users</h3>
+    <table class="w3-table w3-bordered w3-striped">
+      <tr>
+        <th>Edit</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+      <tr ng-repeat="user in users">
+        <td>
+          <button class="w3-btn w3-ripple" ng-click="editUser(user.id)">&#9998; Edit</button>
+        </td>
+        <td>{{ user.firstName}}</td>
+        <td>{{ user.lastName }}</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <button class="w3-btn w3-green w3-ripple" ng-click="editUser('new')">&#9998; Create New User</button>
+  
+    <hr>
+
+    <form ng-hide="hideForm">
+      <h3 ng-show="edit">Create New User :</h3>
+      <h3 ng-hide="edit">Edit User :</h3>
+      <label>First Name :</label>
+      <input 
+        type="text" 
+        class="w3-input w3-border" 
+        ng-model="firstName" 
+        ng-disabled="!edit" 
+        placeholder="What's your first name?"
+      >
+      <br>
+      <label>Last Name :</label>
+      <input 
+        type="text"
+        class="w3-input w3-border"
+        ng-model="lastName"
+        ng-disabled="!edit"
+        placeholder="May we have your last name?"
+      >
+      <br>
+      <label>Password :</label>
+      <input 
+        type="password"
+        class="w3-input w3-border"
+        ng-model="password1"
+        placeholder="Your password"
+      >
+      <br>
+      <label>Repeat your password :</label>
+      <input 
+        type="password"
+        class="w3-input w3-border"
+        type="password"
+        ng-model="password2"
+        placeholder="Repeat your password"
+      >
+      <br>
+      <button class="w3-btn w3-green w3-ripple" ng-disabled="error || incomplete">&#10004; Save Changes</button>
+    </form>
+    <br>
+  </div>
+</body>
+<script src="w3-css.js"></script>
+</html>
