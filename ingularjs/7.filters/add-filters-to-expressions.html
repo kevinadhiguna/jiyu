@@ -46,14 +46,16 @@
     <p>All teams :</p>
     <ul>
       <li ng-repeat="team in teams">
-        {{ team }}
+        <!-- display team names in uppercase -->
+        {{ team | uppercase }}
       </li>
     </ul>
     <br>
     <p>Search Result :</p>
     <ul>
       <li ng-repeat="searchedTeam in teams | filter : teamLetter">
-        {{ searchedTeam }}
+        <!-- show team names in lowercase -->
+        {{ searchedTeam | lowercase}}
       </li>
     </ul>
   </div>
