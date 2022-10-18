@@ -1,0 +1,51 @@
+<!-- Angular.js animation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.js"></script>
+  <title>Angular.js animation</title>
+</head>
+<style>
+  .div-block {
+    transition: all linear 0.5s;
+    background-color: aquamarine;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  /* Some transition options */
+  /* (1) slide up/down transition */
+  .ng-hide {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    top: -200px;
+    left: 200px;
+  }
+  
+  /* (2) "curtain-like" transition */
+  /* .ng-hide {
+    height: 0;
+  } */
+</style>
+<body>
+  <!-- 
+    To make your applications ready for animations, you must refer to the ngAnimate module ( <div ng-app="ngAnimate"></div> ).
+    Otherwise, add ngAnimate as a dependency in your application module like this :   const ngAnimateApp = angular.module("ngAnimateApp", ["ngAnimate"]);
+   -->
+  <div ng-app="ngAnimateApp">
+    <h3>Hide the DIV : <input type="checkbox" ng-model="isDivHidden"></h3>
+    <div ng-hide="isDivHidden" class="div-block"></div>
+  </div>
+</body>
+<script>
+  const ngAnimateApp = angular.module("ngAnimateApp", ["ngAnimate"]);
+</script>
+</html>
