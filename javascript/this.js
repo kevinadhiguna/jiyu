@@ -1,6 +1,6 @@
 // Reference : https://www.w3schools.com/js/js_this.asp
 
-// "this" keyword refers to an object it belongs to.
+// "this" keyword refers to an object it belongs to. When used alone, "this" refers to the global object because "this" is running in the global scope.
 const angels_anaheim = {
   manager: "Joe Maddon",
   best_player: "Shohei Ohtani",
