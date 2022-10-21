@@ -2,6 +2,8 @@
 
 Modal project using Vue.js v3.
 
+<br />
+
 ## Project setup
 ```
 yarn install
@@ -19,6 +21,8 @@ yarn build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+<br />
 
 ## Reference
 
