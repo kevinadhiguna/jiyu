@@ -1,6 +1,7 @@
 <template>
   <div class="backdrop">
     <div class="modal">
+      <h1>Modal header</h1>
       <p>Modal Content</p>
     </div>
   </div>
@@ -24,5 +25,13 @@ export default {};
   margin: 100px auto;
   background: #fff;
   border-radius: 10px;
+}
+.modal h1 {
+  color: #03cfb4;
+  border: none;
+  padding: 0;
+}
+.modal p {
+  font-style: normal;
 }
 </style>
