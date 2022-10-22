@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ framework }} App</h1>
+    <h1 class="main-title">{{ framework }} App</h1>
     <input type="text" ref="inputfield" />
     <button @click="handleClick">Click</button>
     <Modal />
@@ -38,5 +38,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.main-title {
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 </style>
