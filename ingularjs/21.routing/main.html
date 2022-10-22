@@ -1,0 +1,67 @@
+<!-- Angular.js routing -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+  <title>Angular.js routing</title>
+</head>
+<body>
+  <div ng-app="routingApp">
+    <p><a href="#/!">Main</a></p>
+
+    <a href="#!london">London</a>
+    <a href="#!paris">Paris</a>
+    <a href="#!tokyo">Tokyo</a>
+
+    <!-- 
+      Your application needs a container to put the content provided by the routing.
+      This container is the ng-view directive.
+      There are three different ways to include the ng-view directive in your application: 
+    -->
+    <div ng-view></div>
+    <!-- <ng-view></ng-view> -->
+    <!-- <div class="ng-view"></div> -->
+  </div>
+</body>
+<script>
+  const routingApp = angular.module("routingApp", ["ngRoute"]);
+  
+  // Configure routing. With the $routeProvider you can define what page to display when a user clicks a link.
+  routingApp.config(function ($routeProvider) {
+    $routeProvider
+      .when("/", {
+        templateUrl: "main.html",
+      })
+      .when("/london", {
+        templateUrl: "london.html",
+        controller: "londonController",
+      })
+      .when("/paris", {
+        templateUrl: "paris.html",
+        controller: "parisController",
+      })
+      .when("/tokyo", {
+        templateUrl: "tokyo.html",
+        controller: "tokyoController",
+      })
+      .otherwise({ // You can also use the otherwise method, which is the default route when none of the others get a match.
+        template: "<h3>None</h3><p>Nothing has been selected</p>",
+      });
+  });
+
+  // With the $routeProvider you can also define a controller for each "view".
+  routingApp.controller("londonController", function ($scope) {
+    $scope.message = "Hello from London controller!";
+  });
+  routingApp.controller("parisController", function ($scope) {
+    $scope.message = "Bonjour from Paris controller ^^";
+  });
+  routingApp.controller("tokyoController", function ($scope) {
+    $scope.message = "Konnichiwa from Tokyo controller :D";
+  });
+</script>
+</html>
