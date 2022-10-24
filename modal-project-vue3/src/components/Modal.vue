@@ -38,7 +38,7 @@ export default {
 }
 
 .modal.sale-theme {
-  background-color: crimson;
+  background-color: coral;
   color: #fff;
 }
 .modal.sale-theme h1 {
