@@ -3,11 +3,14 @@
     <h1 class="main-title">{{ framework }} App</h1>
     <input type="text" ref="inputfield" />
     <button @click="handleClick">Click</button>
-    <Modal 
-      :header="header"
-      :content="content"
-      :theme="theme"
-    />
+    <div v-if="isModalShown">
+      <Modal 
+        :header="header"
+        :content="content"
+        :theme="theme"
+      />
+    </div>
+    <button @click="handleModalShown">Show Modal</button>
   </div>
 </template>
 
@@ -22,6 +25,7 @@ export default {
       header: "Sign up for MLB All-star tickets!",
       content: "Watch Trout and Ohtani",
       theme: "sale",
+      isModalShown: false,
     };
   },
   components: {
@@ -33,6 +37,9 @@ export default {
       this.$refs.inputfield.classList.add("active"); // <- Add a class named "active"
       this.$refs.inputfield.focus(); // <- Focus to input field
     },
+    handleModalShown() {
+      this.isModalShown = !this.isModalShown;
+    }
   },
 };
 </script>
