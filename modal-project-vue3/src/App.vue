@@ -4,8 +4,8 @@
     <input type="text" ref="inputfield" />
     <button @click="handleClick">Click</button>
     <Modal 
-      header="Sign up for MLB All-star tickets!"
-      content="Watch Trout and Ohtani"
+      :header="header"
+      :content="content"
     />
   </div>
 </template>
@@ -18,6 +18,8 @@ export default {
   data() {
     return {
       framework: "Vue.js v3",
+      header: "Sign up for MLB All-star tickets!",
+      content: "Watch Trout and Ohtani"
     };
   },
   components: {
