@@ -3,7 +3,10 @@
     <h1 class="main-title">{{ framework }} App</h1>
     <input type="text" ref="inputfield" />
     <button @click="handleClick">Click</button>
-    <Modal />
+    <Modal 
+      header="Sign up for MLB All-star tickets!"
+      content="Watch Trout and Ohtani"
+    />
   </div>
 </template>
 
