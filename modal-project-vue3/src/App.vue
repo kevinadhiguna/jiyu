@@ -6,7 +6,7 @@
     <Modal 
       :header="header"
       :content="content"
-      theme="sale"
+      :theme="theme"
     />
   </div>
 </template>
@@ -21,6 +21,7 @@ export default {
       framework: "Vue.js v3",
       header: "Sign up for MLB All-star tickets!",
       content: "Watch Trout and Ohtani",
+      theme: "sale",
     };
   },
   components: {
