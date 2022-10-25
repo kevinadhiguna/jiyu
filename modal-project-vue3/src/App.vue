@@ -1,8 +1,10 @@
 <template>
   <div>
     <h1 class="main-title">{{ framework }} App</h1>
+    <!-- 
     <input type="text" ref="inputfield" />
-    <button @click="handleClick">Click</button> 
+    <button @click="handleClick">Click</button>  
+    -->
     <p>Welcome</p>
     <div v-if="isModalShown">
       <Modal 
