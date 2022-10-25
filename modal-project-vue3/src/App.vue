@@ -2,15 +2,18 @@
   <div>
     <h1 class="main-title">{{ framework }} App</h1>
     <input type="text" ref="inputfield" />
-    <button @click="handleClick">Click</button>
+    <button @click="handleClick">Click</button> 
+    <p>Welcome</p>
     <div v-if="isModalShown">
       <Modal 
         :header="header"
         :content="content"
         :theme="theme"
+        @close="handleModalShown"
       />
     </div>
-    <button @click="handleModalShown">Show Modal</button>
+    <!-- Will react only if shift key is held down -->
+    <button @click.shift="handleModalShown">Show Modal (shift)</button>
   </div>
 </template>
 
