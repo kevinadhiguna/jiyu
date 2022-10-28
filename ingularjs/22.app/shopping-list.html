@@ -1,0 +1,50 @@
+<!-- Angular.js app - shopping list -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <!-- Add W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Angular.js app - shopping list</title>
+</head>
+<body>
+  <div 
+    ng-app="myShoppingList" 
+    ng-cloak
+    ng-controller="myShoppingListController"
+    class="w3-card-2 w3-margin"
+    style="max-width: 400px;"
+  >
+    <header class="w3-container w3-light-grey w3-padding-16">
+      <h3>My Shopping List</h3>
+    </header>
+    <ul class="w3-ul">
+      <li ng-repeat="product in products" class="w3-padding-16">
+        {{ product }} <span ng-click="removeItem($index)" style="cursor: pointer;" class="w3-right w3-margin-right">&times;</span>
+      </li>
+    </ul>
+    
+    <div class="w3-container w3-light-grey w3-padding-16">
+      <div class="w3-row w3-margin-top">
+        <div class="w3-col s10">
+          <input 
+            type="text" 
+            ng-model="addedProduct" 
+            class="w3-input w3-border w3-padding" 
+            placeholder="Add shopping items here"
+          >
+        </div>
+        <div class="w3-col s2">
+          <button ng-click="addItem()" class="w3-btn w3-padding w3-green">Add</button>
+        </div>
+      </div>
+      <p class="w3-text-red">{{ errortext }}</p>
+    </div>
+    
+  </div>
+</body>
+<script src="shopping-list.js"></script>
+</html>
