@@ -14,4 +14,10 @@ myShoppingList.controller("myShoppingListController", function ($scope) {
       $scope.errortext = "The item is already in your shopping list !";
     }
   }
+
+  // Removing items
+  $scope.removeItem = function (productIndex) {
+    $scope.errortext = "";
+    $scope.products.splice(productIndex, 1);
+  }
 });
