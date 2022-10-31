@@ -11,6 +11,7 @@ class Person {
 }
 
 const jack = new Person('jack');
+jack.introduceSelf(); // Hi, I am jack
+
 const doe = new Person();
-jack.introduceSelf();
-doe.introduceSelf();
+doe.introduceSelf(); // Hi, I am undefined
