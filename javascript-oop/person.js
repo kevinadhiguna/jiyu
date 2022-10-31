@@ -1,4 +1,9 @@
 class Person {
+  name;
+  age;
+  weight;
+  height;
+
   constructor (name, age, height, weight) {
     this.name = name;
     this.age = age;
