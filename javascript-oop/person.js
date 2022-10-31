@@ -21,8 +21,8 @@ class Person {
 
 const jack = new Person('jack', 20, 200, 85);
 jack.introduceSelf(); // Hi, I am jack
-jack.currentAge();
-jack.physique();
+jack.currentAge(); // I am 20 years old.
+jack.physique(); // I am 200 cm tall and am 85 kg.
 
 const doe = new Person();
 doe.introduceSelf(); // Hi, I am undefined
