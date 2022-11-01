@@ -52,3 +52,5 @@ class Professor extends Person {
 }
 
 const hanyu = new Professor('Hanyu Yuzuru', 'Ice Skating');
+hanyu.introduceSelf();
+hanyu.grade('How to master free style in ice skating competition');
