@@ -44,4 +44,9 @@ class Professor extends Person {
   introduceSelf() {
     console.log(`My name is ${this.name} and I will be teaching ${this.teaches}.`);
   }
+
+  grade(paper) {
+    const grade = Math.floor(Math.random() * (5 - 1) + 1);
+    console.log(`Paper title is ${paper} and your grade is ${grade}`);
+  }
 }
