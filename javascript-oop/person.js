@@ -50,3 +50,5 @@ class Professor extends Person {
     console.log(`Paper title is ${paper} and your grade is ${grade}`);
   }
 }
+
+const hanyu = new Professor('Hanyu Yuzuru', 'Ice Skating');
