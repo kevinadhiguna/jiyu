@@ -32,3 +32,11 @@ jack.physique(); // I am 200 cm tall and am 85 kg.
 
 const doe = new Person();
 doe.introduceSelf(); // Hi, I am undefined
+
+// Inheritance
+class Professor extends Person {
+  constructor (name, teaches) {
+    super(name, teaches); // super(), passing up the name parameter. The superclass constructor takes care of setting name.
+    this.teaches = teaches;
+  }
+}
