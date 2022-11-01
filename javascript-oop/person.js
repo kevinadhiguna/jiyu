@@ -1,4 +1,5 @@
 class Person {
+  // optional declaration
   name;
   age;
   weight;
