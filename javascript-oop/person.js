@@ -39,4 +39,9 @@ class Professor extends Person {
     super(name, teaches); // super(), passing up the name parameter. The superclass constructor takes care of setting name.
     this.teaches = teaches;
   }
+
+  // Override introduceSelf() method from superclass/parent class
+  introduceSelf() {
+    console.log(`My name is ${this.name} and I will be teaching ${this.teaches}.`);
+  }
 }
