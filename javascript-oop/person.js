@@ -66,4 +66,8 @@ class Student extends Person {
   introduceSelf() {
     console.log(`Hi, I am ${this.name} and am in year ${this.#year}`);
   }
+
+  canStudyIceSkating() {
+    return this.#year >= 2;
+  }
 }
