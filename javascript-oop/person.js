@@ -62,4 +62,8 @@ class Student extends Person {
     super(name);
     this.#year = year;
   }
+
+  introduceSelf() {
+    console.log(`Hi, I am ${this.name} and am in year ${this.#year}`);
+  }
 }
