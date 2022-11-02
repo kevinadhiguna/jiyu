@@ -71,3 +71,7 @@ class Student extends Person {
     return this.#year >= 2;
   }
 }
+
+const evgeny = new Student('Evgeny', 3);
+evgeny.introduceSelf();
+console.log('Can Evgeny study ice skating ? : ', evgeny.canStudyIceSkating());
