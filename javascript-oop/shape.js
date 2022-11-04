@@ -10,3 +10,6 @@ class Shape {
     console.log(`${this.name} perimeter is ${perimeter}`);
   }
 }
+
+const square = new Shape('square', 4, 5);
+square.calcPerimeter();
