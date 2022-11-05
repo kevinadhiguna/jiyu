@@ -16,3 +16,14 @@ square.calcPerimeter();
 
 const equilateralTriangle = new Shape('triangle', 3, 3);
 equilateralTriangle.calcPerimeter();
+
+class Square extends Shape {
+  constructor(sideLength) {
+    super('square', 4, sideLength);
+
+    // super(Shape);
+    // this.name = "square";
+    // this.sides = 4;
+    // this.sideLength = sideLength;
+  }
+}
