@@ -26,4 +26,11 @@ class Square extends Shape {
     // this.sides = 4;
     // this.sideLength = sideLength;
   }
+
+  calcArea() {
+    // const area = this.sideLength * this.sideLength;
+    // console.log(`${this.name} area is ${area}`);
+
+    console.log(`${this.name} area is `, Math.pow(this.sideLength, 2));
+  }
 }
