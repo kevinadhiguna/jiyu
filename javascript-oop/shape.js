@@ -36,3 +36,4 @@ class Square extends Shape {
 }
 
 const anotherSquare = new Square(7);
+anotherSquare.calcArea();
