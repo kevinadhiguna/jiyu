@@ -34,3 +34,5 @@ class Square extends Shape {
     console.log(`${this.name} area is `, Math.pow(this.sideLength, 2));
   }
 }
+
+const anotherSquare = new Square(7);
