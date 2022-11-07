@@ -3,7 +3,8 @@
     <h1 class="main-title">{{ framework }} App</h1>
     <p>Welcome</p>
     
-    <div v-if="isModalShown">
+    <!-- teleport brings an element to a destination which can be a class (e.g.: .modals) or an id (e.g.: #modals) -->
+    <teleport to=".modals" v-if="isModalShown">
       <Modal theme="sale" @close="handleModalShown">
         <!-- Template that will be rendered in <slot name="links"></slot> tags in Modal component -->
         <template v-slot:links>
@@ -15,9 +16,9 @@
         <h1>{{ header }}</h1>
         <p>{{ content }}</p>
       </Modal>
-    </div>
+    </teleport>
 
-    <div v-if="isModalTwoShown">
+    <teleport to="#modals" v-if="isModalTwoShown">
       <Modal theme="" @close="handleModalTwoShown">
         <h1>Modal 2 header</h1>
         <p>Modal 2 text</p>
@@ -27,7 +28,7 @@
           <a href="#">Open for more</a>
         </template>
       </Modal>
-    </div>
+    </teleport>
 
     <!-- Will react only if shift key is held down -->
     <button @click.shift="handleModalShown">Show Modal (shift)</button>
@@ -66,7 +67,7 @@ export default {
 </script>
 
 <style>
-#app {
+#app, .modals, #modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
