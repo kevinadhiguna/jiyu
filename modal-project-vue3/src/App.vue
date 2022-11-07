@@ -33,7 +33,7 @@
     <!-- Will react only if shift key is held down -->
     <button @click.shift="handleModalShown">Show Modal (shift)</button>
     <!-- Will react only if alt key is held down -->
-    <button @click.alt="handleModalTwoShown">Show Modal 2 (alt)</button>
+    <button class="btn-2" @click.alt="handleModalTwoShown">Show Modal 2 (alt)</button>
   </div>
 </template>
 
@@ -80,5 +80,9 @@ export default {
   border-bottom: 1px solid #ddd;
   display: inline-block;
   padding-bottom: 10px;
+}
+
+.btn-2 {
+  margin-left: 10px;
 }
 </style>
