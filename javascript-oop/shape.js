@@ -12,10 +12,10 @@ class Shape {
 }
 
 const square = new Shape('square', 4, 5);
-square.calcPerimeter();
+square.calcPerimeter(); // square perimeter is 20
 
 const equilateralTriangle = new Shape('triangle', 3, 3);
-equilateralTriangle.calcPerimeter();
+equilateralTriangle.calcPerimeter(); // triangle perimeter is 9
 
 class Square extends Shape {
   constructor(sideLength) {
@@ -36,5 +36,5 @@ class Square extends Shape {
 }
 
 const anotherSquare = new Square(7);
-anotherSquare.calcArea();
-anotherSquare.calcPerimeter();
+anotherSquare.calcArea(); // square area is  49
+anotherSquare.calcPerimeter(); // square perimeter is 28
