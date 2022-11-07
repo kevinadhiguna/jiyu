@@ -4,6 +4,11 @@
     <p>Welcome</p>
     <div v-if="isModalShown">
       <Modal :theme="theme" @close="handleModalShown">
+        <!-- Template that will be rendered in <slot name="links"></slot> tags in Modal component -->
+        <template v-slot:links>
+          <a href="#">More info</a>
+        </template>
+        
         <!-- Template that will be rendered in <slot></slot> tags in Modal component -->
         <h1>Grab your Angels tacos!</h1>
         <p>Only at Angels stadium</p>
