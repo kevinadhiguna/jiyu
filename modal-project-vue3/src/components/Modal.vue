@@ -46,11 +46,30 @@ export default {
   font-style: normal;
 }
 
+.modal .actions {
+  text-align: center;
+  margin: 30px 0 10px 0;
+}
+.modal .actions a {
+  color: #333;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 10px;
+}
+
 .modal.sale-theme {
   background-color: coral;
   color: #fff;
 }
 .modal.sale-theme h1 {
+  color: #fff;
+}
+.modal.sale-theme .actions {
+  color: #fff;
+}
+.modal.sale-theme .actions a {
   color: #fff;
 }
 </style>
