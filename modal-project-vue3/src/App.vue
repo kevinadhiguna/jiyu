@@ -11,8 +11,8 @@
         </template>
         
         <!-- Template that will be rendered in <slot></slot> tags in Modal component -->
-        <h1>Grab your Angels tacos!</h1>
-        <p>Only at Angels stadium</p>
+        <h1>{{ header }}</h1>
+        <p>{{ content }}</p>
       </Modal>
     </div>
     <!-- Will react only if shift key is held down -->
