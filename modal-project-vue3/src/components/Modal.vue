@@ -2,7 +2,8 @@
   <!-- Only triggers a click event if event target is the element itself -->
   <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{ 'sale-theme' : theme === 'sale' }">
-      <slot></slot>
+      <!-- The 'Default content' text is only displayed if there's no elements to be rendered -->
+      <slot>Default content</slot>
       <div class="actions">
         <slot name="links"></slot>
       </div>
