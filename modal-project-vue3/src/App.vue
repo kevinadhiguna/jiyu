@@ -6,6 +6,7 @@
       <Modal :theme="theme" @close="handleModalShown">
         <!-- Template that will be rendered in <slot name="links"></slot> tags in Modal component -->
         <template v-slot:links>
+          <a href="#">Sign up now</a>
           <a href="#">More info</a>
         </template>
         
