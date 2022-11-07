@@ -2,6 +2,7 @@
   <div>
     <h1 class="main-title">{{ framework }} App</h1>
     <p>Welcome</p>
+    
     <div v-if="isModalShown">
       <Modal theme="sale" @close="handleModalShown">
         <!-- Template that will be rendered in <slot name="links"></slot> tags in Modal component -->
@@ -15,8 +16,23 @@
         <p>{{ content }}</p>
       </Modal>
     </div>
+
+    <div v-if="isModalTwoShown">
+      <Modal theme="" @close="handleModalTwoShown">
+        <h1>Modal 2 header</h1>
+        <p>Modal 2 text</p>
+
+        <template v-slot:links>
+          <a href="#">Click here!</a>
+          <a href="#">Open for more</a>
+        </template>
+      </Modal>
+    </div>
+
     <!-- Will react only if shift key is held down -->
     <button @click.shift="handleModalShown">Show Modal (shift)</button>
+    <!-- Will react only if alt key is held down -->
+    <button @click.alt="handleModalTwoShown">Show Modal 2 (alt)</button>
   </div>
 </template>
 
@@ -32,6 +48,7 @@ export default {
       content: "Watch Trout and Ohtani",
       // theme: "sale",
       isModalShown: false,
+      isModalTwoShown: false,
     };
   },
   components: {
@@ -40,6 +57,9 @@ export default {
   methods: {
     handleModalShown() {
       this.isModalShown = !this.isModalShown;
+    },
+    handleModalTwoShown() {
+      this.isModalTwoShown = !this.isModalTwoShown;
     }
   },
 };
