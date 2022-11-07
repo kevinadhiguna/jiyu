@@ -1,10 +1,6 @@
 <template>
   <div>
     <h1 class="main-title">{{ framework }} App</h1>
-    <!-- 
-    <input type="text" ref="inputfield" />
-    <button @click="handleClick">Click</button>  
-    -->
     <p>Welcome</p>
     <div v-if="isModalShown">
       <Modal :theme="theme" @close="handleModalShown">
@@ -36,11 +32,6 @@ export default {
     Modal,
   },
   methods: {
-    handleClick() {
-      console.log("Ref element : ", this.$refs.inputfield); // <- Log the component
-      this.$refs.inputfield.classList.add("active"); // <- Add a class named "active"
-      this.$refs.inputfield.focus(); // <- Focus to input field
-    },
     handleModalShown() {
       this.isModalShown = !this.isModalShown;
     }
