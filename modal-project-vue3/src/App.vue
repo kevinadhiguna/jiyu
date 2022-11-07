@@ -7,12 +7,11 @@
     -->
     <p>Welcome</p>
     <div v-if="isModalShown">
-      <Modal 
-        :header="header"
-        :content="content"
-        :theme="theme"
-        @close="handleModalShown"
-      />
+      <Modal :theme="theme" @close="handleModalShown">
+        <!-- Template that will be rendered in <slot></slot> tags in Modal component -->
+        <h1>Grab your Angels tacos!</h1>
+        <p>Only at Angels stadium</p>
+      </Modal>
     </div>
     <!-- Will react only if shift key is held down -->
     <button @click.shift="handleModalShown">Show Modal (shift)</button>
