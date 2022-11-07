@@ -3,7 +3,7 @@
     <h1 class="main-title">{{ framework }} App</h1>
     <p>Welcome</p>
     <div v-if="isModalShown">
-      <Modal :theme="theme" @close="handleModalShown">
+      <Modal theme="sale" @close="handleModalShown">
         <!-- Template that will be rendered in <slot name="links"></slot> tags in Modal component -->
         <template v-slot:links>
           <a href="#">Sign up now</a>
@@ -30,7 +30,7 @@ export default {
       framework: "Vue.js v3",
       header: "Sign up for MLB All-star tickets!",
       content: "Watch Trout and Ohtani",
-      theme: "sale",
+      // theme: "sale",
       isModalShown: false,
     };
   },
