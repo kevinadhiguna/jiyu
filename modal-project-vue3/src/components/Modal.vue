@@ -2,15 +2,14 @@
   <!-- Only triggers a click event if event target is the element itself -->
   <div class="backdrop" @click.self="closeModal">
     <div class="modal" :class="{ 'sale-theme' : theme === 'sale' }">
-      <h1>{{ header }}</h1>
-      <p>{{ content }}</p>
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['header', 'content', 'theme'],
+  props: ['theme'],
   methods: {
     closeModal() {
       this.$emit('close');
