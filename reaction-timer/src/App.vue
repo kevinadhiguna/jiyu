@@ -2,10 +2,13 @@
   <div>
     <h1>Reaction Timer</h1>
     <button @click="start" :disabled="isPlaying">play</button>
+    <Block :delay="delay" />
   </div>
 </template>
 
 <script>
+import Block from './components/Block.vue';
+
 export default {
   name: 'App',
   data() {
@@ -14,7 +17,7 @@ export default {
       delay: null,
     }
   },
-  components: {},
+  components: { Block },
   methods: {
     start() {
       // The most it could be is 7s (7000ms) and the least it could be is 2s (2000ms)
