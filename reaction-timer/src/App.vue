@@ -2,7 +2,7 @@
   <div>
     <h1>Reaction Timer</h1>
     <button @click="start" :disabled="isPlaying">play</button>
-    <Block :delay="delay" />
+    <Block v-if="isPlaying" :delay="delay" />
   </div>
 </template>
 
