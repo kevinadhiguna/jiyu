@@ -1,11 +1,21 @@
 <template>
-  <h1>Reaction Timer</h1>
+  <div>
+    <h1>Reaction Timer</h1>
+    <button :disabled="isPlaying">play</button>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'App',
-  components: {}
+  data() {
+    return {
+      isPlaying: false,
+      delay: null,
+    }
+  },
+  components: {},
+  methods: {}
 }
 </script>
 
