@@ -1,5 +1,7 @@
 # reaction-timer
 
+A reaction time powered by Vue.js v3
+
 ## Project setup
 ```
 yarn install
