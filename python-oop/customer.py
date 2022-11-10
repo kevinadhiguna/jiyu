@@ -8,6 +8,11 @@ class Customer:
     # One can do something such as cost calculation, invoke API calls, etc. here
     self.membership_type = new_membership_type
 
+  # Notice 'self' is not in the below function's parameter. Thus, this is called a static method
+  # A static method is a method that is not attached to any individual object but instead is invoked to a class itself
+  def read_customer():
+    print('Reading customer')
+
 # Create objects from the Customer class
 customer = Customer('Jack', 'Gold')
 customer2 = Customer('Kate', 'Silver')
