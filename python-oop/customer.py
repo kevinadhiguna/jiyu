@@ -4,6 +4,10 @@ class Customer:
     self.name = name
     self.membership_type = membership_type
 
+  def update_membership(self, new_membership_type):
+    # One can do something such as cost calculation, invoke API calls, etc. here
+    self.membership_type = new_membership_type
+
 # Create objects from the Customer class
 customer = Customer('Jack', 'Gold')
 customer2 = Customer('Kate', 'Silver')
