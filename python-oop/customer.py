@@ -33,3 +33,7 @@ print('type of anotherCustomer variable : ', type(anotherCustomer)) # <class 'li
 # Update customer2's membership type
 customer2.update_membership('Gold')
 print('customer2.membership_type : ', customer2.membership_type) # Gold
+
+# Invoke a static method
+#customer.read_customer() # TypeError: Customer.read_customer() takes 0 positional arguments but 1 was given
+Customer.read_customer() # Reading customer
