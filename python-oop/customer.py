@@ -22,6 +22,11 @@ class Customer:
       return True
     
     return False
+
+  # '__hash__()' method is called when hash(variable_name) is executed
+  #def __hash__(self):
+  #  return hash(self.name)
+  __hash__ = None
   
   # Notice 'self' is not in the below function's parameter. Thus, this is called a static method
   # A static method is a method that is not attached to any individual object but instead is invoked to a class itself
@@ -63,3 +68,8 @@ Customer.print_all_customers(anotherCustomer)
 otherCustomer = Customer('Selena', 'Bronze')
 # Code below returns True since comaparison function 'def __eq__' exists. Otherwise, it will compare memory instead of actual data.
 print('anotherCustomer[1] == otherCustomer ? ', anotherCustomer[1] == otherCustomer) # True
+
+# Without __hash__() method :
+#print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # TypeError: unhashable type: 'Customer'
+# With __hash__() method :
+print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # -703132528462260443
