@@ -24,9 +24,11 @@ class Customer:
     return False
 
   # '__hash__()' method is called when hash(variable_name) is executed
+  __hash__ = None
+  
+  # self-defined __str__()
   #def __hash__(self):
   #  return hash(self.name)
-  __hash__ = None
 
   # '__repr__()' method converts object to string like '__str__()' method, but not always in human-readable format
   #__repr__ = __str__
@@ -78,8 +80,8 @@ print('anotherCustomer[1] == otherCustomer ? ', anotherCustomer[1] == otherCusto
 
 # Without __hash__() method :
 #print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # TypeError: unhashable type: 'Customer'
-# With __hash__() method :
-print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # -703132528462260443
+# With self-defined __hash__() method (not equal to None) :
+#print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # -703132528462260443
 
 # Without '__repr__ = __str__' :
 #print(anotherCustomer) # [<__main__.Customer object at 0x7fae3b1f3c40>, <__main__.Customer object at 0x7fae3b1f3be0>]
