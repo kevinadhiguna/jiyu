@@ -27,6 +27,13 @@ class Customer:
   #def __hash__(self):
   #  return hash(self.name)
   __hash__ = None
+
+  # '__repr__()' method converts object to string like '__str__()' method, but not always in human-readable format
+  #__repr__ = __str__
+
+  # self-defined __repr__()
+  def __repr__(self):
+    return f'Customer({self.name}, {self.membership_type})'
   
   # Notice 'self' is not in the below function's parameter. Thus, this is called a static method
   # A static method is a method that is not attached to any individual object but instead is invoked to a class itself
@@ -73,3 +80,11 @@ print('anotherCustomer[1] == otherCustomer ? ', anotherCustomer[1] == otherCusto
 #print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # TypeError: unhashable type: 'Customer'
 # With __hash__() method :
 print('hash(anotherCustomer[0]) : ', hash(anotherCustomer[0])) # -703132528462260443
+
+# Without '__repr__ = __str__' :
+#print(anotherCustomer) # [<__main__.Customer object at 0x7fae3b1f3c40>, <__main__.Customer object at 0x7fae3b1f3be0>]
+# With '__repr__ = __str__' :
+print(anotherCustomer) # [Evgeny Silver, Selena Bronze]
+# With self-defined '__repr__' function:
+print(anotherCustomer[0].__repr__()) # Customer(Evgeny, Silver)
+print(anotherCustomer[0].__str__()) # Evgeny Silver
