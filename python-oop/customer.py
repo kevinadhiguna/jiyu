@@ -11,6 +11,10 @@ class Customer:
   # Convert a customer to a string (without this, 'print(customer)' would give memory address instead of the actual data)
   def __str__(self):
     return self.name + ' ' + self.membership_type
+
+  def print_all_customers(customers):
+    for customer in customers:
+      print(customer)
   
   # Notice 'self' is not in the below function's parameter. Thus, this is called a static method
   # A static method is a method that is not attached to any individual object but instead is invoked to a class itself
@@ -46,3 +50,5 @@ Customer.read_customer() # Reading customer
 #print(anotherCustomer[0]) # <__main__.Customer object at 0x7f2da9c2bd90>
 # With 'def __str__()' method :
 print('anotherCustomer[0] : ', anotherCustomer[0]) # Evgeny Silver
+
+Customer.print_all_customers(anotherCustomer)
