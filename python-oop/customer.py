@@ -1,4 +1,9 @@
-class Customer:
+# Inheritance
+class User:
+  def log(self):
+    print(self)
+
+class Customer(User):
   # '__init__' is like a constructor in JavaScript
   def __init__(self, name, membership_type):
     self.name = name
@@ -107,3 +112,6 @@ print(anotherCustomer[0].__str__()) # Evgeny Silver
 print('anotherCustomer[0].name (before) : ', anotherCustomer[0].name)
 del anotherCustomer[0].name
 #print('anotherCustomer[0].name (after) : ', anotherCustomer[0].name) # AttributeError: 'Customer' object has no attribute '_name'. Did you mean: 'name'?
+
+# An object of Customer (parent class) is able to access methods in its child class which is User (log method belongs to User class)
+anotherCustomer[1].log() # Selena Bronze
