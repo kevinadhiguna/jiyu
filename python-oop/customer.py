@@ -8,7 +8,7 @@ class Customer:
     # One can do something such as cost calculation, invoke API calls, etc. here
     self.membership_type = new_membership_type
 
-  @params
+  @property
   def name(self):
     return self._name
 
