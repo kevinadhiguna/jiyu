@@ -7,6 +7,14 @@ class Teacher(User):
   def log(self):
     print('I am a sensei!')
 
+class Student(User):
+  def log(self):
+    print('I am a student!')
+
+class Member(User):
+  def log(self):
+    print('I am a member!')
+
 class Customer(User):
   # '__init__' is like a constructor in JavaScript
   def __init__(self, name, membership_type):
@@ -123,3 +131,11 @@ anotherCustomer[1].log() # Selena Bronze
 # -- Polymorphism --
 # anotherCustomer[2] is a Teacher class object, thus it will invoke log() method from the Teacher class
 anotherCustomer[2].log() # I am a sensei!
+
+# Create three objects to prove that same method is overrode
+people = [Member(), Student(), Teacher()]
+for person in people:
+  person.log()
+#I am a member!
+#I am a student!
+#I am a sensei!
