@@ -16,6 +16,10 @@ class Customer:
   def name(self, name):
     self._name = name
 
+  @name.deleter
+  def name(self):
+    del self._name
+
   # Convert a customer to a string (without this, 'print(customer)' would give memory address instead of the actual data)
   def __str__(self):
     return self.name + ' ' + self.membership_type
