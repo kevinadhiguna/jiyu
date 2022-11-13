@@ -102,3 +102,8 @@ print(anotherCustomer) # [Evgeny Silver, Selena Bronze]
 # With self-defined '__repr__' function:
 print(anotherCustomer[0].__repr__()) # Customer(Evgeny, Silver)
 print(anotherCustomer[0].__str__()) # Evgeny Silver
+
+# Delete name property from anotherCustomer[0]
+print('anotherCustomer[0].name (before) : ', anotherCustomer[0].name)
+del anotherCustomer[0].name
+#print('anotherCustomer[0].name (after) : ', anotherCustomer[0].name) # AttributeError: 'Customer' object has no attribute '_name'. Did you mean: 'name'?
