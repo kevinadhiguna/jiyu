@@ -3,6 +3,10 @@ class User:
   def log(self):
     print(self)
 
+class Teacher(User):
+  def log(self):
+    print('I am a sensei!')
+
 class Customer(User):
   # '__init__' is like a constructor in JavaScript
   def __init__(self, name, membership_type):
@@ -69,7 +73,7 @@ print('customer2.membership_type : ', customer2.membership_type) # Silver
 print('type of customer variable : ', type(customer)) # <class '__main__.Customer'>
 
 # Another way to create objects in one line
-anotherCustomer = [Customer('Evgeny', 'Silver'), Customer('Selena', 'Bronze')]
+anotherCustomer = [Customer('Evgeny', 'Silver'), Customer('Selena', 'Bronze'), Teacher()]
 print('first anotherCustomer name : ', anotherCustomer[0].name) # Evgeny
 print('first anotherCustomer membership_type : ', anotherCustomer[0].membership_type) # Silver
 print('second anotherCustomer name : ', anotherCustomer[1].name) # Selena
@@ -115,3 +119,7 @@ del anotherCustomer[0].name
 
 # An object of Customer (parent class) is able to access methods in its child class which is User (log method belongs to User class)
 anotherCustomer[1].log() # Selena Bronze
+
+# -- Polymorphism --
+# anotherCustomer[2] is a Teacher class object, thus it will invoke log() method from the Teacher class
+anotherCustomer[2].log() # I am a sensei!
