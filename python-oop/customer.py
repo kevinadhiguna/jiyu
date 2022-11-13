@@ -10,6 +10,10 @@ class Customer:
 
   @params
   def name(self):
+    return self._name
+
+  @name.setter
+  def name(self, name):
     self._name = name
 
   # Convert a customer to a string (without this, 'print(customer)' would give memory address instead of the actual data)
