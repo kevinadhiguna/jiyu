@@ -8,6 +8,7 @@
     <div v-for="name in matchingNames" :key="name">
       <p>{{ name }}</p>
     </div>
+    <button @click="handleClick">Stop watching search</button>
   </div>
 </template>
 
@@ -19,10 +20,14 @@ export default {
   setup() {
     const search = ref('');
     const names = ref(['Dasha', 'Zhenya', 'Alina', 'Anastasia', 'Jessica', 'Medlyn', 'Kate']);
+    
+    const matchingNames = computed(() => {
+      return names.value.filter(name => name.toLowerCase().includes(search.value.toLowerCase()));
+    });
 
     // Triggered :
     // - everytime the variables (dependency) changes. In this case, it is 'search'.
-    watch(search, () => {
+    const stopWatch = watch(search, () => {
       console.log('triggered by watch function !');
     });
 
@@ -30,15 +35,16 @@ export default {
     // - at first (component mounted)
     // - when a variable inside the watchEffect function changes/is affected
     // In addition, watchEffect() is preferred to watch() since one does not have to list watch list (list of variables that will be the dependency of this function)
-    watchEffect(() => {
+    const stopWatchEffect = watchEffect(() => {
       console.log('search keyword (watchEffect) : ', search.value);
     });
 
-    const matchingNames = computed(() => {
-      return names.value.filter(name => name.toLowerCase().includes(search.value.toLowerCase()));
-    });
+    const handleClick = () => {
+      stopWatch();
+      stopWatchEffect();
+    }
 
-    return { names, search, matchingNames }
+    return { names, search, matchingNames, handleClick }
   },
 }
 </script>
