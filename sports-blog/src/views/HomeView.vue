@@ -13,16 +13,18 @@ export default {
   setup() {
     console.log('setup');
 
+    // These are not reacting values, hence the values do not change just like :
+    // data() {
+    //   return {
+    //     name: 'Kai',
+    //     age: 25
+    //   }
+    // }
+    // in Options API
     let name = 'Kai';
     let age = 25;
 
     return { name, age }
-  },
-  created() {
-    console.log('created');
-  },
-  mounted() {
-    console.log('mounted');
   },
 }
 </script>
