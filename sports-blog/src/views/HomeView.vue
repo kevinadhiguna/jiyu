@@ -25,6 +25,9 @@ export default {
     const handleClick = () => {
       console.log('p : ', p);
       console.log('p.value : ', p.value); // <p>My name is Kai and my age is 25</p>
+      
+      // Add a class named 'test' to the HTML element (<p></p>)
+      p.value.classList.add('test') // <p class="test">My name is Kai and my age is 25</p>
     }
 
     return { name, age, handleClick, p }
