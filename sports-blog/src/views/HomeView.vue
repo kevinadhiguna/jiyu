@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>Home view</h1>
+    <p>My name is {{ name }} and my age is {{ age }}</p>
   </div>
 </template>
 
@@ -9,6 +10,19 @@
 
 export default {
   name: 'HomeView',
-  components: {}
+  setup() {
+    console.log('setup');
+
+    let name = 'Kai';
+    let age = 25;
+
+    return { name, age }
+  },
+  created() {
+    console.log('created');
+  },
+  mounted() {
+    console.log('mounted');
+  },
 }
 </script>
