@@ -2,7 +2,10 @@
   <div class="home">
     <h1>Home view</h1>
     <p>My name is {{ name }} and my age is {{ age }}</p>
-    <button @click="handleClick">Click me</button>
+    <div>
+      <button @click="handleClick">Click me</button>
+      <button @click="age++">Add age</button>
+    </div>
     <input type="text" v-model="name" />
   </div>
 </template>
