@@ -21,7 +21,7 @@ export default {
     const names = ref(['Dasha', 'Zhenya', 'Alina', 'Anastasia', 'Jessica', 'Medlyn', 'Kate']);
 
     const matchingNames = computed(() => {
-      return names.value.filter(name => name.includes(search.value));
+      return names.value.filter(name => name.toLowerCase().includes(search.value.toLowerCase()));
     });
 
     return { names, search, matchingNames }
