@@ -1,50 +1,25 @@
 <template>
   <div class="home">
     <h1>Home view</h1>
-    <h2>Computed</h2>
-    <input type="text" v-model="search">
-    <p>search for : {{ search }}</p>
-    <!-- :key = "name" since all names are unique (no same name) -->
-    <div v-for="name in matchingNames" :key="name">
-      <p>{{ name }}</p>
-    </div>
-    <button @click="handleClick">Stop watching search</button>
+    <PostList :posts="posts" />
   </div>
 </template>
 
 <script>
-import { computed, ref, watch, watchEffect } from 'vue';
+import { ref } from 'vue';
+import PostList from '../components/PostList.vue';
 
 export default {
   name: 'HomeView',
+  components: { PostList },
   setup() {
-    const search = ref('');
-    const names = ref(['Dasha', 'Zhenya', 'Alina', 'Anastasia', 'Jessica', 'Medlyn', 'Kate']);
-    
-    const matchingNames = computed(() => {
-      return names.value.filter(name => name.toLowerCase().includes(search.value.toLowerCase()));
-    });
+    const posts = ref([
+      { id: 1, title: 'Portugal to win World Cup 2022', body: 'CR7 aims to win World Cup 2022 with Portugal' }, 
+      { id: 2, title: 'Prince of ice quits', body: 'Japanese figure skater, Yuzuru Hanyu, retires from competitive ice skating' }, 
+      { id: 3, title: 'Angels eyes FA market', body: 'Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023' }
+    ]);
 
-    // Triggered :
-    // - everytime the variables (dependency) changes. In this case, it is 'search'.
-    const stopWatch = watch(search, () => {
-      console.log('triggered by watch function !');
-    });
-
-    // Triggered :
-    // - at first (component mounted)
-    // - when a variable inside the watchEffect function changes/is affected
-    // In addition, watchEffect() is preferred to watch() since one does not have to list watch list (list of variables that will be the dependency of this function)
-    const stopWatchEffect = watchEffect(() => {
-      console.log('search keyword (watchEffect) : ', search.value);
-    });
-
-    const handleClick = () => {
-      stopWatch();
-      stopWatchEffect();
-    }
-
-    return { names, search, matchingNames, handleClick }
+    return { posts }
   },
 }
 </script>
