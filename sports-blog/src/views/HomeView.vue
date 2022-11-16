@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <h1>Home view</h1>
-    <PostList :posts="posts" />
+    <PostList v-if="showPosts" :posts="posts" />
+    <button @click="handleClick">Show posts</button>
   </div>
 </template>
 
@@ -19,7 +20,13 @@ export default {
       { id: 3, title: 'Angels eyes FA market', body: 'Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023' }
     ]);
 
-    return { posts }
+    let showPosts = ref(true);
+
+    const handleClick = () => {
+      showPosts.value = !showPosts.value;
+    }
+
+    return { posts, showPosts, handleClick }
   },
 }
 </script>
