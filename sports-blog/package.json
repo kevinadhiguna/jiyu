@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "serve-data": "json-server --watch data/db.json"
   },
   "dependencies": {
     "core-js": "^3.8.3",
