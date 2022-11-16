@@ -3,6 +3,7 @@
     <h1>Home view</h1>
     <PostList v-if="showPosts" :posts="posts" />
     <button @click="handleClick">Show posts</button>
+    <button @click="deletePost">Delete a post</button>
   </div>
 </template>
 
@@ -26,7 +27,11 @@ export default {
       showPosts.value = !showPosts.value;
     }
 
-    return { posts, showPosts, handleClick }
+    const deletePost = () => {
+      posts.value.pop();
+    }
+
+    return { posts, showPosts, handleClick, deletePost }
   },
 }
 </script>
