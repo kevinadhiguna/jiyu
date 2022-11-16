@@ -3,8 +3,11 @@
     <h1>Home view</h1>
     <div v-if="error">{{ error }}</div>
     <PostList v-if="showPosts" :posts="posts" />
-    <button @click="handleClick">Show posts</button>
-    <button @click="deletePost">Delete a post</button>
+
+    <div v-if="!error">
+      <button @click="handleClick">Show posts</button>
+      <button @click="deletePost">Delete a post</button>
+    </div>
   </div>
 </template>
 
@@ -29,8 +32,8 @@ export default {
         }
 
         posts.value = await res.json();
-      } catch (error) {
-        error.value = error.message;
+      } catch (err) {
+        error.value = err.message;
         console.error('Something went wrong : ', error.value);
       }
     }
