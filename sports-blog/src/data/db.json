@@ -1,5 +1,34 @@
-[
-  { "id": 1, "title": "Portugal to win World Cup 2022", "body": "CR7 aims to win World Cup 2022 with Portugal" }, 
-  { "id": 2, "title": "Prince of ice quits", "body": "Japanese figure skater, Yuzuru Hanyu, retires from competitive ice skating" }, 
-  { "id": 3, "title": "Angels eyes FA market", "body": "Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023" }
-]
+{ 
+  "posts": [
+    { 
+      "id": 1, 
+      "title": "Portugal to win World Cup 2022", 
+      "body": "CR7 aims to win World Cup 2022 with Portugal", 
+      "tags": [
+        "Sports",
+        "Football",
+        "Summer"
+      ]
+    }, 
+    { 
+      "id": 2, 
+      "title": "Prince of ice quits", 
+      "body": "Japanese figure skater, Yuzuru Hanyu, retires from competitive ice skating",
+      "tags": [
+        "Sports",
+        "Figure Skating",
+        "Winter"
+      ]
+    }, 
+    { 
+      "id": 3, 
+      "title": "Angels eyes FA market", 
+      "body": "Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023",
+      "tags": [
+        "Sports", 
+        "Baseball",
+        "Summer"
+      ]
+    }
+  ]
+}
