@@ -5,9 +5,9 @@
       "title": "Portugal to win World Cup 2022", 
       "body": "CR7 aims to win World Cup 2022 with Portugal", 
       "tags": [
-        "Sports",
+        "WorldCup2022",
         "Football",
-        "Summer"
+        "CR7"
       ]
     }, 
     { 
@@ -15,9 +15,8 @@
       "title": "Prince of ice quits", 
       "body": "Japanese figure skater, Yuzuru Hanyu, retires from competitive ice skating",
       "tags": [
-        "Sports",
-        "Figure Skating",
-        "Winter"
+        "FigureSkating",
+        "WinterSports"
       ]
     }, 
     { 
@@ -25,9 +24,8 @@
       "title": "Angels eyes FA market", 
       "body": "Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023",
       "tags": [
-        "Sports", 
         "Baseball",
-        "Summer"
+        "Angels"
       ]
     }
   ]
