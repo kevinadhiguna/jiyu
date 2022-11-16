@@ -11,32 +11,16 @@
 </template>
 
 <script>
-import { ref } from 'vue';
 import PostList from '../components/PostList.vue';
+import getPosts from '../composables/getPosts';
 
 export default {
   name: 'HomeView',
   components: { PostList },
   setup() {
-    const posts = ref([]);
-    const error = ref(null);
+    const { posts, error, load } = getPosts();
 
-    const postBaseUrl = 'http://localhost:3000/posts';
-
-    const load = async() => {
-      try {
-        let res = await fetch(postBaseUrl);
-        if (!res.ok) {
-          throw Error('no data available');
-        }
-
-        posts.value = await res.json();
-      } catch (err) {
-        error.value = err.message;
-        console.error('Something went wrong : ', error.value);
-      }
-    }
-
+    // Get the posts data
     load();
 
     return { posts, error }
