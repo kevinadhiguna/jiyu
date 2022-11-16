@@ -22,5 +22,16 @@ export default {
 </script>
 
 <style>
-
+.post {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.post p {
+  color: #444;
+  line-height: 1.5em;
+  margin-top: 40px;
+}
+.pre {
+  white-space: pre-wrap;
+}
 </style>
