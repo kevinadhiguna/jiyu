@@ -15,11 +15,26 @@ export default {
   name: 'HomeView',
   components: { PostList },
   setup() {
-    const posts = ref([
-      { id: 1, title: 'Portugal to win World Cup 2022', body: 'CR7 aims to win World Cup 2022 with Portugal' }, 
-      { id: 2, title: 'Prince of ice quits', body: 'Japanese figure skater, Yuzuru Hanyu, retires from competitive ice skating' }, 
-      { id: 3, title: 'Angels eyes FA market', body: 'Los Angeles Angels targets some players in FA market to strengthen squad in order to make playoffs in 2023' }
-    ]);
+    const posts = ref([]);
+    const error = ref(null);
+
+    const postBaseUrl = 'http://localhost:3000/posts';
+
+    const load = async() => {
+      try {
+        let res = await fetch(postBaseUrl);
+        if (!res.ok) {
+          throw Error('no data available');
+        }
+
+        posts.value = await res.json();
+      } catch (error) {
+        error.value = error.message;
+        console.error('Something went wrong : ', error.value);
+      }
+    }
+
+    load();
 
     let showPosts = ref(true);
 
