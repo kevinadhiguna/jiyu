@@ -2,12 +2,11 @@
   <div class="home">
     <h1>Home view</h1>
     <div v-if="error">{{ error }}</div>
-    <PostList v-if="showPosts" :posts="posts" />
 
-    <div v-if="!error">
-      <button @click="handleClick">Show posts</button>
-      <button @click="deletePost">Delete a post</button>
+    <div v-if="posts.length">
+      <PostList v-if="showPosts" :posts="posts" />
     </div>
+    <div v-else>Loading...</div>
   </div>
 </template>
 
@@ -40,17 +39,7 @@ export default {
 
     load();
 
-    let showPosts = ref(true);
-
-    const handleClick = () => {
-      showPosts.value = !showPosts.value;
-    }
-
-    const deletePost = () => {
-      posts.value.pop();
-    }
-
-    return { posts, showPosts, handleClick, deletePost, error }
+    return { posts, error }
   },
 }
 </script>
