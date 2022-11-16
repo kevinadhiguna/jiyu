@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>Home view</h1>
+    <div v-if="error">{{ error }}</div>
     <PostList v-if="showPosts" :posts="posts" />
     <button @click="handleClick">Show posts</button>
     <button @click="deletePost">Delete a post</button>
@@ -46,7 +47,7 @@ export default {
       posts.value.pop();
     }
 
-    return { posts, showPosts, handleClick, deletePost }
+    return { posts, showPosts, handleClick, deletePost, error }
   },
 }
 </script>
