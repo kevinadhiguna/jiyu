@@ -29,6 +29,13 @@ export default {
   unmounted() { // Lifecycle hooks
     console.log('component unmounted');
   },
+  methods: {
+    startTimer() {
+      this.timer = setInterval(() => {
+        this.reactionTime += 10;
+      }, 10);
+    },
+  }
 }
 </script>
 
