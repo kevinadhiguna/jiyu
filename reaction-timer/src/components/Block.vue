@@ -14,6 +14,21 @@ export default {
       reactionTime: 0,
     }
   },
+  mounted() { // Lifecycle hooks
+    console.log('component mounted');
+
+    // Display Block component after some delay
+    setTimeout(() => {
+      this.showBlock = true;
+      this.startTimer();
+    }, this.delay);
+  },
+  updated() { // Lifecycle hooks
+    console.log('component updated');
+  },
+  unmounted() { // Lifecycle hooks
+    console.log('component unmounted');
+  },
 }
 </script>
 
