@@ -35,6 +35,13 @@ export default {
         this.reactionTime += 10;
       }, 10);
     },
+    stopTimer() {
+      clearInterval(this.timer); // Stop reactionTime from being increased
+      console.log('reaction time : ', this.reactionTime, 'ms');
+
+      // Emit a custom event
+      this.$emit('end', this.reactionTime); // Passing 'this.reactionTime' so one can access it as a parameter in a custom function in another file 
+    },
   }
 }
 </script>
