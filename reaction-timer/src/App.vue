@@ -1,8 +1,7 @@
 <template>
   <div>
     <h1>Reaction Timer</h1>
-    <button @click="start" :disabled="isPlaying">play</button>
-    <Block v-if="isPlaying" :delay="delay" />
+    <button @click="start" :disabled="isPlaying" class="play-btn">play</button>
   </div>
 </template>
 
@@ -38,5 +37,20 @@ export default {
   text-align: center;
   color: #444;
   margin-top: 60px;
+}
+.play-btn {
+  background: #0faf87;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 10px;
+}
+.play-btn[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 </style>
