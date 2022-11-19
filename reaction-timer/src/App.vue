@@ -2,11 +2,15 @@
   <div>
     <h1>Reaction Timer</h1>
     <button @click="start" :disabled="isPlaying" class="play-btn">play</button>
+    <Block v-if="isPlaying" :delay="delay" @end="endGame" />
+    <!-- <p v-if="showResults">Reaction time : {{ score }} ms</p> -->
+    <Results v-if="showResults" :score="score" />
   </div>
 </template>
 
 <script>
 import Block from './components/Block.vue';
+import Results from './components/Results.vue';
 
 export default {
   name: 'App',
@@ -14,9 +18,11 @@ export default {
     return {
       isPlaying: false,
       delay: null,
+      score: null,
+      showResults: false,
     }
   },
-  components: { Block },
+  components: { Block, Results },
   methods: {
     start() {
       // The most it could be is 7s (7000ms) and the least it could be is 2s (2000ms)
@@ -24,7 +30,13 @@ export default {
       console.log('this.delay : ', (this.delay / 1000).toFixed(3), 'seconds');
 
       this.isPlaying = true;
-    }
+      this.showResults = false;
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime;
+      this.isPlaying = false;
+      this.showResults = true;
+    },
   }
 }
 </script>
