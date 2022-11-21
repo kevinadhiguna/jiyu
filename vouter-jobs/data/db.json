@@ -1,0 +1,7 @@
+{
+  "jobs": [
+    { "id": 1, "title": "Figure Skater", "detail": "Skate on ice" },
+    { "id": 2, "title": "Baseball Pitcher", "detail": "Throw 5 pitch types" },
+    { "id": 3, "title": "Football Midfielder", "detail": "Pass a ball to forward" }
+  ]
+}
