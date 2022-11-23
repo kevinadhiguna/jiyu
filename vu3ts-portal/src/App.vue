@@ -1,5 +1,8 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <div class="app">
+    Welcome to Vu3ts Job portal
+  </div>
 </template>
 
 <script lang="ts">
