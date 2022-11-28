@@ -52,6 +52,7 @@ This is a repo for... whatever 🤷
 | 40 | react-fluentui-ts | ReactJS to-do list app, powered by Fluent UI. |  |
 | 41 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
 | 42 | vouter-jobs | A job portal created using Vue.js v3 |  |
+| 43 | web-form | A web form powered by Vue.js v3 options API |  |
 
 <br />
 
