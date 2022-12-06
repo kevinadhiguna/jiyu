@@ -1,6 +1,6 @@
 # vu3ts-portal
 
-A job portal powered by Vue.js v3 and TypeScript.
+A job portal powered by Vue.js v3, TypeScript, and Composition API.
 
 ## Project setup
 ```
