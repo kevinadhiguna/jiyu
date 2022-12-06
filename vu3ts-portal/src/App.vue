@@ -11,18 +11,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {},
-  data() {
-    return {
-      name: 'vu3ts',
-      age: 15 as number | string, // This means age can be changed to string
-      isStudent: true,
-    }
+  // -- Composition API --
+  setup() {
+    // -- Reactive --
+    const state = reactive({
+      name: 'Leah',
+      age: 25 as number | string
+    });
+
+    // To change value, one can do:
+    state.name = 'Selena';
+    state.age = 19;
+    // state.age = '22'; // <- also works
+
+    return { ...toRefs(state) }
   },
+  // -- Options API --
+  // data() {
+  //   return {
+  //     name: 'vu3ts',
+  //     age: 15 as number | string, // This means age can be changed to string
+  //     isStudent: true,
+  //   }
+  // },
   methods: {
     changeName(name: string): string {
       this.name = name;
