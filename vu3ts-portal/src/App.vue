@@ -4,6 +4,9 @@
     <div v-if="isStudent">
       I am currently a student
     </div>
+    <button @click="changeName('zelda')">change name</button>
+    <button @click="changeAge(17)">change age 17 (number)</button>
+    <button @click="changeAge('21')">change age 21 (string)</button>
   </div>
 </template>
 
@@ -16,7 +19,7 @@ export default defineComponent({
   data() {
     return {
       name: 'vu3ts',
-      age: 15,
+      age: 15 as number | string, // This means age can be changed to string
       isStudent: true,
     }
   },
@@ -24,6 +27,9 @@ export default defineComponent({
     changeName(name: string) {
       this.name = name;
     },
+    changeAge(age: number | string) { // Allowed Parameter: [1] (age: number | string), [2] (age: number), [3] (age: string)
+      this.age = age;
+    }, 
   },
 });
 </script>
