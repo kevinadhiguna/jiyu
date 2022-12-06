@@ -1,6 +1,9 @@
 <template>
   <div class="app">
-    Welcome to Vu3ts Job portal
+    <p>Hi, my name is {{ name }} and I am {{ age }}</p>
+    <div v-if="isStudent">
+      I am currently a student
+    </div>
   </div>
 </template>
 
@@ -9,7 +12,19 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
-  components: {}
+  components: {},
+  data() {
+    return {
+      name: 'vu3ts',
+      age: 15,
+      isStudent: true,
+    }
+  },
+  methods: {
+    changeName(name: string) {
+      this.name = name;
+    },
+  },
 });
 </script>
 
