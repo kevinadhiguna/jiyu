@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue';
+import { defineComponent, reactive, ref, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'App',
@@ -19,17 +19,27 @@ export default defineComponent({
   // -- Composition API --
   setup() {
     // -- Reactive --
-    const state = reactive({
-      name: 'Leah',
-      age: 25 as number | string
-    });
+    // const state = reactive({
+    //   name: 'Leah',
+    //   age: 25 as number | string
+    // });
 
-    // To change value, one can do:
-    state.name = 'Selena';
-    state.age = 19;
-    // state.age = '22'; // <- also works
+    // // To change value, one can do:
+    // state.name = 'Selena';
+    // state.age = 19;
+    // // state.age = '22'; // <- also works
 
-    return { ...toRefs(state) }
+    // return { ...toRefs(state) }
+
+    // -- Ref --
+    const name = ref('Leah');
+    const age = ref<number | string>(25);
+
+    // To change value:
+    name.value = 'Zoe';
+    age.value = 26;
+
+    return { name, age }
   },
   // -- Options API --
   // data() {
