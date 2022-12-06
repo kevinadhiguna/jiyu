@@ -24,11 +24,13 @@ export default defineComponent({
     }
   },
   methods: {
-    changeName(name: string) {
+    changeName(name: string): string {
       this.name = name;
+      return name;
     },
-    changeAge(age: number | string) { // Allowed Parameter: [1] (age: number | string), [2] (age: number), [3] (age: string)
+    changeAge(age: number | string): number | string { // Allowed Parameter: [1] (age: number | string), [2] (age: number), [3] (age: string)
       this.age = age;
+      return age;
     }, 
   },
 });
