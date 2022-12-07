@@ -10,24 +10,24 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 4 | Bash scripts | A collection of bash scripts. |  |
-| 5 | C++ | Some C++ program. |  |
-| 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
-| 9 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
-| 11 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
-| 12 | GitPod Workspace full | (To be added...) |  |
-| 13 | Golang | A directory that contains Golang program. |  |
-| 14 | Java | A number of program to practice OOP. |  |
-| 18 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
-| 22 | Python | Meant to be filled with fun Python scripts, but... |  |
-| 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
-| 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
-| 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
-| 30 | gitlab-docker | GitLab in a docker container.  |  |
-| 31 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
-| 32 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
-| 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
-| 41 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
+| 1 | Bash scripts | A collection of bash scripts. |  |
+| 2 | C++ | Some C++ program. |  |
+| 3 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
+| 4 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
+| 5 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
+| 6 | GitPod Workspace full | (To be added...) |  |
+| 7 | Golang | A directory that contains Golang program. |  |
+| 8 | Java | A number of program to practice OOP. |  |
+| 9 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
+| 10 | Python | Meant to be filled with fun Python scripts, but... |  |
+| 11 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
+| 12 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
+| 13 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
+| 14 | gitlab-docker | GitLab in a docker container.  |  |
+| 15 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
+| 16 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
+| 17 | appsmith | Build internal application.  | https://www.appsmith.com/ |
+| 18 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
 
 <br />
 
