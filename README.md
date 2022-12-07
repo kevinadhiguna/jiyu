@@ -56,6 +56,36 @@ This is a repo for... whatever 🤷
 
 <br />
 
+### Vue.js
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | reaction-timer |  |  |
+| 2 | modal-project-vue3 |  |  |
+| 3 | mount-vuejs | NOT really a Vue.js framework, but uses CDN instead. |  |
+| 4 | sports-blog |  |  |
+| 5 | vouter-jobs | A job portal created using Vue.js v3 |  |
+| 6 | vu3ts-portal |  |  |
+| 7 | web-form | A web form powered by Vue.js v3 options API |  |
+| 8 | funworks |  |  |
+
+<br />
+
+### React.js
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | kyuri | QR code generator |  |
+| 2 | react-fluentui |  |  |
+| 3 | react-fluentui-ts |  |  |
+| 4 | react-fluentui-ts |  |  |
+| 5 | reactjs-count3r | A counter app |  |
+| 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
+
+- React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
+
+<br />
+
 Anyway, feel free to explore and thanks for dropping in !
 
 <br />
