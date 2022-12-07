@@ -30,7 +30,6 @@ This is a repo for... whatever 🤷
 | 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
 | 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
 | 25 | TypeScript | TypeScript program. Running on `ts-node`. |  |
-| 26 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. |  |
 | 27 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
 | 28 | str4pi | Strapi version 4 project.  |  |
 | 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
@@ -75,6 +74,7 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | Funworks | A NuxtJS page. | 🚧 Under development... |
+| 2 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. |  |
 
 <br />
 
