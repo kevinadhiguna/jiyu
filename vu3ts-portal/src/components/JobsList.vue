@@ -2,7 +2,7 @@
   <div class="job-list">
     <p>Ordered by {{ order }}</p>
     <ul>
-      <li v-for="job in jobs" :key="job.id">
+      <li v-for="job in orderedJobs" :key="job.id">
         <h2>{{ job.title }} in {{ job.location }}</h2>
         <div class="salary">
           <p>{{ job.salary }} USD</p>
