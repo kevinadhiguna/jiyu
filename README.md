@@ -19,9 +19,6 @@ This is a repo for... whatever 🤷
 | 13 | Golang | A directory that contains Golang program. |  |
 | 14 | Java | A number of program to practice OOP. |  |
 | 18 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
-| 19 | PHP - Apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
-| 20 | PHP | An attempt to run PHP CodeIgniter with dockerized-environment. |  |
-| 21 | PHPMyAdmin - MySQL | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
 | 22 | Python | Meant to be filled with fun Python scripts, but... |  |
 | 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
 | 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
@@ -112,6 +109,16 @@ This is a repo for... whatever 🤷
 | 7 | ip-getter | Get user IP address.  |  |
 | 8 | date-fns | Play with date in JavaScript.  |  |
 | 9 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
+
+<br />
+
+### PHP
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | PHP - Apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
+| 2 | PHP | An attempt to run PHP CodeIgniter with dockerized-environment. |  |
+| 3 | PHPMyAdmin - MySQL | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
 
 <br />
 
