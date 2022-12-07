@@ -16,7 +16,6 @@ This is a repo for... whatever 🤷
 | 4 | Bash scripts | A collection of bash scripts. |  |
 | 5 | C++ | Some C++ program. |  |
 | 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
-| 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
 | 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
 | 9 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
 | 10 | Funworks | A NuxtJS page. | 🚧 Under development... |
@@ -25,7 +24,6 @@ This is a repo for... whatever 🤷
 | 13 | Golang | A directory that contains Golang program. |  |
 | 14 | Java | A number of program to practice OOP. |  |
 | 15 | JavaScript | JavaScript collection that might be useful (read: cheatsheet). |  |
-| 16 | Mount - VueJS | An HTML/CSS page, but mounting VueJS with the help of unpkg. | [VueJS 3 - Unpkg](https://unpkg.com/browse/vue@3.2.26/) |
 | 17 | NodeJS - MySQL | A workspace to connect NodeJS to MySQL. |  |
 | 18 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
 | 19 | PHP - Apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
@@ -49,10 +47,7 @@ This is a repo for... whatever 🤷
 | 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 | 38 | date-fns | Play with date in JavaScript.  |  |
 | 39 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
-| 40 | react-fluentui-ts | ReactJS to-do list app, powered by Fluent UI. |  |
 | 41 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
-| 42 | vouter-jobs | A job portal created using Vue.js v3 |  |
-| 43 | web-form | A web form powered by Vue.js v3 options API |  |
 
 <br />
 
@@ -62,7 +57,7 @@ This is a repo for... whatever 🤷
 |:---:|:---:|:---:|:---:|
 | 1 | reaction-timer |  |  |
 | 2 | modal-project-vue3 |  |  |
-| 3 | mount-vuejs | NOT really a Vue.js framework, but uses CDN instead. |  |
+| 3 | mount-vuejs | An HTML/CSS page, but mounting VueJS with the help of unpkg/CDN. | [VueJS 3 - Unpkg](https://unpkg.com/browse/vue@3.2.26/) |
 | 4 | sports-blog |  |  |
 | 5 | vouter-jobs | A job portal created using Vue.js v3 |  |
 | 6 | vu3ts-portal |  |  |
@@ -81,6 +76,7 @@ This is a repo for... whatever 🤷
 | 4 | react-fluentui-ts |  |  |
 | 5 | reactjs-count3r | A counter app |  |
 | 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
+| 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
 
