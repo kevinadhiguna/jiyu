@@ -35,8 +35,6 @@ This is a repo for... whatever 🤷
 | 31 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
 | 32 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
 | 33 | mern.io | An application powered by MERN stack.  | 🚧 Front-End is on the way.. |
-| 34 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
-| 35 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
 | 36 | ip-getter | Get user IP address.  |  |
 | 37 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 | 38 | date-fns | Play with date in JavaScript.  |  |
@@ -98,6 +96,15 @@ This is a repo for... whatever 🤷
 |:---:|:---:|:---:|:---:|
 | 1 | str4pi | Strapi version 4 project.  |  |
 | 2 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
+
+<br />
+
+### MongoDB & Mongoose
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
+| 2 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
 
 <br />
 
