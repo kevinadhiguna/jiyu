@@ -5,15 +5,18 @@
     <p>Location : {{ job.location }}</p>
     <p>Salary : {{ job.salary }}</p>
   </div>
+  <JobsList :jobs="jobs" />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import Job from './types/Job';
 
+import JobsList from './components/JobsList.vue'; // <- When using TypeScript, one should add '.vue' extension at the end
+
 export default defineComponent({
   name: 'App',
-  components: {},
+  components: { JobsList },
   setup() {
     const jobs = ref<Job[]>([
       { id: 1, title: 'Footballer', location: 'Brazil', salary: 170000 },
