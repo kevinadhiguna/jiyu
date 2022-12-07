@@ -11,14 +11,11 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | Ant Design Pro v5 | A ReactJS framework created by Ant Group. | [Ant Design - website](https://ant.design/) |
-| 2 | AWS Lambda - Python | Execute an SQL query to AWS RDS (MySQL), powered by Python. |  |
-| 3 | AWS - LocalStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
 | 4 | Bash scripts | A collection of bash scripts. |  |
 | 5 | C++ | Some C++ program. |  |
 | 6 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
 | 8 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
 | 9 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
-| 10 | Funworks | A NuxtJS page. | 🚧 Under development... |
 | 11 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
 | 12 | GitPod Workspace full | (To be added...) |  |
 | 13 | Golang | A directory that contains Golang program. |  |
@@ -62,7 +59,14 @@ This is a repo for... whatever 🤷
 | 5 | vouter-jobs | A job portal created using Vue.js v3 |  |
 | 6 | vu3ts-portal |  |  |
 | 7 | web-form | A web form powered by Vue.js v3 options API |  |
-| 8 | funworks |  |  |
+
+<br />
+
+### Nuxt.js
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | Funworks | A NuxtJS page. | 🚧 Under development... |
 
 <br />
 
