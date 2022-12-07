@@ -30,8 +30,6 @@ This is a repo for... whatever 🤷
 | 23 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
 | 24 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
 | 25 | TypeScript | TypeScript program. Running on `ts-node`. |  |
-| 27 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
-| 28 | str4pi | Strapi version 4 project.  |  |
 | 29 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
 | 30 | gitlab-docker | GitLab in a docker container.  |  |
 | 31 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
@@ -91,6 +89,15 @@ This is a repo for... whatever 🤷
 | 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
+
+<br />
+
+### Strapi
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | str4pi | Strapi version 4 project.  |  |
+| 2 | strapi-docker | Trying to containerize Strapi version 4.  | Original repo : https://github.com/strapi/strapi-docker (still Strapi v3) |
 
 <br />
 
