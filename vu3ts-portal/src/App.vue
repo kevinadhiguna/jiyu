@@ -1,16 +1,20 @@
 <template>
-  <div class="app" v-for="job in jobs" :key="job.id">
-    <p>ID : {{ job.id }}</p>
-    <p>Title : {{ job.title }}</p>
-    <p>Location : {{ job.location }}</p>
-    <p>Salary : {{ job.salary }}</p>
+  <div class="app">
+    <header>
+      <div class="order">
+        <button @click="handleClick('title')">order by title</button>
+        <button @click="handleClick('salary')">order by salary</button>
+        <button @click="handleClick('location')">order by location</button>
+      </div>
+    </header>
+    <JobsList :jobs="jobs" :order="order" />
   </div>
-  <JobsList :jobs="jobs" />
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import Job from './types/Job';
+import OrderTerm from './types/OrderTerm';
 
 import JobsList from './components/JobsList.vue'; // <- When using TypeScript, one should add '.vue' extension at the end
 
@@ -26,7 +30,12 @@ export default defineComponent({
       { id: 5, title: 'Fitness Coach', location: 'London', salary: 105000 },
     ]);
 
-    return { jobs }
+    const order = ref<OrderTerm>('title');
+    const handleClick = (term: OrderTerm) => {
+      order.value = term;
+    }
+
+    return { jobs, handleClick, order }
   },
   methods: {},
 });
