@@ -48,6 +48,14 @@ This is a repo for... whatever 🤷
 
 <br />
 
+### AWS
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | AWS Lambda - Python | Execute an SQL query to AWS RDS (MySQL), powered by Python. |  |
+| 2 | AWS - LocalStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
+
+<br />
+
 ### Vue.js
 
 | No. | Project | Description | Notes |
