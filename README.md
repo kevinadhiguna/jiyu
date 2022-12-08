@@ -92,7 +92,8 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | mongodb-docker | MongoB v4 and v5 powered by Docker.  |  |
-| 2 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
+| 2 | nodejs-mongoose | Learn mongoose, a powerful ODM to connect Node.js app and MongoDB.  | [Mongoose Crash Course by WDS](https://youtu.be/DZBGEVgL2eE) |
+| 3 | learn-mongoose | Learn mongoose, a MongoDB object data modeling (ODM) library.  | 🚧 Under development... |
 
 <br />
 
