@@ -58,7 +58,8 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | Funworks | A NuxtJS page. | 🚧 Under development... |
-| 2 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. |  |
+| 2 | Nuxt2r | NuxtJS version 2. | 🚧 Under development... |
+| 3 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. | 🚧 Under development... |
 
 <br />
 
