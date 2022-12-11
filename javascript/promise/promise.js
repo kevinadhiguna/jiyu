@@ -13,9 +13,23 @@ const transfer = new Promise((resolve, reject) => {
   }
 });
 
+const addToTransferList = transferDetails => {
+  return new Promise((resolve, reject) => {
+    const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee}`;
+    resolve(transferList);
+  });
+};
+
+// Has same functionality as the 'addToTransferList' function above
+const addToTransferList2 = transferDetails => {
+  const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee}`;
+  return Promise.resolve(transferList);
+};
+
 transfer
+  .then(addToTransferList)
   .then(res => {
-    console.log('Transfer is ready to be done');
+    console.log('The transfer is a done deal!');
     console.log(res);
   })
   .catch(err => {
