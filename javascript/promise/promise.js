@@ -3,7 +3,7 @@ const isTransferred = false;
 const transfer = new Promise((resolve, reject) => {
   if (!isTransferred) {
     const transferDetails = {
-      player: 'Luka Modrid',
+      player: 'Luka Modric',
       club: 'Kawasaki Frontale',
       fee: 1000000
     };
@@ -15,14 +15,14 @@ const transfer = new Promise((resolve, reject) => {
 
 const addToTransferList = transferDetails => {
   return new Promise((resolve, reject) => {
-    const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee}`;
+    const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee} EUR`;
     resolve(transferList);
   });
 };
 
 // Has same functionality as the 'addToTransferList' function above
 const addToTransferList2 = transferDetails => {
-  const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee}`;
+  const transferList = `${transferDetails.player} is transferred to ${transferDetails.club} for ${transferDetails.fee} EUR`;
   return Promise.resolve(transferList);
 };
 
