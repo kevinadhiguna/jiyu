@@ -1,37 +1,37 @@
 const response = [
   {
-      "favHeroIndustries": ["DC Comics"],
-      "favHeroes": [
-        "Superman",
-        "Spiderman",
-        "Black Phanter",
-      ],
-      "genre": ["Action"],
-      "_id": "5e170bdc863b0619d9828fe3",
-      "code": "SSB",
-      "displayName": "Legendary",
+    "favHeroIndustries": ["DC Comics"],
+    "favHeroes": [
+      "Superman",
+      "Spiderman",
+      "Black Phanter",
+    ],
+    "genre": ["Action"],
+    "_id": "5e170bdc863b0619d9828fe3",
+    "code": "SSB",
+    "displayName": "Legendary",
   },
   {
-      "favHeroIndustries": ["Marvel"],
-      "favHeroes": [
-        "Aquaman",
-        "Black Widow",
-      ],
-      "genre": ["Action", "Comedy"],
-      "_id": "5e170eaf863b0619d982904d",
-      "code": "AB",
-      "displayName": "Unsung Heroes",
+    "favHeroIndustries": ["Marvel"],
+    "favHeroes": [
+      "Aquaman",
+      "Black Widow",
+    ],
+    "genre": ["Action", "Comedy"],
+    "_id": "5e170eaf863b0619d982904d",
+    "code": "AB",
+    "displayName": "Unsung Heroes",
   },
   {
-      "favHeroIndustries": ["Marvel", "DC Comics"],
-      "favHeroes": [
-        "Antman",
-        "Green Lantern",
-      ],
-      "genre": ["Action", "Comedy", "Innovation"],
-      "_id": "5e171153863b0619d982916e",
-      "code": "ASG",
-      "displayName": "One-season Wonder",
+    "favHeroIndustries": ["Marvel", "DC Comics"],
+    "favHeroes": [
+      "Antman",
+      "Green Lantern",
+    ],
+    "genre": ["Action", "Comedy", "Innovation"],
+    "_id": "5e171153863b0619d982916e",
+    "code": "ASG",
+    "displayName": "One-season Wonder",
   },
 ];
 
