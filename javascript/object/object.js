@@ -40,6 +40,17 @@ console.log("Stringify an object :", JSON.stringify(obj));
 // OUTPUT
 // Stringify an object : {"name":"Harper","age":25,"occupation":"Athlete","club":"Los Angeles Angels"}
 
+// Parsing an object
+//console.log("Parsing an object :", JSON.parse(obj)); // <- SyntaxError: Unexpected token o in JSON at position 1
+console.log("Copying an object :", JSON.parse(JSON.stringify(obj)));
+// OUTPUT
+// Copying an object : {
+//   name: 'Harper',
+//   age: 25,
+//   occupation: 'Athlete',
+//   club: 'Los Angeles Angels'
+// }
+
 // Copying an object
 console.log("Copying an object :", { ...obj });
 // OUTPUT
