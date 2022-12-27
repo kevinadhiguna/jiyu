@@ -68,3 +68,13 @@ console.log("Copying an object :", { ...obj });
 //   occupation: 'Athlete',
 //   club: 'Los Angeles Angels'
 // }
+
+let info = [
+  ["name", "Edgar Conan"],
+  ["profession", "detective"],
+  ["hobby", "football"]
+];
+
+// Returns an object created by key-value entries for properties and methods (reverse of 'Object.entries()')
+console.log("Returns an object from an iterable (array, map, etc.) :", Object.fromEntries(info));
+// Returns an object from an iterable (array, map, etc.) : { name: 'Edgar Conan', profession: 'detective', hobby: 'football' }
