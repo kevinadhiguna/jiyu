@@ -15,6 +15,14 @@ console.log("Getting an entire object :", obj);
 //   club: 'Los Angeles Angels'
 // }
 
+// Creating an object (NOT recommended to do this way, but it works)
+const baseballer = Object.create(obj);
+baseballer.manager = "Dan Nattingly";
+baseballer.club = "Philadelphia Phillies";
+console.log("baseballer :", baseballer);
+// OUTPUT
+// baseballer : { manager: 'Dan Nattingly', club: 'Philadelphia Phillies' }
+
 // Getting an object’s keys
 console.log("Getting an object’s keys :", Object.keys(obj));
 // OUTPUT
