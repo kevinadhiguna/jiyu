@@ -15,6 +15,11 @@ console.log("Getting an entire object :", obj);
 //   club: 'Los Angeles Angels'
 // }
 
+// Check if a property exists in an object 
+console.log("Does 'name' property exist in the object ?", "name" in obj);
+// OUTPUT
+// Does 'name' property exist in the object ? true
+
 // Creating an object (NOT recommended to do this way, but it works)
 const baseballer = Object.create(obj);
 baseballer.manager = "Dan Nattingly";
