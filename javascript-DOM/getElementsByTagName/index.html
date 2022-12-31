@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS getElementsByTagName</title>
+</head>
+<body>
+  <h1>JS - getElementsByName()</h1>
+
+  <h2>CR7 signs with Al-Nassr</h2>
+  <p>The contract is worth to be $200M or even more</p>
+  <h2>Benzema's brace brings Los Blancos 3 points</h2>
+  <p>The former French national team talisman scores 2 goals against Real Valladolid</p>
+  <h2>Cassano praises Brighton's winger</h2>
+  <p>The Italian said he would have brought Kaoru Mitoma to his club if he were a club's president</p>
+
+  <button id="btn-count">Count h2 tags</button>
+</body>
+<script>
+  let btnCount = document.getElementById("btn-count");
+  btnCount.addEventListener('click', () => {
+    let heading2 = document.getElementsByTagName("h2");
+    console.log(heading2);
+    alert(`There are ${heading2.length} h2 tags`);
+  });
+</script>
+</html>
