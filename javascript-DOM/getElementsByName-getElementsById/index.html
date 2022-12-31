@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS getElementsByName & getElementById</title>
+</head>
+<body>
+  <p id="message">England Premier League</p>
+
+  <p>
+    <label for="very-poor">
+      <input type="radio" name="rate" value="Very poor" id="very-poor"> Very poor
+    </label>
+    <label for="poor">
+      <input type="radio" name="rate" value="Poor" id="poor"> Poor
+    </label>
+    <label for="ok">
+      <input type="radio" name="rate" value="Ok" id="ok"> Ok
+    </label>
+    <label for="good">
+      <input type="radio" name="rate" value="Good" id="good"> Good
+    </label>
+    <label for="very-good">
+      <input type="radio" name="rate" value="Very good" id="very-good"> Very good
+    </label>
+  </p>
+  <p>
+    <button id="btn-rate">Submit rate</button>
+  </p>
+  <p id="output"></p>
+</body>
+<script>
+  const p = document.getElementById("message");
+  console.log(p); // <p id="message">England Premier League</p>
+
+  const btnRate = document.getElementById("btn-rate");
+  const output = document.getElementById("output");
+
+  btnRate.addEventListener('click', () => {
+    const rates = document.getElementsByName("rate");
+    console.log(rates);
+    rates.forEach(rate => {
+      if (rate.checked) {
+        output.innerText = `You selected ${rate.value}`;
+      }
+    });
+  });
+</script>
+</html>
