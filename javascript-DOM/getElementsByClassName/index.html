@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - getElementsByClassName</title>
+</head>
+<body>
+  <h1>JS - getElementsByClassName()</h1>
+
+  <header>
+    <nav>
+      <ul id="menu">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item highlight">JavaScript</li>
+        <li class="item">TypeScript</li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <article>
+      <h2 class="secondary">Example 1</h2>
+    </article>
+    <article>
+      <h2 class="secondary">Example 2</h2>
+    </article>
+  </section>
+</body>
+<script>
+  let menu = document.getElementById("menu");
+  let items = menu.getElementsByClassName("item");
+  let itemData = [].map.call(items, item => item.textContext);
+  console.log("itemData :", itemData);
+
+  let elements = document.getElementsByClassName("secondary");
+  let elemData = [].map.call(elements, elem => elem.textContext);
+  console.log("elemData :", elemData);
+</script>
+</html>
