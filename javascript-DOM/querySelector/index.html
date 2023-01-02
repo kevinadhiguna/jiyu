@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - querySelector</title>
+</head>
+<body>
+  <h1>JS - querySelector</h1>
+  <header>
+    <div id="logo">
+      <img src="img/logo.png" alt="Logo" id="logo">
+    </div>
+    <nav class="primary-nav">
+      <ul>
+        <li class="menu-item current">
+          <a href="#home">Home</a>
+        </li>
+        <li class="menu-item">
+          <a href="#services">Services</a>
+        </li>
+        <li class="menu-item">
+          <a href="#about">About</a>
+        </li>
+        <li class="menu-item">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to the JS Dev Agency</h1>
+    
+    <div class="container">
+      <section class="section-a">
+        <h2>UI/UX</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, adipisci.</p>
+        <button>Read more</button>
+      </section>
+      <section class="section-b">
+        <h2>PWA Development</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, non.</p>
+        <button>Read more</button>
+      </section>
+      <section class="section-c">
+        <h2>Cyber Security</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, natus?</p>
+        <button>Read more</button>
+      </section>
+    </div>
+  </main>
+</body>
+<script>
+  // (1) Universal Selector (denoted by * that matches all elements of any type)
+  let element = document.querySelector("*");
+  console.log("element :", element);
+
+  let elements = document.querySelectorAll("*");
+  console.log("elements :", elements);
+  
+  // (2) Type Selector
+  let heading1 = document.querySelector("h1");
+  console.log("heading1 :", heading1);
+
+  let heading2 = document.querySelectorAll("h2");
+  console.log("heading2 :", heading2);
+
+  // (3) Class Selector
+  let note = document.querySelector(".menu-item");
+  console.log("note :", note);
+
+  let notes = document.querySelector(".menu-item");
+  console.log("notes :", notes);
+
+  // (4) ID Selector
+  let logo = document.querySelector("#logo");
+  console.log("logo document.querySelector(`#logo`) :", logo);
+
+  let logo2 = document.querySelector("[id='logo']"); // <- Reference: https://stackoverflow.com/q/26848289
+  console.log("logo2 document.querySelector(`[id='logo']`):", logo2);
+
+  // (5) Attribute Selector
+  let autoplay = document.querySelector("[autoplay]");
+  console.log("autoplay :", autoplay);
+  let autoplays = document.querySelectorAll("[autoplay]");
+  console.log("autoplays :", autoplays);
+</script>
+</html>
