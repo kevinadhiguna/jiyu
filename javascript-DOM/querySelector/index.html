@@ -94,5 +94,12 @@
   // (1) descendant combinators
   let descendants = document.querySelectorAll("p a");
   console.log("descendants :", descendants);
+
+  // (2) child combinators
+  let listItems = document.querySelectorAll("ul > li");
+  console.log("listItems :", listItems);
+  
+  let listItems2 = document.querySelectorAll("ul.nav > li");
+  console.log("listItems :", listItems);
 </script>
 </html>
