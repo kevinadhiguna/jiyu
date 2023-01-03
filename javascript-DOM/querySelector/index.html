@@ -54,52 +54,53 @@
 <script>
   // (1) Universal Selector (denoted by * that matches all elements of any type)
   let element = document.querySelector("*");
-  console.log("element :", element);
+  console.log("[Universal Selector] element :", element);
 
   let elements = document.querySelectorAll("*");
-  console.log("elements :", elements);
+  console.log("[Universal Selector] elements :", elements);
   
   // (2) Type Selector
   let heading1 = document.querySelector("h1");
-  console.log("heading1 :", heading1);
+  console.log("[Type Selector] heading1 :", heading1);
 
   let heading2 = document.querySelectorAll("h2");
-  console.log("heading2 :", heading2);
+  console.log("[Type Selector] heading2 :", heading2);
 
   // (3) Class Selector
   let note = document.querySelector(".menu-item");
-  console.log("note :", note);
+  console.log("[Class Selector] note :", note);
 
   let notes = document.querySelector(".menu-item");
-  console.log("notes :", notes);
+  console.log("[Class Selector] notes :", notes);
 
   // (4) ID Selector
   let logo = document.querySelector("#logo");
-  console.log("logo document.querySelector(`#logo`) :", logo);
+  console.log("[ID Selector] logo document.querySelector(`#logo`) :", logo);
 
   let logo2 = document.querySelector("[id='logo']"); // <- Reference: https://stackoverflow.com/q/26848289
-  console.log("logo2 document.querySelector(`[id='logo']`):", logo2);
+  console.log("[ID Selector] logo2 document.querySelector(`[id='logo']`):", logo2);
 
   // (5) Attribute Selector
   let autoplay = document.querySelector("[autoplay]");
-  console.log("autoplay :", autoplay);
+  console.log("[Attribute Selector] autoplay :", autoplay);
+
   let autoplays = document.querySelectorAll("[autoplay]");
-  console.log("autoplays :", autoplays);
+  console.log("[Attribute Selector] autoplays :", autoplays);
 
   // Grouping Selectors
   let divPs = document.querySelectorAll("div, p");
-  console.log("divPs :", divPs);
+  console.log("[Grouping Selectors] divPs :", divPs);
 
   // Combinators
-  // (1) descendant combinators
+  // (1) Descendant Combinators
   let descendants = document.querySelectorAll("p a");
-  console.log("descendants :", descendants);
+  console.log("[Descendant Combinators] descendants :", descendants);
 
-  // (2) child combinators
+  // (2) Child Combinators
   let listItems = document.querySelectorAll("ul > li");
-  console.log("listItems :", listItems);
-  
+  console.log("[Child Combinators] listItems :", listItems);
+
   let listItems2 = document.querySelectorAll("ul.nav > li");
-  console.log("listItems :", listItems);
+  console.log("[Child Combinators] listItems :", listItems);
 </script>
 </html>
