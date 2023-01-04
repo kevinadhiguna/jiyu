@@ -102,5 +102,9 @@
 
   let listItems2 = document.querySelectorAll("ul.nav > li");
   console.log("[Child Combinators] listItems :", listItems);
+
+  // (3) General Sibling Combinators
+  let links = document.querySelectorAll("p ~ a");
+  console.log("[General Sibling Combinators] links :", links);
 </script>
 </html>
