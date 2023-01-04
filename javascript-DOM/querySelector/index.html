@@ -106,5 +106,12 @@
   // (3) General Sibling Combinators
   let links = document.querySelectorAll("p ~ a");
   console.log("[General Sibling Combinators] links :", links);
+
+  // (4) Adjacent Sibling Combinators
+  let h1aS = document.querySelectorAll("h1 + a"); // <- All elements that directly follows <h1>
+  console.log("[Adjacent Sibling Combinators] h1aS :", h1aS);
+
+  let h1a = document.querySelector("h1 + a"); // <- Only the first <a> element that follows <h1> 
+  console.log("[Adjacent Sibling Combinators] h1a :", h1a);
 </script>
 </html>
