@@ -113,5 +113,14 @@
 
   let h1a = document.querySelector("h1 + a"); // <- Only the first <a> element that follows <h1> 
   console.log("[Adjacent Sibling Combinators] h1a :", h1a);
+
+  // Pseudo
+  // (1) Pseudo-classes
+  let listItems_PseudoClasses = document.querySelectorAll("li:nth-child(2)"); // <- Selects the second <li> element in a list
+  console.log("[Pseudo-classes] listItems_PseudoClasses :", listItems_PseudoClasses);
+
+  // (2) Pseudo-elements
+  let links_PseudoElements = document.querySelector("p::first-line"); // <- matches the first-line of all <p> elements:
+  console.log("[Pseudo-elements] links_PseudoElements :", links_PseudoElements);
 </script>
 </html>
