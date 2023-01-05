@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - window.location()</title>
+</head>
+<body>
+  <h2>JS - window.location()</h2>
+  <form>
+    <input type="button" onclick="leave()" value="Leave 127.0.0.1">
+  </form>
+</body>
+<script>
+  function leave() {
+    let answer = confirm("Are you sure to leave here?");
+
+    if (answer) {
+      alert("Bye!");
+      window.location = "https://duckduckgo.com";
+    } else {
+      alert("Thanks for staying here!");
+    }
+  }
+</script>
+</html>
