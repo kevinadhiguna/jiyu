@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - parent node</title>
+</head>
+<body>
+  <h2>JS - parent node</h2>
+  <div id="main">
+    <p class="note">This is a note!</p>
+  </div>
+</body>
+<script>
+  let note = document.getElementsByClassName("note");
+  console.log("note's parent node :", note.parentNode);
+</script>
+</html>
