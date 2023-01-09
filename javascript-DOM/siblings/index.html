@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - Siblings</title>
+</head>
+<body>
+  <ul id="menu">
+    <li>Home</li>
+    <li>Pricing</li>
+    <li class="current">Cart</li>
+    <li>Career</li>
+    <li>About us</li>
+  </ul>
+</body>
+<script>
+  const current = document.getElementsByClassName("current");
+  
+  const nextSibling = current.nextElementSibling;
+  while (nextSibling) {
+    console.log("Next sibling element of current element :", nextSibling);
+    const nextSibling = current.nextElementSibling;
+  }
+
+  const prevSibling = current.previousElementSibling;
+  while (prevSibling) {
+    console.log("Previous sibling element of current element :", prevSibling);
+    const prevSibling = current.previousElementSibling;
+  }
+</script>
+</html>
