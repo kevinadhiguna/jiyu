@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - event handler</title>
+</head>
+<body>
+  <form>
+    Required Field : <input type="text" id="req1" />
+    <input 
+      type="button" 
+      value="Check Field"
+      onclick="notEmpty(document.getElementById('req1'), 'Please enter a value')"
+    />
+  </form>
+</body>
+<script>
+  function notEmpty(elem, helperMsg) {
+    if (elem.value.length === 0) {
+      alert(helperMsg);
+      elem.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+</html>
