@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - getAttributes()</title>
+</head>
+<body>
+  <h2>JavaScript - element.getAttributes()</h2>
+  <div>
+    <button id="disable-send-btn" onclick="disableSendBtn()">Disable the send button</button>
+  </div>
+  <button id="send-btn">Send data</button>
+</body>
+<script>
+  const disabledBtn = document.getElementById("disable-send-btn");
+  const sendBtn = document.getElementById("send-btn");
+
+  function disableSendBtn() {
+    sendBtn.setAttribute('value', 'Can not be clicked..'); // <- Not sure if this works
+    sendBtn.setAttribute('disable', 'true');
+  }
+</script>
+</html>
