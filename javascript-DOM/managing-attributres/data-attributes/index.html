@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - "data-*" attributes</title>
+</head>
+<body>
+  <h2>The data-* attributes</h2>
+  <input type="range" id="bar" data-progress="pending" data-value="60%" />
+</body>
+<script>
+  const range = document.getElementById("bar");
+
+  // The 'dataset' property is meant to show the data-* attributes
+  console.log("The data-* attributes in 'range' :", range.dataset);
+</script>
+</html>
