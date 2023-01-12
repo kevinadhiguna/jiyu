@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS - Form Validation</title>
+</head>
+<body>
+  <form>
+    <pre>
+      Please input your data :
+      Name : <input type="text" id="nametxt" name="name">
+      Address : <input type="text" id="addresstxt" name="address" size="50">
+      Phone number : <input type="text" id="phonetxt" name="phone" size="10">
+      Password : <input type="password" id="password" maxlength="6">
+
+      <hr>
+
+      <input type="submit" value="Send data" onclick="validate()">
+      <input type="reset" value="Reset input">
+    </pre>
+  </form>
+</body>
+<script>
+  function isNumber(elem, helperMsg) {
+    let numberExpression = /^[0-9]+$/;
+
+    if (elem.value.match(numberExpression)) {
+      return true;
+    } else {
+      alert(helperMsg);
+      elem.focus();
+      return false;
+    }
+  }
+
+  function isAlphabet(elem, helperMsg) {
+    let alphabetExpression = /^[a-zA-Z]+$/;
+
+    if (elem.value.match(alphabetExpression)) {
+      return true;
+    } else {
+      alert(helperMsg);
+      elem.focus();
+      return false;
+    }
+  }
+
+  function isAlphanumeric(elem, helperMsg) {
+    let alphanumericExpression = /^[0-9a-zA-Z]+$/;
+
+    if (elem.value.match(alphanumericExpression)) {
+      return true;
+    } else {
+      alert(helperMsg);
+      elem.focus();
+      return false;
+    }
+  }
+
+  function isNumeric(elem, helperMsg) {
+    let numericExpression = /^[0-9]+$/;
+
+    if (elem.value.match(numericExpression)) {
+      return true;
+    } else {
+      alert(helperMsg);
+      elem.focus();
+      return false;
+    }
+  }
+
+  function lengthRestriction(elem, min, max) {
+    let input = elem.value;
+
+    if (input.length >= min && input.length <= max) {
+      return true;      
+    } else {
+      alert(`Please enter ${min} to ${max} chars`);
+      elem.focus();
+      return false;
+    }
+  }
+
+  function validate() {
+    isAlphabet(document.getElementById("nametxt"), "Name should be in alphabet");
+    isAlphanumeric(document.getElementById("addresstxt", "Address should be in alphanumeric"));
+    isNumber(document.getElementById("phonetxt"), "Phone number should be in numbers");
+    isAlphanumeric(document.getElementById("password"), "Password should be in alphanumeric");
+  }
+</script>
+</html>
