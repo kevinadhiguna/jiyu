@@ -14,6 +14,10 @@ function App() {
         value={link}
         icon={icon}
         color={token.colorInfoText}
+        style={{
+          marginBottom: 16,
+          backgroundColor: token.colorBgLayout
+        }}
       />
     </div>
   );
