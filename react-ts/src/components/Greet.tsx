@@ -1,11 +1,9 @@
-import { FC } from "react";
-
 type GreetProps = {
   name: string;
 }
 
 // GOOD (destructuring props)
-export const Greet: FC<GreetProps> = ({ name }: GreetProps) => {
+export const Greet = ({ name }: GreetProps) => {
   return(
     <div>
       <h2>Hola {name}, como estas?</h2>
