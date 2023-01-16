@@ -4,7 +4,7 @@ import { Greet } from './components/Greet';
 function App() {
   return (
     <div className="App">
-      <Greet name='Alvaro' />
+      <Greet name='Alvaro' unreadMessages={5} />
     </div>
   );
 }
