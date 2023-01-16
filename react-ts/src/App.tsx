@@ -8,18 +8,18 @@ import { Balondor } from './components/Balondor';
 
 function App() {
   const personName = {
-    first: "Isagi",
-    last: "Toichi"
+    first: 'Isagi',
+    last: 'Toichi'
   };
 
   const nameList = [
-    { first: "Eiryu", last: "Jyubei" },
-    { first: "Noel", last: "Neuer" },
-    { first: "Etosi", last: "Sae" },
+    { first: 'Eiryu', last: 'Jyubei' },
+    { first: 'Noel', last: 'Neuer' },
+    { first: 'Etosi', last: 'Sae' },
   ];
 
   return (
-    <div className="App">
+    <div className='App'>
       <Greet name='Alvaro' unreadMessages={5} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
