@@ -1,4 +1,4 @@
-// Learn object prop example
+// Learn an object prop example
 
 type PersonProps = {
   name: {
