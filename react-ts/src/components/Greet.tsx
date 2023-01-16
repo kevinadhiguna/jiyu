@@ -5,7 +5,8 @@ type GreetProps = {
 }
 
 // GOOD (destructuring props)
-export const Greet = ({ name, unreadMessages, isLoggedIn }: GreetProps) => {
+// "... unreadMessages = 117 ..." is a way to initialize an optional variable
+export const Greet = ({ name, unreadMessages = 117, isLoggedIn }: GreetProps) => {
   return(
     <div>
       { 
