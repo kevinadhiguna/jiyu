@@ -6,6 +6,7 @@ import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Balondor } from './components/Balondor';
 import { Button } from './components/Button';
+import React from 'react';
 
 function App() {
   const personName = {
@@ -18,10 +19,6 @@ function App() {
     { first: 'Noel', last: 'Neuer' },
     { first: 'Etosi', last: 'Sae' },
   ];
-
-  function isClicked() {
-    console.log('Button is clicked!');
-  }
 
   return (
     <div className='App'>
@@ -40,7 +37,7 @@ function App() {
         <Heading>Balond'or winner is Isagi Toichi</Heading>
       </Balondor>
 
-      <Button handleClick={isClicked} />
+      <Button handleClick={(event) => console.log('Button is clicked', event)} />
     </div>
   );
 }
