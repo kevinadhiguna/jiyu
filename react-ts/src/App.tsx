@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Greet name='Alvaro' unreadMessages={5} isLoggedIn={false} />
+      <Greet name='Alvaro' unreadMessages={5} isLoggedIn={true} />
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status='success' />
