@@ -5,6 +5,7 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Balondor } from './components/Balondor';
+import { Button } from './components/Button';
 
 function App() {
   const personName = {
@@ -17,6 +18,10 @@ function App() {
     { first: 'Noel', last: 'Neuer' },
     { first: 'Etosi', last: 'Sae' },
   ];
+
+  function isClicked() {
+    console.log('Button is clicked!');
+  }
 
   return (
     <div className='App'>
@@ -34,6 +39,8 @@ function App() {
       <Balondor>
         <Heading>Balond'or winner is Isagi Toichi</Heading>
       </Balondor>
+
+      <Button handleClick={isClicked} />
     </div>
   );
 }
