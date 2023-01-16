@@ -1,12 +1,13 @@
 type GreetProps = {
   name: string;
+  unreadMessages?: number;
 }
 
 // GOOD (destructuring props)
-export const Greet = ({ name }: GreetProps) => {
+export const Greet = ({ name, unreadMessages }: GreetProps) => {
   return(
     <div>
-      <h2>Hola {name}, como estas?</h2>
+      <h2>Hola {name}, como estas? You have {unreadMessages} unread meassages.</h2>
     </div>
   );
 }
