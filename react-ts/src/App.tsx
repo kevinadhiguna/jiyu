@@ -37,7 +37,7 @@ function App() {
         <Heading>Balond'or winner is Isagi Toichi</Heading>
       </Balondor>
 
-      <Button handleClick={(event) => console.log('Button is clicked', event)} />
+      <Button handleClick={(event, id) => console.log('Button is clicked', event, id)} />
     </div>
   );
 }
