@@ -4,6 +4,7 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading';
+import { Balondor } from './components/Balondor';
 
 function App() {
   const personName = {
@@ -29,6 +30,10 @@ function App() {
       
       {/* No error */}
       <Heading>Brewlock</Heading>
+
+      <Balondor>
+        <Heading>Balond'or winner is Isagi Toichi</Heading>
+      </Balondor>
     </div>
   );
 }
