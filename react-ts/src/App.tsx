@@ -3,6 +3,7 @@ import { Greet } from './components/Greet';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import { Heading } from './components/Heading';
 
 function App() {
   const personName = {
@@ -22,6 +23,12 @@ function App() {
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status='success' />
+      
+      {/* Type '{ children: string; }' has no properties in common with type 'IntrinsicAttributes'. */}
+      {/* <Heading>Another placeholder text</Heading> */}
+      
+      {/* No error */}
+      <Heading>Brewlock</Heading>
     </div>
   );
 }
