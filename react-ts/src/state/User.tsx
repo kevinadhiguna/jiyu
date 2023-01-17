@@ -6,8 +6,8 @@ export const User = () => {
 
   function handleLogin() {
     setUser({
-      name: 'Joe',
-      email: 'Isagi'
+      name: 'Joe Ryusei',
+      email: 'joe@ryusei.jp'
     });
   }
 
