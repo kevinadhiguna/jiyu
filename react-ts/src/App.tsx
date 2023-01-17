@@ -9,6 +9,7 @@ import { Button } from './components/Button';
 import { Input } from './components/Input';
 import { Container } from './components/Container';
 import { LoggedIn } from './state/LoggedIn';
+import { User } from './state/User';
 
 function App() {
   const personName = {
@@ -48,6 +49,8 @@ function App() {
       {/* <Container styles={{ border: '1px solid black', pading: '1rem' }} />   <--   Type '{ border: string; pading: string; }' is not assignable to type 'Properties<string | number, string & {}>'. */}
 
       <LoggedIn />
+
+      <User />
     </div>
   );
 }
