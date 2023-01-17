@@ -6,7 +6,7 @@ import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Balondor } from './components/Balondor';
 import { Button } from './components/Button';
-import React from 'react';
+import { Input } from './components/Input';
 
 function App() {
   const personName = {
@@ -38,6 +38,8 @@ function App() {
       </Balondor>
 
       <Button handleClick={(event, id) => console.log('Button is clicked', event, id)} />
+
+      <Input value='' handleChange={(event) => console.log('Input is changed', event)} />
     </div>
   );
 }
