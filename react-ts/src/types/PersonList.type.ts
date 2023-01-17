@@ -1,8 +1,7 @@
+import { Name } from './Person.type';
+
 // Learn an array of object prop example
 
 export type PersonListProps = {
-  names: {
-    first: string;
-    last: string;
-  }[]
+  names: Name[]
 };

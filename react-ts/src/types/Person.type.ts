@@ -1,6 +1,6 @@
 // Learn an object prop example
 
-type Name = {
+export type Name = {
   first: string;
   last: string;
 }
