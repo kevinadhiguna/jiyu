@@ -1,8 +1,4 @@
-// Learn React.ReactNode (simply, another component as children props)
-
-type BalondorProps = {
-  children: React.ReactNode;
-};
+import { BalondorProps } from '../types/Balondor.types';
 
 export const Balondor = ({ children }: BalondorProps) => {
   return(
