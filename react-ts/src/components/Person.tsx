@@ -1,11 +1,4 @@
-// Learn an object prop example
-
-type PersonProps = {
-  name: {
-    first: string;
-    last: string;
-  }
-};
+import { PersonProps } from '../types/Person.type';
 
 export const Person = ({ name }: PersonProps) => {
   return(
