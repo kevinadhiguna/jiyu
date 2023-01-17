@@ -1,11 +1,4 @@
-// Learn an array of object prop example
-
-type PersonListProps = {
-  names: {
-    first: string;
-    last: string;
-  }[]
-};
+import { PersonListProps } from '../types/PersonList.type';
 
 export const PersonList = ({ names }: PersonListProps) => {
   return(
