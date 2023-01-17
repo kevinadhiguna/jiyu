@@ -1,12 +1,4 @@
-// Learn union of string literals in props
-
-type StatusProps = {
-  // Instead of this:
-  // status: string;
-
-  // DO this:
-  status: 'loading' | 'success' | 'error';
-};
+import { StatusProps } from '../types/Status.type';
 
 export const Status = ({ status }: StatusProps) => {
   let message;
