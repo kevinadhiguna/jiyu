@@ -7,6 +7,7 @@ import { Heading } from './components/Heading';
 import { Balondor } from './components/Balondor';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
+import { Container } from './components/Container';
 
 function App() {
   const personName = {
@@ -40,6 +41,10 @@ function App() {
       <Button handleClick={(event, id) => console.log('Button is clicked', event, id)} />
 
       <Input value='' handleChange={(event) => console.log('Input is changed', event)} />
+
+      <Container styles={{ border: '1px solid black', padding: '1rem' }} />
+      {/* By specifying 'styles: React.CSSProperties', one can not add an invalid CSS property such as following: */}
+      {/* <Container styles={{ border: '1px solid black', pading: '1rem' }} />   <--   Type '{ border: string; pading: string; }' is not assignable to type 'Properties<string | number, string & {}>'. */}
     </div>
   );
 }
