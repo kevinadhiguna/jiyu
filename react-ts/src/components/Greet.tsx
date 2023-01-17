@@ -1,8 +1,4 @@
-type GreetProps = {
-  name: string;
-  unreadMessages?: number;
-  isLoggedIn: boolean;
-}
+import { GreetProps } from '../types/Greet.type';
 
 // GOOD (destructuring props)
 // "... unreadMessages = 117 ..." is a way to initialize an optional variable
