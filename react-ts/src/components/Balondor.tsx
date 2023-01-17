@@ -6,6 +6,6 @@ export const Balondor = ({ children }: BalondorProps) => {
     // <h3>Balondor goes to Isagi Toichi</h3>
 
     // Dynamic (GOOD)
-    <h3>{children}</h3>
+    <div>{children}</div>
   );
 }
