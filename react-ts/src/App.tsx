@@ -10,6 +10,7 @@ import { Input } from './components/Input';
 import { Container } from './components/Container';
 import { LoggedIn } from './state/LoggedIn';
 import { User } from './state/User';
+import { Counter } from './state/Counter';
 
 function App() {
   const personName = {
@@ -51,6 +52,8 @@ function App() {
       <LoggedIn />
 
       <User />
+
+      <Counter />
     </div>
   );
 }
