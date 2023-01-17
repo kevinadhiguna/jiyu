@@ -1,11 +1,4 @@
-// Learn to insert text between the component tags, such as :
-// <Heading>My Text</Heading>
-// Instead of :
-// <Heading message='My Text' />
-
-type HeadingProps = {
-  children: string;
-};
+import { HeadingProps } from '../types/Heading.type';
 
 export const Heading = ({ children }: HeadingProps) => {
   return(
