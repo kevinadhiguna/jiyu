@@ -1,6 +1,14 @@
 # ReactJS - TypeScript
 
-ReactJS powered by TypeScript.
+Learn ReactJS powered by TypeScript.
+
+<br />
+
+## References
+
+- [React TypeScript Tutorial for Beginners by Codevolution](https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK)
+
+<br />
 
 ## Available Scripts
 
