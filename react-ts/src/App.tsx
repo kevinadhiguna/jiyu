@@ -1,4 +1,5 @@
 import './App.css';
+
 import { Greet } from './components/Greet';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
@@ -8,9 +9,14 @@ import { Balondor } from './components/Balondor';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
 import { Container } from './components/Container';
-import { LoggedIn } from './state/LoggedIn';
-import { User } from './state/User';
-import { Counter } from './state/Counter';
+
+import { LoggedIn } from './components/state/LoggedIn';
+import { User } from './components/state/User';
+import { Counter } from './components/state/Counter';
+
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
+import { UserContextProvider } from './components/context/UserContext';
 
 function App() {
   const personName = {
@@ -54,6 +60,10 @@ function App() {
       <User />
 
       <Counter />
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
