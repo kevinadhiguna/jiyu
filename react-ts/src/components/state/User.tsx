@@ -1,10 +1,8 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { AuthUser } from '../types/AuthUser.type';
-import { UserContext } from '../context/UserContext';
 
 export const User = () => {
   const [user, setUser] = useState<AuthUser | null>(null);
-  const userContext = useContext(UserContext);
 
   function handleLogin() {
     setUser({
