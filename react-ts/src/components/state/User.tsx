@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react';
-import { AuthUser } from '../../types/AuthUser.type';
+import { AuthUser } from '../types/AuthUser.type';
 import { UserContext } from '../context/UserContext';
 
 export const User = () => {

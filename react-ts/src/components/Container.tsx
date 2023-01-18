@@ -1,4 +1,4 @@
-import { ContainerProps } from '../types/Container.type';
+import { ContainerProps } from './types/Container.type';
 
 export const Container = ({ styles }: ContainerProps) => {
   return(

@@ -1,4 +1,4 @@
-import { BalondorProps } from '../types/Balondor.types';
+import { BalondorProps } from './types/Balondor.types';
 
 export const Balondor = ({ children }: BalondorProps) => {
   return(

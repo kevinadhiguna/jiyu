@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
-import { CounterState } from '../../types/CounterState.type';
-import { CounterAction } from '../../types/CounterAction.type';
+import { CounterState } from '../types/CounterState.type';
+import { CounterAction } from '../types/CounterAction.type';
 
 const initialState = { count: 0 };
 

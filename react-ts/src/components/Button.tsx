@@ -1,4 +1,4 @@
-import { ButtonProps } from '../types/Button.type';
+import { ButtonProps } from './types/Button.type';
 
 export const Button = ({ handleClick }: ButtonProps) => {
   return(

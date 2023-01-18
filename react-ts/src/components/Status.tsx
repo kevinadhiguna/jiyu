@@ -1,4 +1,4 @@
-import { StatusProps } from '../types/Status.type';
+import { StatusProps } from './types/Status.type';
 
 export const Status = ({ status }: StatusProps) => {
   let message;
