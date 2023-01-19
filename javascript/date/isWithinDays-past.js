@@ -8,6 +8,8 @@ const betweenDatesInMs = Math.abs(createdTime.getTime() - now.getTime());
 console.log('Between dates (in ms) :', betweenDatesInMs, 'miliseconds'); // Between dates (in ms) : 1231119019 miliseconds
 
 const oneDayInMs = 24 * 60 * 60 * 1000;
+// To-do: consider using Math.round() round the day, but do not use either Math.ceil() and Math.floor()
+// const daysBetweenDates = Math.round(betweenDatesInMs / oneDayInMs);
 const daysBetweenDates = betweenDatesInMs / oneDayInMs;
 console.log('Days between dates (possibly not in an even number) :', daysBetweenDates, 'days'); 
 // Days between dates (possibly not in an even number) : 14.249157222222221 days
