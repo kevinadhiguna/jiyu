@@ -20,6 +20,8 @@ import { UserContextProvider } from './components/context/UserContext';
 import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
 
+import { Counter as CounterClassComponent } from './components/class/Counter';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -74,6 +76,8 @@ function App() {
       <DomRef />
 
       <MutableRef />
+
+      <CounterClassComponent message='The counter value is' />
     </div>
   );
 }
