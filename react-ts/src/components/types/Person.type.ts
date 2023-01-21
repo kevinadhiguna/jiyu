@@ -8,3 +8,9 @@ export type Name = {
 export type PersonProps = {
   name: Name;
 };
+
+export type PersonInGeneric = {
+  id: number;
+  first: string;
+  last: string;
+};
