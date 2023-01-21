@@ -21,6 +21,8 @@ import { DomRef } from './components/ref/DomRef';
 import { MutableRef } from './components/ref/MutableRef';
 
 import { Counter as CounterClassComponent } from './components/class/Counter';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 
 function App() {
   const personName = {
@@ -78,6 +80,9 @@ function App() {
       <MutableRef />
 
       <CounterClassComponent message='The counter value is' />
+
+      {/* Learn to pass a component as a prop */}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
