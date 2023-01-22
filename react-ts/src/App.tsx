@@ -24,6 +24,8 @@ import { Counter as CounterClassComponent } from './components/class/Counter';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
 
+import { List } from './components/generics/List';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -83,6 +85,34 @@ function App() {
 
       {/* Learn to pass a component as a prop */}
       <Private isLoggedIn={true} component={Profile} />
+
+      {/* Valid if <T extends {}> */}
+      {/* 
+      <List
+        items={['Speaker', 'Microphone', 'Mouse', 'Keyboard']}
+        onClick={item => console.log(item)}
+      /> */}
+
+      <List
+        items={[
+          {
+            id: 1,
+            first: 'Wayne',
+            last: 'Rooney',
+          },
+          {
+            id: 2,
+            first: 'Cristiano',
+            last: 'Ronaldo',
+          },
+          {
+            id: 3,
+            first: 'Ricardo',
+            last: 'Kaka',
+          },
+        ]}
+        onClick={item => console.log(item)}
+      />
     </div>
   );
 }
