@@ -26,6 +26,8 @@ import { Profile } from './components/auth/Profile';
 
 import { List } from './components/generics/List';
 
+import { RandomNumber } from './components/restriction/RandomNumber';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -113,6 +115,11 @@ function App() {
         ]}
         onClick={item => console.log(item)}
       />
+
+      {/* Error */}
+      {/* <RandomNumber value={11} isPositive isNegative isZero /> */}
+
+      <RandomNumber value={17} isPositive />
     </div>
   );
 }
