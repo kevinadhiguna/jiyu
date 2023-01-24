@@ -11,7 +11,13 @@ export const List = <T extends PersonInGeneric>({
       {items.map((item, index) => {
         return(
           <div key={item.id} onClick={() => onClick(item)}>
-            {JSON.stringify(item)}
+            {/* Error: Type 'T' is not assignable to type 'ReactNode'. */}
+            {/* {item} */}
+
+            {item.toString()}
+
+            {/* The following works too, since it returns a string, not possibly a React.Node like {item} does */}
+            {/* {JSON.stringify(item)} */}
           </div>
         );
       })}
