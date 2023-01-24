@@ -28,6 +28,8 @@ import { List } from './components/generics/List';
 
 import { RandomNumber } from './components/restriction/RandomNumber';
 
+import { Toast } from './components/template-literals/Toast';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -120,6 +122,8 @@ function App() {
       {/* <RandomNumber value={11} isPositive isNegative isZero /> */}
 
       <RandomNumber value={17} isPositive />
+
+      <Toast position='center' />
     </div>
   );
 }
