@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-cron-job",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cron": "^2.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.0"
+  }
+}
