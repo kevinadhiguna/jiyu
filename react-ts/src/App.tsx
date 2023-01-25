@@ -30,6 +30,8 @@ import { RandomNumber } from './components/restriction/RandomNumber';
 
 import { Toast } from './components/template-literals/Toast';
 
+import { CustomButton } from './components/html/CustomButton';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -124,6 +126,13 @@ function App() {
       <RandomNumber value={17} isPositive />
 
       <Toast position='center' />
+
+      <CustomButton 
+        variant='primary' 
+        onClick={() => console.log('Custom Button clicked')}
+      >
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
