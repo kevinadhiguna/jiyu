@@ -19,3 +19,4 @@ yarn add node-cron
 ## Reference
 
 - [Scheduling Jobs with Node.js - refactoring.io](https://reflectoring.io/schedule-cron-job-in-node/)
+- [How to Schedule a Job in Node Using node-cron](https://www.freecodecamp.org/news/schedule-a-job-in-node-with-nodecron/)
