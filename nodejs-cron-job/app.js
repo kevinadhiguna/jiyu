@@ -23,6 +23,9 @@ const app = express();
 
 cron.addJob('Run a task every second', '* * * * *', tasks.everySecond);
 
+// Use single integer values to populate a chron expression
+cron.addJob('Run a task on 3rd and 17th at 23:59 every month', '59 23 3,17 * *', tasks.certainDates);
+
 const port = config.port || 5050;
 
 app.start(() => {
