@@ -1,3 +1,5 @@
+const { mailDetails } = require('./helper/mail-helper');
+
 const tasks = {
   everySecond: function () {
     console.log('==========');
@@ -15,6 +17,27 @@ const tasks = {
     console.log('==========');
     console.log('A cron job that runs every 20 minutes');
     console.log('==========');
+  },
+
+  mail: {
+    sendSubscriptionMail: function () {
+      let mailTransporter = nodemailer.createTransport({
+        service: config.mail.transporterService,
+        auth: {
+          user: config.mail.transporterAuthUser,
+          pass: config.mail.transporterAuthPassword,
+        },
+      });
+
+      // To-do: move mailTransporter.sendMail() to mail-helper.js, if possible
+      mailTransporter.sendMail(mailDetails, function (err) {
+        if (err) {
+          console.log(`Something went wrong ${err}`);
+        } else {
+          console.log('Email sent succesfully');
+        }
+      });
+    }
   },
 };
 
