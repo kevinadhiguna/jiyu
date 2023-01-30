@@ -29,6 +29,8 @@ cron.addJob('Run a task on 3rd and 17th at 23:59 every month', '59 23 3,17 * *',
 // Use step values to populate a chron expression
 cron.addJob('Run a task every 20 minutes', '*/20 * * * * *', tasks.every20minutes);
 
+cron.addJob('Send an email on 1st and 25th every month', '0 8 1,25 * *', tasks.mail.sendSubscriptionMail);
+
 const port = config.port || 5050;
 
 app.start(() => {
