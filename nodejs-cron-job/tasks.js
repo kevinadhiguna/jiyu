@@ -1,3 +1,5 @@
+const nodemailer = require('nodemailer');
+
 const { mailDetails } = require('./helper/mail-helper');
 const { heap, date, freeMemory } = require('./helper/resource-helper');
 
@@ -44,6 +46,63 @@ const tasks = {
   resource: {
     listResource: function () {
       console.log(`${date}: heap ${heap} & free memory ${freeMemory}`);
+    }
+  },
+
+  population: {
+    scrapeWorldPopulation: async function () {
+      const url = 'https://www.worldometers.info/world-population/';
+
+      console.log(chalk.green('Scraping world population'));
+      const spinner = ora({
+        text: 'Launching puppeteer',
+        color: 'blue',
+        hideCursor: false,
+      }).spin();
+
+      try {
+        const date = new Date();
+        // Launch puppeteer
+        const browser = await puppeteer.launch();
+
+        spinner.text = 'Launching headless browser page';
+        // Launch a headless browser page
+        const newPage = await browser.newPage();
+
+        spinner.text = `Navigating to ${url}`;
+        // Navigate to the URL of the page to be scraped
+        await newPage.goto({
+          waitUntil: 'load',
+          timeout: 0
+        });
+
+        spinner.text = 'Scraping the page';
+        // Start scraping the URL page
+        const digitGroups = await newPage.evaluate(() => {
+          const digitGroupArr = [];
+          const selector = '#maincounter-wrap .maincounter-number .rts-counter span';
+          const digitSpans = document.querySelectorAll(selector);
+          digitSpans.forEach(span => {
+            if (!Nan(parseInt(span.textContent))) {
+              digitGroupArr.push(span.textContent);
+            }
+          });
+          return JSON.stringify(digitGroupArr);
+        });
+
+        spinner.text = 'Closing headless browser';
+        await browser.close();
+
+        spinner.succeed(`Page scraping succesful after ${Date.now() - date} ms`);
+        spinner.clear();
+        console.log(
+          chalk.yellow.bold(`World population on ${new Date().toISOString()}:`),
+          chalk.blue.bold(JSON.parse(digitGroups).join(","))
+        );
+      } catch (error) {
+        spinner.fail({ text: 'Scraping failed' });
+        spinner.clear();
+      }
     }
   },
 };
