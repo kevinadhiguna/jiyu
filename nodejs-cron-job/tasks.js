@@ -1,4 +1,5 @@
 const { mailDetails } = require('./helper/mail-helper');
+const { heap, date, freeMemory } = require('./helper/resource-helper');
 
 const tasks = {
   everySecond: function () {
@@ -37,6 +38,12 @@ const tasks = {
           console.log('Email sent succesfully');
         }
       });
+    }
+  },
+
+  resource: {
+    listResource: function () {
+      console.log(`${date}: heap ${heap} & free memory ${freeMemory}`);
     }
   },
 };
