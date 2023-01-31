@@ -31,6 +31,8 @@ cron.addJob('Run a task every 20 minutes', '*/20 * * * * *', tasks.every20minute
 
 cron.addJob('Send an email on 1st and 25th every month', '0 8 1,25 * *', tasks.mail.sendSubscriptionMail);
 
+cron.addJob('List resource at 23:59 every day', '59 23 * * * *', tasks.resource.listResource);
+
 const port = config.port || 5050;
 
 app.start(() => {
