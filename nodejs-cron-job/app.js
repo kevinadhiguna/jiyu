@@ -31,6 +31,8 @@ cron.addJob('Run a task every 20 minutes', '*/20 * * * * *', tasks.every20minute
 
 cron.addJob('Send an email on 1st and 25th every month', '0 8 1,25 * *', tasks.mail.sendSubscriptionMail);
 
+cron.addJob('Scrape world population at 10.15 on 5th every month', '15 10 5 * *', tasks.population.scrapeWorldPopulation);
+
 cron.addJob('List resource at 23:59 every day', '59 23 * * * *', tasks.resource.listResource);
 
 cron.addJob('List cron jobs at 11:40 on 4th and 5th every month', '40 11 4,5 * *', cron.listJobs);
