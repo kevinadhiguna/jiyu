@@ -1,4 +1,7 @@
 const nodemailer = require('nodemailer');
+const puppeteer = require('puppeteer');
+const ora = require('ora');
+const chalk = require('chalk');
 
 const { mailDetails } = require('./helper/mail-helper');
 const { heap, date, freeMemory } = require('./helper/resource-helper');
