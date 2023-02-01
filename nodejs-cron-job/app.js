@@ -33,6 +33,8 @@ cron.addJob('Send an email on 1st and 25th every month', '0 8 1,25 * *', tasks.m
 
 cron.addJob('List resource at 23:59 every day', '59 23 * * * *', tasks.resource.listResource);
 
+cron.addJob('List cron jobs at 11:40 on 4th and 5th every month', '40 11 4,5 * *', cron.listJobs);
+
 const port = config.port || 5050;
 
 app.start(() => {
