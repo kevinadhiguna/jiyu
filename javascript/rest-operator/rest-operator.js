@@ -9,3 +9,14 @@ function summon(greeting1, greeting2, ...rest) {
 }
 
 summon("hi", "hola", "konnichiwa", "namaste");
+
+// -- Outside of a function --
+const { spain, england, ...otherNations } = {
+  spain: "FC Barcha",
+  england: "Manshine City",
+  italy: "Ubers",
+  france: "PXG",
+  germany: "Bascard Munchen"
+};
+
+console.log("otherNations :", otherNations); // { italy: 'Ubers', france: 'PXG', germany: 'Bascard Munchen' }
