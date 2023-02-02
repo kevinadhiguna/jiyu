@@ -83,3 +83,22 @@ let info = [
 // Returns an object created by key-value entries for properties and methods (reverse of 'Object.entries()')
 console.log("Returns an object from an iterable (array, map, etc.) :", Object.fromEntries(info));
 // Returns an object from an iterable (array, map, etc.) : { name: 'Edgar Conan', profession: 'detective', hobby: 'football' }
+
+let hero = {
+  // -- Method before ES6 (still valid in ES6) --
+  sayHello: function () {
+    console.log('Hello from hero!');    
+  },
+  // -- Method prior to ES6 --
+  greeting() {
+    console.log('Greeting from hero!');
+  },
+  // -- Method name can be separated with a space as long as it is within quotes --
+  'favorite city'() {
+    console.log('My favorite city is Gotham city');
+  },
+}
+
+hero.sayHello(); // Hello from hero!
+hero.greeting(); // Hi, I am a superhero
+hero["favorite city"](); // My favorite city is Gotham city
