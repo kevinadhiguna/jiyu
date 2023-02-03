@@ -6,6 +6,8 @@ const chalk = require('chalk');
 const { mailDetails } = require('./helper/mail-helper');
 const { heap, date, freeMemory } = require('./helper/resource-helper');
 
+// Note: function/variable name should be improved...
+
 const tasks = {
   everySecond: function () {
     console.log('==========');
