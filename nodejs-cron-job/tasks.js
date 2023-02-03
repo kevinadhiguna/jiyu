@@ -25,6 +25,12 @@ const tasks = {
     console.log('==========');
   },
 
+  every_minute15th_from1pmThrough3pmOnThe3rd: function () {
+    console.log('==========');
+    console.log('A cron job that runs at 1:15PM, 2:15PM, and 3:15PM on the 3rd every month');
+    console.log('==========');
+  },
+
   mail: {
     sendSubscriptionMail: function () {
       let mailTransporter = nodemailer.createTransport({
