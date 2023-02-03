@@ -18,6 +18,16 @@ console.log("i :", i); // 2
 console.log("j :", j); // 10
 console.log("...l :", ...l); // [14, 16]
 
+function takeOns() {
+  return [45, 21, [2, 12]];
+}
+
+let [noel, lavi, [blake, julien]] = takeOns();
+console.log("noel :", noel); // 45
+console.log("lavi :", lavi); // 21
+console.log("blake :", blake); // 2
+console.log("julien :", julien); // 12
+
 // -----
 
 let x, y = [43, 23];
