@@ -62,6 +62,14 @@ console.log("char2 (after swap) :", char2); // silva
 
 // -----
 
+let num1, num2;
+[num1 = 100, num2 = 101] = [];
+
+console.log("num1 :", num1); // 100
+console.log("num2 :", num2); // 101
+
+// -----
+
 let x, y = [43, 23];
 console.log("x :", x); // undefined
 console.log("y :", y); // [43, 23]
