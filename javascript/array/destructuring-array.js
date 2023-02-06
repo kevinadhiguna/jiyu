@@ -30,6 +30,26 @@ console.log("julien :", julien); // 12
 
 // -----
 
+// Practical: A function that returns multiple values
+function getStats(kazu, suuji) {
+  return [
+    kazu + suuji,
+    kazu - suuji,
+    kazu * suuji,
+    kazu / suuji,
+    kazu % suuji,
+  ];
+}
+
+let [sum, subtract, times, division, mod] = getStats(200, 10);
+console.log("sum :", sum); // 210
+console.log("subtract :", subtract); // 190
+console.log("times :", times); // 2000
+console.log("division :", division); // 20
+console.log("mod :", mod); // 0
+
+// -----
+
 let x, y = [43, 23];
 console.log("x :", x); // undefined
 console.log("y :", y); // [43, 23]
