@@ -50,6 +50,18 @@ console.log("mod :", mod); // 0
 
 // -----
 
+// Practical: Swapping variables
+let char1 = "silva";
+let char2 = "cavazzo";
+console.log("char1 (before swap) :", char1); // silva
+console.log("char2 (before swap) :", char2); // cavazzo
+
+[char1, char2] = [char2, char1];
+console.log("char1 (after swap) :", char1); // cavazzo
+console.log("char2 (after swap) :", char2); // silva
+
+// -----
+
 let x, y = [43, 23];
 console.log("x :", x); // undefined
 console.log("y :", y); // [43, 23]
