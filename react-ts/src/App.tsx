@@ -36,6 +36,8 @@ import { CustomButton } from './components/html/CustomButton';
 
 import { Text } from './components/polymorphic/Text';
 
+import { ReducerForm } from './components/state/ReducerForm';
+
 function App() {
   const personName = {
     first: 'Isagi',
@@ -141,6 +143,8 @@ function App() {
       <Text as={'h1'} size='lg'>Heading</Text>
       <Text as={'p'} size='md'>Paragraph</Text>
       <Text as={'label'} htmlFor='someId' size='sm' color='secondary'>Label</Text>
+
+      <ReducerForm />
     </div>
   );
 }
