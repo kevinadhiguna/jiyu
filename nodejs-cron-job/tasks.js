@@ -33,6 +33,12 @@ const tasks = {
     console.log('==========');
   },
 
+  everydayAt_511_533_555AM: function () {
+    console.log('==========');
+    console.log('A cron job that runs everyday at 5:11AM, 5:33AM, and 5:55');
+    console.log('==========');
+  },
+
   mail: {
     sendSubscriptionMail: function () {
       let mailTransporter = nodemailer.createTransport({
