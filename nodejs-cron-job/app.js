@@ -35,6 +35,9 @@ cron.addJob('Run a task at :11, :33, and :55 during 5am', '11,33,55 5 * * *', ta
 // Use step values to populate a chron expression
 cron.addJob('Run a task every 20 minutes', '*/20 * * * * *', tasks.every20minutes);
 
+// Use names to populate a chron expression
+cron.addJob('Run a task every minute on Sundays in June and October', '* * * June,October Sunday', tasks.everyMinuteOnSundaysInJuneAndOctober);
+
 cron.addJob('Send an email on 1st and 25th every month', '0 8 1,25 * *', tasks.mail.sendSubscriptionMail);
 
 cron.addJob('Scrape world population at 10.15 on 5th every month', '15 10 5 * *', tasks.population.scrapeWorldPopulation);
