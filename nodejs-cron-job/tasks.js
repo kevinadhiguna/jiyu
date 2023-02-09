@@ -39,6 +39,12 @@ const tasks = {
     console.log('==========');
   },
 
+  everyMinuteOnSundaysInJuneAndOctober: function () {
+    console.log('==========');
+    console.log('A cron job that runs every minute on Sundays in June and October');
+    console.log('==========');
+  },
+
   mail: {
     sendSubscriptionMail: function () {
       let mailTransporter = nodemailer.createTransport({
