@@ -21,3 +21,15 @@ console.log("lastname_afterES6 :", lastname_afterES6); // asylum
 let { firstname, lastname } = person;
 console.log("firstname :", firstname); // arkham
 console.log("lastname :", lastname); // asylum
+
+// -----
+
+let club = {
+  spain: "real madrid",
+  italy: "juventus fc",
+};
+
+let { spain, germany, italy } = club;
+console.log("spain :", spain); // real madrid
+console.log("germany :", germany); // undefined
+console.log("italy :", italy); // juventus fc
