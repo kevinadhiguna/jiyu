@@ -49,3 +49,18 @@ console.log("nickName :", nickName); // 'JD'
 console.log("age :", age); // 28
 
 // Notice that age is equal to 28 even though it is initiated as 18
+
+// -----
+
+let nestedObj = {
+  id: 505,
+  amigo: {
+    address: "prosperity street",
+    email: "randomjoe@nestedobj.com",
+  },
+};
+
+let { id, amigo: { address, email } } = nestedObj;
+
+console.log("address :", address); // prosperity street
+console.log("email :", email); // randomjoe@nestedobj.com
