@@ -33,3 +33,19 @@ let { spain, germany, italy } = club;
 console.log("spain :", spain); // real madrid
 console.log("germany :", germany); // undefined
 console.log("italy :", italy); // juventus fc
+
+// -----
+
+let friend = {
+  firstName: 'John',
+  lastName: 'Doe',
+  middleName: 'L.',
+  currentAge: 28,
+};
+
+let { firstName, lastName, middleName = '', nickName = 'JD', currentAge: age = 18 } = friend;
+console.log("middleName :", middleName); // 'L.'
+console.log("nickName :", nickName); // 'JD'
+console.log("age :", age); // 28
+
+// Notice that age is equal to 28 even though it is initiated as 18
