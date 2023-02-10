@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn tsc",
     "start": "node dist/index.js",
-    "dev": "concurrently \"yarn tsc --watch\" \"nodemon dist/index.js\""
+    "dev": "concurrently \"yarn tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "dependencies": {
     "dotenv": "^16.0.3",
