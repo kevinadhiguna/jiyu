@@ -1,4 +1,5 @@
-import { ITodos, IAction } from '../types/ReducerTodos.type';
+import { useReducer } from 'react';
+import { ITodos, IAction, ITodo } from '../types/ReducerTodos.type';
 
 const initialTodos: ITodos = [
   {
@@ -27,4 +28,30 @@ function reducer(state: ITodos, action: IAction) {
     default:
       return state;
   }
+}
+
+export function ReducerTodos() {
+  const [todos, dispatch] = useReducer(reducer, initialTodos);
+
+  function handleComplete(todo: ITodo): void {
+    dispatch({ type: "COMPLETE", id: todo.id });
+  }
+
+  return(
+    <>
+      {todos.map(todo => (
+        <div key={todo.id}>
+          <label style={ todo.complete ? {backgroundColor: 'green'} : {backgroundColor: 'orange'} }>
+            <input 
+              type="checkbox" 
+              checked={todo.complete} 
+              // onChange={handleComplete(todo)} // <- Error: Type 'void' is not assignable to type '((event: ChangeEvent<HTMLInputElement>) => void)
+              onChange={() => handleComplete(todo)} 
+            />
+            {todo.title}
+          </label>
+        </div>
+      ))}
+    </>
+  );
 }
