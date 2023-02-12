@@ -6,3 +6,9 @@ export interface ITodo {
 
 // an Array of Objects (for more: https://stackoverflow.com/questions/25469244/how-can-i-define-an-interface-for-an-array-of-objects)
 export interface ITodos extends Array<ITodo> {}
+
+export interface IAction {
+  id: number;
+  // type: string;
+  type: "COMPLETE";
+}
