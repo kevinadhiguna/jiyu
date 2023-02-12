@@ -1,4 +1,4 @@
-import { ITodos } from '../types/ReducerTodos.type';
+import { ITodos, IAction } from '../types/ReducerTodos.type';
 
 const initialTodos: ITodos = [
   {
@@ -12,3 +12,19 @@ const initialTodos: ITodos = [
     complete: false,
   },
 ];
+
+function reducer(state: ITodos, action: IAction) {
+  switch (action.type) {
+    case "COMPLETE":
+      return state.map(todo => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: !todo.complete };
+        } else {
+          return todo;
+        }
+      });
+  
+    default:
+      return state;
+  }
+}
