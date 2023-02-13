@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { ITodos, IAction, ITodo } from '../types/ReducerTodos.type';
+import { ITodos, IAction, ITodo } from '../interfaces/ReducerTodos.interface';
 
 const initialTodos: ITodos = [
   {
