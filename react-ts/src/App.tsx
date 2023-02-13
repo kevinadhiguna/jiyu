@@ -38,6 +38,7 @@ import { Text } from './components/polymorphic/Text';
 
 import { ReducerForm } from './components/state/ReducerForm';
 import { ReducerTodos } from './components/state/ReducerTodos';
+import { ReducerInput } from './components/state/ReducerInput';
 
 function App() {
   const personName = {
@@ -148,6 +149,8 @@ function App() {
       <ReducerForm />
 
       <ReducerTodos />
+
+      <ReducerInput />
     </div>
   );
 }
