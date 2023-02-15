@@ -26,7 +26,7 @@ type ActionType =
   | { type: 'SET_CONTEXT', payload: string }
   | { type: 'CLEAR_CONTEXT' };
 
-// (3)
+// (3) (But this forces one to include 'payload' property)
 // Reference: https://stackoverflow.com/a/75458439/14418391
 export interface IAction2 extends Omit<ISetContextAction, 'type'>, Omit<IClearContextAction, 'type'> {
   type: 'SET_CONTEXT' | 'CLEAR_CONTEXT';
