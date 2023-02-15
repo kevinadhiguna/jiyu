@@ -20,3 +20,8 @@ export interface IAction {
   type: 'SET_CONTEXT' | 'CLEAR_CONTEXT';
   payload?: string;
 }
+
+// (2)
+type ActionType = 
+  | { type: 'SET_CONTEXT', payload: string }
+  | { type: 'CLEAR_CONTEXT' };
