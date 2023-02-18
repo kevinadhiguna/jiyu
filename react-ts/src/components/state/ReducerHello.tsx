@@ -19,3 +19,5 @@ function reducer(context: IContext, action: ActionType) {
     }
   }
 }
+
+const initialContext: IContext = { input: 'World' };
