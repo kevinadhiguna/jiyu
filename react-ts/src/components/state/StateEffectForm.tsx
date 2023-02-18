@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import { Form, Input, Button } from 'antd';
 
 export function StateEffectForm() {
+  const [name, setName] = useState<string>('');
+  const [address, setAddress] = useState<string>('');
+
   return(
     <Form>
       <Form.Item>
