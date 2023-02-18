@@ -26,11 +26,19 @@ const initialContext: IContext = { input: 'World' };
 export function ReducerHello() {
   const [context, dispatch] = useReducer(reducer, initialContext);
 
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    dispatch({ type: 'SET_CONTEXT', payload: e.target.value });
+  }
+
+  function handleClearInput() {
+    dispatch({ type: 'CLEAR_CONTEXT' });
+  }
+
   return(
     <>
       <h1>Hello {context.input}</h1>
-      <input type="text" value={context.input} />
-      <button>Clear</button>
+      <input type="text" value={context.input} onChange={handleInputChange} />
+      <button onClick={handleClearInput}>Clear</button>
     </>
   );
 }
