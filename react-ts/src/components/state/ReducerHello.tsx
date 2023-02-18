@@ -1,3 +1,4 @@
+import React, { useReducer } from 'react';
 import { IContext, ActionType } from '../interfaces/ReducerHello.interface';
 
 function reducer(context: IContext, action: ActionType) {
@@ -21,3 +22,15 @@ function reducer(context: IContext, action: ActionType) {
 }
 
 const initialContext: IContext = { input: 'World' };
+
+export function ReducerHello() {
+  const [context, dispatch] = useReducer(reducer, initialContext);
+
+  return(
+    <>
+      <h1>Hello {context.input}</h1>
+      <input type="text" value={context.input} />
+      <button>Clear</button>
+    </>
+  );
+}
