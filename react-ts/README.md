@@ -7,6 +7,7 @@ Learn ReactJS powered by TypeScript.
 ## References
 
 - [React TypeScript Tutorial for Beginners by Codevolution](https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK)
+- [React Hooks With Typescript: Use State And Use Effect by Lucas White - CodeSera](https://codersera.com/blog/react-hooks-with-typescript-use-state-and-use-effect-in-2020/)
 
 <br />
 
