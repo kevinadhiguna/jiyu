@@ -14,7 +14,7 @@ export function StateEffectForm() {
   }
 
   return(
-    <Form>
+    <Form layout='inline'>
       <Form.Item>
         <Input placeholder='Name' onChange={handleNameChange}>Name</Input>
         <Input placeholder='Address' onChange={handleAddressChange}>Address</Input>
