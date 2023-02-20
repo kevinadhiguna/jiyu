@@ -19,6 +19,13 @@ export function StateEffectForm() {
     console.log('address :', address);
   }
 
+  useEffect(() => {
+    console.log('Component mounted');
+    return(() => {
+      console.log('Component will be unmounted');
+    });
+  }, []);
+
   return(
     <Form layout='inline' onSubmitCapture={handleFormSubmit}>
       <Form.Item>
