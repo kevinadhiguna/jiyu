@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
 
 export function StateEffectForm() {
@@ -13,8 +13,14 @@ export function StateEffectForm() {
     setAddress(e.target.value);
   }
 
+  function handleFormSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    console.log('name :', name);
+    console.log('address :', address);
+  }
+
   return(
-    <Form layout='inline'>
+    <Form layout='inline' onSubmitCapture={handleFormSubmit}>
       <Form.Item>
         <Input placeholder='Name' onChange={handleNameChange}>Name</Input>
         <Input placeholder='Address' onChange={handleAddressChange}>Address</Input>
