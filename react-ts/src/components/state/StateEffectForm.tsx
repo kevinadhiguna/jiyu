@@ -35,6 +35,10 @@ export function StateEffectForm() {
     console.log(`Name changed : ${name}`);
   }, [name]);
 
+  useEffect(() => {
+    console.log(`Address changed : ${address}`);
+  }, [address]);
+
   return(
     <Form layout='inline' onSubmitCapture={handleFormSubmit}>
       <Form.Item>
