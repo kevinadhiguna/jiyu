@@ -26,6 +26,11 @@ export function StateEffectForm() {
     });
   }, []);
 
+  useEffect(() => {
+    console.log(`Name (useEffect without dependency array) : ${name}`);
+    console.log(`Address (useEffect without dependency array) : ${address}`);
+  });
+
   return(
     <Form layout='inline' onSubmitCapture={handleFormSubmit}>
       <Form.Item>
