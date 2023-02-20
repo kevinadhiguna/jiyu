@@ -40,6 +40,7 @@ import { ReducerForm } from './components/state/ReducerForm';
 import { ReducerTodos } from './components/state/ReducerTodos';
 import { ReducerInput } from './components/state/ReducerInput';
 import { ReducerHello } from './components/state/ReducerHello';
+import { StateEffectForm } from './components/state/StateEffectForm';
 
 function App() {
   const personName = {
@@ -154,6 +155,8 @@ function App() {
       <ReducerInput />
 
       <ReducerHello />
+
+      <StateEffectForm />
     </div>
   );
 }
