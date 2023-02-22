@@ -41,6 +41,7 @@ import { ReducerTodos } from './components/state/ReducerTodos';
 import { ReducerInput } from './components/state/ReducerInput';
 import { ReducerHello } from './components/state/ReducerHello';
 import { StateEffectForm } from './components/state/StateEffectForm';
+import { RefCounter } from './components/state/RefCounter';
 
 function App() {
   const personName = {
@@ -157,6 +158,8 @@ function App() {
       <ReducerHello />
 
       <StateEffectForm />
+
+      <RefCounter />
     </div>
   );
 }
