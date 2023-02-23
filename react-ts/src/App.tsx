@@ -42,6 +42,7 @@ import { ReducerInput } from './components/state/ReducerInput';
 import { ReducerHello } from './components/state/ReducerHello';
 import { StateEffectForm } from './components/state/StateEffectForm';
 import { RefCounter } from './components/state/RefCounter';
+import { RefFocusElement } from './components/state/RefFocusElement';
 
 function App() {
   const personName = {
@@ -160,6 +161,8 @@ function App() {
       <StateEffectForm />
 
       <RefCounter />
+
+      <RefFocusElement />
     </div>
   );
 }
