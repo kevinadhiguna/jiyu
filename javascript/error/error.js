@@ -6,3 +6,5 @@ try {
 } catch (error) {
   console.error("Error :", error.message); // Error : Sorry, an error happened...
 }
+
+// Reference: https://exercism.org/tracks/javascript/concepts/errors
