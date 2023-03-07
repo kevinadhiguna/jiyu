@@ -74,6 +74,7 @@ This is a repo for... whatever 🤷
 | 5 | reactjs-count3r | A counter app |  |
 | 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
 | 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
+| 8 | react-ts | React.js powered by TypeScript. |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
 
