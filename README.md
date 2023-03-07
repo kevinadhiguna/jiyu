@@ -28,6 +28,7 @@ This is a repo for... whatever 🤷
 | 16 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
 | 17 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 | 18 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
+| 19 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
 
 <br />
 
