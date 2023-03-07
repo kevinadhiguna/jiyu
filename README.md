@@ -34,8 +34,8 @@ This is a repo for... whatever 🤷
 ### AWS
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | AWS Lambda - Python | Execute an SQL query to AWS RDS (MySQL), powered by Python. |  |
-| 2 | AWS - LocalStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
+| 1 | aws-lambda-py | Execute an SQL query to AWS RDS (MySQL), powered by Python. |  |
+| 2 | aws-localStack | AWS simulation in local machine, powered by LocalStack. | [LocalStack - GitHub](https://github.com/localstack/localstack) |
 
 <br />
 
@@ -57,9 +57,9 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | Funworks | A NuxtJS page. | 🚧 Under development... |
-| 2 | Nuxt2r | NuxtJS version 2. | 🚧 Under development... |
-| 3 | Nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. | 🚧 Under development... |
+| 1 | funworks | A NuxtJS page. | 🚧 Under development... |
+| 2 | nuxt2r | NuxtJS version 2. | 🚧 Under development... |
+| 3 | nuxt3r | NuxtJS version 3, including docker resources such as `Dockerfile` and `docker-compose.yml`. | 🚧 Under development... |
 
 <br />
 
@@ -73,7 +73,7 @@ This is a repo for... whatever 🤷
 | 4 | react-fluentui-ts |  |  |
 | 5 | reactjs-count3r | A counter app |  |
 | 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
-| 7 | Electricart - React - Tailwind | Homepage of a website named Electricart. |  |
+| 7 | electricart-react-tailwind | Homepage of a website named Electricart. |  |
 | 8 | react-ts | React.js powered by TypeScript. |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
@@ -103,11 +103,11 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | Ant Design Pro v5 | A ReactJS framework created by Ant Group. | [Ant Design - website](https://ant.design/) |
-| 2 | JavaScript | JavaScript collection that might be useful (read: cheatsheet). |  |
-| 3 | TypeScript | TypeScript program. Running on `ts-node`. |  |
-| 4 | Fastify - CRUD API | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
-| 5 | NodeJS - MySQL | A workspace to connect NodeJS to MySQL. |  |
+| 1 | antdpro-v5 | A ReactJS framework created by Ant Group. | [Ant Design - website](https://ant.design/) |
+| 2 | javaScript | JavaScript collection that might be useful (read: cheatsheet). |  |
+| 3 | typeScript | TypeScript program. Running on `ts-node`. |  |
+| 4 | fastify-crud-api | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
+| 5 | nodejs-mysql | A workspace to connect NodeJS to MySQL. |  |
 | 6 | mern.io | An application powered by MERN stack.  | 🚧 Front-End is on the way.. |
 | 7 | ip-getter | Get user IP address.  |  |
 | 8 | date-fns | Play with date in JavaScript.  |  |
@@ -119,9 +119,9 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | PHP - Apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
-| 2 | PHP | An attempt to run PHP CodeIgniter with dockerized-environment. |  |
-| 3 | PHPMyAdmin - MySQL | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
+| 1 | php-apache | A dockerized-environment of PHP, backed by Apache web server. [Using Docker] |  |
+| 2 | php-codeigniter | An attempt to run PHP CodeIgniter with dockerized-environment. |  |
+| 3 | phpmyadmin-mysql | docker-compose of PHPMyAdmin and MySQL. Able to initialize a database as well. | No need to login to container to import an sql file. |
 
 <br />
 
