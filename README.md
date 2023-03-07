@@ -10,17 +10,17 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | C++ | Some C++ program. |  |
-| 2 | Elastic Search - Kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
-| 3 | Filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
-| 4 | GitHub Workflow - Slack Notification | Notify you whether if a workflow is successful or not. |  |
-| 5 | GitPod Workspace full | (To be added...) |  |
-| 6 | Golang | A directory that contains Golang program. |  |
-| 7 | Java | A number of program to practice OOP. |  |
-| 8 | Odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
-| 9 | Python | Meant to be filled with fun Python scripts, but... |  |
-| 10 | Rsync over SSH - from GitHub to Cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
-| 11 | Rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
+| 1 | cpp | Some C++ program. |  |
+| 2 | elasticsearch-kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
+| 3 | filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
+| 4 | gitHub -workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
+| 5 | gitPod-workspace-full | (To be added...) |  |
+| 6 | golang | A directory that contains Golang program. |  |
+| 7 | java | A number of program to practice OOP. |  |
+| 8 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
+| 9 | python | Meant to be filled with fun Python scripts, but... |  |
+| 10 | rsync-over-ssh-gitHub-to-cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
+| 11 | rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
 | 12 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
 | 13 | gitlab-docker | GitLab in a docker container.  |  |
 | 14 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
