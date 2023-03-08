@@ -28,6 +28,7 @@ This is a repo for... whatever 🤷
 | 16 | appsmith | Build internal application.  | https://www.appsmith.com/ |
 | 17 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
 | 18 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
+| 19 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
 
 <br />
 
