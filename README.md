@@ -29,6 +29,7 @@ This is a repo for... whatever 🤷
 | 17 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
 | 18 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
 | 19 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
+| 20 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
 
 <br />
 
