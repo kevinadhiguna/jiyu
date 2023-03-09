@@ -126,6 +126,14 @@ This is a repo for... whatever 🤷
 
 <br />
 
+### Angular.js (not Angular)
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | ingularjs | ingularjs = Intorduction to Angular.js | [Angular.js](https://angularjs.org/) (support has officially ended on January 2022) |
+
+<br />
+
 ### PHP
 
 | No. | Project | Description | Notes |
