@@ -15,7 +15,6 @@ This is a repo for... whatever 🤷
 | 3 | filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
 | 4 | github-workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
 | 5 | gitpod-workspace-full | (To be added...) |  |
-| 6 | golang | A directory that contains Golang program. |  |
 | 7 | java | A number of program to practice OOP. |  |
 | 8 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
 | 9 | python | Meant to be filled with fun Python scripts, but... |  |
@@ -115,6 +114,14 @@ This is a repo for... whatever 🤷
 | 7 | ip-getter | Get user IP address.  |  |
 | 8 | date-fns | Play with date in JavaScript.  |  |
 | 9 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
+
+<br />
+
+### Golang
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | golang | A directory that contains Golang program. |  |
 
 <br />
 
