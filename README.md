@@ -114,6 +114,7 @@ This is a repo for... whatever 🤷
 | 7 | ip-getter | Get user IP address.  |  |
 | 8 | date-fns | Play with date in JavaScript.  |  |
 | 9 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
+| 10 | javascript-DOM | Get to know Document Object Model (DOM)  |  |
 
 <br />
 
