@@ -13,8 +13,8 @@ This is a repo for... whatever 🤷
 | 1 | cpp | Some C++ program. |  |
 | 2 | elasticsearch-kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
 | 3 | filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
-| 4 | gitHub -workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
-| 5 | gitPod-workspace-full | (To be added...) |  |
+| 4 | github-workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
+| 5 | gitpod-workspace-full | (To be added...) |  |
 | 6 | golang | A directory that contains Golang program. |  |
 | 7 | java | A number of program to practice OOP. |  |
 | 8 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
