@@ -106,8 +106,8 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | antdpro-v5 | A ReactJS framework created by Ant Group. | [Ant Design - website](https://ant.design/) |
-| 2 | javaScript | JavaScript collection that might be useful (read: cheatsheet). |  |
-| 3 | typeScript | TypeScript program. Running on `ts-node`. |  |
+| 2 | javascript | JavaScript collection that might be useful (read: cheatsheet). |  |
+| 3 | typescript | TypeScript program. Running on `ts-node`. |  |
 | 4 | fastify-crud-api | A basic CRUD API with Fastify, a NodeJS framework. | [Fastify crash course - Traversy Media](https://youtu.be/Lk-uVEVGxOA) |
 | 5 | nodejs-mysql | A workspace to connect NodeJS to MySQL. |  |
 | 6 | mern.io | An application powered by MERN stack.  | 🚧 Front-End is on the way.. |
