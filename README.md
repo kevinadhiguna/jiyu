@@ -115,6 +115,7 @@ This is a repo for... whatever 🤷
 | 8 | date-fns | Play with date in JavaScript.  |  |
 | 9 | mailgun-nodemailer | Send email using Nodemailer via Mailgun service. | Reference: [Mailgun Nodemailer - StackOverflow](https://stackoverflow.com/a/29686158) |
 | 10 | javascript-DOM | Get to know Document Object Model (DOM)  |  |
+| 11 | javascript-event-handler | Some of JavaScript event handler examples  |  |
 
 <br />
 
