@@ -31,6 +31,7 @@ This is a repo for... whatever 🤷
 | 20 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
 | 21 | docker-timezone-lists | Timezones that can be set in Docker | [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html) |
 | 22 | krakend | Open source API Gateway | [KrakenD](https://krakend.io) |
+| 23 | krakend-playground | KrakenD Playground |  |
 
 <br />
 
