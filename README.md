@@ -79,6 +79,7 @@ This is a repo for... whatever 🤷
 | 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
 | 7 | electricart-react-tailwind | Homepage of a website named Electricart. |  |
 | 8 | react-ts | React.js powered by TypeScript. |  |
+| 9 | kyuri-antd | QR code generator powered by Ant Design |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
 
