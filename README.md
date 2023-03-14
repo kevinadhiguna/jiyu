@@ -73,12 +73,11 @@ This is a repo for... whatever 🤷
 | 1 | kyuri | QR code generator |  |
 | 2 | react-fluentui |  |  |
 | 3 | react-fluentui-ts |  |  |
-| 4 | react-fluentui-ts |  |  |
-| 5 | reactjs-count3r | A counter app |  |
-| 6 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
-| 7 | electricart-react-tailwind | Homepage of a website named Electricart. |  |
-| 8 | react-ts | React.js powered by TypeScript. |  |
-| 9 | kyuri-antd | QR code generator powered by Ant Design |  |
+| 4 | reactjs-count3r | A counter app |  |
+| 5 | reactjs-map-array-of-objects | Demo of mapping a sample data into a table |  |
+| 6 | electricart-react-tailwind | Homepage of a website named Electricart. |  |
+| 7 | react-ts | React.js powered by TypeScript. |  |
+| 8 | kyuri-antd | QR code generator powered by Ant Design |  |
 
 - React-realted Ant Design Pro, MERN stack, etc. which are not "pure" React.js do not count :)
 
