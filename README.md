@@ -17,21 +17,20 @@ This is a repo for... whatever 🤷
 | 5 | gitpod-workspace-full | (To be added...) |  |
 | 7 | java | A number of program to practice OOP. |  |
 | 8 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
-| 9 | python | Meant to be filled with fun Python scripts, but... |  |
-| 10 | rsync-over-ssh-gitHub-to-cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
-| 11 | rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
-| 12 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
-| 13 | gitlab-docker | GitLab in a docker container.  |  |
-| 14 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
-| 15 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
-| 16 | appsmith | Build internal application.  | https://www.appsmith.com/ |
-| 17 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
-| 18 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
-| 19 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
-| 20 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
-| 21 | docker-timezone-lists | Timezones that can be set in Docker | [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html) |
-| 22 | krakend | Open source API Gateway | [KrakenD](https://krakend.io) |
-| 23 | krakend-playground | KrakenD Playground |  |
+| 9 | rsync-over-ssh-gitHub-to-cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
+| 10 | rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
+| 11 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
+| 12 | gitlab-docker | GitLab in a docker container.  |  |
+| 13 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
+| 14 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
+| 15 | appsmith | Build internal application.  | https://www.appsmith.com/ |
+| 16 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
+| 17 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
+| 18 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
+| 19 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
+| 20 | docker-timezone-lists | Timezones that can be set in Docker | [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html) |
+| 21 | krakend | Open source API Gateway | [KrakenD](https://krakend.io) |
+| 22 | krakend-playground | KrakenD Playground |  |
 
 <br />
 
@@ -142,6 +141,14 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | ingularjs | ingularjs = Intorduction to Angular.js | [Angular.js](https://angularjs.org/) (support has officially ended on January 2022) |
+
+<br />
+
+### Python
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | python | Meant to be filled with fun Python scripts, but... |  |
 
 <br />
 
