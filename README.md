@@ -149,6 +149,7 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | python | Meant to be filled with fun Python scripts, but... |  |
+| 2 | python-oop | Implementation of Object Oriented Programming with Python |  |
 
 <br />
 
