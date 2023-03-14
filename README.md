@@ -124,6 +124,7 @@ This is a repo for... whatever 🤷
 | 13 | javascript-quiz | Some of JavaScript questions  |  |
 | 14 | nodejs | Utility functions powered by JavaScript and Node.js   |  |
 | 15 | nodejs-cron-job | Demonstrate how Node.js cron jobs take place   | [kelektiv/node-cron](https://github.com/kelektiv/node-cron) |
+| 16 | nodejs-express-ts | Express.js + TypeScript |  |
 
 <br />
 
