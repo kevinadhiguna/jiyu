@@ -152,6 +152,14 @@ This is a repo for... whatever 🤷
 
 <br />
 
+### HTML/CSS
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | spoiler | HTML/CSS-powered spoiler page |  |
+
+<br />
+
 ### PHP
 
 | No. | Project | Description | Notes |
