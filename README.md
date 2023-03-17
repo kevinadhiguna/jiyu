@@ -10,26 +10,25 @@ This is a repo for... whatever 🤷
 
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
-| 1 | cpp | Some C++ program. |  |
-| 2 | elasticsearch-kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
-| 3 | filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
-| 4 | github-workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
-| 5 | gitpod-workspace-full | (To be added...) |  |
-| 6 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
-| 7 | rsync-over-ssh-gitHub-to-cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
-| 8 | rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
-| 9 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
-| 10 | gitlab-docker | GitLab in a docker container.  |  |
-| 11 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
-| 12 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
-| 13 | appsmith | Build internal application.  | https://www.appsmith.com/ |
-| 14 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
-| 15 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
-| 16 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
-| 17 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
-| 18 | docker-timezone-lists | Timezones that can be set in Docker | [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html) |
-| 19 | krakend | Open source API Gateway | [KrakenD](https://krakend.io) |
-| 20 | krakend-playground | KrakenD Playground |  |
+| 1 | elasticsearch-kibana | A logging utility. [Using Docker] | [ElasticSearch x docker-compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html#run-stack-docker) |
+| 2 | filebeat | A logging utility. [Using Docker] | [Filebeat - website](https://www.elastic.co/beats/filebeat) |
+| 3 | github-workflow-slack-notification | Notify you whether if a workflow is successful or not. |  |
+| 4 | gitpod-workspace-full | (To be added...) |  |
+| 5 | odoo | An ERP solution (it is said so). [Using Docker] | [Odoo - website](https://www.odoo.com/) |
+| 6 | rsync-over-ssh-gitHub-to-cpanel | Tired of importing files with FTP? Try syncing your GitHub repo with the help of Rsync. | GitHub Action is required. |
+| 7 | rundeck | Rundeck is a job scheduler and automation platform. Run it with MySQL, PostgreSQL, or even H2 (an embedded database). [Using Docker] | [Rundeck - website](https://www.rundeck.com/open-source) |
+| 8 | docker-nginx | Serve a static file using Nginx in a docker container.  |  |
+| 9 | gitlab-docker | GitLab in a docker container.  |  |
+| 10 | metabase | Metabase is an open-source business-intelligence tool that shares data and analytics inside your company.  | [How to run Metabase - powered by Docker](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) |
+| 11 | cloudbeaver | DBeaver in website, powered by Docker.  | https://cloudbeaver.io/ |
+| 12 | appsmith | Build internal application.  | https://www.appsmith.com/ |
+| 13 | terraform | Terraform config (AWS, Google Cloud, Azure, Oracle Cloud, Docker) |  |
+| 14 | amcharts | JavaScript charts and maps | [Amcharts](https://www.amcharts.com/) |
+| 15 | backstage | Backstage is an open platform for building developer portals. | [Backstage](https://backstage.io/) |
+| 16 | diagrams | Allows one to draw the cloud system architecture in Python code. | [Diagrams](https://diagrams.mingrammer.com/) |
+| 17 | docker-timezone-lists | Timezones that can be set in Docker | [Setting local time in Docker](https://docs.diladele.com/docker/timezones.html) |
+| 18 | krakend | Open source API Gateway | [KrakenD](https://krakend.io) |
+| 19 | krakend-playground | KrakenD Playground |  |
 
 <br />
 
@@ -156,6 +155,14 @@ This is a repo for... whatever 🤷
 | No. | Project | Description | Notes |
 |:---:|:---:|:---:|:---:|
 | 1 | java | A number of Java program to practice OOP. |  |
+
+<br />
+
+### C++
+
+| No. | Project | Description | Notes |
+|:---:|:---:|:---:|:---:|
+| 1 | cpp | Some C++ program. |  |
 
 <br />
 
