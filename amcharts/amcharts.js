@@ -1,10 +1,12 @@
+let chart = null;
+
 am4core.ready(function() {
   // Themes begin
   am4core.useTheme(am4themes_animated);
   // Themes end
 
   // Create chart instance
-  let chart = am4core.create("chartdiv", am4charts.XYChart);
+  chart = am4core.create("chartdiv", am4charts.XYChart);
 
   // Add data
   chart.data = [{
@@ -80,3 +82,6 @@ am4core.ready(function() {
   // Legend
   chart.legend = new am4charts.Legend();
 }); // end am4core.ready()
+
+// Access chart globally
+console.log('chart.series :', chart.series);
