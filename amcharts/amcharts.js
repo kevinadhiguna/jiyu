@@ -60,8 +60,8 @@ am4core.ready(function() {
     series.columns.template.width = am4core.percent(60);
     series.columns.template.tooltipText = "[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}";
 
-    // Adjust horizontal offset of the tooltip 
-    series.tooltip.dx = -10;
+    // Change tooltip position
+    series.tooltip.pointerOrientation = "down";
 
     // Add label
     let labelBullet = series.bullets.push(new am4charts.LabelBullet());
