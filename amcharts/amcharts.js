@@ -63,6 +63,9 @@ am4core.ready(function() {
     // Change tooltip position
     series.tooltip.pointerOrientation = "down";
 
+    // Adjust vertical offset of the element
+    series.tooltip.dy = -15;
+
     // Add label
     let labelBullet = series.bullets.push(new am4charts.LabelBullet());
     labelBullet.label.text = "{valueY}";
