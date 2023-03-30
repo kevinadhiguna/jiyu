@@ -1,9 +1,9 @@
 <template>
   <div>
     <header>
-      <nav>
+      <nav class="shadow-sm bg-white">
         <NuxtLink to="/">Nuxt3r Merch app</NuxtLink>
-        <ul>
+        <ul class="container mx-auto p-4 flex justify-between">
           <li>
             <NuxtLink to="/">Home</NuxtLink>
           </li>
