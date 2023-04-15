@@ -11,4 +11,6 @@ console.log("Math.abs(5832949) :", Math.abs(5832949)); // 5832949
 
 console.log("Math.random() :", Math.random()); // Any random floating numbers between 0 and 1 (example: 0.5281335966084748)
 
+console.log("Math.log10(100) :", Math.log10(100)); // 2
+
 console.log("Math.hypot(3, 4) :", Math.hypot(3, 4)); // 5
