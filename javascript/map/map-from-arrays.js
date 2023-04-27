@@ -20,6 +20,9 @@ console.log("playersMap (after) :", playersMap);
 // }
 console.log("playersMap.size (after) :", playersMap.size); // 5
 
+// Getting a value in a map
+console.log("playersMap.get('Trout') :", playersMap.get("Trout")); // Angels
+
 // -----
 
 // function mapInfo(map, condition) {
