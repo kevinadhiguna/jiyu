@@ -23,6 +23,9 @@ console.log("playersMap.size (after) :", playersMap.size); // 5
 // Getting a value in a map
 console.log("playersMap.get('Trout') :", playersMap.get("Trout")); // Angels
 
+// Checking a key in a map
+console.log("playersMap.has('Trout') :", playersMap.has("Trout")); // true
+
 // -----
 
 // function mapInfo(map, condition) {
