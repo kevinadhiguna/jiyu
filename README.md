@@ -122,6 +122,7 @@ This is a repo for... whatever 🤷
 | 14  |          nodejs          |      Utility functions powered by JavaScript and Node.js       |                                                                                       |
 | 15  |     nodejs-cron-job      |          Demonstrate how Node.js cron jobs take place          |              [kelektiv/node-cron](https://github.com/kelektiv/node-cron)              |
 | 16  |    nodejs-express-ts     |                    Express.js + TypeScript                     |                                                                                       |
+| 17  |   javascript-offensive   |                   Some offensive JavaScript                    |                                                                                       |
 
 <br />
 
