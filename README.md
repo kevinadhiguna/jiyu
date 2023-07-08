@@ -172,7 +172,7 @@ This is a repo for... whatever 🤷
 
 | No. | Project |          Description          | Notes |
 | :-: | :-----: | :---------------------------: | :---: |
-|  1  | spoiler | HTML/CSS-powered spoiler page |       |
+|  1  | spoiler | HTML/CSS-powered spoiler page | Based on a YouTube tutorial      |
 
 <br />
 
