@@ -4,6 +4,7 @@ homerunDerbyParticipants = ("julio", "juan", "kyle", "mookie", "pete")
 for participant in homerunDerbyParticipants:
   print("Participant : {}".format(participant))
 
+# === Output ===
 # Participant : julio
 # Participant : juan
 # Participant : kyle

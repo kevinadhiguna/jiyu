@@ -2,4 +2,6 @@ sentence = "kubo has been pretty solid this season and is a prominent part of Re
 capitalized = sentence.capitalize()
 
 print(capitalized)
+
+# === Output ===
 # Kubo has been pretty solid this season and is a prominent part of real sociedad offense

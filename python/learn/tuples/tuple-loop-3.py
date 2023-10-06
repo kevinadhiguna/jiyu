@@ -7,6 +7,7 @@ while i < len(nationalLeagueAllStars):
   print("National League All Star - {}".format(i+1), " : {}".format(nationalLeagueAllStars[i]))
   i = i+1
 
+# === Output ===
 # National League All Star - 1  : betts
 # National League All Star - 2  : freeman
 # National League All Star - 3  : machado

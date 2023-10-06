@@ -15,6 +15,6 @@ var_complex1 = 1j
 var_complex2 = 4+7j
 var_complex3 = -753j
 
-print("type of", var_int1, ": ", type(var_int1))
-print("type of", var_float2, ": ", type(var_float2))
-print("type of", var_complex3, ": ", type(var_complex3))
+print("type of", var_int1, ": ", type(var_int1)) # type of 1 :  <class 'int'>
+print("type of", var_float2, ": ", type(var_float2)) # type of 3.42 :  <class 'float'>
+print("type of", var_complex3, ": ", type(var_complex3)) # type of (-0-753j) :  <class 'complex'>

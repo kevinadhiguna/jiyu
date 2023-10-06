@@ -4,6 +4,8 @@ print(city[0] + city[1] + city[2]) # Los
 
 for char in city:
   print(char)
+
+# === Output ===
 # L
 # o
 # s
@@ -16,4 +18,4 @@ for char in city:
 # e
 # s
 
-print("String length :", len(city))
+print("String length :", len(city)) # 11

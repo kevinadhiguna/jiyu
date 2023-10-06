@@ -5,6 +5,8 @@ padres.add("Sanchez")
 
 for padre in padres:
   print("Padres : {}".format(padre))
+
+# === Output ===
 # Padres : Tatis Jr.
 # Padres : Soto
 # Padres : Sanchez

@@ -4,6 +4,7 @@ americanLeagueAllStars = ("ohoppe", "ohtani", "trout", "judge", "yordan", "bo", 
 for i in range(len(americanLeagueAllStars)):
   print("American League AllStar - {}".format(i+1), " : {}".format(americanLeagueAllStars[i]))
 
+# === Output ===
 # American League AllStar - 1  : ohoppe
 # American League AllStar - 2  : ohtani
 # American League AllStar - 3  : trout

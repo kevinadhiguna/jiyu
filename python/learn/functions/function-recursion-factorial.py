@@ -10,4 +10,4 @@ def factorial(number):
 count = 9   # 9! = 362880
 result = factorial(count)
 
-print("Result of {}!".format(count), ":", result)
+print("Result of {}!".format(count), ":", result) # Result of 9! : 362880

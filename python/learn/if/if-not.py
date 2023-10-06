@@ -4,3 +4,6 @@ defensiveWar = -0.8
 
 if not pitcherWar > hitterWar:
   print("Hitter WAR is greater than pitcher WAR")
+
+# === Output ===
+# Hitter WAR is greater than pitcher WAR

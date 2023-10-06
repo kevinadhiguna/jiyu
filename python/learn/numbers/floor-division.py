@@ -3,6 +3,8 @@ num2 = 5
 result = num1 // num2
 
 print("(Floor division) {}".format(num1), "//", "{}".format(num2), ": {}".format(result))
+
+# === Output ===
 # (Floor division) 573 // 5 : 114
 
 # Notes:

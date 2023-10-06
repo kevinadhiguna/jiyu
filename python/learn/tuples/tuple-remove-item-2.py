@@ -1,6 +1,6 @@
 programming_languages = ("javascript", "python", "go", "sql", "java")
 
-print("programming languages (BEFORE) : {}".format(programming_languages))
+print("programming languages (BEFORE) : {}".format(programming_languages)) # ('javascript', 'python', 'go', 'sql', 'java')
 
 del programming_languages
 
