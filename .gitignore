@@ -85,6 +85,7 @@ $RECYCLE.BIN/
 ### Himitsu ###
 syusoku
 TEMP
+TEMP-2
 javascript/js-TEMP
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,osx,windows,linux,java
