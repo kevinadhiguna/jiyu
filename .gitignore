@@ -79,6 +79,10 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
+# Env vars
+**/*.env
+.env
+
 # Windows shortcuts
 *.lnk
 
