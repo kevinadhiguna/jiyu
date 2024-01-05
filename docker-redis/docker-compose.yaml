@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2.3
+    restart: always
+    ports:
+      - 6377:6379
+    command: /bin/sh -c "redis-server --save 20 1 --loglevel warning --requirepass $$REDIS_HOST_PASSWORD"
+    env_file:
+      - redis.env
+    volumes: 
+      - redis-data:/data
+
+volumes:
+  redis-data:
