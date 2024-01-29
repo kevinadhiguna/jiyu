@@ -4,11 +4,13 @@ Building an image gallery using CSS grid
 
 <br>
 
-<!-- ## Preview
+## Preview
 
-<img src="demo/" alt="image gallery" />
+<img src="demo/main-s-2.png" alt="image gallery" />
 
-<br> -->
+<img src="demo/main-s.png" alt="image gallery" />
+
+<br>
 
 ## Reference
 
