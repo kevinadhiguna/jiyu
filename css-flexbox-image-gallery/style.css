@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+.title {
+    text-align: center;
+    color: chocolate;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+}
+
+.item {
+    margin: 5px;
+    border-radius: 5px;
+}
