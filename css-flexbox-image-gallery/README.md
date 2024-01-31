@@ -36,6 +36,14 @@ Comes by default
 
 <br>
 
+## To-do List
+
+- Provide lazy load images
+- Keep the buttons down, even though the images are loading (if possible)
+- Provide buttons (`flex-start`, `center`, `flex-end`, etc.) that customize styling of `justify-content` value accordingly ✅
+
+<br>
+
 ## Reference
 
 - [How to Create a Responsive Image Gallery With Flexbox - DeveloperDrive](https://www.developerdrive.com/responsive-image-gallery-flexbox/)
