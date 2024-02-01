@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" async></script>
     <title>Image Gallery - Flexbox</title>
 </head>
 <body>
     <h1 class="title">Image Gallery</h1>
-    <div class="container">
+    <div id="btn-ctr" class="button-container">
+        <button id="btn-start" class="btn">flex-start</button>
+        <button id="btn-center" class="btn">center</button>
+        <button id="btn-end" class="btn">flex-end</button>
+    </div>
+    <div id="ctr" class="container">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
         <img src="https://source.unsplash.com/random/320x240" alt="image" class="item">
-    </div>    
+    </div>
+    <div id="btn-ctr" class="button-container">
+        <button id="btn-space-around" class="btn">space-around</button>
+        <button id="btn-space-evenly" class="btn">space-evenly</button>
+        <button id="btn-space-between" class="btn">space-between</button>
+    </div>
 </body>
 </html>
