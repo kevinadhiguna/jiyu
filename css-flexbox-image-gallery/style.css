@@ -1,3 +1,4 @@
+/* --- Reset browser's styling --- */
 * {
     box-sizing: border-box;
 }
@@ -10,6 +11,7 @@ html, body, div, img {
     font: inherit;
     vertical-align: baseline;
 }
+/* ------------------------------- */
 
 body {
     line-height: 1;
@@ -21,6 +23,21 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.6;
     font-weight: 300;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    /* margin: 5px; */
+}
+
+.btn {
+    background-color: aquamarine;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .container {
