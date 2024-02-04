@@ -6,43 +6,45 @@ function getCurrentJustifyContentValue() {
     console.log(`Current justify-content value is '${containerJC}'`);
 }
 
+function setJustifyContentValue(value) {
+    if (value) {
+        container.style.justifyContent = value;
+    } else {
+        console.error("Please provide `justify-content` value...");
+    }
+}
+
 // Get default container's justify-content value
 window.onload = function () {
     getCurrentJustifyContentValue();
 }
 
-const startButton = document.getElementById("btn-start");
-startButton.onclick = function() {
-    container.style.justifyContent = "flex-start";
+document.getElementById("btn-start").onclick(() => { 
+    setJustifyContentValue("flex-start");
     getCurrentJustifyContentValue();
-}
+});
 
-const centerButton = document.getElementById("btn-center");
-centerButton.onclick = function() {
-    container.style.justifyContent = "center";
+document.getElementById("center").onclick(() => { 
+    setJustifyContentValue("center");
     getCurrentJustifyContentValue();
-}
+});
 
-const endButton = document.getElementById("btn-end");
-endButton.onclick = function() {
-    container.style.justifyContent = "flex-end";
+document.getElementById("btn-end").onclick(() => { 
+    setJustifyContentValue("flex-end");
     getCurrentJustifyContentValue();
-}
+});
 
-const spaceAroundButton = document.getElementById("btn-space-around");
-spaceAroundButton.onclick = function() {
-    container.style.justifyContent = "space-around";
+document.getElementById("btn-space-between").onclick(() => { 
+    setJustifyContentValue("space-between");
     getCurrentJustifyContentValue();
-}
+});
 
-const spaceEvenlyButton = document.getElementById("btn-space-evenly");
-spaceEvenlyButton.onclick = function() {
-    container.style.justifyContent = "space-evenly";
+document.getElementById("btn-space-around").onclick(() => { 
+    setJustifyContentValue("space-around");
     getCurrentJustifyContentValue();
-}
+});
 
-const spaceBetweenButton = document.getElementById("btn-space-between");
-spaceBetweenButton.onclick = function() {
-    container.style.justifyContent = "space-between";
+document.getElementById("btn-space-evenly").onclick(() => { 
+    setJustifyContentValue("space-evenly");
     getCurrentJustifyContentValue();
-}
+});
