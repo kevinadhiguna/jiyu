@@ -15,5 +15,3 @@ let get_inner_func = randomFunction();
 console.log(get_inner_func()); // 5
 console.log(get_inner_func()); // 5
 console.log(get_inner_func()); // 5
-
-// Reference: GeeksforGeeks - How to explain closures in JavaScript and when to use it?
