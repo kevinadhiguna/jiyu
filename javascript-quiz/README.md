@@ -8,7 +8,7 @@ Can you guess the output??
 
 ## References
 
-- [How to explain closures in JavaScript and when to use it? - GeeksforGeeks]()
+- [How to explain closures in JavaScript and when to use it? - GeeksforGeeks](https://www.geeksforgeeks.org/closure-in-javascript/)
 - [JavaScript Output Questions to Test Your Skills - Utkarsh Gupta in Medium](https://medium.com/@utkarsh.gupta0311/javascript-output-questions-to-test-your-skills-7fcc06ecd117)
 - [JavaScript Interview Preparation Guide (50 Output related questions) - Ayush Verma in PlainEnglish](https://plainenglish.io/blog/50-javascript-output-questions)
 - [JavaScript Questions - Lydia Hallie in GitHub](https://github.com/lydiahallie/javascript-questions)
