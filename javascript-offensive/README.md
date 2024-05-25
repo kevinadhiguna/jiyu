@@ -3,3 +3,4 @@
 ## Reference(s)
 
 - [JavaScript for Hackers](https://github.com/zapstiko/Hacking-PDF/blob/main/JavaScript%20for%20Hackers.pdf)
+- [JavaScript for Penetration Testers](https://github.com/h3ll0clar1c3/JavaScript-for-Penetration-Testers)
