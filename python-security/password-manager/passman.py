@@ -28,4 +28,21 @@ def login():
     else:
         print("Invalid username or password")
 
+def main():
+    while True:
+        choice = input("Enter '1' to create an account, '2' to login, and '0' to exit: ")
+
+        if choice == 1:
+            create_account()
+        elif choice == 2:
+            login()
+        elif choice == 0:
+            print("Thank you, have a nice day!")
+            break
+        else:
+            print("Invalid choice")
+
+if __main__ = "__main__":
+    main()
+
 # Reference: https://youtu.be/tbhYxd2sfAE
