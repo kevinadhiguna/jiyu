@@ -14,3 +14,4 @@ Can you guess the output??
 - [JavaScript Questions - Lydia Hallie in GitHub](https://github.com/lydiahallie/javascript-questions)
 - [Guess the output of this JS code - Shuvo in dev.to](https://dev.to/0shuvo0/guess-the-output-of-this-js-code-117)
 - [Algochurn](https://www.algochurn.com/frontend/guess-the-output-i)
+- [JavaScript Questions](https://javascript-questions.vercel.app/)
