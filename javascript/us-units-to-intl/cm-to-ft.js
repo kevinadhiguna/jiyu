@@ -9,6 +9,6 @@ function roundNumber(number) {
     return Math.round(number * 100) / 100;
 }
 
-let roundedFeet = roundNumber(feetTall);
-console.log(`[Rounded] If you're ${cmTall} cm tall, you're ${roundedFeet} feet`);
+let roundedFeetTall = roundNumber(feetTall);
+console.log(`[Rounded] If you're ${cmTall} cm tall, you're ${roundedFeetTall} feet`);
 // Output: [Rounded] If you're 190 cm tall, you're 6.16 feet
