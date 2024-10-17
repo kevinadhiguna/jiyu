@@ -4,7 +4,7 @@ const kgWeight = lbsWeight * 0.454;
 console.log(`[Precise] If you weigh ${lbsWeight} lbs, you weigh ${kgWeight} kgs`);
 
 function roundNumber(number) {
-    // To-do: round the number
+    // Round to 2 decimal places
     return Math.round(number * 100) / 100;
 }
 
