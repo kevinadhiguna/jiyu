@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avoid Inline Event Handlers!</title>
+</head>
+<body>
+    <!-- More vulnerable to XSS attacks (Avoid the following implementation!) -->
+    <button onclick="sayHi()">Click me!</button>
+
+    <!-- Less vulnerable to XSS attacks -->
+    <button id="hiButton">Click me 2!</button>
+</body>
+<script defer>
+    function sayHi() {
+        alert("Hi there! How you doing?")
+    }
+
+    document.getElementById('hiButton').addEventListener('click', sayHi());
+</script>
+</html>
