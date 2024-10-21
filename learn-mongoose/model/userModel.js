@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     min: 1,
     max: 150,
   },
-  email: String,
+  email: [String], // To anticipate if some users own multiple email accounts
   createdAt: {
     type: Date,
     default: () => Date.now(),
