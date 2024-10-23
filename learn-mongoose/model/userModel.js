@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
   bestFriends: [String],
   hobbies: [String],
   address: {
+    country: String,
     city: String,
     street: String,
   },
