@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema({
     country: String,
     city: String,
     street: String,
+    zipcode: {
+      type: Number,
+      min: 1, // To-do: make it exactly 5 numbers instead
+      max: 5,
+    },
   },
 });
 
