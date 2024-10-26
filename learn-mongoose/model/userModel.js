@@ -27,6 +27,13 @@ const userSchema = new mongoose.Schema({
       type: Number,
       min: 0o501, // To-do: make it exactly 5 numbers instead
       max: 99950,
+      validate: {
+        validator: function(zipCode) {
+          return zipCode.toString().length === 5;
+        },
+        message: zipCode => `${zipCode} has to be 5 digits`
+        // Reference: Mongoose validation function https://stackoverflow.com/a/68523867
+      },
     },
     // Note:
     // - 'min' does not mean 'min-length'. Same goes for 'max' (different to 'max-length')
