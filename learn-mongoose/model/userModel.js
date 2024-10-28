@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
       max: 99950,
       validate: {
         validator: function(zipCode) {
-          return zipCode.toString().length === 5;
+          return zipCode?.toString().length === 5;
         },
         message: zipCode => `${zipCode} has to be 5 digits`
         // Reference: Mongoose validation function https://stackoverflow.com/a/68523867
