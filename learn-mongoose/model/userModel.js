@@ -25,10 +25,11 @@ const userSchema = new mongoose.Schema({
     street: String,
     zipcode: {
       type: Number,
-      min: 0o501, // To-do: make it exactly 5 numbers instead
+      min: 0o501,
       max: 99950,
       validate: {
         validator: function(zipCode) {
+          // zipcode should be exactly 5 digits
           return zipCode?.toString().length === 5;
         },
         message: zipCode => `${zipCode} has to be 5 digits`
