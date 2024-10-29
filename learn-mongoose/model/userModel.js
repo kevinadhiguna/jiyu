@@ -2,13 +2,18 @@ const mongoose = require("mongoose");
 
 // Create schema
 const userSchema = new mongoose.Schema({
-  firstName: String,
+  firstName: {
+    type: String,
+    required: true,
+    min: [1, "Please put your first name"], // There are people whose first name is only 1 character
+  },
   lastName: String,
   age: {
     type: Number,
     min: 1,
     max: 150,
   },
+  phoneNumber: String, // To-do: should be expanded in detail
   email: [String], // To anticipate if some users own multiple email accounts
   createdAt: {
     type: Date,
