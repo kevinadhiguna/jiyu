@@ -7,7 +7,11 @@ const userSchema = new mongoose.Schema({
     required: true,
     min: [1, "Please put your first name"], // There are people whose first name is only 1 character
   },
-  lastName: String,
+  lastName: {
+    type: String,
+    required: true,
+    min: [1, "Please put your last name"], // Not sure about minimum last name length. Just put it 1 character at this point.. 
+  },
   age: {
     type: Number,
     min: 1,
