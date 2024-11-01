@@ -22,7 +22,11 @@ const userSchema = new mongoose.Schema({
     max: 150,
   },
   phoneNumber: String, // To-do: should be expanded in detail
-  email: [String], // To anticipate if some users own multiple email accounts
+  email: [{
+    type: String,
+    required: true,
+    // To-do: add regex to match email address format
+  }], // To anticipate if some users own multiple email accounts
   createdAt: {
     type: Date,
     default: () => Date.now(),
