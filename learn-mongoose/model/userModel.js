@@ -22,6 +22,14 @@ const userSchema = new mongoose.Schema({
     max: 150,
   },
   phoneNumber: String, // To-do: should be expanded in detail
+  password: {
+    type: String,
+    required: true,
+    min: [8, "Password must be at least 8 characters"],
+    // To-do: add password validtor so it contains at least:
+    // 1 lowercase letter, 1 one uppercase letter, 
+    // 1 number, 1 special character.
+  },
   email: [{
     type: String,
     required: true,
