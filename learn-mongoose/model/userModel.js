@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
 // Create schema
 const userSchema = new mongoose.Schema({
   firstName: {
@@ -26,9 +28,12 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     min: [8, "Password must be at least 8 characters"],
-    // To-do: add password validtor so it contains at least:
-    // 1 lowercase letter, 1 one uppercase letter, 
-    // 1 number, 1 special character.
+    validate: {
+      validator: function (input) {
+        return passwordRegex.test(input);
+      },
+      message: "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.",
+    },
   },
   email: [{
     type: String,
