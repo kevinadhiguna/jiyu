@@ -2,6 +2,14 @@ const mongoose = require("mongoose");
 
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// ^\w+: The email must start with one or more word characters (letters, numbers, or underscores).
+// ([\.-]?\w+)*: After the initial characters, it can optionally include a dot or hyphen followed by more word characters, repeated as needed.
+// @: There must be an "@" symbol separating the local part (before the @) and the domain part (after the @).
+// \w+: The domain must have at least one word character.
+// ([\.-]?\w+)*: Similar to before, it can have optional dots or hyphens followed by word characters.
+// (\.\w{2,3})+: Finally, the domain must end with a dot followed by 2 to 3 word characters (e.g., ".com", ".org").
+
 // Create schema
 const userSchema = new mongoose.Schema({
   firstName: {
@@ -40,13 +48,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     match: [
       // Validate the format of email address
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      // ^\w+: The email must start with one or more word characters (letters, numbers, or underscores).
-      // ([\.-]?\w+)*: After the initial characters, it can optionally include a dot or hyphen followed by more word characters, repeated as needed.
-      // @: There must be an "@" symbol separating the local part (before the @) and the domain part (after the @).
-      // \w+: The domain must have at least one word character.
-      // ([\.-]?\w+)*: Similar to before, it can have optional dots or hyphens followed by word characters.
-      // (\.\w{2,3})+: Finally, the domain must end with a dot followed by 2 to 3 word characters (e.g., ".com", ".org").
+      emailRegex,
       "Email format is possibly wrong..",
     ],
   }], // To anticipate if some users own multiple email accounts
