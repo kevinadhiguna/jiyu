@@ -15,15 +15,18 @@ const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
+    trim: true, // If the schema does not use trim: true, the value will be saved as " John " (with spaces included)
     min: [1, "Please put your first name"], // There are people whose first name is only 1 character
   },
   middleName: {
     type: String,
+    trim: true,
     min: [1, "Please put your last name"],
   },
   lastName: {
     type: String,
     required: true,
+    trim: true,
     min: [1, "Please put your last name"], // Not sure about minimum last name length. Just put it 1 character at this point.. 
   },
   age: {
