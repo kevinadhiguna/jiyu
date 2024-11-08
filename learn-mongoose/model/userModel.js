@@ -14,7 +14,7 @@ const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const userSchema = new mongoose.Schema({
   firstName: {
     type: String,
-    required: true,
+    required: [true, 'first name is required'],
     trim: true, // If the schema does not use trim: true, the value will be saved as " John " (with spaces included)
     min: [1, "Please put your first name"], // There are people whose first name is only 1 character
   },
@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
   },
   lastName: {
     type: String,
-    required: true,
+    required: [true, 'lastname is required'],
     trim: true,
     min: [1, "Please put your last name"], // Not sure about minimum last name length. Just put it 1 character at this point.. 
   },
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
   phoneNumber: String, // To-do: should be expanded in detail
   password: {
     type: String,
-    required: true,
+    required: [true, "Password not provided"],
     min: [8, "Password must be at least 8 characters"],
     validate: {
       validator: function (input) {
@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema({
   },
   email: [{
     type: String,
-    required: true,
+    required: [true, "Please provide email address"],
     match: [
       // Validate the format of email address
       emailRegex,
