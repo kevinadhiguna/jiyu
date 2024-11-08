@@ -16,18 +16,18 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'first name is required'],
     trim: true, // If the schema does not use trim: true, the value will be saved as " John " (with spaces included)
-    min: [1, "Please put your first name"], // There are people whose first name is only 1 character
+    minlength: [1, "Please put your first name"], // There are people whose first name is only 1 character
   },
   middleName: {
     type: String,
     trim: true,
-    min: [1, "Please put your last name"],
+    minlength: [1, "Please put your last name"], // Note: it's minlength, not minLength!
   },
   lastName: {
     type: String,
     required: [true, 'lastname is required'],
     trim: true,
-    min: [1, "Please put your last name"], // Not sure about minimum last name length. Just put it 1 character at this point.. 
+    minlength: [1, "Please put your last name"], // Not sure about minimum last name length. Just put it 1 character at this point.. 
   },
   age: {
     type: Number,
@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, "Password not provided"],
-    min: [8, "Password must be at least 8 characters"],
+    minlength: [8, "Password must be at least 8 characters"],
     validate: {
       validator: function (input) {
         return passwordRegex.test(input);
