@@ -50,6 +50,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide email address"],
     lowercase: true,
+    unique: true,
     trim: true,
     match: [
       // Validate the format of email address
