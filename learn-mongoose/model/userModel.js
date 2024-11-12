@@ -90,6 +90,13 @@ const userSchema = new mongoose.Schema({
     // - Hence, instead of placing 'min: 1' and 'max: 5', I believe it is more appropriate to put the smallest and the highest numbered ZIP codes
     // - According to USPS, the highest numbered ZIP Code is 99950 in Ketchikan, AK. The lowest ZIP Code number is 00501 (needs to be noted '0o501' since octal literals are not allowed)
   },
+
+  // Role and Permissions
+  roles: {
+    type: [String],
+    enum: ['user', 'admin'], // Define role based on application needs
+    default: ['user'],
+  },
 });
 
 // Make and export model, based on the schema created above
