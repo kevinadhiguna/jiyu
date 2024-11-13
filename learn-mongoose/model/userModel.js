@@ -91,6 +91,11 @@ const userSchema = new mongoose.Schema({
     // - According to USPS, the highest numbered ZIP Code is 99950 in Ketchikan, AK. The lowest ZIP Code number is 00501 (needs to be noted '0o501' since octal literals are not allowed)
   },
 
+  isVerified: {
+    type: Boolean,
+    default: false, // Whether user email is verified or not
+  },
+
   // Role and Permissions
   roles: {
     type: [String],
