@@ -96,6 +96,11 @@ const userSchema = new mongoose.Schema({
     default: false, // Whether user email is verified or not
   },
 
+  isActive: {
+    type: Boolean,
+    default: true, // Whether user account is active or not
+  },
+
   // Role and Permissions
   roles: {
     type: [String],
