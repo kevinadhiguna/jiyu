@@ -34,6 +34,18 @@ const userSchema = new mongoose.Schema({
     min: 1,
     max: 150,
   },
+  // Optional field for additional user info
+  dateOfBirth: {
+    type: Date,
+    // required: [true, 'Please enter your date of birth'],
+    validate: {
+      validator: function (value) {
+        // Ensure the date is in the past
+        return value && value < Date.now();
+      },
+      message: 'Date of birth can not be in the future',
+    },
+  },
   phoneNumber: String, // To-do: should be expanded in detail
   password: {
     type: String,
