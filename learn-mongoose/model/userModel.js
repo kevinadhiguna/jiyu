@@ -46,7 +46,9 @@ const userSchema = new mongoose.Schema({
       message: 'Date of birth can not be in the future',
     },
   },
-  phoneNumber: String, // To-do: should be expanded in detail
+  phoneNumber: {
+    type: String,
+  },
   password: {
     type: String,
     required: [true, "Password not provided"],
