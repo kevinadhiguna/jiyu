@@ -10,6 +10,9 @@ const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 // ([\.-]?\w+)*: Similar to before, it can have optional dots or hyphens followed by word characters.
 // (\.\w{2,3})+: Finally, the domain must end with a dot followed by 2 to 3 word characters (e.g., ".com", ".org").
 
+// Phone number validation regex (supports international formats with optional spaces, dashes, etc.)
+const phoneNumberRegex = /^\+?[1-9]\d{1,14}$/;
+
 // Create schema
 const userSchema = new mongoose.Schema({
   firstName: {
@@ -48,6 +51,7 @@ const userSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: String,
+    match: [phoneNumberRegex, 'Please provide a valid phone number (with optional country code)']
   },
   password: {
     type: String,
