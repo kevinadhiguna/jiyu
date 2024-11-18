@@ -127,5 +127,19 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Hash password before saving user
+userSchema.pre('save', async function hashPassword(next) {
+  // Only hash if password has been modified
+  if (!this.isModified('password')) return next();
+
+  try {
+    const salt = await bcrypt.genSalt(10); // Salt rounds
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
 // Make and export model, based on the schema created above
 module.exports = mongoose.model("User", userSchema);
