@@ -141,5 +141,10 @@ userSchema.pre('save', async function hashPassword(next) {
   }
 });
 
+// Method to check if password matches
+userSchema.methods.matchPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+}
+
 // Make and export model, based on the schema created above
 module.exports = mongoose.model("User", userSchema);
