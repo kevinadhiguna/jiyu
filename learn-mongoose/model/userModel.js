@@ -146,5 +146,19 @@ userSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 }
 
+// Resetting password (if necessary)
+userSchema.methods.generateResetPasswordToken = function () {
+  const crypto = require('crypto');
+  
+  // Generate a random token
+  const token = crypto.randomBytes(20).toString('hex');
+  
+  this.resetPasswordToken = token;
+  // Expires in 1 hour
+  this.resetPasswordExpires = Date.now() + 3600000;
+
+  return token;
+}
+
 // Make and export model, based on the schema created above
 module.exports = mongoose.model("User", userSchema);
