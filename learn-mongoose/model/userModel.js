@@ -76,14 +76,6 @@ const userSchema = new mongoose.Schema({
       "Email format is possibly wrong..",
     ],
   }], // To anticipate if some users own multiple email accounts
-  createdAt: {
-    type: Date,
-    default: () => Date.now(),
-  },
-  updatedAt: {
-    type: Date,
-    default: () => Date.now(),
-  },
   bestFriends: [String],
   hobbies: [String],
   address: {
@@ -125,6 +117,10 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'], // Define role based on application needs
     default: ['user'],
   },
+},
+{
+  // Let mongoose automatically manage the 'createdAt' and 'updatedAt' fields
+  timestamps: true,
 });
 
 // Hash password before saving user
