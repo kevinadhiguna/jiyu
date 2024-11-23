@@ -7,6 +7,11 @@ const sessionSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    token: {
+        type: String,
+        required: true,
+        unique: true,
+    },
 });
 
 const session = mongoose.model('Session', sessionSchema);
