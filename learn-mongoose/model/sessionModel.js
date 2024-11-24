@@ -12,6 +12,10 @@ const sessionSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
+    expiresAt: {
+        type: Date,
+        required: true,
+    },
 });
 
 const session = mongoose.model('Session', sessionSchema);
