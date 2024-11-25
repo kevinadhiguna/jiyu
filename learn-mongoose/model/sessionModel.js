@@ -16,6 +16,10 @@ const sessionSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const session = mongoose.model('Session', sessionSchema);
