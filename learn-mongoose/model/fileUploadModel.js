@@ -5,4 +5,7 @@ const fileUploadSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    mimetype: {
+        type: String,
+    },
 });
