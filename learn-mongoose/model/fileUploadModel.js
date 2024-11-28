@@ -8,4 +8,7 @@ const fileUploadSchema = new mongoose.Schema({
     mimetype: {
         type: String,
     },
+    size: {
+        type: Number,
+    },
 });
