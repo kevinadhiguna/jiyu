@@ -11,4 +11,8 @@ const fileUploadSchema = new mongoose.Schema({
     size: {
         type: Number,
     },
+    uploadedAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
