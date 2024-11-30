@@ -16,3 +16,5 @@ const fileUploadSchema = new mongoose.Schema({
         default: Date.now,
     },
 });
+
+const fileUpload = mongoose.model('fileUpload', fileUploadSchema);
