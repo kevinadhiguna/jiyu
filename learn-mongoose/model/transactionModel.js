@@ -10,4 +10,10 @@ const transactionSchema = new mongoose.Schema({
         enum: ['credit', 'debit'],
         required: true,
     },
+    status: {
+        type: String,
+        enum: ['pending', 'completed', 'failed'],
+        // To-do: Add default?
+        required: true,
+    },
 });
