@@ -16,4 +16,6 @@ const transactionSchema = new mongoose.Schema({
         // To-do: Add default?
         required: true,
     },
+}, {
+    timestamp: true,
 });
