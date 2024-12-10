@@ -11,6 +11,11 @@ const fileUploadSchema = new mongoose.Schema({
     size: {
         type: Number,
     },
+    uploadedBy: {
+        type: mongoose.Schmea.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
     uploadedAt: {
         type: Date,
         default: Date.now,
