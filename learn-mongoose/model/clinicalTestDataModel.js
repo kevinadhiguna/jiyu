@@ -6,6 +6,11 @@ const clinicalTestSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    patientId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Patient',
+        required: true,
+    },
 });
 
 const clinicalTest = mongoose.model('clinicalTest', clinicalTestSchema);
