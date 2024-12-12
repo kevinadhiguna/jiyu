@@ -11,6 +11,10 @@ const clinicalTestSchema = new mongoose.Schema({
         ref: 'Patient',
         required: true,
     },
+    testDate: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const clinicalTest = mongoose.model('clinicalTest', clinicalTestSchema);
