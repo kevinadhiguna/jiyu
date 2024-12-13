@@ -15,6 +15,11 @@ const clinicalTestSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    testType: {
+        type: String,
+        enum: ['Blood Test', 'Imaging', 'Genetic', 'other'],
+        required: true,
+    },
 });
 
 const clinicalTest = mongoose.model('clinicalTest', clinicalTestSchema);
