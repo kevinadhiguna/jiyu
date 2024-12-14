@@ -20,6 +20,10 @@ const clinicalTestSchema = new mongoose.Schema({
         enum: ['Blood Test', 'Imaging', 'Genetic', 'other'],
         required: true,
     },
+    result: {
+        type: String,
+        required: true,
+    },
 });
 
 const clinicalTest = mongoose.model('clinicalTest', clinicalTestSchema);
