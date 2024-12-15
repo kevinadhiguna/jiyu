@@ -24,6 +24,9 @@ const clinicalTestSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    comment: {
+        type: String,
+    },
 });
 
 const clinicalTest = mongoose.model('clinicalTest', clinicalTestSchema);
