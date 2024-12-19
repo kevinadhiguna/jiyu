@@ -16,6 +16,9 @@ const genomicDataSchema = new mongoose.Schema({
         enum: ['Normal', 'Abnormal', 'Indeterminate'],
         required: true,
     },
+    comments: {
+        type: String,
+    },
 });
 
 const genomicData = mongoose.model('genomicData', genomicDataSchema);
