@@ -19,6 +19,8 @@ const genomicDataSchema = new mongoose.Schema({
     comments: {
         type: String,
     },
+}, {
+    timestamps: true,
 });
 
 const genomicData = mongoose.model('genomicData', genomicDataSchema);
