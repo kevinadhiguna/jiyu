@@ -7,6 +7,10 @@ const inventorySchema = new mongoose.Schema({
         ref: 'Product',
         required: true,
     },
+    warehouseLocation: {
+        type: String,
+        required: true,
+    },
 });
 
 const inventory = mongoose.model('inventory', inventorySchema);
