@@ -15,6 +15,10 @@ const inventorySchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    lastRestocked: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const inventory = mongoose.model('inventory', inventorySchema);
