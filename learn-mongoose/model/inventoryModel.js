@@ -19,6 +19,10 @@ const inventorySchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    supplier: {
+        type: String,
+        // required: true,
+    },
 });
 
 const inventory = mongoose.model('inventory', inventorySchema);
