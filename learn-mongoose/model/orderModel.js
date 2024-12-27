@@ -7,6 +7,11 @@ const orderSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    status: {
+        type: String,
+        enum: ['pending', 'shipped', 'delivered'],
+        default: 'pending',
+    },
 });
 
 const order = mongoose.model('order', orderSchema);
