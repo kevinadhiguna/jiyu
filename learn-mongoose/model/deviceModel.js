@@ -11,6 +11,11 @@ const deviceSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    status: {
+        type: String,
+        enum: ['online', 'offline', 'inactive'],
+        default: 'offline',
+    },
 });
 
 const device = mongoose.model('device', deviceSchema);
