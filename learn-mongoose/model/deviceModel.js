@@ -20,6 +20,9 @@ const deviceSchema = new mongoose.Schema({
         enum: ['online', 'offline', 'inactive'],
         default: 'offline',
     },
+    data: [{
+        type: mongoose.Schema.Types.Mixed, // store various sensor data
+    }],
 });
 
 const device = mongoose.model('device', deviceSchema);
