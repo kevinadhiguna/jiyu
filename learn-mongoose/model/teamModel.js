@@ -6,6 +6,10 @@ const teamSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    members: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    }],
 });
 
 const team = mongoose.model('team', teamSchema);
