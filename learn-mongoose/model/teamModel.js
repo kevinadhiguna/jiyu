@@ -14,6 +14,11 @@ const teamSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
+    stats: {
+        wins: { type: Number, default: 0 },
+        losses: { type: Number, default: 0 },
+        draw: { type: Number, default: 0 },
+    },
 });
 
 const team = mongoose.model('team', teamSchema);
