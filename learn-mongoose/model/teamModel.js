@@ -19,6 +19,8 @@ const teamSchema = new mongoose.Schema({
         losses: { type: Number, default: 0 },
         draw: { type: Number, default: 0 },
     },
+}, {
+    timestamp: true,
 });
 
 const team = mongoose.model('team', teamSchema);
