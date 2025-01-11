@@ -5,6 +5,9 @@ const taskSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+    },
 });
 
 const task = new mongoose.model('task', taskSchema);
