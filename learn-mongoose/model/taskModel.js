@@ -8,6 +8,11 @@ const taskSchema = new mongoose.Schema({
     description: {
         type: String,
     },
+    status: {
+        type: String,
+        enum: ['to-do', 'in-progress', 'completed'],
+        default: 'to-do',
+    },
 });
 
 const task = new mongoose.model('task', taskSchema);
