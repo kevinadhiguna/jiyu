@@ -13,6 +13,11 @@ const taskSchema = new mongoose.Schema({
         enum: ['to-do', 'in-progress', 'completed'],
         default: 'to-do',
     },
+    priority: {
+        type: String,
+        enum: ['low', 'medium', 'high'],
+        default: 'medium',
+    },
 });
 
 const task = new mongoose.model('task', taskSchema);
