@@ -18,6 +18,9 @@ const taskSchema = new mongoose.Schema({
         enum: ['low', 'medium', 'high'],
         default: 'medium',
     },
+    dueDate: {
+        type: Date,
+    },
 });
 
 const task = new mongoose.model('task', taskSchema);
