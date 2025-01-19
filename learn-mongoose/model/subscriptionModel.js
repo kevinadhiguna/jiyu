@@ -12,6 +12,10 @@ const subscriptionModel = new mongoose.Schema({
         enum: ['basic', 'family', 'premium'],
         required: true,
     },
+    startDate: {
+        type: Date,
+        required: true,
+    },
 });
 
 const subscription = mongoose.model('subscrption', subscriptionModel);
