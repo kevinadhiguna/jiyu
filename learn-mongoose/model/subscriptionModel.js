@@ -16,6 +16,9 @@ const subscriptionModel = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    endDate: {
+        type: Date,
+    },
 });
 
 const subscription = mongoose.model('subscrption', subscriptionModel);
