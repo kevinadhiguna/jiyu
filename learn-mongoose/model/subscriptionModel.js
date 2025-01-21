@@ -19,6 +19,11 @@ const subscriptionModel = new mongoose.Schema({
     endDate: {
         type: Date,
     },
+    status: {
+        type: String,
+        enum: ['active', 'inactive', 'suspended'],
+        default: 'active',
+    },
 });
 
 const subscription = mongoose.model('subscrption', subscriptionModel);
