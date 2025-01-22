@@ -24,6 +24,17 @@ const subscriptionModel = new mongoose.Schema({
         enum: ['active', 'inactive', 'suspended'],
         default: 'active',
     },
+    paymentInfo: {
+        cardType: {
+            type: String,
+            // enum: ['visa', 'mastercard', 'jcb', 'other'],
+        },
+        last4digits: {
+            type: String,
+        },
+        // cardNumber: {},
+        // cvc: {},
+    },
 });
 
 const subscription = mongoose.model('subscrption', subscriptionModel);
