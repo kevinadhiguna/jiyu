@@ -35,6 +35,8 @@ const subscriptionModel = new mongoose.Schema({
         // cardNumber: {},
         // cvc: {},
     },
+}, {
+    timestamps: true,
 });
 
 const subscription = mongoose.model('subscrption', subscriptionModel);
