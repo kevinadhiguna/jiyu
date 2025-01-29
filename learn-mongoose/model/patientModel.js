@@ -18,6 +18,10 @@ const patientSchema = new mongoose.Schema({
         enum: ['Male', 'Female'],
         required: true,
     },
+    contactInfo: {
+        email: { type: String },
+        phone: {type: String },
+    },
 });
 
 const patient = new mongoose.Model('patient', patientSchema);
