@@ -22,6 +22,8 @@ const patientSchema = new mongoose.Schema({
         email: { type: String },
         phone: {type: String },
     },
+    // To-do: improve medical history
+    medicalHistory: [String],
 });
 
 const patient = new mongoose.Model('patient', patientSchema);
