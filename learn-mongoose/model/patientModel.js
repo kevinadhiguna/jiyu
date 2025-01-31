@@ -24,6 +24,8 @@ const patientSchema = new mongoose.Schema({
     },
     // To-do: improve medical history
     medicalHistory: [String],
+}, {
+    timesstamps: true,
 });
 
 const patient = new mongoose.Model('patient', patientSchema);
