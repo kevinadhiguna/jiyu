@@ -117,6 +117,12 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'], // Define role based on application needs
     default: ['user'],
   },
+
+  // For security, mainly for preventing brute-force attacks
+  isLocked: {
+    type: Boolean,
+    default: false,
+  },
 },
 {
   // Let mongoose automatically manage the 'createdAt' and 'updatedAt' fields
