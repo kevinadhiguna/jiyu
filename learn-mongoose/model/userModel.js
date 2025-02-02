@@ -123,6 +123,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  failedLoginAttempts: {
+    type: Number,
+    default: 0,
+  },
 },
 {
   // Let mongoose automatically manage the 'createdAt' and 'updatedAt' fields
