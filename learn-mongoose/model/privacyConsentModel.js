@@ -6,6 +6,10 @@ const privacyConsentSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    consentType: {
+        type: String, // e.g.: "data_collection", "cookies", "marketing"
+        required: true,
+    },
 });
 
 const privacyConsent = mongoose.model('privacyConsent', privacyConsentSchema);
