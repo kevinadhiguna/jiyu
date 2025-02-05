@@ -10,6 +10,10 @@ const privacyConsentSchema = new mongoose.Schema({
         type: String, // e.g.: "data_collection", "cookies", "marketing"
         required: true,
     },
+    granted: {
+        type: Boolean,
+        required: true,
+    },
 });
 
 const privacyConsent = mongoose.model('privacyConsent', privacyConsentSchema);
