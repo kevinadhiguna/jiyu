@@ -14,6 +14,10 @@ const privacyConsentSchema = new mongoose.Schema({
         type: Boolean,
         required: true,
     },
+    grantedAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const privacyConsent = mongoose.model('privacyConsent', privacyConsentSchema);
