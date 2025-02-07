@@ -18,6 +18,10 @@ const privacyConsentSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    // Allows for consent to be withdrawn:
+    withdrawnAt: {
+        type: Date,
+    },
 });
 
 const privacyConsent = mongoose.model('privacyConsent', privacyConsentSchema);
