@@ -6,6 +6,11 @@ const auditLogSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    action: {
+        type: String,
+        required: true,
+        enum: ['create', 'read', 'update', 'delete', 'login', 'logout'],
+    },
 });
 
 const auditLog = mongoose.Model('auditLogs', auditLogsSchema);
