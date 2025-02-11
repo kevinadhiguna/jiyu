@@ -11,6 +11,10 @@ const auditLogSchema = new mongoose.Schema({
         required: true,
         enum: ['create', 'read', 'update', 'delete', 'login', 'logout'],
     },
+    resource: {
+        type: String,
+        required: true,
+    },
 });
 
 const auditLog = mongoose.Model('auditLogs', auditLogsSchema);
