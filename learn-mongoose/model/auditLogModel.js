@@ -20,6 +20,8 @@ const auditLogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+}, {
+    timestamps: true,
 });
 
 const auditLog = mongoose.Model('auditLogs', auditLogsSchema);
