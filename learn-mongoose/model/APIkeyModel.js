@@ -14,6 +14,11 @@ const apiKeySchema = new mongoose.Schema({
         // Generate a random API key
         default: () => crypto.randomBytes(32).toString('hex'),
     },
+    // Permissions are assigned per key, allowing fine-grained access control
+    permissions: {
+        type: [String], // e.g., ['read', 'write', 'admin']
+        default: ['read']
+    },
 });
 
 const apiKey = mongoose.Model('apiKey', apiKeySchema);
