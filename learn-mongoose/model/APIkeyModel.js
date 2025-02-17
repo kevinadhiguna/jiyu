@@ -19,6 +19,11 @@ const apiKeySchema = new mongoose.Schema({
         type: [String], // e.g., ['read', 'write', 'admin']
         default: ['read']
     },
+    // Expiration dates can be set to automatically invalidate old API keys
+    expiresAt: {
+        type: Date,
+        default: () => Date.now() + 30*24*60*60*1000, // Default expiration: 30 days
+    },
 });
 
 const apiKey = mongoose.Model('apiKey', apiKeySchema);
