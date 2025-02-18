@@ -24,6 +24,10 @@ const apiKeySchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now() + 30*24*60*60*1000, // Default expiration: 30 days
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const apiKey = mongoose.Model('apiKey', apiKeySchema);
