@@ -30,5 +30,10 @@ const apiKeySchema = new mongoose.Schema({
     },
 });
 
+// Method to check if the API key has permission
+apiKeySchema.methods.hasPermission = function (permission) {
+    return this.permissions.includes(permission);
+};
+
 const apiKey = mongoose.Model('apiKey', apiKeySchema);
 module.exports = apiKey;
