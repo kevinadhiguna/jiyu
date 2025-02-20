@@ -35,5 +35,10 @@ apiKeySchema.methods.hasPermission = function (permission) {
     return this.permissions.includes(permission);
 };
 
+// Method to check if the API key is expired
+apiKeySchema.methods.isExpired = function () {
+    return this.expiresAt < Date.now();
+};
+
 const apiKey = mongoose.Model('apiKey', apiKeySchema);
 module.exports = apiKey;
