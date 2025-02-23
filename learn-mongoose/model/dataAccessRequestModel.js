@@ -11,6 +11,11 @@ const dataAccessRequestSchema = new mongoose.Schema({
         type: String, // To-do: make this plural?
         required: true,
     },
+    // reason to for requesting access
+    reason: {
+        type: String,
+        required: true,
+    },
 });
 
 const dataAccessRequest = mongoose.model('DataAccessRequest', dataAccessRequestSchema);
