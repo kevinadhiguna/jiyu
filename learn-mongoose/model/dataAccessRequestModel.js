@@ -16,6 +16,12 @@ const dataAccessRequestSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    // Supports an approval process to manage data access responsibly
+    status: {
+        type: String,
+        enum: ['pending', 'approved', 'denied'],
+        default: 'pending',
+    },
 });
 
 const dataAccessRequest = mongoose.model('DataAccessRequest', dataAccessRequestSchema);
