@@ -22,6 +22,10 @@ const dataAccessRequestSchema = new mongoose.Schema({
         enum: ['pending', 'approved', 'denied'],
         default: 'pending',
     },
+    requestedAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const dataAccessRequest = mongoose.model('DataAccessRequest', dataAccessRequestSchema);
