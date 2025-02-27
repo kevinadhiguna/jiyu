@@ -29,6 +29,9 @@ const dataAccessRequestSchema = new mongoose.Schema({
     reviewedAt: {
         type: Date,
     },
+    approvedAt: {
+        type: Date,
+    },
 });
 
 const dataAccessRequest = mongoose.model('DataAccessRequest', dataAccessRequestSchema);
