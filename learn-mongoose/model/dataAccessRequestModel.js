@@ -32,6 +32,9 @@ const dataAccessRequestSchema = new mongoose.Schema({
     approvedAt: {
         type: Date,
     },
+    rejectedAt: {
+        type: Date,
+    },
 });
 
 const dataAccessRequest = mongoose.model('DataAccessRequest', dataAccessRequestSchema);
