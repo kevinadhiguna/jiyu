@@ -15,6 +15,10 @@ const auditLogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    details: {
+        type: Object,
+        default: {},
+    },
     // Tracks the user's IP address for accountability (must be included in privacy policy)
     ipAddress: {
         type: String,
