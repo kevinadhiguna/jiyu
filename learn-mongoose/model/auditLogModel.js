@@ -28,6 +28,10 @@ const auditLogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    metadata: {
+        type: Object,
+        default: {},
+    },
 }, {
     timestamps: true,
 });
