@@ -36,5 +36,13 @@ const auditLogSchema = new mongoose.Schema({
     timestamps: true,
 });
 
+// [Security] Prevent modification of logs
+auditLogSchema.pre('save', function (next) {
+   if (!this.isNew) {
+    throw new Error('Audit logs cannot be modified');
+   }
+   next();
+});
+
 const auditLog = mongoose.Model('auditLogs', auditLogsSchema);
 module.exports = auditLog;
