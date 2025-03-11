@@ -8,6 +8,9 @@ const taskSchema = new mongoose.Schema({
     description: {
         type: String,
     },
+    dueDate: {
+        type: Date,
+    },
 });
 
 const task = mongoose.model('Task', taskSchema);
