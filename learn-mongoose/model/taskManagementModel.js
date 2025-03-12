@@ -11,6 +11,11 @@ const taskSchema = new mongoose.Schema({
     dueDate: {
         type: Date,
     },
+    status: {
+        type: String,
+        enum: ['pending', 'in-progress', 'completed'],
+        default: 'pending',
+    },
 });
 
 const task = mongoose.model('Task', taskSchema);
