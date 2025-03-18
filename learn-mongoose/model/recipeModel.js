@@ -13,6 +13,10 @@ const recipeSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    prepTime: {
+        type: Number, // in minutes
+        required: true,
+    },
 });
 
 const recipe = mongoose.model('recipe', recipeSchema);
