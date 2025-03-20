@@ -21,6 +21,10 @@ const recipeSchema = new mongoose.Schema({
         type: Number, // in minutes
         required: true,
     },
+    servings: {
+        type: Number,
+        required: true,
+    },
 });
 
 const recipe = mongoose.model('recipe', recipeSchema);
