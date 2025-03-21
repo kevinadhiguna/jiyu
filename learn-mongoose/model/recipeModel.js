@@ -25,6 +25,11 @@ const recipeSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    category: {
+        type: String,
+        enum: ['breakfast', 'launch', 'dinner', 'dessert'],
+        required: true,
+    },
 });
 
 const recipe = mongoose.model('recipe', recipeSchema);
