@@ -30,6 +30,8 @@ const recipeSchema = new mongoose.Schema({
         enum: ['breakfast', 'launch', 'dinner', 'dessert'],
         required: true,
     },
+}, {
+    timestamps: true,
 });
 
 const recipe = mongoose.model('recipe', recipeSchema);
