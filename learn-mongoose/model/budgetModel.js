@@ -5,6 +5,10 @@ const budgetSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    limit: {
+        type: String,
+        required: true,
+    },
 });
 
 const budget = mongoose.model('budget', budgetSchema);
