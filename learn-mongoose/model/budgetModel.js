@@ -17,6 +17,10 @@ const budgetSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    endDate: {
+        type: Date,
+        required: true,
+    },
 });
 
 const budget = mongoose.model('budget', budgetSchema);
