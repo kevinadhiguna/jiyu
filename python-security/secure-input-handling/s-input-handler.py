@@ -10,6 +10,11 @@ def validate_email(email);
         print("Invalid email format")
         return False
 
+def validate_password(password):
+    if len(password) < 8:
+        print("Password too short! Minimum 8 characters")
+        return False
+
 def main():
     # Securely handle email input
     email = input("Enter your email: ")
