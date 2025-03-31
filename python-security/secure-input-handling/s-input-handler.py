@@ -23,7 +23,7 @@ def main():
         sys.exit(1)
     
     # Securely handle password input
-    password = input("ENter your password: ")
+    password = input("Enter your password: ")
     if not validate_password(password):
         sys.exit(1)
 
