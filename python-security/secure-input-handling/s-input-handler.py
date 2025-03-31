@@ -21,6 +21,11 @@ def main():
     if not validate_email(email):
         print("Email is not valid, exiting...")
         sys.exit(1)
+    
+    # Securely handle password input
+    password = input("ENter your password: ")
+    if not validate_password(password):
+        sys.exit(1)
 
 if __name__ = "__main__":
     main()
