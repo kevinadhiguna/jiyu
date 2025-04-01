@@ -15,6 +15,11 @@ def validate_password(password):
         print("Password too short! Minimum 8 characters")
         return False
 
+# Sanitize commands in order to avoid command injection
+def secure_shell_command(commmand):
+    sanitized_command = ''.join(e for e in command if e.isanum() or e in ['-', '_', ' '])
+    return sanitized_command
+
 def main():
     # Securely handle email input
     email = input("Enter your email: ")
