@@ -31,6 +31,10 @@ def main():
     password = input("Enter your password: ")
     if not validate_password(password):
         sys.exit(1)
+    
+    # Sanitize shell commands to prevent injection
+    command = input("Enter a command to execute: ")
+    sanitized_command = secure_shell_command(command)
 
 if __name__ = "__main__":
     main()
