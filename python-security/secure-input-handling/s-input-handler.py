@@ -32,9 +32,13 @@ def main():
     if not validate_password(password):
         sys.exit(1)
     
-    # Sanitize shell commands to prevent injection
+    # Sanitize shell command to prevent injection
     command = input("Enter a command to execute: ")
     sanitized_command = secure_shell_command(command)
+
+    # Execute sanitized shell command
+    print(f"Executing a shell command: {sanitized_command}")
+    os.system(sanitized_command)
 
 if __name__ = "__main__":
     main()
