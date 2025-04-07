@@ -8,3 +8,4 @@ const errorLogSchema = new mongoose.Schema({
 });
 
 const errorLog = mongoose.model('ErrorLog', errorLogSchema);
+module.exports = { errorLog };
