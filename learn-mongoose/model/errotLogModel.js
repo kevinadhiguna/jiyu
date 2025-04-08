@@ -5,6 +5,9 @@ const errorLogSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    stackTrace: {
+        type: String,
+    },
 });
 
 const errorLog = mongoose.model('ErrorLog', errorLogSchema);
