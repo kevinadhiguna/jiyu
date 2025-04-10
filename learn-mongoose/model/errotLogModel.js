@@ -11,6 +11,11 @@ const errorLogSchema = new mongoose.Schema({
     context: {
         type: Object,
     },
+    level: {
+        type: String,
+        enum: ['info', 'warn', 'critical', 'error'],
+        default: 'error',
+    },
 });
 
 const errorLog = mongoose.model('ErrorLog', errorLogSchema);
