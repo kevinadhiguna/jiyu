@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const errorLogSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+    },
     message: {
         type: String,
         required: true,
