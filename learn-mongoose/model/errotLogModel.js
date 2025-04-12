@@ -20,6 +20,8 @@ const errorLogSchema = new mongoose.Schema({
         enum: ['info', 'warn', 'critical', 'error'],
         default: 'error',
     },
+}, {
+    timestamps: true,
 });
 
 const errorLog = mongoose.model('ErrorLog', errorLogSchema);
