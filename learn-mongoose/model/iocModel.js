@@ -11,6 +11,11 @@ const IoCschema = new mongoose.Schema({
         enum: ['ip', 'domain', 'hash', 'url', 'email'],
         required: true,
     },
+    value: {
+        type: String,
+        required: true,
+        trim: true,
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
