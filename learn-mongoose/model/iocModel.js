@@ -16,6 +16,11 @@ const IoCschema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    threatType: {
+        type: String,
+        enum: ['malware', 'phishing', 'botnet', 'ransomware', 'unknown'],
+        default: 'unknown',
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
