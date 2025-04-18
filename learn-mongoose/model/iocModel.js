@@ -21,6 +21,12 @@ const IoCschema = new mongoose.Schema({
         enum: ['malware', 'phishing', 'botnet', 'ransomware', 'unknown'],
         default: 'unknown',
     },
+    confidence: {
+        type: Number,
+        min: 0,
+        max: 100,
+        required: true,
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
