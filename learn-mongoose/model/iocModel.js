@@ -27,6 +27,10 @@ const IoCschema = new mongoose.Schema({
         max: 100,
         required: true,
     },
+    source: {
+        type: String,
+        required: true,
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
