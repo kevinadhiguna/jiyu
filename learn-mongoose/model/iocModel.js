@@ -31,6 +31,10 @@ const IoCschema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    lastSeen: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
