@@ -35,6 +35,10 @@ const IoCschema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    isActive: {
+        type: Boolean,
+        default: true,
+    },
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
