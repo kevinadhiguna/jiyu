@@ -39,6 +39,8 @@ const IoCschema = new mongoose.Schema({
         type: Boolean,
         default: true,
     },
+}, {
+    timestamps: true,
 });
 
 const ioc = mongoose.model('IoC', IoCschema);
