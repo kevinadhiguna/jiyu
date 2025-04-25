@@ -12,6 +12,10 @@ const commentSchema = new mongoose.Schema({
         trim: true,
         maxlength: [500, 'Comment can not exceed 500 characters'],
     },
+    isFlagged: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const comment = mongoose.model('comment', commentSchema);
