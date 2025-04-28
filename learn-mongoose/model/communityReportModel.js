@@ -6,6 +6,10 @@ const communityReportSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    details: {
+        type: String,
+        required: true,
+    },
 });
 
 const communityReport = mongoose.model('communityReport', communityReportSchema);
