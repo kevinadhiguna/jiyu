@@ -10,6 +10,11 @@ const communityReportSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    submittedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+    },
 });
 
 const communityReport = mongoose.model('communityReport', communityReportSchema);
