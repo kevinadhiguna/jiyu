@@ -15,6 +15,13 @@ const communityReportSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    location: {
+        type: {
+            type: String,
+            enum: ['Point'],
+        },
+        coordinates: [Number],
+    },
 });
 
 const communityReport = mongoose.model('communityReport', communityReportSchema);
