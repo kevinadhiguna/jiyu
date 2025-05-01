@@ -22,6 +22,11 @@ const communityReportSchema = new mongoose.Schema({
         },
         coordinates: [Number],
     },
+    status: {
+        type: String,
+        enum: ['pending', 'reviewed', 'escalated'],
+        default: 'pending',
+    },
 });
 
 const communityReport = mongoose.model('communityReport', communityReportSchema);
