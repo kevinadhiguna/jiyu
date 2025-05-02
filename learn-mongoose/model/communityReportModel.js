@@ -27,6 +27,10 @@ const communityReportSchema = new mongoose.Schema({
         enum: ['pending', 'reviewed', 'escalated'],
         default: 'pending',
     },
+    submittedAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const communityReport = mongoose.model('communityReport', communityReportSchema);
