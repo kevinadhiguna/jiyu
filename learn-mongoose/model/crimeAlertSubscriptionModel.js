@@ -14,6 +14,10 @@ const crimeAlertSubscriptionSchema = new mongoose.Schema({
         },
         coordinates: [[[Number]]], // GeoJSON Polygon: [[[lon, lat], [lon, lat], ...]]
     },
+    crimeTypes: [{
+        type: String,
+        enum: ['theft', 'assault', 'vandalism', 'suspicious activity', 'other'],
+    }],
 });
 
 const crimeAlertSubscription = mongoose.model('crimeAlertSubscription', crimeAlertSubscriptionSchema);
