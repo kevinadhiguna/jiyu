@@ -18,6 +18,10 @@ const crimeAlertSubscriptionSchema = new mongoose.Schema({
         type: String,
         enum: ['theft', 'assault', 'vandalism', 'suspicious activity', 'other'],
     }],
+    active: {
+        type: Boolean,
+        default: true,
+    },
 });
 
 const crimeAlertSubscription = mongoose.model('crimeAlertSubscription', crimeAlertSubscriptionSchema);
