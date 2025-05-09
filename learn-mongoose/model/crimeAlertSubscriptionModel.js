@@ -22,6 +22,8 @@ const crimeAlertSubscriptionSchema = new mongoose.Schema({
         type: Boolean,
         default: true,
     },
+}, {
+    timestamps: true,
 });
 
 const crimeAlertSubscription = mongoose.model('crimeAlertSubscription', crimeAlertSubscriptionSchema);
