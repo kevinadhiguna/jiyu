@@ -14,6 +14,13 @@ const policeReportSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    location: {
+        type: {
+            type: String,
+            enum: ['point'],
+        },
+        coordinates: [Number],
+    },
 });
 
 const policeReport = mongoose.model('policeReport', policeReportSchema);
