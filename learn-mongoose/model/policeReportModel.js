@@ -10,6 +10,10 @@ const policeReportSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    reportedDate: {
+        type: Date,
+        required: true,
+    },
 });
 
 const policeReport = mongoose.model('policeReport', policeReportSchema);
