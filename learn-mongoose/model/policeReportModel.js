@@ -21,6 +21,10 @@ const policeReportSchema = new mongoose.Schema({
         },
         coordinates: [Number],
     },
+    source: {
+        type: String,
+        required: true, // e.g., 'NYPD', 'LAPD'
+    },
 });
 
 const policeReport = mongoose.model('policeReport', policeReportSchema);
