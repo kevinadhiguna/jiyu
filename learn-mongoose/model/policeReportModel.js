@@ -25,6 +25,8 @@ const policeReportSchema = new mongoose.Schema({
         type: String,
         required: true, // e.g., 'NYPD', 'LAPD'
     },
+}, {
+    timestamps: true,
 });
 
 const policeReport = mongoose.model('policeReport', policeReportSchema);
