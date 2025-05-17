@@ -6,6 +6,11 @@ const crimeNotificationSchema = mongoose.Schema({
         ref: 'User',
         required: true,
     },
+    incident: {
+        type: new mongoose.Schema.Types.ObjectId,
+        ref: 'CrimeIncident',
+        required: false, // Some notifications may not be tied to incidents
+    },
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
