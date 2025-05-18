@@ -11,6 +11,11 @@ const crimeNotificationSchema = mongoose.Schema({
         ref: 'CrimeIncident',
         required: false, // Some notifications may not be tied to incidents
     },
+    message: {
+        type: String,
+        required: true,
+        trim: true,
+    },
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
