@@ -16,6 +16,11 @@ const crimeNotificationSchema = mongoose.Schema({
         required: true,
         trim: true,
     },
+    type: {
+        type: String,
+        enum: ['Incident Alert', 'System Update', 'Community Notice'],
+        required: true,
+    },
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
