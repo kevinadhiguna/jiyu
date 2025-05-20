@@ -21,6 +21,10 @@ const crimeNotificationSchema = mongoose.Schema({
         enum: ['Incident Alert', 'System Update', 'Community Notice'],
         required: true,
     },
+    read: {
+        type: Boolean,
+        default: false,
+    },
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
