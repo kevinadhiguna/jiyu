@@ -25,6 +25,10 @@ const crimeNotificationSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    sentAt: {
+        type: Date,
+        default: Date.now,
+    },
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
