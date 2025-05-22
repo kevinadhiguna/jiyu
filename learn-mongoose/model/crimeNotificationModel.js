@@ -29,6 +29,8 @@ const crimeNotificationSchema = mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+}, {
+    timestamps: true,
 }); 
 
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
