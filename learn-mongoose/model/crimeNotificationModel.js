@@ -33,5 +33,11 @@ const crimeNotificationSchema = mongoose.Schema({
     timestamps: true,
 }); 
 
+// Log notification for external systems (e.g., push notification service)
+crimeNotificationSchema.pre('save', function (next) {
+    console.log(`Sending this notification to user ${this.recepient}: ${this.message}`);
+    next();
+});
+
 const crimeNotification = mongoose.model('crimeNotification', crimeNotificationSchema);
 module.exports = { crimeNotification };
