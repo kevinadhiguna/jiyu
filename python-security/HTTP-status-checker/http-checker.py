@@ -36,3 +36,21 @@ def scan(targets, paths):
                 print(f"[ERROR] Failed to scan {url}: {e}")
 
     print(f"Scan completed at {datetime.now()}")
+    
+if __name__ == "__main__":
+    # Replace these URLs with your target URLs
+    targets = ["http://localhost", "http://example.com"]
+
+    # This can be replaced with directory lists
+    common_paths = [
+        "/",
+        "/admin",
+        "/login",
+        "/admin/login",
+        "/config",
+        "/.git",
+        "/backup",
+        "phpinfo.php",
+    ]
+
+    scan(targets, common_paths)
