@@ -1,4 +1,10 @@
 import socket
+import threading
+import queue
+
+# Queue to store ports for threading
+port_queue = queue.Queue()
+open_ports = []
 
 def scan_port(target, port):
     """
@@ -22,3 +28,12 @@ def scan_port(target, port):
         sys.exit(1)
     except socket.error as e:
         print(f"Error scanning port {port}: {e}")
+
+def worker(target):
+    """
+    Thread worker function to process ports from the queue
+    """
+    while not port_queue.empty():
+        port = port_queue.get()
+        scan_port(target, port)
+        port_queue.task_done()
