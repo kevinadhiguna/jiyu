@@ -1,10 +1,8 @@
 # 👋 Welcome to `Jiyu`
 
 ```
-This is a repo for... whatever 🤷
+This repository documents my learning progress across various technologies, including cybersecurity and software development.
 ```
-
-will be updated soon
 
 <br />
 
